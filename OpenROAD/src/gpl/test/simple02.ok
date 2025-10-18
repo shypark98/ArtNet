@@ -1,0 +1,68 @@
+[INFO ODB-0227] LEF file: ./nangate45.lef, created 22 layers, 27 vias, 134 library cells
+[INFO ODB-0128] Design: gcd
+[INFO ODB-0130]     Created 54 pins.
+[INFO ODB-0131]     Created 294 components and 1656 component-terminals.
+[INFO ODB-0133]     Created 364 nets and 1068 connections.
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: (  0.000  0.000 ) ( 30.970 30.800 ) um
+[INFO GPL-0006] Number of instances:               295
+[INFO GPL-0007] Movable instances:                 294
+[INFO GPL-0008] Fixed instances:                     0
+[INFO GPL-0009] Dummy instances:                     1
+[INFO GPL-0010] Number of nets:                    364
+[INFO GPL-0011] Number of pins:                   1122
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 30.970 30.800 ) um
+[INFO GPL-0013] Core BBox: (  0.000  0.000 ) ( 30.970 30.800 ) um
+[INFO GPL-0016] Core area:                     953.876 um^2
+[INFO GPL-0017] Fixed instances area:            0.266 um^2
+[INFO GPL-0018] Movable instances area:        569.772 um^2
+[INFO GPL-0019] Utilization:                    59.749 %
+[INFO GPL-0020] Standard cells area:           569.772 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:      1.938 um^2
+[INFO GPL-0025] Ideal bin area:                  3.230 um^2
+[INFO GPL-0026] Ideal bin count:                   295
+[INFO GPL-0027] Total bin area:                953.876 um^2
+[INFO GPL-0028] Bin count (X, Y):          16 ,     16
+[INFO GPL-0029] Bin size (W * H):       1.936 *  1.925 um
+[INFO GPL-0030] Number of bins:                    256
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        1 |   0.8641 |  3.842435e+06 |   +0.00% |  1.03e-11 |      
+       10 |   0.7711 |  4.226616e+06 |  +10.00% |  1.60e-11 |      
+       20 |   0.7691 |  4.211793e+06 |   -0.35% |  2.60e-11 |      
+       30 |   0.7680 |  4.219738e+06 |   +0.19% |  4.23e-11 |      
+       40 |   0.7648 |  4.231388e+06 |   +0.28% |  6.89e-11 |      
+       50 |   0.7604 |  4.248951e+06 |   +0.42% |  1.12e-10 |      
+       60 |   0.7527 |  4.275341e+06 |   +0.62% |  1.83e-10 |      
+       70 |   0.7387 |  4.311376e+06 |   +0.84% |  2.98e-10 |      
+       80 |   0.7207 |  4.363272e+06 |   +1.20% |  4.85e-10 |      
+       90 |   0.7034 |  4.436056e+06 |   +1.67% |  7.91e-10 |      
+      100 |   0.6755 |  4.524728e+06 |   +2.00% |  1.29e-09 |      
+      110 |   0.6395 |  4.603897e+06 |   +1.75% |  2.10e-09 |      
+      120 |   0.6024 |  4.711206e+06 |   +2.33% |  3.42e-09 |      
+      130 |   0.5558 |  4.800865e+06 |   +1.90% |  5.57e-09 |      
+      140 |   0.4987 |  4.833172e+06 |   +0.67% |  9.07e-09 |      
+      150 |   0.4480 |  4.876598e+06 |   +0.90% |  1.48e-08 |      
+      160 |   0.3826 |  4.863085e+06 |   -0.28% |  2.41e-08 |      
+      170 |   0.3380 |  4.883201e+06 |   +0.41% |  3.84e-08 |      
+      180 |   0.3192 |  4.966690e+06 |   +1.71% |  5.66e-08 |      
+      190 |   0.2790 |  4.999035e+06 |   +0.65% |  8.33e-08 |      
+      200 |   0.2446 |  5.042939e+06 |   +0.88% |  1.23e-07 |      
+      210 |   0.2151 |  5.084577e+06 |   +0.83% |  1.81e-07 |      
+      220 |   0.1848 |  5.134153e+06 |   +0.98% |  2.66e-07 |      
+      230 |   0.1583 |  5.172484e+06 |   +0.75% |  3.92e-07 |      
+      240 |   0.1311 |  5.199455e+06 |   +0.52% |  5.78e-07 |      
+      250 |   0.1108 |  5.230322e+06 |   +0.59% |  8.52e-07 |      
+[INFO GPL-1001] Finished with Overflow: 0.098638
+[INFO GPL-1002] Placed Cell Area              569.7720
+[INFO GPL-1003] Available Free Area           953.6100
+[INFO GPL-1004] Minimum Feasible Density        0.6000 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.6639
+[INFO GPL-1008]     - For 80% usage of free space: 0.7469
+[INFO GPL-1009]     - For 50% usage of free space: 1.1950
+No differences found.

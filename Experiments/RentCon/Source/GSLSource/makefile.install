@@ -1,0 +1,6 @@
+M64 = CC=cc CFLAGS="-64" LDFLAGS="-64"
+
+all:
+	./configure $(M64) --prefix=$(PWD)/../gsl;
+	make;
+	make install;

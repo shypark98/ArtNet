@@ -1,0 +1,4 @@
+
+
+990324 	aec	added complement and intersection to IntervalSeq.
+020824  ilm     ported to g++ 3.1.1

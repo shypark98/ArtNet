@@ -1,0 +1,74 @@
+#/**************************************************************************
+#***    
+#*** Copyright (c) 2008 Regents of the University of California,
+#***               Andrew B. Kahng, Kwangok Jeong and Hailong Yao
+#***
+#***  Contact author(s): abk@cs.ucsd.edu, kjeong@vlsicad.ucsd.edu, hailong@cs.ucsd.edu
+#***  Original Affiliation:   UCSD, Computer Science and Engineering Department,
+#***                          La Jolla, CA 92093-0404 USA
+#***
+#***  Permission is hereby granted, free of charge, to any person obtaining 
+#***  a copy of this software and associated documentation files (the
+#***  "Software"), to deal in the Software without restriction, including
+#***  without limitation 
+#***  the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+#***  and/or sell copies of the Software, and to permit persons to whom the 
+#***  Software is furnished to do so, subject to the following conditions:
+#***
+#***  The above copyright notice and this permission notice shall be included
+#***  in all copies or substantial portions of the Software.
+#***
+#*** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+#*** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+#*** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+#*** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+#*** CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+#*** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+#*** THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#***
+#***
+#***************************************************************************/
+
+###########################
+# Created by Hailong Yao  #
+# hailong@cs.ucsd.edu     #
+# Date: Jul. 30, 2008     #
+###########################
+
+1. This program is used for evaluating Rent's parameters 
+using different methods including circuit partitioning
+based method, graph traversal based method and rectangle
+sampling based method.
+
+2. Platform: current version of the program runs on 
+Linux g++ (GCC) 3.2.3 or higher.
+
+3. For information about installing the software, please
+refer to the INSTALL.
+
+4. For information about running the software, please
+refer to the script ./Sample/tesRent.
+
+Program options:
+
+-f <aux file> - auxiliary file for LEF and DEF file names. Please refer to the sample aux file ./Sample/Rent.aux
+-noCP - do not use circuit partitioning method.
+-noGT - do not use graph traversal method.
+-noRS - do not use rectangle sampling method.
+-seedCP <unsigned> - seed for the random number generator used in circuit partitioning method (default: 123).
+-seedGT <unsigned> - seed for the random number generator used in graph traversal method (default: 123).
+-seedRS <unsigned> - seed for the random number generator used in rectangle sampling method (default: 123).
+-verb <1_1_1|1_2_3|etc> - verbosity: <For actions>_<For system resources>_<For major stats>.
+-startsPerRun <unsigned> - number of solutions for each run of circuit partitioning process (default: 1).
+-totalRuns <unsigned> - total number of runs of circuit partitioning process (default: 1).
+-sampleNumGT <unsigned> - number of samples for each round in the graph traversal method (default: 3).
+-sampleNumRS <unsigned> - number of samples for each round in the rectangle sampling method (default: 3).
+-sampleSizeNum <unsigned> - total number of rounds in the graph traversal and rectangle sampling methods (default: 30).
+-log <filename>  - print all output to a file instead of the screen.
+-h|-help  - print this message.
+
+5. If there is any problem in running the program, please use "-log" option to generate the log file and send a feedback.
+
+6. example:
+
+./RentCon.exe -f Rent.aux -verb 3_3_3 -log RentCon.log

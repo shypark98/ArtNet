@@ -1,0 +1,122 @@
+
+MLPart 1.1 980408 ilm
+    - general termnal propagation using class TerminalPropagator 
+    - no more xTics/yTics (in fact, MLPart still uses them to find
+      n*m, but this is not newcessary ... neither it is expensive)
+
+1.2 980409 
+    ilm - added moreCellsFromSmashing to BaseMLPart::Parameters
+
+1.3 980409
+    ilm - added setTolToAFactorOfMaxClustArea to BaseMLPart::Parameters;
+          if explicitely set, it overrides capacity tolerance with
+          a factor of max cluster area at each level
+1.4 980410
+
+    ilm - levelGrowthFactor replaces moreCellFromSmashing and
+          maxClustToleranceFactor replaces setTolToAFactorOfMaxClustArea
+          in BaseMLPart::Parameters 
+
+    ilm - if ML can't smash to N, it now smashes to 1.1 * numChildren
+          (was smashing to numChildren). This should improve balances 
+          for the top-level partitioning problem
+        
+        - added "logarithmic adjustment" for levelGrowthFactor...
+          it is adjusted by ML so that the same number of levels are
+          distributed more uniformly (the last level is calculated to
+          smash at approx. 2/3 of the levelGrowthFactor)
+
+          this leads to a certain discreteness of levelGrowthFactors,
+          but for large testcases, this should not be a problem
+
+1.7 980413
+    ilm - ML evaluates all solutions independently of flat partitioners
+          in the end (w/o thresholding) and prints stats.
+        - the firstLevel can be increased for multi-way partitions
+          (e.g. if 20*k > 100 )
+        - SA is plugged in
+        - purify-clean with partitioners
+        ...
+
+1.8 980414 
+    ilm - temporary fix to the solution buffers bug
+        - split large source files 
+        - reworked regression tests
+    aec - changed param from saMaxMoves to saNumSeconds
+
+2.0 980429
+    aec - adjusted verb. output levels
+2.0.1 980503
+    aec - added netThreshold parameter
+2.2   980514
+    ilm - updated to use PartitioningBuffer
+
+2.3 980516
+    aec - changed reorder to put the result directly into the
+	problems buffer, from the double buffer. Removed copying from
+	the dbl buffer into the problem's buffer before the call
+	to reorder
+	- rebuildClTree is no longer used (nor does it compile..
+	  ClusterTree:reconcile tree interface has changed slightly).
+	  It will eventually be deleted entierly
+
+2.4 980520
+    ilm - a series of updates to the new partitioning infrastructure
+    ilm - removed (it's now in Partitioning) the computation of xTics 
+                  and yTics from vector<BBox>
+          into Partitioning
+
+2.5 980609
+    ilm - the package is now independent of DB
+    ilm - MLParameters reworked and simplified
+
+2.7 980711
+    ilm - no overhead when running flat problems
+
+3.3 980731
+    ilm - added toleranceReduction params, 
+          revised debug output for tolerance
+
+3.4 980811
+    ilm - supported Vcycling types are now NoVCycles, Exclusive, Relaxed,
+          Relaxed2
+
+4.5 981002
+    ilm - added -mlClusterToTerminals <0|1>
+          1 by default
+
+4.9
+    aec - removed 'resetMovables' function (not used anywere, no longer
+		needed)
+	- turned off first lifo pass on top level
+
+4.10
+    aec - added parameter    seedTopLevelSoln
+  	if an initial partitioning is passed to
+        ML, it will build the ClusteredHGraphs to respect it.  
+	If seedTopLvlSoln is true, the top-level soln will also 
+	respect this partitioning, otherwise it will be randomly generated.
+
+4.11
+   aec 990401 - removed mlParam 'firstLevelSize'. The clutering param
+	'sizeOfTop' makes it unnecessary.
+
+4.13
+   aec 990707
+	-removed parameters maxClustToleranceFactor and toleranceReduction
+	-added parameters toleranceMultiple and toleranceAlpha
+	-this version sets a high tolerance at the top level, and
+	 a slightly smaller tolerance for each following level...the
+	 bottom level has the original tol.
+4.14
+  aec 990709
+	-adds parameter -useTwoPartCalls {NEVER | TOPONLY | ALLBUTLAST | ALL}
+	-uses two calls at each level for tolerance relaxation, rather than
+		the tapering done in the pervious version
+
+4.15
+  aec 990712
+	-vcycling has been greatly simplified
+4.20
+  ilm 020824
+        -ported to g++ 3.1.1

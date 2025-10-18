@@ -1,0 +1,474 @@
+UCLA nets 1.0
+# Created      : Tue Aug 31 13:44:35 1999
+# User         : caldwell@nexus10.cs.ucla.edu (uclacs) 
+# Platform     : SunOS 5.7 sparc SUNW,Ultra-1 
+
+NumPins : 358
+NetDegree : 3  netX
+a52 B
+a21 B
+a2 B
+NetDegree : 3  netY
+a59 B
+a52 B
+a21 B
+NetDegree : 2  netZ
+a54 B
+a45 B
+NetDegree : 5
+a57 B
+a30 B
+a11 B
+a9 B
+a4 B
+NetDegree : 5
+a56 B
+a45 B
+a29 B
+a11 B
+a7 B
+NetDegree : 2
+a44 B
+a5 B
+NetDegree : 4
+a62 B
+a49 B
+a47 B
+a6 B
+NetDegree : 4
+a61 B
+a50 B
+a48 B
+a44 B
+NetDegree : 3
+a50 B
+a49 B
+a43 B
+NetDegree : 3
+a48 B
+a47 B
+a8 B
+NetDegree : 3
+a48 B
+a47 B
+a43 B
+NetDegree : 2
+a52 B
+a42 B
+NetDegree : 4
+a25 B
+a21 B
+a19 B
+a0 B
+NetDegree : 4
+a42 B
+a25 B
+a21 B
+a19 B
+NetDegree : 2
+a41 B
+a11 B
+NetDegree : 7
+a57 B
+a56 B
+a30 B
+a29 B
+a10 B
+a9 B
+a7 B
+NetDegree : 7
+a57 B
+a56 B
+a41 B
+a30 B
+a29 B
+a9 B
+a7 B
+NetDegree : 3
+a62 B
+a61 B
+a40 B
+NetDegree : 5
+a50 B
+a49 B
+a48 B
+a47 B
+a12 B
+NetDegree : 5
+a50 B
+a49 B
+a48 B
+a47 B
+a40 B
+NetDegree : 3
+a39 B
+a15 B
+a13 B
+NetDegree : 3
+a31 B
+a27 B
+a14 B
+NetDegree : 3
+a39 B
+a31 B
+a27 B
+NetDegree : 2
+a38 B
+a21 B
+NetDegree : 3
+a25 B
+a19 B
+a16 B
+NetDegree : 3
+a38 B
+a25 B
+a19 B
+NetDegree : 3
+a57 B
+a56 B
+a37 B
+NetDegree : 5
+a30 B
+a29 B
+a18 B
+a9 B
+a7 B
+NetDegree : 5
+a37 B
+a30 B
+a29 B
+a9 B
+a7 B
+NetDegree : 2
+a36 B
+a17 B
+NetDegree : 5
+a31 B
+a27 B
+a20 B
+a15 B
+a13 B
+NetDegree : 5
+a36 B
+a31 B
+a27 B
+a15 B
+a13 B
+NetDegree : 2
+a53 B
+a35 B
+NetDegree : 6
+a31 B
+a27 B
+a22 B
+a17 B
+a15 B
+a13 B
+NetDegree : 6
+a35 B
+a31 B
+a27 B
+a17 B
+a15 B
+a13 B
+NetDegree : 2
+a34 B
+a19 B
+NetDegree : 2
+a25 B
+a24 B
+NetDegree : 2
+a34 B
+a25 B
+NetDegree : 3
+a33 B
+a9 B
+a7 B
+NetDegree : 3
+a30 B
+a29 B
+a26 B
+NetDegree : 3
+a33 B
+a30 B
+a29 B
+NetDegree : 2
+a60 B
+a32 B
+NetDegree : 5
+a53 B
+a31 B
+a28 B
+a17 B
+a15 B
+NetDegree : 5
+a53 B
+a32 B
+a27 B
+a17 B
+a13 B
+NetDegree : 9
+a58 B
+a55 B
+a54 B
+a31 B
+a23 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 5
+a30 B
+a23 B
+a5 B
+a3 B
+a1 B
+NetDegree : 5
+a29 B
+a23 B
+a5 B
+a3 B
+a1 B
+NetDegree : 9
+a58 B
+a55 B
+a54 B
+a27 B
+a23 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 2
+a47 B
+a23 B
+NetDegree : 2
+a48 B
+a23 B
+NetDegree : 2
+a49 B
+a1 B
+NetDegree : 2
+a50 B
+a1 B
+NetDegree : 13
+a63 B
+a60 B
+a58 B
+a55 B
+a54 B
+a53 B
+a25 B
+a23 B
+a17 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 3
+a46 B
+a25 B
+a19 B
+NetDegree : 2
+a63 B
+a15 B
+NetDegree : 2
+a63 B
+a13 B
+NetDegree : 2
+a57 B
+a55 B
+NetDegree : 2
+a56 B
+a55 B
+NetDegree : 2
+a58 B
+a9 B
+NetDegree : 2
+a58 B
+a7 B
+NetDegree : 2
+a62 B
+a3 B
+NetDegree : 2
+a61 B
+a3 B
+NetDegree : 5
+a59 B
+a51 B
+a46 B
+p1 B
+a2 B
+NetDegree : 3
+a42 B
+p2 B
+a0 B
+NetDegree : 3
+a38 B
+p3 B
+a16 B
+NetDegree : 3
+a34 B
+p4 B
+a24 B
+NetDegree : 3
+a32 B
+p5 B
+a28 B
+NetDegree : 3
+a35 B
+p6 B
+a22 B
+NetDegree : 3
+a36 B
+p7 B
+a20 B
+NetDegree : 3
+a39 B
+p8 B
+a14 B
+NetDegree : 3
+a45 B
+p9 B
+a4 B
+NetDegree : 3
+a41 B
+p10 B
+a10 B
+NetDegree : 3
+a37 B
+p11 B
+a18 B
+NetDegree : 3
+a33 B
+p12 B
+a26 B
+NetDegree : 3
+a44 B
+p13 B
+a6 B
+NetDegree : 3
+a40 B
+p14 B
+a12 B
+NetDegree : 3
+a43 B
+p15 B
+a8 B
+NetDegree : 5
+a59 B
+a51 B
+a46 B
+p16 B
+a2 B
+NetDegree : 3
+a42 B
+p17 B
+a0 B
+NetDegree : 3
+a38 B
+p18 B
+a16 B
+NetDegree : 3
+a34 B
+p19 B
+a24 B
+NetDegree : 3
+a32 B
+p20 B
+a28 B
+NetDegree : 3
+a35 B
+p21 B
+a22 B
+NetDegree : 3
+a36 B
+p22 B
+a20 B
+NetDegree : 3
+a39 B
+p23 B
+a14 B
+NetDegree : 3
+a45 B
+p24 B
+a4 B
+NetDegree : 3
+a41 B
+p25 B
+a10 B
+NetDegree : 3
+a37 B
+p26 B
+a18 B
+NetDegree : 3
+a33 B
+p27 B
+a26 B
+NetDegree : 3
+a44 B
+p28 B
+a6 B
+NetDegree : 3
+a40 B
+p29 B
+a12 B
+NetDegree : 3
+a43 B
+p30 B
+a8 B
+NetDegree : 5
+a52 B
+a51 B
+a46 B
+p31 B
+a21 B
+NetDegree : 2
+a51 B
+p32 B
+NetDegree : 2
+a52 B
+p33 B
+NetDegree : 2
+p34 B
+a21 B
+NetDegree : 2
+p35 B
+a19 B
+NetDegree : 2
+a60 B
+p36 B
+NetDegree : 2
+a53 B
+p37 B
+NetDegree : 2
+p38 B
+a17 B
+NetDegree : 2
+a63 B
+p39 B
+NetDegree : 2
+a54 B
+p40 B
+NetDegree : 2
+p41 B
+a11 B
+NetDegree : 2
+a55 B
+p42 B
+NetDegree : 2
+a58 B
+p43 B
+NetDegree : 2
+p44 B
+a5 B
+NetDegree : 2
+p45 B
+a3 B
+NetDegree : 2
+p46 B
+a1 B
+NetDegree : 2
+p47 B
+a23 B
+

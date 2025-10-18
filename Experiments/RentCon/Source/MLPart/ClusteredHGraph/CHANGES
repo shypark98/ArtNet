@@ -1,0 +1,60 @@
+1.0  	aec	
+	first released version 
+
+1.1 	aec
+	renamed classes/files to not conflict with Clustering
+
+1.2  	aec 980917
+	major revision. removed slice, parent/child relationships, and
+	many other un-necessary things.  Removed Hierarchical base class.
+
+1.2.1 	aec 980918
+	change to ClHG_Cluster 'interior' node ctor..removed sorting of
+	CutNets
+
+1.3	aec 980919
+	code to remove duplicate edges, and weight the remaining ones.
+	Added a param, removeDup, to remove either 0(none), 2(only deg2),
+	or 3(deg2 and deg3 edges).
+
+1.3.1   aec 980921
+	change to the cluster area limits.  params are now:
+	maxNewClRatio, maxChildClRatio, and maxClArea
+
+1.3.2   aec 980922
+	added support for Vcycling
+
+1.5     aec 981002
+	updated to new HGraph w/ faster construction of the level HGraphs.
+	allowed clustering w/ terminals if a partitioning was passed
+	 to ClusteredHGraph ctor
+	removed interior node ctor.  When to nodes are clustered,
+	 the higher numbered on is merged into the lower numberd one.
+
+1.6 	aec 981004
+	clustering to terminals is only allowed if they are movable
+
+1.7	aec 981005
+	added BestHEM as a clustering algorithm
+
+1.8	aec 981007
+	ClusteredHGraph now takes 2 partitionions (optionally).  The
+	first is a Constraints, the second partitioning.  It produces
+	a solution for the top level, as before, but also a Constraints
+	partitioning for each level.
+
+1.10	aec 990222
+	added CutOptimal Clustering
+
+2.2	aec 990711
+	added new clustering algorith, PinHEM, which is now the default.
+	PHEM is a HEM-style clustering algorithm that uses 
+	as edge weights 2 for shared degree-2 edges, and 1 else.
+
+2.7.2   sm 010507
+        added new clustering algorithm, Random.
+        Random is a clustering algorithm that picks neighboring cells
+        for clustering at random.
+
+2.8     ilm 020824
+        ported to g++ 3.1.1

@@ -1,0 +1,9 @@
+1.0	980602 aec
+	-moved random init partitioning genertor from Partition -> PartLeg.
+	  and made it into class SingleBalanceGenerator
+	-added reg tests for SBGenerator
+1.2     980606 ilm added ~300 ESLOC in enforce() and balance()
+                   tripled regression tests
+1.4     980719 ilm added getViolation() 
+1.9     990517 ilm added MultBalChk and main4.cxx
+2.3     020823 ilm ported to g++ 3.1.1

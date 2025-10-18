@@ -1,0 +1,49 @@
+README for Combinatorics
+Contact: Max Moroz <mmoroz@ucla.edu>
+Date: May 11, 1998
+
+Copyright: ABKGroup and UC Regents, see file COPYRIGHT
+Author: Max Moroz
+
+OS and compilers supported: SunOS CC 4.2 - SunOS 5.5.1
+                              MSVC++ 5.0 - Windows NT, Windows95
+
+******************  THIS IS THE SOLARIS DISTRIBUTION ***************
+
+
+Libraries used:
+   STL
+   ABKCommon
+
+Formal C++ interface:
+   combi.h             (see main0.cxx through main3.cxx for sample uses)
+   grayTransp.h        (see main4.cxx)
+
+Linking interface:
+   libcombi.a
+   libcombi.so
+
+Test:
+      requires files regression, test.netD, test.are
+      produce executable "make test", then use
+      script "regression"; correct output contains
+
+  lines:  words:  bytes: in error log:
+       0       0       0 test0.diff
+
+	and similarly for other tests
+
+      If you do not get zeros, look at the error log file and
+      if you think the differences are essential, email them
+      to <mmoroz@ucla.edu>
+
+Installation notes: customize Makefile to your filesystem,
+                     Type make. This will build the libraries.
+                     The shared library can not be
+                     moved from its initial location.
+
+Additional documentation: none
+
+Changes: see the file CHANGES (if any)
+
+Planned Changes: see the file TODO (if any)

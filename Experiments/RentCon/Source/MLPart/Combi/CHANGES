@@ -1,0 +1,56 @@
+1.1 mmoroz
+	-removed the "can't uninline due to MSVC problems" thingy
+	(MSVC should eat the construct if it is put in as an uninlined
+	templated function in the header)
+	-maybe a couple more bits changed in the source code, can't remember
+	exactly (nothing serious)
+1.2	aec	980514
+	-moved PartitionIds to Combi from Partitioing
+1.3     ilm     980605
+        -added Partitioning:randomize(unsigned nParts)
+1.4     ilm     981111
+        -added bitBoard.h and main6.cxx; updated regression test
+1.5     ilm     981128
+        -renamed GrayTransposition into GrayTranspositionForPermutations
+        -added   GrayCodeForPartitionings (multiway)
+        -added   main7.cxx to demonstrate the usage of the above
+
+        Note 1: The generating algorithm is lightning-fast -- it
+                copies pieces of memory with memcpy() and does little else;
+                also, every entry in the table is written exactly once and
+                no additional memory is used. It takes negligible time to
+                run out of memory. Current hardwired limitations --- 
+                a partitioning can not have more than 29 instances
+                (this can be easily changed) and, independently, a Gray code
+                table can not occupy more than 20Mb in memory. A warning
+                is printed if it takes more than 10Mb.
+
+                For example, 3-way partitionings of 16 instances need 41Mb,
+                of 15 instances -- under 13.7Mb (obviously).
+                Bipartionings of 25 instances take 32Mb. Generating the
+                biggest tables <20Mb takes on the order of 1 sec. 
+
+               I can speed it up in the case of bipartitioning, 
+               but that won't be necessary as I see it;-)
+
+        Note 2: the Gray code order generated for partitionings
+              is not far from lexicographic ordering, -- can be
+              easily modified into the latter by adding repeating 
+              partitionings and removing some originals.
+
+1.6 ilm 981202
+    
+     - added GrayCodeForPartitionigs::resetEndSymmetric()
+       and methods to go backwards to help enumPart save some effort
+     - changed typedef char byte to #define byte with ifndef
+
+1.7 yu 990215
+     
+     - added comments for doc++
+     - added "inline" before the declaration of inline member functions in 
+       mapping.h, partitionIds.h
+
+1.9 ilm 000501
+     - ported to CC5.0
+2.1 ilm 020824
+     - ported to g++ 3.1.1

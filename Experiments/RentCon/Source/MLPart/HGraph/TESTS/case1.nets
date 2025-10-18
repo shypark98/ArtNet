@@ -1,0 +1,17 @@
+  UCLA nets 1.0
+# Created	:	Oct 23 2000
+# User   	:	Suresh Raman
+
+NumPins : 8
+NetDegree : 2	net1
+	box1    B  :  -5	-1
+	pio_I1    B  :  0	-1
+NetDegree : 2	net2
+	box1    B  :  4	-1
+	pio_I2    B  :  0	-1
+NetDegree : 2	net4
+	box2    B  :  4	-1
+	pio_O1    B  :  0	0
+NetDegree : 2	net3
+	box2    B  :  -5	-1
+	box1    B  :  -1	12

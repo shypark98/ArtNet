@@ -1,0 +1,15 @@
+UCLA fix 1.0 
+# Created    : Sat Mar 21 03:32:43 1998
+# User       : imarkov@nexus8 (uclacs) 
+# Platform   : SunOS 5.5.1 sparc SUNW,Ultra-1 
+
+Regular partitions : 2
+Pad partitions : 3
+Fixed Pads : 3
+Fixed NonPads : 2
+      p1 : pb0
+      p2 : pb1 
+      p3 : pb2 
+      a1 : b0
+      a3 : b1
+

@@ -1,0 +1,179 @@
+
+ README for StatzenPlotz1.1
+ Contact: Igor Markov <imarkov@cs.ucla.edu>
+ Date:    September 24, 1997
+
+ Copyright: ABKGroup and UC Regents, see file COPYRIGHT
+ Authors:  Igor Markov
+
+     OS and compilers supported : CC 4.2+ for  Solaris 2.5+,
+                               MSVC++5.0 for Windows NT4.0
+     compilers not supported : MSVC++4.x, g++ 2.7.2, CC 4.1
+
+   ******************  THIS IS THE SOLARIS DISTRIBUTION ***************
+
+ Libraries used : STL 2.01  (see STL note below), ABKCommon2.6.1
+                  Placement4.1, Constraints2.4
+
+ Formal C++ interface : stats.h
+
+ Linking interface: 
+   one static (libstats.a) or shared (libstats.so) library
+
+ Test:
+         produce executable statsTest with "make test", then use 
+         script "regression"; correct output contains
+
+          Differences from precomputed results
+           0       0       0 diffs.notime
+
+         If you do not get zeros, look at the file diffs.notime
+         and if you think the differences are essential, 
+         email them to <imarkov@math.ucla.edu>
+
+ Installation notes : customize Makefile to your filesystem,
+		      Type make. This will build the libraries. 
+                      The shared library can not be
+		      moved from its initial location.
+
+
+ STL note: you need an *adapted* version 2.01  970718) or higher. 
+            It is available (together with a testsuite) from
+            http://www.ipmce.su/people/fbp/stl/stlport.html. 
+            Extensive online documentation is available at
+            http://www.sgi.com/Technology/STL/
+            Links to tutorials can be found at
+            http://www.sgi.com/Technology/STL/other_resources.html
+
+
+ Synopsys:  Routines for computing and outputting statistics and plots.
+
+            Main facilities are classes TrivialStats, TrivialStatsWithStdDev 
+            CumulativeFrequencyDistribution, Correlation
+            RankCorrelation  (aka RankCorr) and
+            LinearRegression (aka LinRegression).
+
+            All classes accept statistical
+            data in the form of vector<double> or vector<unsigned>. 
+
+            The first two classes can be used to quickly compute, query and,
+            possibly, pretty-print min/max/avg and standard deviation.
+
+            Example:
+                     vector<double> vec(3);
+                     iota(vec.begin(),vec.end(),0);
+                     cout << TrivialStatsWithStdDev(vec);
+
+            Will produce:  Max: 3  Min: 0  Avg: 1.5  StdDev: 1.25
+
+            For more info (e.g. how to query min/max/etc) see trivStats.h
+            and main0.cxx (note: you do not need to include trivStats.h
+            explicitly)
+
+            class CumulativeFrequencyDistribution, typedefed to FreqDistr
+            computes cumulative frequency distribution, pretty-prints it, 
+            saves plots for it and allows to several types of queries.
+
+            Example:
+                     vector<double> vec(4);
+                     iota(vec.begin(),vec.end(),0);
+                     FreqDistr distr(vec)
+                     cout << distr;
+                     distr.saveXYPlot("plot.xy");
+
+            Will produce:
+
+ Distribution in 4 equal subranges : 
+            [0,0.75]: 1             [0.75,1.5]: 1             [1.5,2.25]: 1    
+            [2.25,3]: 1    
+ Distribution in 4 equipotent subranges : 
+               [0,2]: 3                  [2,2]: 0                  [2,3]: 1    
+               [3,3]: 0    
+
+             The number of subranges can be set in user code.
+             File "plot.xy" can be plotted with gnuplot
+
+           0         0.25
+           1          0.5
+           2         0.75
+           3            1
+             
+            class FreqDistr can not only be used for pretty-printing,
+            but also in critical applications (optimized for speed).
+            For more info (e.g. run-time queries) see freqDistr.h and
+            main[12].cxx
+
+            classes Correlation, RankCorrelation  (aka RankCorr) and
+            LinearRegression (aka LinRegression) can be constructed from
+            two vector<double> or two vector<unsigned>.
+
+            Correlation and RankCorr have implicit conversions to double.
+  LinRegression has methods double getC() const and double getK() const;
+
+For example, StatzenPlotz/main3.cxx has the following lines:
+
+   cout << " Correlation(vec1,vec2) = " << Correlation(vec1,vec2) << endl
+        << " Correlation(vec1,vec3) = " << Correlation(vec1,vec3) << endl
+        << " Correlation(vec1,vec4) = " << Correlation(vec1,vec4) << endl
+        << " Correlation(vec4,vec5) = " << Correlation(vec4,vec5) << endl;
+
+   cout << " Rank Correlation(vec1,vec2) = " << RankCorr(vec1,vec2)<<endl
+        << " Rank Correlation(vec1,vec3) = " << RankCorr(vec1,vec3)<<endl
+        << " Rank Correlation(vec1,vec4) = " << RankCorr(vec1,vec4)<<endl
+        << " Rank Correlation(vec4,vec5) = " << RankCorr(vec4,vec5)<<endl 
+        << " Rank Correlation(vec1,vec6) = " << RankCorr(vec1,vec6)<<endl;
+  
+   LinRegression reg0(vec1,vec2), reg1(vec2,vec1), reg2(vec1,vec3),
+                reg3(vec1,vec4), reg4(vec4,vec5), reg5(vec1,vec6);
+ 
+ cout<<" LinRegression(vec1,vec2): k= "<<reg0.getK()<<" c="<<reg0.getC()<<endl
+     <<" LinRegression(vec2,vec1): k= "<<reg1.getK()<<" c="<<reg1.getC()<<endl
+     <<" LinRegression(vec1,vec3): k= "<<reg2.getK()<<" c="<<reg2.getC()<<endl
+     <<" LinRegression(vec1,vec4): k= "<<reg3.getK()<<" c="<<reg3.getC()<<endl
+     <<" LinRegression(vec4,vec5): k= "<<reg4.getK()<<" c="<<reg4.getC()<<endl
+     <<" LinRegression(vec1,vec6): k= "<<reg5.getK()<<" c="<<reg5.getC()<<endl;
+
+   and produces the following output
+
+ Vec 1 : 
+          0      1      2      3      4      5      6      7      8      9 
+ Vec 2 : 
+          0      2      4      6      8     10     12     14     16     18 
+ Vec 3 : 
+         -0     -3     -6     -9    -12    -15    -18    -21    -24    -27 
+ Vec 4 : 
+        1.2    4.1    9.1   13.1    2.1    4.2    9.2   13.2   14.1   14.7 
+ Vec 5 : 
+        1.2   -4.1    9.1  -13.1    2.1   -4.2    9.2  -13.2   14.1  -14.7 
+ Vec 6 : 
+      -14.7  -13.2  -13.1   -4.2   -4.1    1.2    2.1    9.1    9.2   14.1 
+ Correlation(vec1,vec2) = 1
+ Correlation(vec1,vec3) = -1
+ Correlation(vec1,vec4) = 0.710372
+ Correlation(vec4,vec5) = -0.224812
+ Rank Correlation(vec1,vec2) = 1
+ Rank Correlation(vec1,vec3) = -1
+ Rank Correlation(vec1,vec4) = 0.830303
+ Rank Correlation(vec4,vec5) = -0.248485
+ Rank Correlation(vec1,vec6) = 1
+ LinRegression(vec1,vec2): k= 2 c= 0
+ LinRegression(vec2,vec1): k= 0.5 c= 0
+ LinRegression(vec1,vec3): k= -3 c= 0
+ LinRegression(vec1,vec4): k= 1.22667 c= 2.98
+ LinRegression(vec4,vec5): k= -0.441789 c= 2.3952
+
+Statistical note:  Some of these methods assume large sample size.
+	For example, TrivialStatsWithStdDev calculates the standard
+	deviation with n degrees of freedom (n=sample size) rather
+	than n-1; this results in a slightly biased estimate of
+	population std dev, but shouldn't matter much for large
+	n.  Also RankCorrelation omits a small-n correction (commented
+	out, lines 95-96 of rancor.cxx, the correction is called "fac").
+
+New Release: version 2.1 released by Sachin Bansal on 3/30/2000
+	contact: sachin@cs.ucla.edu
+
+       Addition: New package to generate random variables with various 
+	distributions. The changes are in RNG subdirectory. To use the 
+	package, include RNG/include.h and RNG/newran.h. More documentation 
+	is available at RNG/readme.txt 

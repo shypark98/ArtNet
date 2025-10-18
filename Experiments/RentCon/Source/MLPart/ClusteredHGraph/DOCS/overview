@@ -1,0 +1,107 @@
+ClusteredHGraph Overview
+
+
+I) Overview & Use Model
+  - ClusteredHGraph produces a sequence of successivly smaller (fewer nodes)
+	HGraphs from a given HGraph.
+  - ClusteredHGraph maintains a mapping of the nodes in an upper level, to
+	the nodes in the HGraph directly below it.
+  - ClusteredHGraph is designed for use with MultiLevel partitioners, 
+	hopefully it is also easily adaptable to ML placement tools, etc.
+
+II) Class Hierarchy and Design Basics
+
+    BaseClusteredHGraph
+	base object produced by the clustering algorithms.  It contains
+	a vector of pointers to HGraphs, maps between them, and a bit
+	specifying if it owns each of the HGraphs (for instance, it will
+	typically own all but the bottom most HGraph).
+
+	-key interface items:
+	    Parameters class for ClusteredHGraph
+	    BaseClusteredHGraph(const HGraphFixed& leavLevelHG,
+				const Parameters&  params,
+				const Partitioning* fixedConst = NULL,
+				const Partitioning* origPart   = NULL);
+	    const HGraphFixed&  getHGraph(unsigned level);
+	    const Partitioning& getFixedConst(unsigned level);
+	    void  mapPartitionings(const Partitioning& srcPart, 
+				   const Partitioning& destPart,
+				   unsigned level);
+	   
+	-key data items (protected)
+	    vector<HGraphFixed*> _clusteredHGraphs //the bottom level is idx 0.
+	    vector<vector<unsigned> > _clusterMap;
+		//_clusterMap[k] is the mapping from _clusteredHGraphs[k]->
+		//	_clusteredHGraph[k-1] (one level larger) for k >= 1
+	    vector<Partitioning>	_fixedconst;
+	    Partitioning		_topLevel;
+
+    CLHG_ClusterTreeBase : public BaseClusteredHGraph
+	base class to each of the specific clustering algorithms.  
+	It provides functions common to all (or nearly all) clustering
+	algorithms, as well as preparing the data they all operate on.
+
+	-key interface items (protected)
+	   void addClust(const HGFNode& node, PartitionIds fixed, 
+				PartitionIds part); 
+	   void addHGraph();	//take a 'snap-shot' of the clusters,
+				//and add a HGraph to BaseClusteredHGraph's
+				//vector of them
+	   void addTopLevelParttioning();
+
+	   void printStatsHeader();
+	   void printStats();
+	   void doCutOptimalClustering();
+
+
+	-key data items (protected)
+	   unsigned       _nextId;    //Index the next cluster added will get.
+           unsigned       _numLeafClusters;
+
+    	   vector<ClHG_Cluster*> _terminals; //(always leaf clusters, BTW)
+           vector<ClHG_Cluster*> _toCluster; //nodes to cluster
+    	   vector<ClHG_ClNet>    _nets;      //one net for each HGraph net.
+
+    	   RandomRawUnsigned     _rng;
+    	   double                _totalArea;	//total area of all nodes
+    	   double                _minArea;	//area of smallest non-zero
+						//area node
+    	   unsigned              _numTermsToCl; //number of terminals in the
+						//'toCluster' vector
+
+    	   vector<unsigned>      _numContained; 
+				//indexed by net id.  Used in creating
+                                //a new cluster's set of cut nets
+
+
+
+    ClusteredHGraph: public virtual ClHG_ClkusterTreeBase,
+		     protected < all clustering algorithms>
+
+	ClusteredHGraph is the interface object for the package.
+	It contains no data items, only constructors, each of which
+	simply call 'setupTree()', which usues the parameters object
+	to decide which clustering algorithm's 'populateTree' method
+	to call.
+
+
+III) Items to be clarified:
+
+	-ClusteredHGraph takes as arguments both a Partitioning* fixed, and
+	a Partitioning* origPart.  The distinction is:
+
+
+	-a cluster may, in all situations, only cluster with another when
+	(fixed[cluster1] & origPart[cluster1]) & 
+	(fixed[cluster2] & origPart[cluster2]) is not empty. That is,
+	a cluster is restricted to clutering only within the intersectio of
+	it's fixedConstraint partitions, and its original Partitions.
+
+	However, the FixedConstraints partitioning which ClusteredHGraph
+	generates for each level in the tree will only contain the
+	cluster's fixedConstraint partitionIds.  
+
+	The top-level partitioning solution will only contain the cluster's
+	origPartition partitionIds.
+

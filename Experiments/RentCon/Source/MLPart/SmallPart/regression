@@ -1,0 +1,76 @@
+#!/bin/csh -f
+
+#****************************************************************************
+#***
+#***   Copyright (c) 1997 by Max Moroz and ABKGroup, UCLA VLSI CAD Laboratory,
+#***    UCLA Computer Science Department, Los Angeles, CA 90095-1596 USA, 
+#***    and by the Regents of the University of California.    
+#***    All rights reserved.   
+#***
+#***    No portion of this package may be used, copied, or transmitted for
+#***    any purpose, including any research or commercial purpose,
+#***    without the express written consent of Professor Andrew B. Kahng,
+#***    UCLA Computer Science Department, 3713 Boelter Hall, Los Angeles,
+#***    CA 90095-1596 USA.   Any copy made of this file must include this
+#***    notice.    ABKGroup and the Regents of the University of California
+#***    retain title to all copies of this file and/or its compiled
+#***    derivatives.
+#***
+#*****************************************************************************/
+
+set DIFF=/usr/bin/diff
+set WC=/usr/bin/wc
+set PROG=./SmallPartTest 
+
+/bin/rm -f new.out
+/bin/rm -f seeds.{in,out} *.diff >& /dev/null
+/bin/cp -f TESTS/seeds.in ./
+
+echo "------------  Running test 0a..." > new.out
+echo -n Running test 0a...
+${PROG}0.exe  -f TESTS/test2cells.aux >>& new.out
+cat best.sol >> new.out
+rm best.sol
+echo Ok
+
+echo "------------  Running test 0b..." >> new.out
+echo -n Running test 0b...
+${PROG}0.exe  -f TESTS/test12cells.aux >>& new.out
+cat best.sol >> new.out
+rm best.sol
+echo Ok
+
+echo "------------  Running test 0c..." >> new.out
+echo -n Running test 0c...
+${PROG}0.exe  -f TESTS/spp-i872.aux >>& new.out
+cat best.sol >> new.out
+rm best.sol
+echo Ok
+
+echo "------------  Running test 2..." >> new.out
+echo -n Running test 2...
+/bin/rm -f err.log
+/bin/rm -f run.log
+
+foreach  auxfile ( TESTS/*.aux )
+  if ( $auxfile != "TESTS/intel_hang.aux" ) then
+        ( ./SmallPartTest2.exe -f $auxfile >>& run.log ) >>& err.log
+  endif
+end
+
+egrep "(aux|Resulting|iolati|search)" run.log >> new.out
+
+rm err.log
+rm run.log
+rm best.sol
+
+egrep -v "(non-deterministic|seed|arning|Created|sec|User|Platform|Memory us)" new.out > newout.notime
+egrep -v "(non-deterministic|seed|arning|Created|sec|User|Platform|Memory us)" expected.out > expectedout.notime
+$DIFF newout.notime expectedout.notime > diffs.notime
+
+echo " "
+echo Differences from precomputed results
+echo "  lines:  words:  bytes:"
+$WC diffs.notime
+
+/bin/rm -f seeds.{in,out} >& /dev/null

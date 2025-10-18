@@ -1,0 +1,2825 @@
+------- Running Test 0a..
+Reading TESTS/addNetAreM.aux
+Finished reading TESTS/addNetAreM.aux and referenced files
+Saving HGraph as nodes/nets/wts with baseFileName: testOut
+Saving HGraph as netD/AreM with baseFileName: testOut
+# Virtual Memory usage : 3.37891MB (estimate)
+a0      0      0      0      1
+a1      1      1      1      0
+a2      0      0      0      1
+a3      1      1      1      0
+a4      0      0      0      1
+a5      1      1      1      0
+a6      0      0      0      1
+a7      1      1      1      0
+a8      0      0      0      1
+a9      1      1      1      0
+a10      0      0      0      1
+a11      1      1      1      0
+a12      0      0      0      1
+a13      1      1      1      0
+a14      0      0      0      1
+a15      1      1      1      0
+a16      0      0      0      1
+a17      1      1      1      0
+a18      0      0      0      1
+a19      1      1      1      0
+a20      0      0      0      1
+a21      1      1      1      0
+a22      0      0      0      1
+a23      1      1      1      0
+a24      0      0      0      1
+a25      1      1      1      0
+a26      0      0      0      1
+a27      1      1      1      0
+a28      0      0      0      1
+a29      1      1      1      0
+a30      1      1      1      0
+a31      1      1      1      0
+a32      0      1      1      0
+a33      0      1      1      0
+a34      0      1      1      0
+a35      0      1      1      0
+a36      0      1      1      0
+a37      0      1      1      0
+a38      0      1      1      0
+a39      0      1      1      0
+a40      0      1      1      0
+a41      0      1      1      0
+a42      0      1      1      0
+a43      0      1      1      0
+a44      0      1      1      0
+a45      0      1      1      0
+a46      0      1      1      0
+a47      0      1      1      0
+a48      0      1      1      0
+a49      0      1      1      0
+a50      0      1      1      0
+a51      0      1      1      0
+a52      0      1      1      0
+a53      0      1      1      0
+a54      0      1      1      0
+a55      0      1      1      0
+a56      0      1      1      0
+a57      0      1      1      0
+a58      0      1      1      0
+a59      0      1      0      0
+a60      0      0      1      0
+a61      0      1      0      0
+a62      0      0      1      0
+a63      0      0      1      0
+p1      0      0      0      0
+p2      0      0      0      0
+p3      0      0      0      0
+p4      0      0      0      0
+p5      0      0      0      0
+p6      0      0      0      0
+p7      0      0      0      0
+p8      0      0      0      0
+p9      0      0      0      0
+p10      0      0      0      0
+p11      0      0      0      0
+p12      0      0      0      0
+p13      0      0      0      0
+p14      0      0      0      0
+p15      0      0      0      0
+p16      0      0      0      0
+p17      0      0      0      0
+p18      0      0      0      0
+p19      0      0      0      0
+p20      0      0      0      0
+p21      0      0      0      0
+p22      0      0      0      0
+p23      0      0      0      0
+p24      0      0      0      0
+p25      0      0      0      0
+p26      0      0      0      0
+p27      0      0      0      0
+p28      0      0      0      0
+p29      0      0      0      0
+p30      0      0      0      0
+p31      0      0      0      0
+p32      0      0      0      0
+p33      0      0      0      0
+p34      0      0      0      0
+p35      0      0      0      0
+p36      0      0      0      0
+p37      0      0      0      0
+p38      0      0      0      0
+p39      0      0      0      0
+p40      0      0      0      0
+p41      0      0      0      0
+p42      0      0      0      0
+p43      0      0      0      0
+p44      0      0      0      0
+p45      0      0      0      0
+p46      0      0      0      0
+p47      0      0      0      0
+
+HGraph : testOut.netD  testOut.areM
+0
+358
+109
+111
+63
+a52 s B
+a21 l B
+a2 l B
+a59 s B
+a52 l B
+a21 l B
+a54 s B
+a45 l B
+a57 s B
+a30 l B
+a11 l B
+a9 l B
+a4 l B
+a56 s B
+a45 l B
+a29 l B
+a11 l B
+a7 l B
+a44 s B
+a5 l B
+a62 s B
+a49 l B
+a47 l B
+a6 l B
+a61 s B
+a50 l B
+a48 l B
+a44 l B
+a50 s B
+a49 l B
+a43 l B
+a48 s B
+a47 l B
+a8 l B
+a48 s B
+a47 l B
+a43 l B
+a52 s B
+a42 l B
+a25 s B
+a21 l B
+a19 l B
+a0 l B
+a42 s B
+a25 l B
+a21 l B
+a19 l B
+a41 s B
+a11 l B
+a57 s B
+a56 l B
+a30 l B
+a29 l B
+a10 l B
+a9 l B
+a7 l B
+a57 s B
+a56 l B
+a41 l B
+a30 l B
+a29 l B
+a9 l B
+a7 l B
+a62 s B
+a61 l B
+a40 l B
+a50 s B
+a49 l B
+a48 l B
+a47 l B
+a12 l B
+a50 s B
+a49 l B
+a48 l B
+a47 l B
+a40 l B
+a39 s B
+a15 l B
+a13 l B
+a31 s B
+a27 l B
+a14 l B
+a39 s B
+a31 l B
+a27 l B
+a38 s B
+a21 l B
+a25 s B
+a19 l B
+a16 l B
+a38 s B
+a25 l B
+a19 l B
+a57 s B
+a56 l B
+a37 l B
+a30 s B
+a29 l B
+a18 l B
+a9 l B
+a7 l B
+a37 s B
+a30 l B
+a29 l B
+a9 l B
+a7 l B
+a36 s B
+a17 l B
+a31 s B
+a27 l B
+a20 l B
+a15 l B
+a13 l B
+a36 s B
+a31 l B
+a27 l B
+a15 l B
+a13 l B
+a53 s B
+a35 l B
+a31 s B
+a27 l B
+a22 l B
+a17 l B
+a15 l B
+a13 l B
+a35 s B
+a31 l B
+a27 l B
+a17 l B
+a15 l B
+a13 l B
+a34 s B
+a19 l B
+a25 s B
+a24 l B
+a34 s B
+a25 l B
+a33 s B
+a9 l B
+a7 l B
+a30 s B
+a29 l B
+a26 l B
+a33 s B
+a30 l B
+a29 l B
+a60 s B
+a32 l B
+a53 s B
+a31 l B
+a28 l B
+a17 l B
+a15 l B
+a53 s B
+a32 l B
+a27 l B
+a17 l B
+a13 l B
+a58 s B
+a55 l B
+a54 l B
+a31 l B
+a23 l B
+a11 l B
+a5 l B
+a3 l B
+a1 l B
+a30 s B
+a23 l B
+a5 l B
+a3 l B
+a1 l B
+a29 s B
+a23 l B
+a5 l B
+a3 l B
+a1 l B
+a58 s B
+a55 l B
+a54 l B
+a27 l B
+a23 l B
+a11 l B
+a5 l B
+a3 l B
+a1 l B
+a47 s B
+a23 l B
+a48 s B
+a23 l B
+a49 s B
+a1 l B
+a50 s B
+a1 l B
+a63 s B
+a60 l B
+a58 l B
+a55 l B
+a54 l B
+a53 l B
+a25 l B
+a23 l B
+a17 l B
+a11 l B
+a5 l B
+a3 l B
+a1 l B
+a46 s B
+a25 l B
+a19 l B
+a63 s B
+a15 l B
+a63 s B
+a13 l B
+a57 s B
+a55 l B
+a56 s B
+a55 l B
+a58 s B
+a9 l B
+a58 s B
+a7 l B
+a62 s B
+a3 l B
+a61 s B
+a3 l B
+a59 s B
+a51 l B
+a46 l B
+p1 l B
+a2 l B
+a42 s B
+p2 l B
+a0 l B
+a38 s B
+p3 l B
+a16 l B
+a34 s B
+p4 l B
+a24 l B
+a32 s B
+p5 l B
+a28 l B
+a35 s B
+p6 l B
+a22 l B
+a36 s B
+p7 l B
+a20 l B
+a39 s B
+p8 l B
+a14 l B
+a45 s B
+p9 l B
+a4 l B
+a41 s B
+p10 l B
+a10 l B
+a37 s B
+p11 l B
+a18 l B
+a33 s B
+p12 l B
+a26 l B
+a44 s B
+p13 l B
+a6 l B
+a40 s B
+p14 l B
+a12 l B
+a43 s B
+p15 l B
+a8 l B
+a59 s B
+a51 l B
+a46 l B
+p16 l B
+a2 l B
+a42 s B
+p17 l B
+a0 l B
+a38 s B
+p18 l B
+a16 l B
+a34 s B
+p19 l B
+a24 l B
+a32 s B
+p20 l B
+a28 l B
+a35 s B
+p21 l B
+a22 l B
+a36 s B
+p22 l B
+a20 l B
+a39 s B
+p23 l B
+a14 l B
+a45 s B
+p24 l B
+a4 l B
+a41 s B
+p25 l B
+a10 l B
+a37 s B
+p26 l B
+a18 l B
+a33 s B
+p27 l B
+a26 l B
+a44 s B
+p28 l B
+a6 l B
+a40 s B
+p29 l B
+a12 l B
+a43 s B
+p30 l B
+a8 l B
+a52 s B
+a51 l B
+a46 l B
+p31 l B
+a21 l B
+a51 s B
+p32 l B
+a52 s B
+p33 l B
+p34 s B
+a21 l B
+p35 s B
+a19 l B
+a60 s B
+p36 l B
+a53 s B
+p37 l B
+p38 s B
+a17 l B
+a63 s B
+p39 l B
+a54 s B
+p40 l B
+p41 s B
+a11 l B
+a55 s B
+p42 l B
+a58 s B
+p43 l B
+p44 s B
+a5 l B
+p45 s B
+a3 l B
+p46 s B
+a1 l B
+p47 s B
+a23 l B
+
+UCLA nets 1.0
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNets : 109
+NumPins : 358
+NetDegree : 3 
+a52 B
+a21 B
+a2 B
+NetDegree : 3 
+a59 B
+a52 B
+a21 B
+NetDegree : 2 
+a54 B
+a45 B
+NetDegree : 5 
+a57 B
+a30 B
+a11 B
+a9 B
+a4 B
+NetDegree : 5 
+a56 B
+a45 B
+a29 B
+a11 B
+a7 B
+NetDegree : 2 
+a44 B
+a5 B
+NetDegree : 4 
+a62 B
+a49 B
+a47 B
+a6 B
+NetDegree : 4 
+a61 B
+a50 B
+a48 B
+a44 B
+NetDegree : 3 
+a50 B
+a49 B
+a43 B
+NetDegree : 3 
+a48 B
+a47 B
+a8 B
+NetDegree : 3 
+a48 B
+a47 B
+a43 B
+NetDegree : 2 
+a52 B
+a42 B
+NetDegree : 4 
+a25 B
+a21 B
+a19 B
+a0 B
+NetDegree : 4 
+a42 B
+a25 B
+a21 B
+a19 B
+NetDegree : 2 
+a41 B
+a11 B
+NetDegree : 7 
+a57 B
+a56 B
+a30 B
+a29 B
+a10 B
+a9 B
+a7 B
+NetDegree : 7 
+a57 B
+a56 B
+a41 B
+a30 B
+a29 B
+a9 B
+a7 B
+NetDegree : 3 
+a62 B
+a61 B
+a40 B
+NetDegree : 5 
+a50 B
+a49 B
+a48 B
+a47 B
+a12 B
+NetDegree : 5 
+a50 B
+a49 B
+a48 B
+a47 B
+a40 B
+NetDegree : 3 
+a39 B
+a15 B
+a13 B
+NetDegree : 3 
+a31 B
+a27 B
+a14 B
+NetDegree : 3 
+a39 B
+a31 B
+a27 B
+NetDegree : 2 
+a38 B
+a21 B
+NetDegree : 3 
+a25 B
+a19 B
+a16 B
+NetDegree : 3 
+a38 B
+a25 B
+a19 B
+NetDegree : 3 
+a57 B
+a56 B
+a37 B
+NetDegree : 5 
+a30 B
+a29 B
+a18 B
+a9 B
+a7 B
+NetDegree : 5 
+a37 B
+a30 B
+a29 B
+a9 B
+a7 B
+NetDegree : 2 
+a36 B
+a17 B
+NetDegree : 5 
+a31 B
+a27 B
+a20 B
+a15 B
+a13 B
+NetDegree : 5 
+a36 B
+a31 B
+a27 B
+a15 B
+a13 B
+NetDegree : 2 
+a53 B
+a35 B
+NetDegree : 6 
+a31 B
+a27 B
+a22 B
+a17 B
+a15 B
+a13 B
+NetDegree : 6 
+a35 B
+a31 B
+a27 B
+a17 B
+a15 B
+a13 B
+NetDegree : 2 
+a34 B
+a19 B
+NetDegree : 2 
+a25 B
+a24 B
+NetDegree : 2 
+a34 B
+a25 B
+NetDegree : 3 
+a33 B
+a9 B
+a7 B
+NetDegree : 3 
+a30 B
+a29 B
+a26 B
+NetDegree : 3 
+a33 B
+a30 B
+a29 B
+NetDegree : 2 
+a60 B
+a32 B
+NetDegree : 5 
+a53 B
+a31 B
+a28 B
+a17 B
+a15 B
+NetDegree : 5 
+a53 B
+a32 B
+a27 B
+a17 B
+a13 B
+NetDegree : 9 
+a58 B
+a55 B
+a54 B
+a31 B
+a23 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 5 
+a30 B
+a23 B
+a5 B
+a3 B
+a1 B
+NetDegree : 5 
+a29 B
+a23 B
+a5 B
+a3 B
+a1 B
+NetDegree : 9 
+a58 B
+a55 B
+a54 B
+a27 B
+a23 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 2 
+a47 B
+a23 B
+NetDegree : 2 
+a48 B
+a23 B
+NetDegree : 2 
+a49 B
+a1 B
+NetDegree : 2 
+a50 B
+a1 B
+NetDegree : 13 
+a63 B
+a60 B
+a58 B
+a55 B
+a54 B
+a53 B
+a25 B
+a23 B
+a17 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 3 
+a46 B
+a25 B
+a19 B
+NetDegree : 2 
+a63 B
+a15 B
+NetDegree : 2 
+a63 B
+a13 B
+NetDegree : 2 
+a57 B
+a55 B
+NetDegree : 2 
+a56 B
+a55 B
+NetDegree : 2 
+a58 B
+a9 B
+NetDegree : 2 
+a58 B
+a7 B
+NetDegree : 2 
+a62 B
+a3 B
+NetDegree : 2 
+a61 B
+a3 B
+NetDegree : 5 
+a59 B
+a51 B
+a46 B
+p1 B
+a2 B
+NetDegree : 3 
+a42 B
+p2 B
+a0 B
+NetDegree : 3 
+a38 B
+p3 B
+a16 B
+NetDegree : 3 
+a34 B
+p4 B
+a24 B
+NetDegree : 3 
+a32 B
+p5 B
+a28 B
+NetDegree : 3 
+a35 B
+p6 B
+a22 B
+NetDegree : 3 
+a36 B
+p7 B
+a20 B
+NetDegree : 3 
+a39 B
+p8 B
+a14 B
+NetDegree : 3 
+a45 B
+p9 B
+a4 B
+NetDegree : 3 
+a41 B
+p10 B
+a10 B
+NetDegree : 3 
+a37 B
+p11 B
+a18 B
+NetDegree : 3 
+a33 B
+p12 B
+a26 B
+NetDegree : 3 
+a44 B
+p13 B
+a6 B
+NetDegree : 3 
+a40 B
+p14 B
+a12 B
+NetDegree : 3 
+a43 B
+p15 B
+a8 B
+NetDegree : 5 
+a59 B
+a51 B
+a46 B
+p16 B
+a2 B
+NetDegree : 3 
+a42 B
+p17 B
+a0 B
+NetDegree : 3 
+a38 B
+p18 B
+a16 B
+NetDegree : 3 
+a34 B
+p19 B
+a24 B
+NetDegree : 3 
+a32 B
+p20 B
+a28 B
+NetDegree : 3 
+a35 B
+p21 B
+a22 B
+NetDegree : 3 
+a36 B
+p22 B
+a20 B
+NetDegree : 3 
+a39 B
+p23 B
+a14 B
+NetDegree : 3 
+a45 B
+p24 B
+a4 B
+NetDegree : 3 
+a41 B
+p25 B
+a10 B
+NetDegree : 3 
+a37 B
+p26 B
+a18 B
+NetDegree : 3 
+a33 B
+p27 B
+a26 B
+NetDegree : 3 
+a44 B
+p28 B
+a6 B
+NetDegree : 3 
+a40 B
+p29 B
+a12 B
+NetDegree : 3 
+a43 B
+p30 B
+a8 B
+NetDegree : 5 
+a52 B
+a51 B
+a46 B
+p31 B
+a21 B
+NetDegree : 2 
+a51 B
+p32 B
+NetDegree : 2 
+a52 B
+p33 B
+NetDegree : 2 
+p34 B
+a21 B
+NetDegree : 2 
+p35 B
+a19 B
+NetDegree : 2 
+a60 B
+p36 B
+NetDegree : 2 
+a53 B
+p37 B
+NetDegree : 2 
+p38 B
+a17 B
+NetDegree : 2 
+a63 B
+p39 B
+NetDegree : 2 
+a54 B
+p40 B
+NetDegree : 2 
+p41 B
+a11 B
+NetDegree : 2 
+a55 B
+p42 B
+NetDegree : 2 
+a58 B
+p43 B
+NetDegree : 2 
+p44 B
+a5 B
+NetDegree : 2 
+p45 B
+a3 B
+NetDegree : 2 
+p46 B
+a1 B
+NetDegree : 2 
+p47 B
+a23 B
+
+UCLA nodes 1.0 
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNodes :              111
+NumTerminals :           47
+p1 terminal
+p2 terminal
+p3 terminal
+p4 terminal
+p5 terminal
+p6 terminal
+p7 terminal
+p8 terminal
+p9 terminal
+p10 terminal
+p11 terminal
+p12 terminal
+p13 terminal
+p14 terminal
+p15 terminal
+p16 terminal
+p17 terminal
+p18 terminal
+p19 terminal
+p20 terminal
+p21 terminal
+p22 terminal
+p23 terminal
+p24 terminal
+p25 terminal
+p26 terminal
+p27 terminal
+p28 terminal
+p29 terminal
+p30 terminal
+p31 terminal
+p32 terminal
+p33 terminal
+p34 terminal
+p35 terminal
+p36 terminal
+p37 terminal
+p38 terminal
+p39 terminal
+p40 terminal
+p41 terminal
+p42 terminal
+p43 terminal
+p44 terminal
+p45 terminal
+p46 terminal
+p47 terminal
+a0
+a1
+a2
+a3
+a4
+a5
+a6
+a7
+a8
+a9
+a10
+a11
+a12
+a13
+a14
+a15
+a16
+a17
+a18
+a19
+a20
+a21
+a22
+a23
+a24
+a25
+a26
+a27
+a28
+a29
+a30
+a31
+a32
+a33
+a34
+a35
+a36
+a37
+a38
+a39
+a40
+a41
+a42
+a43
+a44
+a45
+a46
+a47
+a48
+a49
+a50
+a51
+a52
+a53
+a54
+a55
+a56
+a57
+a58
+a59
+a60
+a61
+a62
+a63
+UCLA wts 1.0
+    a0      0      0      0      1
+    a1      1      1      1      0
+    a2      0      0      0      1
+    a3      1      1      1      0
+    a4      0      0      0      1
+    a5      1      1      1      0
+    a6      0      0      0      1
+    a7      1      1      1      0
+    a8      0      0      0      1
+    a9      1      1      1      0
+   a10      0      0      0      1
+   a11      1      1      1      0
+   a12      0      0      0      1
+   a13      1      1      1      0
+   a14      0      0      0      1
+   a15      1      1      1      0
+   a16      0      0      0      1
+   a17      1      1      1      0
+   a18      0      0      0      1
+   a19      1      1      1      0
+   a20      0      0      0      1
+   a21      1      1      1      0
+   a22      0      0      0      1
+   a23      1      1      1      0
+   a24      0      0      0      1
+   a25      1      1      1      0
+   a26      0      0      0      1
+   a27      1      1      1      0
+   a28      0      0      0      1
+   a29      1      1      1      0
+   a30      1      1      1      0
+   a31      1      1      1      0
+   a32      0      1      1      0
+   a33      0      1      1      0
+   a34      0      1      1      0
+   a35      0      1      1      0
+   a36      0      1      1      0
+   a37      0      1      1      0
+   a38      0      1      1      0
+   a39      0      1      1      0
+   a40      0      1      1      0
+   a41      0      1      1      0
+   a42      0      1      1      0
+   a43      0      1      1      0
+   a44      0      1      1      0
+   a45      0      1      1      0
+   a46      0      1      1      0
+   a47      0      1      1      0
+   a48      0      1      1      0
+   a49      0      1      1      0
+   a50      0      1      1      0
+   a51      0      1      1      0
+   a52      0      1      1      0
+   a53      0      1      1      0
+   a54      0      1      1      0
+   a55      0      1      1      0
+   a56      0      1      1      0
+   a57      0      1      1      0
+   a58      0      1      1      0
+   a59      0      1      0      0
+   a60      0      0      1      0
+   a61      0      1      0      0
+   a62      0      0      1      0
+   a63      0      0      1      0
+    p1      0      0      0      0
+    p2      0      0      0      0
+    p3      0      0      0      0
+    p4      0      0      0      0
+    p5      0      0      0      0
+    p6      0      0      0      0
+    p7      0      0      0      0
+    p8      0      0      0      0
+    p9      0      0      0      0
+   p10      0      0      0      0
+   p11      0      0      0      0
+   p12      0      0      0      0
+   p13      0      0      0      0
+   p14      0      0      0      0
+   p15      0      0      0      0
+   p16      0      0      0      0
+   p17      0      0      0      0
+   p18      0      0      0      0
+   p19      0      0      0      0
+   p20      0      0      0      0
+   p21      0      0      0      0
+   p22      0      0      0      0
+   p23      0      0      0      0
+   p24      0      0      0      0
+   p25      0      0      0      0
+   p26      0      0      0      0
+   p27      0      0      0      0
+   p28      0      0      0      0
+   p29      0      0      0      0
+   p30      0      0      0      0
+   p31      0      0      0      0
+   p32      0      0      0      0
+   p33      0      0      0      0
+   p34      0      0      0      0
+   p35      0      0      0      0
+   p36      0      0      0      0
+   p37      0      0      0      0
+   p38      0      0      0      0
+   p39      0      0      0      0
+   p40      0      0      0      0
+   p41      0      0      0      0
+   p42      0      0      0      0
+   p43      0      0      0      0
+   p44      0      0      0      0
+   p45      0      0      0      0
+   p46      0      0      0      0
+   p47      0      0      0      0
+
+------- Running Test 0b..
+Reading TESTS/addNetsNodes.aux
+ Reading TESTS/add.nodes ... 
+ Reading TESTS/add.nets ... 
+ Reading TESTS/add.wts ... 
+Finished reading TESTS/addNetsNodes.aux and referenced files
+Saving HGraph as nodes/nets/wts with baseFileName: testOut
+Saving HGraph as netD/AreM with baseFileName: testOut
+# Virtual Memory usage : 3.73047MB (estimate)
+a0      0      0      0      1
+a1      1      1      1      0
+a2      0      0      0      1
+a3      1      1      1      0
+a4      0      0      0      1
+a5      1      1      1      0
+a6      0      0      0      1
+a7      1      1      1      0
+a8      0      0      0      1
+a9      1      1      1      0
+a10      0      0      0      1
+a11      1      1      1      0
+a12      0      0      0      1
+a13      1      1      1      0
+a14      0      0      0      1
+a15      1      1      1      0
+a16      0      0      0      1
+a17      1      1      1      0
+a18      0      0      0      1
+a19      1      1      1      0
+a20      0      0      0      1
+a21      1      1      1      0
+a22      0      0      0      1
+a23      1      1      1      0
+a24      0      0      0      1
+a25      1      1      1      0
+a26      0      0      0      1
+a27      1      1      1      0
+a28      0      0      0      1
+a29      1      1      1      0
+a30      1      1      1      0
+a31      1      1      1      0
+a32      0      1      1      0
+a33      0      1      1      0
+a34      0      1      1      0
+a35      0      1      1      0
+a36      0      1      1      0
+a37      0      1      1      0
+a38      0      1      1      0
+a39      0      1      1      0
+a40      0      1      1      0
+a41      0      1      1      0
+a42      0      1      1      0
+a43      0      1      1      0
+a44      0      1      1      0
+a45      0      1      1      0
+a46      0      1      1      0
+a47      0      1      1      0
+a48      0      1      1      0
+a49      0      1      1      0
+a50      0      1      1      0
+a51      0      1      1      0
+a52      0      1      1      0
+a53      0      1      1      0
+a54      0      1      1      0
+a55      0      1      1      0
+a56      0      1      1      0
+a57      0      1      1      0
+a58      0      1      1      0
+a59      0      1      0      0
+a60      0      0      1      0
+a61      0      1      0      0
+a62      0      0      1      0
+a63      0      0      1      0
+p1      0      0      0      0
+p2      0      0      0      0
+p3      0      0      0      0
+p4      0      0      0      0
+p5      0      0      0      0
+p6      0      0      0      0
+p7      0      0      0      0
+p8      0      0      0      0
+p9      0      0      0      0
+p10      0      0      0      0
+p11      0      0      0      0
+p12      0      0      0      0
+p13      0      0      0      0
+p14      0      0      0      0
+p15      0      0      0      0
+p16      0      0      0      0
+p17      0      0      0      0
+p18      0      0      0      0
+p19      0      0      0      0
+p20      0      0      0      0
+p21      0      0      0      0
+p22      0      0      0      0
+p23      0      0      0      0
+p24      0      0      0      0
+p25      0      0      0      0
+p26      0      0      0      0
+p27      0      0      0      0
+p28      0      0      0      0
+p29      0      0      0      0
+p30      0      0      0      0
+p31      0      0      0      0
+p32      0      0      0      0
+p33      0      0      0      0
+p34      0      0      0      0
+p35      0      0      0      0
+p36      0      0      0      0
+p37      0      0      0      0
+p38      0      0      0      0
+p39      0      0      0      0
+p40      0      0      0      0
+p41      0      0      0      0
+p42      0      0      0      0
+p43      0      0      0      0
+p44      0      0      0      0
+p45      0      0      0      0
+p46      0      0      0      0
+p47      0      0      0      0
+
+HGraph : testOut.netD  testOut.areM
+0
+358
+109
+111
+63
+a52 s B
+a21 l B
+a2 l B
+a59 s B
+a52 l B
+a21 l B
+a54 s B
+a45 l B
+a57 s B
+a30 l B
+a11 l B
+a9 l B
+a4 l B
+a56 s B
+a45 l B
+a29 l B
+a11 l B
+a7 l B
+a44 s B
+a5 l B
+a62 s B
+a49 l B
+a47 l B
+a6 l B
+a61 s B
+a50 l B
+a48 l B
+a44 l B
+a50 s B
+a49 l B
+a43 l B
+a48 s B
+a47 l B
+a8 l B
+a48 s B
+a47 l B
+a43 l B
+a52 s B
+a42 l B
+a25 s B
+a21 l B
+a19 l B
+a0 l B
+a42 s B
+a25 l B
+a21 l B
+a19 l B
+a41 s B
+a11 l B
+a57 s B
+a56 l B
+a30 l B
+a29 l B
+a10 l B
+a9 l B
+a7 l B
+a57 s B
+a56 l B
+a41 l B
+a30 l B
+a29 l B
+a9 l B
+a7 l B
+a62 s B
+a61 l B
+a40 l B
+a50 s B
+a49 l B
+a48 l B
+a47 l B
+a12 l B
+a50 s B
+a49 l B
+a48 l B
+a47 l B
+a40 l B
+a39 s B
+a15 l B
+a13 l B
+a31 s B
+a27 l B
+a14 l B
+a39 s B
+a31 l B
+a27 l B
+a38 s B
+a21 l B
+a25 s B
+a19 l B
+a16 l B
+a38 s B
+a25 l B
+a19 l B
+a57 s B
+a56 l B
+a37 l B
+a30 s B
+a29 l B
+a18 l B
+a9 l B
+a7 l B
+a37 s B
+a30 l B
+a29 l B
+a9 l B
+a7 l B
+a36 s B
+a17 l B
+a31 s B
+a27 l B
+a20 l B
+a15 l B
+a13 l B
+a36 s B
+a31 l B
+a27 l B
+a15 l B
+a13 l B
+a53 s B
+a35 l B
+a31 s B
+a27 l B
+a22 l B
+a17 l B
+a15 l B
+a13 l B
+a35 s B
+a31 l B
+a27 l B
+a17 l B
+a15 l B
+a13 l B
+a34 s B
+a19 l B
+a25 s B
+a24 l B
+a34 s B
+a25 l B
+a33 s B
+a9 l B
+a7 l B
+a30 s B
+a29 l B
+a26 l B
+a33 s B
+a30 l B
+a29 l B
+a60 s B
+a32 l B
+a53 s B
+a31 l B
+a28 l B
+a17 l B
+a15 l B
+a53 s B
+a32 l B
+a27 l B
+a17 l B
+a13 l B
+a58 s B
+a55 l B
+a54 l B
+a31 l B
+a23 l B
+a11 l B
+a5 l B
+a3 l B
+a1 l B
+a30 s B
+a23 l B
+a5 l B
+a3 l B
+a1 l B
+a29 s B
+a23 l B
+a5 l B
+a3 l B
+a1 l B
+a58 s B
+a55 l B
+a54 l B
+a27 l B
+a23 l B
+a11 l B
+a5 l B
+a3 l B
+a1 l B
+a47 s B
+a23 l B
+a48 s B
+a23 l B
+a49 s B
+a1 l B
+a50 s B
+a1 l B
+a63 s B
+a60 l B
+a58 l B
+a55 l B
+a54 l B
+a53 l B
+a25 l B
+a23 l B
+a17 l B
+a11 l B
+a5 l B
+a3 l B
+a1 l B
+a46 s B
+a25 l B
+a19 l B
+a63 s B
+a15 l B
+a63 s B
+a13 l B
+a57 s B
+a55 l B
+a56 s B
+a55 l B
+a58 s B
+a9 l B
+a58 s B
+a7 l B
+a62 s B
+a3 l B
+a61 s B
+a3 l B
+a59 s B
+a51 l B
+a46 l B
+p1 l B
+a2 l B
+a42 s B
+p2 l B
+a0 l B
+a38 s B
+p3 l B
+a16 l B
+a34 s B
+p4 l B
+a24 l B
+a32 s B
+p5 l B
+a28 l B
+a35 s B
+p6 l B
+a22 l B
+a36 s B
+p7 l B
+a20 l B
+a39 s B
+p8 l B
+a14 l B
+a45 s B
+p9 l B
+a4 l B
+a41 s B
+p10 l B
+a10 l B
+a37 s B
+p11 l B
+a18 l B
+a33 s B
+p12 l B
+a26 l B
+a44 s B
+p13 l B
+a6 l B
+a40 s B
+p14 l B
+a12 l B
+a43 s B
+p15 l B
+a8 l B
+a59 s B
+a51 l B
+a46 l B
+p16 l B
+a2 l B
+a42 s B
+p17 l B
+a0 l B
+a38 s B
+p18 l B
+a16 l B
+a34 s B
+p19 l B
+a24 l B
+a32 s B
+p20 l B
+a28 l B
+a35 s B
+p21 l B
+a22 l B
+a36 s B
+p22 l B
+a20 l B
+a39 s B
+p23 l B
+a14 l B
+a45 s B
+p24 l B
+a4 l B
+a41 s B
+p25 l B
+a10 l B
+a37 s B
+p26 l B
+a18 l B
+a33 s B
+p27 l B
+a26 l B
+a44 s B
+p28 l B
+a6 l B
+a40 s B
+p29 l B
+a12 l B
+a43 s B
+p30 l B
+a8 l B
+a52 s B
+a51 l B
+a46 l B
+p31 l B
+a21 l B
+a51 s B
+p32 l B
+a52 s B
+p33 l B
+p34 s B
+a21 l B
+p35 s B
+a19 l B
+a60 s B
+p36 l B
+a53 s B
+p37 l B
+p38 s B
+a17 l B
+a63 s B
+p39 l B
+a54 s B
+p40 l B
+p41 s B
+a11 l B
+a55 s B
+p42 l B
+a58 s B
+p43 l B
+p44 s B
+a5 l B
+p45 s B
+a3 l B
+p46 s B
+a1 l B
+p47 s B
+a23 l B
+
+UCLA nets 1.0
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNets : 109
+NumPins : 358
+NetDegree : 3       netX
+a52 B
+a21 B
+a2 B
+NetDegree : 3       netY
+a59 B
+a52 B
+a21 B
+NetDegree : 2       netZ
+a54 B
+a45 B
+NetDegree : 5 
+a57 B
+a30 B
+a11 B
+a9 B
+a4 B
+NetDegree : 5 
+a56 B
+a45 B
+a29 B
+a11 B
+a7 B
+NetDegree : 2 
+a44 B
+a5 B
+NetDegree : 4 
+a62 B
+a49 B
+a47 B
+a6 B
+NetDegree : 4 
+a61 B
+a50 B
+a48 B
+a44 B
+NetDegree : 3 
+a50 B
+a49 B
+a43 B
+NetDegree : 3 
+a48 B
+a47 B
+a8 B
+NetDegree : 3 
+a48 B
+a47 B
+a43 B
+NetDegree : 2 
+a52 B
+a42 B
+NetDegree : 4 
+a25 B
+a21 B
+a19 B
+a0 B
+NetDegree : 4 
+a42 B
+a25 B
+a21 B
+a19 B
+NetDegree : 2 
+a41 B
+a11 B
+NetDegree : 7 
+a57 B
+a56 B
+a30 B
+a29 B
+a10 B
+a9 B
+a7 B
+NetDegree : 7 
+a57 B
+a56 B
+a41 B
+a30 B
+a29 B
+a9 B
+a7 B
+NetDegree : 3 
+a62 B
+a61 B
+a40 B
+NetDegree : 5 
+a50 B
+a49 B
+a48 B
+a47 B
+a12 B
+NetDegree : 5 
+a50 B
+a49 B
+a48 B
+a47 B
+a40 B
+NetDegree : 3 
+a39 B
+a15 B
+a13 B
+NetDegree : 3 
+a31 B
+a27 B
+a14 B
+NetDegree : 3 
+a39 B
+a31 B
+a27 B
+NetDegree : 2 
+a38 B
+a21 B
+NetDegree : 3 
+a25 B
+a19 B
+a16 B
+NetDegree : 3 
+a38 B
+a25 B
+a19 B
+NetDegree : 3 
+a57 B
+a56 B
+a37 B
+NetDegree : 5 
+a30 B
+a29 B
+a18 B
+a9 B
+a7 B
+NetDegree : 5 
+a37 B
+a30 B
+a29 B
+a9 B
+a7 B
+NetDegree : 2 
+a36 B
+a17 B
+NetDegree : 5 
+a31 B
+a27 B
+a20 B
+a15 B
+a13 B
+NetDegree : 5 
+a36 B
+a31 B
+a27 B
+a15 B
+a13 B
+NetDegree : 2 
+a53 B
+a35 B
+NetDegree : 6 
+a31 B
+a27 B
+a22 B
+a17 B
+a15 B
+a13 B
+NetDegree : 6 
+a35 B
+a31 B
+a27 B
+a17 B
+a15 B
+a13 B
+NetDegree : 2 
+a34 B
+a19 B
+NetDegree : 2 
+a25 B
+a24 B
+NetDegree : 2 
+a34 B
+a25 B
+NetDegree : 3 
+a33 B
+a9 B
+a7 B
+NetDegree : 3 
+a30 B
+a29 B
+a26 B
+NetDegree : 3 
+a33 B
+a30 B
+a29 B
+NetDegree : 2 
+a60 B
+a32 B
+NetDegree : 5 
+a53 B
+a31 B
+a28 B
+a17 B
+a15 B
+NetDegree : 5 
+a53 B
+a32 B
+a27 B
+a17 B
+a13 B
+NetDegree : 9 
+a58 B
+a55 B
+a54 B
+a31 B
+a23 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 5 
+a30 B
+a23 B
+a5 B
+a3 B
+a1 B
+NetDegree : 5 
+a29 B
+a23 B
+a5 B
+a3 B
+a1 B
+NetDegree : 9 
+a58 B
+a55 B
+a54 B
+a27 B
+a23 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 2 
+a47 B
+a23 B
+NetDegree : 2 
+a48 B
+a23 B
+NetDegree : 2 
+a49 B
+a1 B
+NetDegree : 2 
+a50 B
+a1 B
+NetDegree : 13 
+a63 B
+a60 B
+a58 B
+a55 B
+a54 B
+a53 B
+a25 B
+a23 B
+a17 B
+a11 B
+a5 B
+a3 B
+a1 B
+NetDegree : 3 
+a46 B
+a25 B
+a19 B
+NetDegree : 2 
+a63 B
+a15 B
+NetDegree : 2 
+a63 B
+a13 B
+NetDegree : 2 
+a57 B
+a55 B
+NetDegree : 2 
+a56 B
+a55 B
+NetDegree : 2 
+a58 B
+a9 B
+NetDegree : 2 
+a58 B
+a7 B
+NetDegree : 2 
+a62 B
+a3 B
+NetDegree : 2 
+a61 B
+a3 B
+NetDegree : 5 
+a59 B
+a51 B
+a46 B
+p1 B
+a2 B
+NetDegree : 3 
+a42 B
+p2 B
+a0 B
+NetDegree : 3 
+a38 B
+p3 B
+a16 B
+NetDegree : 3 
+a34 B
+p4 B
+a24 B
+NetDegree : 3 
+a32 B
+p5 B
+a28 B
+NetDegree : 3 
+a35 B
+p6 B
+a22 B
+NetDegree : 3 
+a36 B
+p7 B
+a20 B
+NetDegree : 3 
+a39 B
+p8 B
+a14 B
+NetDegree : 3 
+a45 B
+p9 B
+a4 B
+NetDegree : 3 
+a41 B
+p10 B
+a10 B
+NetDegree : 3 
+a37 B
+p11 B
+a18 B
+NetDegree : 3 
+a33 B
+p12 B
+a26 B
+NetDegree : 3 
+a44 B
+p13 B
+a6 B
+NetDegree : 3 
+a40 B
+p14 B
+a12 B
+NetDegree : 3 
+a43 B
+p15 B
+a8 B
+NetDegree : 5 
+a59 B
+a51 B
+a46 B
+p16 B
+a2 B
+NetDegree : 3 
+a42 B
+p17 B
+a0 B
+NetDegree : 3 
+a38 B
+p18 B
+a16 B
+NetDegree : 3 
+a34 B
+p19 B
+a24 B
+NetDegree : 3 
+a32 B
+p20 B
+a28 B
+NetDegree : 3 
+a35 B
+p21 B
+a22 B
+NetDegree : 3 
+a36 B
+p22 B
+a20 B
+NetDegree : 3 
+a39 B
+p23 B
+a14 B
+NetDegree : 3 
+a45 B
+p24 B
+a4 B
+NetDegree : 3 
+a41 B
+p25 B
+a10 B
+NetDegree : 3 
+a37 B
+p26 B
+a18 B
+NetDegree : 3 
+a33 B
+p27 B
+a26 B
+NetDegree : 3 
+a44 B
+p28 B
+a6 B
+NetDegree : 3 
+a40 B
+p29 B
+a12 B
+NetDegree : 3 
+a43 B
+p30 B
+a8 B
+NetDegree : 5 
+a52 B
+a51 B
+a46 B
+p31 B
+a21 B
+NetDegree : 2 
+a51 B
+p32 B
+NetDegree : 2 
+a52 B
+p33 B
+NetDegree : 2 
+p34 B
+a21 B
+NetDegree : 2 
+p35 B
+a19 B
+NetDegree : 2 
+a60 B
+p36 B
+NetDegree : 2 
+a53 B
+p37 B
+NetDegree : 2 
+p38 B
+a17 B
+NetDegree : 2 
+a63 B
+p39 B
+NetDegree : 2 
+a54 B
+p40 B
+NetDegree : 2 
+p41 B
+a11 B
+NetDegree : 2 
+a55 B
+p42 B
+NetDegree : 2 
+a58 B
+p43 B
+NetDegree : 2 
+p44 B
+a5 B
+NetDegree : 2 
+p45 B
+a3 B
+NetDegree : 2 
+p46 B
+a1 B
+NetDegree : 2 
+p47 B
+a23 B
+
+UCLA nodes 1.0 
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNodes :              111
+NumTerminals :           47
+p1 terminal
+p2 terminal
+p3 terminal
+p4 terminal
+p5 terminal
+p6 terminal
+p7 terminal
+p8 terminal
+p9 terminal
+p10 terminal
+p11 terminal
+p12 terminal
+p13 terminal
+p14 terminal
+p15 terminal
+p16 terminal
+p17 terminal
+p18 terminal
+p19 terminal
+p20 terminal
+p21 terminal
+p22 terminal
+p23 terminal
+p24 terminal
+p25 terminal
+p26 terminal
+p27 terminal
+p28 terminal
+p29 terminal
+p30 terminal
+p31 terminal
+p32 terminal
+p33 terminal
+p34 terminal
+p35 terminal
+p36 terminal
+p37 terminal
+p38 terminal
+p39 terminal
+p40 terminal
+p41 terminal
+p42 terminal
+p43 terminal
+p44 terminal
+p45 terminal
+p46 terminal
+p47 terminal
+a0
+a1
+a2
+a3
+a4
+a5
+a6
+a7
+a8
+a9
+a10
+a11
+a12
+a13
+a14
+a15
+a16
+a17
+a18
+a19
+a20
+a21
+a22
+a23
+a24
+a25
+a26
+a27
+a28
+a29
+a30
+a31
+a32
+a33
+a34
+a35
+a36
+a37
+a38
+a39
+a40
+a41
+a42
+a43
+a44
+a45
+a46
+a47
+a48
+a49
+a50
+a51
+a52
+a53
+a54
+a55
+a56
+a57
+a58
+a59
+a60
+a61
+a62
+a63
+UCLA wts 1.0
+    a0      0      0      0      1
+    a1      1      1      1      0
+    a2      0      0      0      1
+    a3      1      1      1      0
+    a4      0      0      0      1
+    a5      1      1      1      0
+    a6      0      0      0      1
+    a7      1      1      1      0
+    a8      0      0      0      1
+    a9      1      1      1      0
+   a10      0      0      0      1
+   a11      1      1      1      0
+   a12      0      0      0      1
+   a13      1      1      1      0
+   a14      0      0      0      1
+   a15      1      1      1      0
+   a16      0      0      0      1
+   a17      1      1      1      0
+   a18      0      0      0      1
+   a19      1      1      1      0
+   a20      0      0      0      1
+   a21      1      1      1      0
+   a22      0      0      0      1
+   a23      1      1      1      0
+   a24      0      0      0      1
+   a25      1      1      1      0
+   a26      0      0      0      1
+   a27      1      1      1      0
+   a28      0      0      0      1
+   a29      1      1      1      0
+   a30      1      1      1      0
+   a31      1      1      1      0
+   a32      0      1      1      0
+   a33      0      1      1      0
+   a34      0      1      1      0
+   a35      0      1      1      0
+   a36      0      1      1      0
+   a37      0      1      1      0
+   a38      0      1      1      0
+   a39      0      1      1      0
+   a40      0      1      1      0
+   a41      0      1      1      0
+   a42      0      1      1      0
+   a43      0      1      1      0
+   a44      0      1      1      0
+   a45      0      1      1      0
+   a46      0      1      1      0
+   a47      0      1      1      0
+   a48      0      1      1      0
+   a49      0      1      1      0
+   a50      0      1      1      0
+   a51      0      1      1      0
+   a52      0      1      1      0
+   a53      0      1      1      0
+   a54      0      1      1      0
+   a55      0      1      1      0
+   a56      0      1      1      0
+   a57      0      1      1      0
+   a58      0      1      1      0
+   a59      0      1      0      0
+   a60      0      0      1      0
+   a61      0      1      0      0
+   a62      0      0      1      0
+   a63      0      0      1      0
+    p1      0      0      0      0
+    p2      0      0      0      0
+    p3      0      0      0      0
+    p4      0      0      0      0
+    p5      0      0      0      0
+    p6      0      0      0      0
+    p7      0      0      0      0
+    p8      0      0      0      0
+    p9      0      0      0      0
+   p10      0      0      0      0
+   p11      0      0      0      0
+   p12      0      0      0      0
+   p13      0      0      0      0
+   p14      0      0      0      0
+   p15      0      0      0      0
+   p16      0      0      0      0
+   p17      0      0      0      0
+   p18      0      0      0      0
+   p19      0      0      0      0
+   p20      0      0      0      0
+   p21      0      0      0      0
+   p22      0      0      0      0
+   p23      0      0      0      0
+   p24      0      0      0      0
+   p25      0      0      0      0
+   p26      0      0      0      0
+   p27      0      0      0      0
+   p28      0      0      0      0
+   p29      0      0      0      0
+   p30      0      0      0      0
+   p31      0      0      0      0
+   p32      0      0      0      0
+   p33      0      0      0      0
+   p34      0      0      0      0
+   p35      0      0      0      0
+   p36      0      0      0      0
+   p37      0      0      0      0
+   p38      0      0      0      0
+   p39      0      0      0      0
+   p40      0      0      0      0
+   p41      0      0      0      0
+   p42      0      0      0      0
+   p43      0      0      0      0
+   p44      0      0      0      0
+   p45      0      0      0      0
+   p46      0      0      0      0
+   p47      0      0      0      0
+
+       netX        1.1
+       netY        1.2
+       netZ        1.3
+------- Running Test 0c..
+Reading TESTS/testAux1.aux
+are(M) file not found. loading unit weights for all nodes
+Finished reading TESTS/testAux1.aux and referenced files
+Saving HGraph as nodes/nets/wts with baseFileName: testOut
+Saving HGraph as netD/AreM with baseFileName: testOut
+# Virtual Memory usage : 3.84766MB (estimate)
+a0      1
+a1      1
+a2      1
+a3      1
+p1      1
+p2      1
+p3      1
+
+HGraph : testOut.netD  testOut.areM
+0
+13
+5
+7
+3
+p1 s O
+a1 l I
+a0 l I
+a0 s O
+a2 l I
+a3 l I
+a1 s O
+a2 l I
+a3 l I
+a2 s O
+p2 l I
+a3 s O
+p3 l I
+
+UCLA nets 1.0
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNets : 5
+NumPins : 13
+NetDegree : 3 
+p1 O
+a1 I
+a0 I
+NetDegree : 3 
+a0 O
+a2 I
+a3 I
+NetDegree : 3 
+a1 O
+a2 I
+a3 I
+NetDegree : 2 
+a2 O
+p2 I
+NetDegree : 2 
+a3 O
+p3 I
+
+UCLA nodes 1.0 
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNodes :                7
+NumTerminals :            3
+p1 terminal
+p2 terminal
+p3 terminal
+a0
+a1
+a2
+a3
+------- Running Test 0d..
+Reading TESTS/testAux2.aux
+are(M) file not found. loading unit weights for all nodes
+Finished reading TESTS/testAux2.aux and referenced files
+Saving HGraph as nodes/nets/wts with baseFileName: testOut
+Saving HGraph as netD/AreM with baseFileName: testOut
+# Virtual Memory usage : 3.91016MB (estimate)
+a0      1
+a1      1
+a2      1
+a3      1
+p1      1
+p2      1
+p3      1
+
+HGraph : testOut.netD  testOut.areM
+0
+13
+5
+7
+3
+p1 s O
+a1 l I
+a0 l I
+a0 s O
+a2 l I
+a3 l I
+a1 s O
+a2 l I
+a3 l I
+a2 s O
+p2 l I
+a3 s O
+p3 l I
+
+UCLA nets 1.0
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNets : 5
+NumPins : 13
+NetDegree : 3 
+p1 O
+a1 I
+a0 I
+NetDegree : 3 
+a0 O
+a2 I
+a3 I
+NetDegree : 3 
+a1 O
+a2 I
+a3 I
+NetDegree : 2 
+a2 O
+p2 I
+NetDegree : 2 
+a3 O
+p3 I
+
+UCLA nodes 1.0 
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNodes :                7
+NumTerminals :            3
+p1 terminal
+p2 terminal
+p3 terminal
+a0
+a1
+a2
+a3
+------- Running Test 0e..
+Reading TESTS/testAux3.aux
+Finished reading TESTS/testAux3.aux and referenced files
+Saving HGraph as nodes/nets/wts with baseFileName: testOut
+Saving HGraph as netD/AreM with baseFileName: testOut
+# Virtual Memory usage : 3.59766MB (estimate)
+a0      1
+a1      3
+a2      4
+a3      2
+p1      0
+p2      0
+p3      0
+
+HGraph : testOut.netD  testOut.areM
+0
+13
+5
+7
+3
+p1 s B
+a1 l B
+a0 l B
+a0 s B
+a2 l B
+a3 l B
+a1 s B
+a2 l B
+a3 l B
+a2 s B
+p2 l B
+a3 s B
+p3 l B
+
+UCLA nets 1.0
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNets : 5
+NumPins : 13
+NetDegree : 3 
+p1 B
+a1 B
+a0 B
+NetDegree : 3 
+a0 B
+a2 B
+a3 B
+NetDegree : 3 
+a1 B
+a2 B
+a3 B
+NetDegree : 2 
+a2 B
+p2 B
+NetDegree : 2 
+a3 B
+p3 B
+
+UCLA nodes 1.0 
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNodes :                7
+NumTerminals :            3
+p1 terminal
+p2 terminal
+p3 terminal
+a0
+a1
+a2
+a3
+UCLA wts 1.0
+    a0      1
+    a1      3
+    a2      4
+    a3      2
+    p1      0
+    p2      0
+    p3      0
+
+------- Running Test 0f..
+Reading TESTS/testAux4.aux
+Finished reading TESTS/testAux4.aux and referenced files
+Saving HGraph as nodes/nets/wts with baseFileName: testOut
+Saving HGraph as netD/AreM with baseFileName: testOut
+# Virtual Memory usage : 3.70703MB (estimate)
+a0      1      5
+a1      3      6
+a2      4      7
+a3      2      8
+p1      0      9
+p2      0     10
+p3      0     11
+
+HGraph : testOut.netD  testOut.areM
+0
+13
+5
+7
+3
+p1 s O
+a1 l I
+a0 l I
+a0 s O
+a2 l I
+a3 l I
+a1 s O
+a2 l I
+a3 l I
+a2 s O
+p2 l I
+a3 s O
+p3 l I
+
+UCLA nets 1.0
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNets : 5
+NumPins : 13
+NetDegree : 3 
+p1 O
+a1 I
+a0 I
+NetDegree : 3 
+a0 O
+a2 I
+a3 I
+NetDegree : 3 
+a1 O
+a2 I
+a3 I
+NetDegree : 2 
+a2 O
+p2 I
+NetDegree : 2 
+a3 O
+p3 I
+
+UCLA nodes 1.0 
+# Created      : Tue Dec 13 13:36:41 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+NumNodes :                7
+NumTerminals :            3
+p1 terminal
+p2 terminal
+p3 terminal
+a0
+a1
+a2
+a3
+UCLA wts 1.0
+    a0      1      5
+    a1      3      6
+    a2      4      7
+    a3      2      8
+    p1      0      9
+    p2      0     10
+    p3      0     11
+
+------- Running Test 1a...
+Reading TESTS/addNetsNodes.aux
+ Reading TESTS/add.nodes ... 
+ Reading TESTS/add.nets ... 
+ Reading TESTS/add.wts ... 
+Finished reading TESTS/addNetsNodes.aux and referenced files
+
+ Edge sizes :  Max: 13  Min: 2  Avg: 3.2844
+     2: 39        3: 44        4: 4         5: 15        6: 2     
+     7: 2         9: 2        13: 1     
+
+ ----- Statistics for edge weight
+ Max: 1.3  Min: 1  Avg: 1.006
+ Total Wt:    109.6 Max:    1.186%    Min nonzero: 1
+ Num zeros:     0   Num minNZ:   106  Num others:  3
+
+ Node degrees:  Max: 8  Min: 1  Avg: 3.225
+ Total Pins: 358
+     1: 47        3: 19        4: 17        5: 7         6: 4     
+     7: 9         8: 8     
+
+ ----- Statistics for weight 0 ----- 
+ Max: 1  Min: 0  Avg: 0.1532
+ Total Wt:       17 Max:    5.882%    Min nonzero: 1
+ Num zeros:    94   Num minNZ:    17  Num others:  0
+ ----- Statistics for weight 1 ----- 
+ Max: 1  Min: 0  Avg: 0.4144
+ Total Wt:       46 Max:    2.174%    Min nonzero: 1
+ Num zeros:    65   Num minNZ:    46  Num others:  0
+ ----- Statistics for weight 2 ----- 
+ Max: 1  Min: 0  Avg: 0.4234
+ Total Wt:       47 Max:    2.128%    Min nonzero: 1
+ Num zeros:    64   Num minNZ:    47  Num others:  0
+ ----- Statistics for weight 3 ----- 
+ Max: 1  Min: 0  Avg: 0.1351
+ Total Wt:       15 Max:    6.667%    Min nonzero: 1
+ Num zeros:    96   Num minNZ:    15  Num others:  0
+ --- Correlations between weights --- 
+      1    0.5055    0.4963   -0.1681 
+                1    0.9076   -0.3325 
+                          1   -0.3387 
+                                    1 
+
+ Total Edges: 109
+ Total Nodes: 111
+   Terminals: 47
+   Non-Terms: 64
+------- Running Test 1b...
+Reading TESTS/case1-h.aux
+ Reading TESTS/case1.nodes ... 
+ Reading TESTS/case1.nets ... 
+Finished reading TESTS/case1-h.aux and referenced files
+
+ Edge sizes :  Max: 2  Min: 2  Avg: 2
+     2: 4     
+
+ Max: 1  Min: 1  Avg: 1
+ Total Wt:        4 Max:       25%    Min nonzero: 1
+ Num zeros:     0   Num minNZ:     4  Num others:  0
+
+ Node degrees:  Max: 3  Min: 1  Avg: 1.6
+ Total Pins: 8
+     1: 3         2: 1         3: 1     
+
+
+ Weights : Max: 1  Min: 1  Avg: 1
+ Total Wt:        5 Max:       20%    Min nonzero: 1
+ Num zeros:     0   Num minNZ:     5  Num others:  0
+
+ Total Edges: 4
+ Total Nodes: 5
+   Terminals: 3
+   Non-Terms: 2
+-------- Running Test 2a..
+Reading TESTS/test-0.aux
+ Reading TESTS/test-0.nodes ... 
+ Reading TESTS/test-0.nets ... 
+Finished reading TESTS/test-0.aux and referenced files
+
+ Edge sizes :  Max: 6  Min: 2  Avg: 3.14286
+     2: 3         3: 2         4: 1         6: 1     
+
+ Max: 1  Min: 1  Avg: 1
+ Total Wt:        7 Max:    14.29%    Min nonzero: 1
+ Num zeros:     0   Num minNZ:     7  Num others:  0
+
+ Node degrees:  Max: 2  Min: 1  Avg: 1.1
+ Total Pins: 22
+     1: 18        2: 2     
+
+
+ Weights : Max: 1  Min: 1  Avg: 1
+ Total Wt:       20 Max:        5%    Min nonzero: 1
+ Num zeros:     0   Num minNZ:    20  Num others:  0
+
+ Total Edges: 7
+ Total Nodes: 20
+   Terminals: 0
+   Non-Terms: 20
+-------- Running Test 2b..
+Reading TESTS/test-0.aux
+ Reading TESTS/test-0.nodes ... 
+ Reading TESTS/test-0.nets ... 
+Finished reading TESTS/test-0.aux and referenced files
+
+ Edge sizes :  Max: 3  Min: 2  Avg: 2.5
+     2: 3         3: 3     
+
+ Max: 1  Min: 1  Avg: 1
+ Total Wt:        6 Max:    16.67%    Min nonzero: 1
+ Num zeros:     0   Num minNZ:     6  Num others:  0
+
+ Node degrees:  Max: 2  Min: 1  Avg: 1.5
+ Total Pins: 15
+     1: 5         2: 5     
+
+
+ Weights : Max: 2  Min: 2  Avg: 2
+ Total Wt:       20 Max:       10%    Min nonzero: 2
+ Num zeros:     0   Num minNZ:    10  Num others:  0
+
+ Total Edges: 6
+ Total Nodes: 10
+   Terminals: 0
+   Non-Terms: 10

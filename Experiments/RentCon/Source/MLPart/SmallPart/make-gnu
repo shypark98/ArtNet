@@ -1,0 +1,7 @@
+#CHANGED BY DAP: Jan 08, 2004 to include OPT2FLAGS and CC2 for compatability with the file
+#netStacksInevCuts.cxx on 64 bit machines.  There is an optimization bug with -03 that 
+#goes away with -02
+#!/bin/sh
+make MAKE="./make-gnu" DEPENDOPT="-MM" CC4LIBS="g++" OPTFLAGS="-g -DABKDEBUG"  CCFLAGS="-fPIC -Wall -pedantic -pipe" CC='g++ $(OPTFLAGS) $(CCFLAGS)' LD="g++ -shared" LDFINAL="g++" SOLABEL="" SODIRKEY="-Wl,-rpath," OPT2FLAGS="-g -DABKDEBUG" CC2='g++ $(OPT2FLAGS) $(CCFLAGS)' $1 $2 $3 $4 $5 
+# SONAMEKEY="-Wl,-soname," 
+

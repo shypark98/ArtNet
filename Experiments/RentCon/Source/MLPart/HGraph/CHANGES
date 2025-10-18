@@ -1,0 +1,398 @@
+CHANGES TO HGRAPH
+
+1.0
+
+   first release
+
+1.1
+
+   added class HEdgeWeight to store and print out hyperedge weight
+   added HEdge::GetWeight, HEdge::SetWeight methods
+
+   made HEdgeInfo synonym for class Empty
+   changed HEdgeInfo, HNodeInfo class members to static to keep old
+   code legal, but to not waste any memory in HEdge, HNode objects
+
+   renamed: InEdge -> SnkEdge, OutEdge -> SrcEdge, InOutEdge->SnkSrcEdge,
+   Sources->Srcs, Sinks->Snks, SourceSinks->SrcSnks
+
+   renamed GetId -> GetIndex for consistency with other packages
+   
+   added HNode::IsNodeSrc(), IsNodeSnk(), IsNodeSrcSnk(), IsNodeAdjacent(),
+   and the same for HNode; these are lookup methods (that now use linear
+   search) for directionality and adjacency relationship
+
+   added HGraph::GetEdge() and HEdge::GetIndex() to allow reference to edges
+   via unique id's in O(1)
+
+   updated regression tests to check the new functionality
+
+1.2
+
+   added ctor taking dbNetlist
+
+   renamed GetNode->GetNodeByIdx, GetEdge->GetEdgeByIdx
+
+   added ctor taking an unsigned numNodes parameter to construct HGraph with
+   numNodes nodes (rather than an empty HGraph)
+
+   added private AddNodesN method to efficiently add many nodes to empty graph
+
+   added bounds checking in debug mode
+
+1.3
+
+   [internal note: UNIX version became primary; Win95 version secondary]
+
+   renamed fn template print10 to printRange
+
+   renamed hgrBase.h to tmp.h, soon to be removed (when printRange is included in ABKCommon)
+
+   changed default weights to 1 from 0 in ctor from dbNetlist
+
+   made isTrivial return false always for now (when removal becomes an issue, we can discuss
+   whether and which edges should be removed automatically)
+
+   separated HGraph's ctor taking dbNetlist into a separate derived class HGfromDB and into
+   separate header and source files (seeking suggestion on a better name for the class!)
+
+   changed the GetXXXByIdx to return reference instead of iterator
+
+   renamed all "id" to "index", e.g. mId to mIndex
+
+   ac added changed private: to protected: in HEdge, mm in all the other classes
+
+1.3.1 980213  ilm
+   moved tmp.h and printRange to ABKCommon
+   moved HGfromDB into DB
+
+1.3.3 980216 ac
+   made GetXXByIdx const
+
+1.3.4 980217 mm
+   added virtual dtor for HGraph
+1.3.5 980222 aec
+   added HGraphWithTerminals (hgterm.h)
+   HGWithTerminals is a hypergraph with the restriction that
+   all terminal nodes in the graph come first in the global ordering.  
+   It also has a function bool isTerminal(unsigned nodeId)
+
+   HGWithTerminals is the class to use to load .net files   
+
+   added get/setArea for HNode (and corr. protected data member)
+
+   renamed HEdgeWeight -> HGWeight
+
+   added buildAll script
+
+TO BE DONE SOON:
+
+   added HGraph::Parameters to store verbosity, seed and net size threshold (see hgraph.h)
+
+1.4 980224 mm
+
+   renamed all class member fns to start with lowercase
+
+   new HGraph ctor added: accepts filenames of two files: .are and .net(D)
+
+   HGraph::saveAsNetDAre() added
+
+1.5 980224 imarkov
+
+   renamed numXXX methods into getNumXXX, ditto for Degree()
+   cosmetic changes to regression script and netDare.cxx
+
+1.51 980225 mm
+   corrected new/delete bugs
+
+   now the package is purify-clean
+
+   addNodesN removed; use addNode n times...
+
+   itHNodeGlobal and itHEdgeGlobal when dereferenced now yield reference, not pointer
+   (therefore, one less operator * is required to get the same result, or an extra &)
+
+   isPad() public fn says if a node is a pad according to the .are file read
+   in; by default all nodes are considered to be non-pads
+
+1.53 980227 mm
+   added getNumTerminals(), renamed isPad() -> isTerminal()
+
+   put terminals at the beginning (as agreed earlier) rather than at the end (as implied by
+   .are format)
+
+   got itHXXXGlobal to where they were before for consistency (they now dereference to ptrs)
+
+   added non-const versions of {nodes,edges}{Begin,End} mem fns in HGraph
+
+   removed hgterm.h and HGraphWithTerminals : all functionality now available in HGraph
+
+1.54 980303 mm
+   changed list->listO1size, same for slist
+
+   slight code clean-up (addNode/addEdge, and isSrc/...)
+
+2.0 980304 mm
+   renamed class HGraph -> HGraphSoft
+
+   renamed class HNode -> HGSNode
+
+   renamed class HEdge -> HGSEdge
+
+   renamed iterator and container typedefs to have HGS instead of H, e.g.
+   itHNodeGlobal -> itHGSNodeGlobal
+
+   added class HGraphFixed
+
+   differences of HGraphFixed from HGraphSoft:
+
+      vectors instead of slists
+
+      iteration through all adajcent elements in one swoop is possible using
+      HNode::edgesBegin, HNode::edgesEnd, HEdge::nodesBegin, HEdge::nodesEnd
+
+      class is called HGraphFixed, other names are HGFNode, itHGFEdgeGlobal,
+      etc.
+
+      there are no removeXXX methods (add methods are unchanged)
+
+      you must call HGraph::finalize(void) method after constructing the
+      graph, before you actually use it
+
+2.1 980311 mm
+   added converters between the two graph classes:
+       HGraphXXX::HGraphXXX(const HGraphYYY&)
+
+2.2 980319 ilm
+    reorganized #include directives to break circular dependencies
+    made all headers idempotent
+    extracted listO1size.h from hgraph.h and moved to ABKCommon3.6
+    extracted hgweight.{h,cxx} 
+    hgraph.h is now trivial -- includes hgFixed.h and hgSoft.h
+                               most likely you need only one of those
+
+2.3
+//ALL CHANGES ONLY TO HGRAPHFIXED, NOT HGRAPHSOFT
+
+//INTERFACE:
+   removed addNode method; use ctor instead indicating #of nodes at once
+
+   removed default ctor (since there is no way to add nodes later, you must
+   tell it at once!)
+
+//IMPLEMENTATION:
+   added protected init method to allocate and initialize a required number
+   of nodes
+
+   changed from allocating individual nodes one by one to allocating an
+   array
+
+  removed container of pointers to nodes, instead storing just an array of
+  nodes note: now mNodes[i] is of type HGFNode, not HGFNode*
+
+2.3.2
+
+  added a dummy getWeight(unsigned n) method to fixed graph's nodes
+
+   corrected input routines to treat 0 pad offset as if it implied "no
+   terminals", according to (incomplete) email discussion with Chuck
+
+   corrected bug with saving netD/are ('s' wasn't output if there were no
+   sources on an edge)
+
+   corrected another bug that prevented reading net files in many cases
+
+   if are is not found, uniweights are assumed and warning is given;
+   if are is NULL, uniweights are assumed and no warning is given;
+   if are parameter is absent, it defaults to NULL
+
+2.4
+
+   support for multiweights added (getWeight, setWeight, ctor from files, saveAsNetDAre, op<<)
+
+   during input, if the file ends in 'm', multiweights are assumed; 1st line
+   should contain number of weights
+
+   saving is done in .arem format iff the filename supplied ends in 'm';
+   e.g., a multiweight graph will still be saved as single weight if the
+   filename doesn't end in 'm'
+
+   saveAsNetDAre accepts NULL second param (either explicitly or as default param value)
+
+   corrected a nasty bug: HGWeight's operator>> parameter came by value instead of by reference
+
+2.4.1
+mm
+	most of the code unified between Fixed and Soft graphs: all I/O and much of the simpler methods;
+	total saving almost 400 lines
+
+	consistency check addded: isConsistent(); causes abkfatal in case of failure
+
+2.4.2
+mm
+	order of nodes kept the same in each class (B/I/O)
+
+	connectedComponents() added (HGAlgo:: in hgalgo.h)
+
+	if number of nets doesn't match header info, just a warning is issued
+	instead of fatal error
+
+	lineNo in readNetDAre() funciton keeps track of .netD line number for dbx usage
+
+	getXXXByIdx now checks array bounds in debug mode
+
+2.5 ilm added
+        printEdgeSizeStats(), printNodeStatsSize() and printNodeWtStats()
+        and added dependency on the Stats package
+        modified hgraphTest2
+
+2.6 [??] this line was absent until May28; I *assume* the below changes are
+in 2.6, not 2.5; otherwise I don't know what was changed between 2.5 and 2.6
+	mm
+			default terminal areas made 0, not 1
+
+			parser made case-insensitive
+
+			many more error reports by the parser, incl. line numbers and syntax errors
+
+
+2.61 unified part of the two graph classes into HGraphBase, adding the
+	internal header hgBase.h
+
+	removed the internal header hgweight.h (info moved to hgBase.h)
+
+TOBEDONE: move much of the remaining header file content to hgBase.h; this
+would require creation of two more base classes, InternalHGraph{Soft,Fixed},
+with the idea being that they contain the greatest common factor of HGS and
+HGF. The actual HGS and HGF classes would still be separate becasue
+something cannot be factored like that: e.g., extra data/function members.
+
+2.62
+	files renamed; public headers now have 'hg' prefix
+		hg.h, hgBase.h, hgFixed.h, hgSoft.h, hgAlgo.h
+	non-public files have no 'hg' prefix
+	automatically generated files have 'auto' prefix
+
+	sortAsDB method added; you can call it at any time, but it takes O(|V| *
+	avg_node_degree * log (avg_node_degree) )
+
+2.63
+
+        getNumPins() is now a lazily-evaluated fn computing the total degree 
+        (i.e., sigma over all nodes v of degree(v))
+
+	question: getNumTerminals() is still "fictitious" fn; is this ok?
+        answer:   getTerminals is fine now -ILM
+
+	getAvgDegree() added
+
+	getNodesSortedByWeights(), computeNodesSortedByWeights() added
+        [note: multiweights NOT supported due to extra overhead in a 
+         uniwqeight case]
+
+	dependency on Combi added (to use Permutation)
+
+2.7
+
+  corrected the bug causing incorrect weight assignments in case of no .are file
+
+2.71
+
+  thresholding of nets through HGraphBase::Parameters::netThreshold
+  only HGraphFixed is supported
+  edges exceeding threshold are still in the graph (so indexing is not affected),
+  but have no nodes
+  default value for netThreshold is UINT_MAX, naturally signifying no effect
+
+2.72
+
+  new parameter HGraph::Parameters::removeBigNets [default=false]
+  if true, nets exceeding threshold are removed, not just emptieed
+
+2.8
+  removed code which clears pad(terminal) area.
+
+2.9
+  added new Parameters
+    makeAllSrcSnk (ignoring directionality info in .netD)
+    nodeSortMethod (enum describing how to sort nodes on edges)
+    similarly, edgeSortMethod
+    sort methods type definitions (under Parameters:: namespace):
+    enum NodeSortMethod
+        { DONT_SORT_NODES, SORT_NODES_BY_INDEX, SORT_NODES_BY_ASCENDING_DEGREE };
+    enum EdgeSortMethod
+        { DONT_SORT_EDGES, SORT_EDGES_BY_INDEX, SORT_EDGES_BY_ASCENDING_DEGREE };
+
+
+	deprecated sortAsDB (instead set
+	Parameteres::edgeSortMethod=SORT_EDGES_BY_INDEX)
+
+2.10 
+
+	added getNodesSortedByDegree (ascending degrees, no tie-breaking (can
+	add if needed))
+
+	added optional 2nd param to HGraph::addEdge that takes unsigned numPins -
+	number of pins expected on this hedge. If correctly provided => no memory
+	reallocations, saving both runtime and memory overhead / fragmentation);
+	if incorrectly provided, everything works fine, except no performance gains
+
+	added extra item to XXXSortMethod: SORT_XXX_BY_DESCENDING_DEGREE
+
+	added comand-line reading of Parameters
+
+	made makeAllSrcSnk default value true instead of false
+
+2.11
+
+  added fast versions: fastAddEdge, fastAddSrcSnk (cannot be mixed with
+  regular versions; also require param allSrcSnks, i.e. undirected graph)
+
+  added adviseNodeDegrees (use to save memory reallocation in nodes)
+
+  -skipNetsLargerThan <unsigned> command line param added
+
+2.12  aec
+   inlined fastAddSrcSnk and fastAddEdge
+
+2.13 sm 19981203
+   added SubHGraph class (moved from NetTopology package)
+
+2.14 yc 9902016
+   added comments for doc++
+
+3.0	aec	990831
+   major change:
+	-all variable names were changed to meet group standards
+	-HGSoft was removed
+	-'included' cxx files are no longer included, nor do they
+		exploit typedefs for class names
+	-support for multi-bin weights added
+	-support for I/O in the nets/nodes/wts formats added
+	-support for cell-names added
+3.2	aec	990910
+	-fixed but in copy ctor
+3.2.2  aec
+	-moved HGraphBase::setNumTerminals from protected to public
+3.2.5  aec
+	-added partProb to list of allowed aux file formats
+3.5.3  ilm
+        -when HGraph is read from files (nets or netD), pin orientations
+         are not ignored (even if makeAllSrcSnk is set in the params object)
+3.6    ilm 
+        -net names are now copied during copy-construction of HGraphFixed
+        -net names are now read from and saved to .nets files
+           * if a .wts file declares the weight of a net more than once,
+             the last value is take and  no error is reported
+        -net weights are now read from and saved to .wts files
+           * net weights 1.0 (or very close) are not saved
+             since 1.0 is assumed by default
+           * if a no-name net has a non-trivial weight, 
+             it names defaults to "net<numerical_index>";
+             no safety checks are made
+        -regression tests changed accordingly
+3.6.1  ilm
+        -when saving HGraph, check if node names exist;
+         if they don't, use generic a/p names as in .net format
+4.0    ilm
+        -ported to g++ 3.1.1

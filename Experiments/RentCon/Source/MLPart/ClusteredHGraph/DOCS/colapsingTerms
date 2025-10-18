@@ -1,0 +1,11 @@
+
+
+- ClusteredHGraph does, conditional on a parameter option, colapsing of
+	terminals.  The method is as follows:
+
+1) if there are no terminals in the leaflevel HGraph, then this isn't an issue
+2) if a fixedConstraints partitioning was not passed, then all terminals
+	are treated exactly like movables. (though, they will still be
+	terminals in the created HGraphs)
+3) 
+

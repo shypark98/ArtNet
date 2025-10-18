@@ -1,0 +1,170 @@
+------------  Running test 0...
+a :            2            3
+b :            4            5
+a - b =           -2           -2
+box  : 0  0   1  1
+box  : 0  0   2  3
+box1 : 2  3   4  5
+Half perimeter : 4
+# Created      : Tue Sep 13 15:33:16 2005
+Total points : 3
+           2            3 
+           4            5 
+           3           -1 
+2  -1   4  5
+# Created      : Tue Sep 13 15:33:16 2005
+Total points : 3
+           2            3 
+           4            5 
+           3           -1 
+2  -1   4  5
+ ------------------------------------- 
+ Original :                        1.3          1.2
+ Coerced to the unit BBox :           1            1
+ Original                 :        -1.3         -1.2
+ Coerced to the unit BBox :           0            0
+ ------------------------------------- 
+ Same with unitSmartBBox centered at          0.9          0.1
+ Original :                         1.2          1.3
+ Coerced to the SmartBBox :           1          0.5
+ Original                 :        -1.1         -2.9
+ Coerced to the SmartBBox :    0.833333  6.93889e-18
+ ------------------------------------- 
+# Created      : Tue Sep 13 15:33:16 2005
+Total points : 4
+           1            1 
+           2            1 
+           1            2 
+           2            2 
+ Center of Gravity :          1.5          1.5
+------------  Running test 1...
+Creating :  0 user, 0.0e+00 system, 0 real, 0 norm'd sec 
+Saving   :  0.006999 user, 0.0e+00 system, 0 real, 0.0717505 norm'd sec 
+Rotating :  0.003 user, 0.0e+00 system, 0 real, 0.0307546 norm'd sec 
+Saving   :  0.006999 user, 0.0e+00 system, 0 real, 0.0717505 norm'd sec 
+Resulting BBox : -1.11022e-16  0   1  1
+------------  Running test 2...
+Polygon area and convex hull test
+Area : 1
+Point          0.3          0.5
+ is inside: 1
+------------  Running test 3...
+ Sub placement test
+# Created      : Tue Sep 13 15:33:16 2005
+ Total points in sub placement : 3
+           0            0
+           1            1
+           0            1
+# Created      : Tue Sep 13 15:33:16 2005
+Total points : 3
+           0            0 
+           1            1 
+           0            1 
+# Created      : Tue Sep 13 15:33:16 2005
+Total points : 4
+           0            0 
+           1            0 
+           2            2 
+           0            1 
+Area : 2
+------------  Running test 4...
+------------  Running test 5...
+          -1            0
+       -0.75          0.5
+        -0.5            1
+       -0.25          1.5
+           0            2
+           0           -1
+         0.5        -0.75
+           1         -0.5
+         1.5        -0.25
+           2            0
+           0            0
+           0    0.0526316
+           0     0.105263
+           0     0.157895
+           0     0.210526
+           0     0.263158
+           0     0.315789
+           0     0.368421
+           0     0.421053
+           0     0.473684
+           0     0.526316
+           0     0.578947
+           0     0.631579
+           0     0.684211
+           0     0.736842
+           0     0.789474
+           0     0.842105
+           0     0.894737
+           0     0.947368
+           0            1
+           0            1
+   0.0526316            1
+    0.105263            1
+    0.157895            1
+    0.210526            1
+    0.263158            1
+    0.315789            1
+    0.368421            1
+    0.421053            1
+    0.473684            1
+    0.526316            1
+    0.578947            1
+    0.631579            1
+    0.684211            1
+    0.736842            1
+    0.789474            1
+    0.842105            1
+    0.894737            1
+    0.947368            1
+           1            1
+           1            1
+           1     0.947368
+           1     0.894737
+           1     0.842105
+           1     0.789474
+           1     0.736842
+           1     0.684211
+           1     0.631579
+           1     0.578947
+           1     0.526316
+           1     0.473684
+           1     0.421053
+           1     0.368421
+           1     0.315789
+           1     0.263158
+           1     0.210526
+           1     0.157895
+           1     0.105263
+           1    0.0526316
+           1  5.55112e-16
+           1            0
+    0.947368            0
+    0.894737            0
+    0.842105            0
+    0.789474            0
+    0.736842            0
+    0.684211            0
+    0.631579            0
+    0.578947            0
+    0.526316            0
+    0.473684            0
+    0.421053            0
+    0.368421            0
+    0.315789            0
+    0.263158            0
+    0.210526            0
+    0.157895            0
+    0.105263            0
+   0.0526316            0
+ 5.55112e-16            0
+------------  Running test 6...
+------------  Running test 7...
+File seeds.in exists and will override all seeds, including hardcoded ones 
+ Items: 10  Total dimension: 20  Min dimension: 0.5  Step: 0.1
+    1.9     2.3       2     1.5     2.5     2.2     1.8       2     1.9     1.9 
+
+ Items: 10  Total dimension: 20  Min dimension: 0.2  Step: 0.2
+    1.8     1.6     2.8     1.4     2.2     2.4     1.4       2     2.4       2 
+

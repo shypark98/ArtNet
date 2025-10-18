@@ -1,0 +1,18 @@
+#Sample aux file
+
+DEF: ./aes_cipher_top_0_90_fe+be.def
+
+LEF: /home/projects/libs/macro.lef
+../../libs/tcbn90lphp_8lmT2.lef
+./tech.lef
+
+#FILLER and DECAP are substrings of the cell masters
+REMOVE_CELL_BY_KEY:
+FILLER
+DECAP
+
+#FILLX2 and FILLX4 are exact cell master names
+REMOVE_CELL_BY_FULL_NAME:
+FILLX2
+FILLX4
+

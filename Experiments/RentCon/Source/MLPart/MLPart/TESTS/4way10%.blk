@@ -1,0 +1,13 @@
+UCLA blk 1.0 
+# Created    : Thu Apr  2 04:38:35 1998
+# User       : imarkov@nexus10 (uclacs) 
+# Platform   : SunOS 5.5.1 sparc SUNW,Ultra-1 
+
+Regular partitions : 4
+Pad partitions : 0
+Relative capacities : yes 
+Capacity tolerances : 10%   
+      b0 rect        -10          0          0         10  :         25
+      b1 rect          0          0         10         10  :         25
+      b2 rect        -10        -10          0          0  :         25
+      b3 rect          0        -10         10          0  :         25

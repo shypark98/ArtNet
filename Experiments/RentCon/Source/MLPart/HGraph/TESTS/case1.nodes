@@ -1,0 +1,11 @@
+UCLA nodes 1.0
+# Created	:	Oct 23 2000
+# User   	:	Suresh Raman
+
+NumNodes :		5
+NumTerminals :		3
+	pio_I1	1	1	terminal
+	pio_I2	1	1	terminal
+	pio_O1	1	1	terminal
+	box1	9	25	 : X   Y
+	box2	9	25	 : X   Y

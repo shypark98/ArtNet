@@ -1,0 +1,13 @@
+UCLA blk 1.0 
+# Created      : Tue Feb 23 17:15:32 1999
+# User         : caldwell@nexus12 (uclacs) 
+# Platform     : SunOS 5.6 sparc SUNW,Ultra-5_10 
+
+Regular partitions : 2
+Pad partitions : 2
+Relative capacities : yes 
+Capacity tolerances : 61.2398%   
+     pb0 rect     516120      95640     516120      95640 
+     pb1 rect     547140      81540     547140      81540 
+      b0 rect     516120      92340     547140      95640  :    33.3333 
+      b1 rect     516120      81540     547140      92340  :    66.6667 

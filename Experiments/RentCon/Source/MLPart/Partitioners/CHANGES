@@ -1,0 +1,35 @@
+
+Partitioners
+
+1.1 980608 ilm
+
+ - added command line processing for parameters
+
+1.3 980705 aec
+ - added SVMoveLog:popMove()
+
+1.4 980711 ilm
+ - BasePart now reports  NumLegalSolutions
+
+1.5 980713 ilm
+ - added simplified interface to MM and MoveLog
+
+    981113 aec
+ - added bool lastMoveWasInvalid to MMInterface
+
+2.7 990710 ilm
+ - added SolnGenType, and 3 params to multiStartPart params:
+   solnGen, wiggleTerms, legalizeOnly
+ - added wiggleTerms to move manager interface
+
+2.9
+ - fixed bug w/ _solutions size in multiStartMM
+ - fixed mem leak in AGreed
+
+3.1 ilm 001002
+ - a series of changes to multiStartPart.*, svMoveLog,*
+   and moveMgrXFace.h to allow FMPart to save move log from last pass
+   depending on a parameter (see FMPart/FMPartTest5.cxx for an example).
+ 
+3.3 ilm 020824
+ - ported to g++ 3.1.1

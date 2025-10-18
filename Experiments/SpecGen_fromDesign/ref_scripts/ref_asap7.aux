@@ -1,0 +1,20 @@
+#Sample aux file
+
+DEF: __DEF_FILE__
+
+LEF: 
+../pdk/lef/asap7_tech_1x_201209.lef
+../pdk/lef/asap7sc7p5t_27_R_1x_201211.lef
+../pdk/lef/asap7sc7p5t_27_L_1x_201211.lef
+../pdk/lef/asap7sc7p5t_27_SL_1x_201211.lef
+../pdk/lef/sram_asap7_16x256_1rw.lef
+
+#FILLER and DECAP are substrings of the cell masters
+REMOVE_CELL_BY_KEY:
+FILLER
+DECAP
+
+#FILLX2 and FILLX4 are exact cell master names
+REMOVE_CELL_BY_FULL_NAME:
+FILLX2
+FILLX4

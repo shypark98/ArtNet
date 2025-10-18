@@ -1,0 +1,105 @@
+
+  CHANGES in the Placement package
+
+ 4.5   970923 
+          pat - added IntervalSeq::getLength()
+              - changed name of formal parameter to IntervalSeq::IntervalSeq
+              - added some lines to main9.cxx to test getLength
+              - updated expected.out for the new getLength test
+ 
+          ilm - added ctor for class Permutation to produce a sorting
+                permutation for vector<double> permutation for vector<double>
+                (i.e. where the k-th entry will sort to)
+              - added main10.cxx to the suite of regression tests
+                (updated expected.out)
+  4.5.1 970923 
+          ilm - Permutation::getInverse() does not require anything 
+                about its argument anymore
+
+  4.6   970929 
+          ilm - added plStats.h with classes PlCorrelation and PlRankCorrelation
+              - added class ClumpInCenter : public Transform to transf.h
+              - main11.cxx to demonstrate the above two
+                (note: main11.cxx can not be compiled *within*
+                the Placement package due to an exceptional circumstance ---
+                plStats.h depends on the StatzenPlotz package and Placement
+                does not).
+
+  4.7   970929
+          ilm - added rwalk.h and rwalk.o with class RandomWalk (aka RWalk)
+                class RandomWalk represents a fixed-length random walk starting
+                at 0.0, ending at a predefined location (default 0.0) with 
+                limited steps. It can be created deterministically or randomly
+                (but with a possibility of a "replay")
+              - added main12.cxx and modified the regression script accordingly
+              - added perturb.h and perturb.cxx with class Perturbation
+                (this class allows for two ways to perturb placements 
+                and control the perturbations with several parameters)
+              - added main13.cxx to demo class Perturbation
+
+  4.7.3 971023
+	  pat - added canonicalize and merge to IntervalSeq.
+                The first ensures that all intervals are sorted by
+	        low coordinate and non-overlapping.  The second
+	        merges two IntervalSeqs and ensures that the result
+	        is in canonical form.
+              - added main14.cxx to test these changes, and updated
+		expected.out and the regression script.
+
+  4.7.3 971124
+          ilm - cleaned out mess with ABKDEBUG and Mapping::op[]
+
+  4.8.2 971128
+          ilm - moved rwalk.{h,cxx} and perturb.{h,cxx} to the BTW subdir
+
+  4.9   971128
+          ilm - added xyDraw.{h,cxx} with xyDrawLine(), xyDrawLines() and
+                xyDrawRectangle() to be used with gnuplot
+          ilm - added main15.cxx (corresp. changes to Makefile and regression)
+
+ 4.9.5  971130
+          ilm - to draw a line with one dot, xyDrawLine uses the beginning
+                   numDots is now optional with default value 1
+ 4.9.6  971206
+          ilm - added BBox::ShrinkTo(double percent=0.9)
+                  with percent>0; percent > 1.0 will expand the BBox
+          ilm - all BBox modifying methods now return BBox& (for chaining)
+          ilm - Placement::_Grid2 now yields a regular grid size*size
+                  filling the given BBox 
+ 5.0   971206
+          ilm - added xyDrawPoints()
+ 
+ 5.0.5 971212
+          ilm - added Subset::_Random
+
+ 5.0.6 971216
+          mro - xyDrawPoints() moved to .cxx file
+       980217 ilm added Interval::getMiddle()
+
+ 5.1   980408
+          ilm - added double BBox::mdistTo(Point);
+ 5.2.2 980428
+          ilm - added a couple of missing const's in mapping.h
+          ilm - renamed Mapping::_Identity into Mapping::Identity
+		  ilm - fixed a bug in BBox::shrinkTo()
+
+ 5.5  980922
+          ilm - added Placement::flipXY()
+          ilm - added GridInPlacement
+
+ 5.6  980925
+          sm  - added layoutBBoxes
+      981202
+          sm  - added contains and locate in layoutBBoxes
+                for checking if a point is inside any box and to find
+                the box index
+
+ 5.8.1 990219
+          sm  - remove MST8 from the package and add GeomTrees package
+
+ 6.1	990911
+	  aec - added class PlacementWOrient - contains orientations 
+		added unsigned size() const to Placement (same functionality
+			as getSize..just more standard)
+ 6.4    020824
+          ilm - ported to g++ 3.1.1

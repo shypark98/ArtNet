@@ -1,0 +1,1374 @@
+ ------------  Running test 0 ...
+ Testing permutations 
+ Permutation size : 3
+0 : 0
+1 : 2
+2 : 1
+ Permutation size : 3
+0 : 0
+1 : 2
+2 : 1
+ Permutation size : 3
+0 : 1
+1 : 2
+2 : 0
+Square of the above is 
+ Permutation size : 3
+0 : 2
+1 : 0
+2 : 1
+After assignment 
+ Permutation size : 3
+0 : 1
+1 : 2
+2 : 0
+ Inverse 
+ Permutation size : 3
+0 : 2
+1 : 0
+2 : 1
+ ---- Testing general mappings --- 
+ Mapping source size : 2    destination size : 4
+0 : 0
+1 : 2
+ Mapping source size : 2    destination size : 4
+0 : 0
+1 : 2
+ Mapping source size : 2    destination size : 3
+0 : 0
+1 : 1
+ Mapping source size : 4    destination size : 5
+0 : 3
+1 : 2
+2 : 1
+3 : 0
+ The product of the two Mapping source size : 2    destination size : 5
+0 : 3
+1 : 2
+ Partial inverse :  Mapping source size : 2    destination size : 5
+0 : 3
+1 : 2
+
+ ------------  Running test 1 ...
+ Mapping source size : 2    destination size : 5
+0 : 0
+1 : 2
+
+ Mapping source size : 3    destination size : 5
+0 : 1
+1 : 3
+2 : 4
+
+ Mapping source size : 2    destination size : 5
+0 : 0
+1 : 2
+
+ Mapping source size : 0    destination size : 5
+
+ Mapping source size : 4    destination size : 5
+0 : 1
+1 : 2
+2 : 3
+3 : 4
+
+ ------------  Running test 2 ...
+          0      1      2      3      4      5      6      7      8      9 
+          0      1      2      3      4      5      6      7      8      9 
+ Permutation size : 10
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 6
+7 : 7
+8 : 8
+9 : 9
+ Permutation size : 10
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 6
+7 : 7
+8 : 8
+9 : 9
+----------------
+A
+          0      1      2      3      4      5      6      7      8      9 
+          0      8      2      4      3      5      6      7      1      9 
+0...9
+0...9
+ Permutation size : 10
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 6
+7 : 7
+8 : 8
+9 : 9
+ Permutation size : 10
+0 : 0
+1 : 8
+2 : 2
+3 : 4
+4 : 3
+5 : 5
+6 : 6
+7 : 7
+8 : 1
+9 : 9
+------------  Running test 3 ...
+ Permutation size : 5
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+ Permutation size : 5
+0 : 0
+1 : 1
+2 : 2
+3 : 4
+4 : 3
+ Permutation size : 5
+0 : 0
+1 : 1
+2 : 3
+3 : 2
+4 : 4
+ Permutation size : 5
+0 : 0
+1 : 1
+2 : 3
+3 : 4
+4 : 2
+ Permutation size : 5
+0 : 0
+1 : 1
+2 : 4
+3 : 2
+4 : 3
+ Permutation size : 5
+0 : 0
+1 : 1
+2 : 4
+3 : 3
+4 : 2
+ Permutation size : 5
+0 : 0
+1 : 2
+2 : 1
+3 : 3
+4 : 4
+ Permutation size : 5
+0 : 0
+1 : 2
+2 : 1
+3 : 4
+4 : 3
+ Permutation size : 5
+0 : 0
+1 : 2
+2 : 3
+3 : 1
+4 : 4
+ Permutation size : 5
+0 : 0
+1 : 2
+2 : 3
+3 : 4
+4 : 1
+ Permutation size : 5
+0 : 0
+1 : 2
+2 : 4
+3 : 1
+4 : 3
+ Permutation size : 5
+0 : 0
+1 : 2
+2 : 4
+3 : 3
+4 : 1
+ Permutation size : 5
+0 : 0
+1 : 3
+2 : 1
+3 : 2
+4 : 4
+ Permutation size : 5
+0 : 0
+1 : 3
+2 : 1
+3 : 4
+4 : 2
+ Permutation size : 5
+0 : 0
+1 : 3
+2 : 2
+3 : 1
+4 : 4
+ Permutation size : 5
+0 : 0
+1 : 3
+2 : 2
+3 : 4
+4 : 1
+ Permutation size : 5
+0 : 0
+1 : 3
+2 : 4
+3 : 1
+4 : 2
+ Permutation size : 5
+0 : 0
+1 : 3
+2 : 4
+3 : 2
+4 : 1
+ Permutation size : 5
+0 : 0
+1 : 4
+2 : 1
+3 : 2
+4 : 3
+ Permutation size : 5
+0 : 0
+1 : 4
+2 : 1
+3 : 3
+4 : 2
+ Permutation size : 5
+0 : 0
+1 : 4
+2 : 2
+3 : 1
+4 : 3
+ Permutation size : 5
+0 : 0
+1 : 4
+2 : 2
+3 : 3
+4 : 1
+ Permutation size : 5
+0 : 0
+1 : 4
+2 : 3
+3 : 1
+4 : 2
+ Permutation size : 5
+0 : 0
+1 : 4
+2 : 3
+3 : 2
+4 : 1
+ Permutation size : 5
+0 : 1
+1 : 0
+2 : 2
+3 : 3
+4 : 4
+ Permutation size : 5
+0 : 1
+1 : 0
+2 : 2
+3 : 4
+4 : 3
+ Permutation size : 5
+0 : 1
+1 : 0
+2 : 3
+3 : 2
+4 : 4
+ Permutation size : 5
+0 : 1
+1 : 0
+2 : 3
+3 : 4
+4 : 2
+ Permutation size : 5
+0 : 1
+1 : 0
+2 : 4
+3 : 2
+4 : 3
+ Permutation size : 5
+0 : 1
+1 : 0
+2 : 4
+3 : 3
+4 : 2
+ Permutation size : 5
+0 : 1
+1 : 2
+2 : 0
+3 : 3
+4 : 4
+ Permutation size : 5
+0 : 1
+1 : 2
+2 : 0
+3 : 4
+4 : 3
+ Permutation size : 5
+0 : 1
+1 : 2
+2 : 3
+3 : 0
+4 : 4
+ Permutation size : 5
+0 : 1
+1 : 2
+2 : 3
+3 : 4
+4 : 0
+ Permutation size : 5
+0 : 1
+1 : 2
+2 : 4
+3 : 0
+4 : 3
+ Permutation size : 5
+0 : 1
+1 : 2
+2 : 4
+3 : 3
+4 : 0
+ Permutation size : 5
+0 : 1
+1 : 3
+2 : 0
+3 : 2
+4 : 4
+ Permutation size : 5
+0 : 1
+1 : 3
+2 : 0
+3 : 4
+4 : 2
+ Permutation size : 5
+0 : 1
+1 : 3
+2 : 2
+3 : 0
+4 : 4
+ Permutation size : 5
+0 : 1
+1 : 3
+2 : 2
+3 : 4
+4 : 0
+ Permutation size : 5
+0 : 1
+1 : 3
+2 : 4
+3 : 0
+4 : 2
+ Permutation size : 5
+0 : 1
+1 : 3
+2 : 4
+3 : 2
+4 : 0
+ Permutation size : 5
+0 : 1
+1 : 4
+2 : 0
+3 : 2
+4 : 3
+ Permutation size : 5
+0 : 1
+1 : 4
+2 : 0
+3 : 3
+4 : 2
+ Permutation size : 5
+0 : 1
+1 : 4
+2 : 2
+3 : 0
+4 : 3
+ Permutation size : 5
+0 : 1
+1 : 4
+2 : 2
+3 : 3
+4 : 0
+ Permutation size : 5
+0 : 1
+1 : 4
+2 : 3
+3 : 0
+4 : 2
+ Permutation size : 5
+0 : 1
+1 : 4
+2 : 3
+3 : 2
+4 : 0
+ Permutation size : 5
+0 : 2
+1 : 0
+2 : 1
+3 : 3
+4 : 4
+ Permutation size : 5
+0 : 2
+1 : 0
+2 : 1
+3 : 4
+4 : 3
+ Permutation size : 5
+0 : 2
+1 : 0
+2 : 3
+3 : 1
+4 : 4
+ Permutation size : 5
+0 : 2
+1 : 0
+2 : 3
+3 : 4
+4 : 1
+ Permutation size : 5
+0 : 2
+1 : 0
+2 : 4
+3 : 1
+4 : 3
+ Permutation size : 5
+0 : 2
+1 : 0
+2 : 4
+3 : 3
+4 : 1
+ Permutation size : 5
+0 : 2
+1 : 1
+2 : 0
+3 : 3
+4 : 4
+ Permutation size : 5
+0 : 2
+1 : 1
+2 : 0
+3 : 4
+4 : 3
+ Permutation size : 5
+0 : 2
+1 : 1
+2 : 3
+3 : 0
+4 : 4
+ Permutation size : 5
+0 : 2
+1 : 1
+2 : 3
+3 : 4
+4 : 0
+ Permutation size : 5
+0 : 2
+1 : 1
+2 : 4
+3 : 0
+4 : 3
+ Permutation size : 5
+0 : 2
+1 : 1
+2 : 4
+3 : 3
+4 : 0
+ Permutation size : 5
+0 : 2
+1 : 3
+2 : 0
+3 : 1
+4 : 4
+ Permutation size : 5
+0 : 2
+1 : 3
+2 : 0
+3 : 4
+4 : 1
+ Permutation size : 5
+0 : 2
+1 : 3
+2 : 1
+3 : 0
+4 : 4
+ Permutation size : 5
+0 : 2
+1 : 3
+2 : 1
+3 : 4
+4 : 0
+ Permutation size : 5
+0 : 2
+1 : 3
+2 : 4
+3 : 0
+4 : 1
+ Permutation size : 5
+0 : 2
+1 : 3
+2 : 4
+3 : 1
+4 : 0
+ Permutation size : 5
+0 : 2
+1 : 4
+2 : 0
+3 : 1
+4 : 3
+ Permutation size : 5
+0 : 2
+1 : 4
+2 : 0
+3 : 3
+4 : 1
+ Permutation size : 5
+0 : 2
+1 : 4
+2 : 1
+3 : 0
+4 : 3
+ Permutation size : 5
+0 : 2
+1 : 4
+2 : 1
+3 : 3
+4 : 0
+ Permutation size : 5
+0 : 2
+1 : 4
+2 : 3
+3 : 0
+4 : 1
+ Permutation size : 5
+0 : 2
+1 : 4
+2 : 3
+3 : 1
+4 : 0
+ Permutation size : 5
+0 : 3
+1 : 0
+2 : 1
+3 : 2
+4 : 4
+ Permutation size : 5
+0 : 3
+1 : 0
+2 : 1
+3 : 4
+4 : 2
+ Permutation size : 5
+0 : 3
+1 : 0
+2 : 2
+3 : 1
+4 : 4
+ Permutation size : 5
+0 : 3
+1 : 0
+2 : 2
+3 : 4
+4 : 1
+ Permutation size : 5
+0 : 3
+1 : 0
+2 : 4
+3 : 1
+4 : 2
+ Permutation size : 5
+0 : 3
+1 : 0
+2 : 4
+3 : 2
+4 : 1
+ Permutation size : 5
+0 : 3
+1 : 1
+2 : 0
+3 : 2
+4 : 4
+ Permutation size : 5
+0 : 3
+1 : 1
+2 : 0
+3 : 4
+4 : 2
+ Permutation size : 5
+0 : 3
+1 : 1
+2 : 2
+3 : 0
+4 : 4
+ Permutation size : 5
+0 : 3
+1 : 1
+2 : 2
+3 : 4
+4 : 0
+ Permutation size : 5
+0 : 3
+1 : 1
+2 : 4
+3 : 0
+4 : 2
+ Permutation size : 5
+0 : 3
+1 : 1
+2 : 4
+3 : 2
+4 : 0
+ Permutation size : 5
+0 : 3
+1 : 2
+2 : 0
+3 : 1
+4 : 4
+ Permutation size : 5
+0 : 3
+1 : 2
+2 : 0
+3 : 4
+4 : 1
+ Permutation size : 5
+0 : 3
+1 : 2
+2 : 1
+3 : 0
+4 : 4
+ Permutation size : 5
+0 : 3
+1 : 2
+2 : 1
+3 : 4
+4 : 0
+ Permutation size : 5
+0 : 3
+1 : 2
+2 : 4
+3 : 0
+4 : 1
+ Permutation size : 5
+0 : 3
+1 : 2
+2 : 4
+3 : 1
+4 : 0
+ Permutation size : 5
+0 : 3
+1 : 4
+2 : 0
+3 : 1
+4 : 2
+ Permutation size : 5
+0 : 3
+1 : 4
+2 : 0
+3 : 2
+4 : 1
+ Permutation size : 5
+0 : 3
+1 : 4
+2 : 1
+3 : 0
+4 : 2
+ Permutation size : 5
+0 : 3
+1 : 4
+2 : 1
+3 : 2
+4 : 0
+ Permutation size : 5
+0 : 3
+1 : 4
+2 : 2
+3 : 0
+4 : 1
+ Permutation size : 5
+0 : 3
+1 : 4
+2 : 2
+3 : 1
+4 : 0
+ Permutation size : 5
+0 : 4
+1 : 0
+2 : 1
+3 : 2
+4 : 3
+ Permutation size : 5
+0 : 4
+1 : 0
+2 : 1
+3 : 3
+4 : 2
+ Permutation size : 5
+0 : 4
+1 : 0
+2 : 2
+3 : 1
+4 : 3
+ Permutation size : 5
+0 : 4
+1 : 0
+2 : 2
+3 : 3
+4 : 1
+ Permutation size : 5
+0 : 4
+1 : 0
+2 : 3
+3 : 1
+4 : 2
+ Permutation size : 5
+0 : 4
+1 : 0
+2 : 3
+3 : 2
+4 : 1
+ Permutation size : 5
+0 : 4
+1 : 1
+2 : 0
+3 : 2
+4 : 3
+ Permutation size : 5
+0 : 4
+1 : 1
+2 : 0
+3 : 3
+4 : 2
+ Permutation size : 5
+0 : 4
+1 : 1
+2 : 2
+3 : 0
+4 : 3
+ Permutation size : 5
+0 : 4
+1 : 1
+2 : 2
+3 : 3
+4 : 0
+ Permutation size : 5
+0 : 4
+1 : 1
+2 : 3
+3 : 0
+4 : 2
+ Permutation size : 5
+0 : 4
+1 : 1
+2 : 3
+3 : 2
+4 : 0
+ Permutation size : 5
+0 : 4
+1 : 2
+2 : 0
+3 : 1
+4 : 3
+ Permutation size : 5
+0 : 4
+1 : 2
+2 : 0
+3 : 3
+4 : 1
+ Permutation size : 5
+0 : 4
+1 : 2
+2 : 1
+3 : 0
+4 : 3
+ Permutation size : 5
+0 : 4
+1 : 2
+2 : 1
+3 : 3
+4 : 0
+ Permutation size : 5
+0 : 4
+1 : 2
+2 : 3
+3 : 0
+4 : 1
+ Permutation size : 5
+0 : 4
+1 : 2
+2 : 3
+3 : 1
+4 : 0
+ Permutation size : 5
+0 : 4
+1 : 3
+2 : 0
+3 : 1
+4 : 2
+ Permutation size : 5
+0 : 4
+1 : 3
+2 : 0
+3 : 2
+4 : 1
+ Permutation size : 5
+0 : 4
+1 : 3
+2 : 1
+3 : 0
+4 : 2
+ Permutation size : 5
+0 : 4
+1 : 3
+2 : 1
+3 : 2
+4 : 0
+ Permutation size : 5
+0 : 4
+1 : 3
+2 : 2
+3 : 0
+4 : 1
+ Permutation size : 5
+0 : 4
+1 : 3
+2 : 2
+3 : 1
+4 : 0
+ 0 user, 0.0e+00 system, 0 real, 0 norm'd sec ------------  Running test 4a...
+0 1 2 3 
+ Permutation size : 4
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+
+0 1 3 2 
+ Permutation size : 4
+0 : 0
+1 : 1
+2 : 3
+3 : 2
+
+0 3 1 2 
+ Permutation size : 4
+0 : 0
+1 : 3
+2 : 1
+3 : 2
+
+3 0 1 2 
+ Permutation size : 4
+0 : 3
+1 : 0
+2 : 1
+3 : 2
+
+3 0 2 1 
+ Permutation size : 4
+0 : 3
+1 : 0
+2 : 2
+3 : 1
+
+0 3 2 1 
+ Permutation size : 4
+0 : 0
+1 : 3
+2 : 2
+3 : 1
+
+0 2 3 1 
+ Permutation size : 4
+0 : 0
+1 : 2
+2 : 3
+3 : 1
+
+0 2 1 3 
+ Permutation size : 4
+0 : 0
+1 : 2
+2 : 1
+3 : 3
+
+2 0 1 3 
+ Permutation size : 4
+0 : 2
+1 : 0
+2 : 1
+3 : 3
+
+2 0 3 1 
+ Permutation size : 4
+0 : 2
+1 : 0
+2 : 3
+3 : 1
+
+2 3 0 1 
+ Permutation size : 4
+0 : 2
+1 : 3
+2 : 0
+3 : 1
+
+3 2 0 1 
+ Permutation size : 4
+0 : 3
+1 : 2
+2 : 0
+3 : 1
+
+3 2 1 0 
+ Permutation size : 4
+0 : 3
+1 : 2
+2 : 1
+3 : 0
+
+2 3 1 0 
+ Permutation size : 4
+0 : 2
+1 : 3
+2 : 1
+3 : 0
+
+2 1 3 0 
+ Permutation size : 4
+0 : 2
+1 : 1
+2 : 3
+3 : 0
+
+2 1 0 3 
+ Permutation size : 4
+0 : 2
+1 : 1
+2 : 0
+3 : 3
+
+1 2 0 3 
+ Permutation size : 4
+0 : 1
+1 : 2
+2 : 0
+3 : 3
+
+1 2 3 0 
+ Permutation size : 4
+0 : 1
+1 : 2
+2 : 3
+3 : 0
+
+1 3 2 0 
+ Permutation size : 4
+0 : 1
+1 : 3
+2 : 2
+3 : 0
+
+3 1 2 0 
+ Permutation size : 4
+0 : 3
+1 : 1
+2 : 2
+3 : 0
+
+3 1 0 2 
+ Permutation size : 4
+0 : 3
+1 : 1
+2 : 0
+3 : 2
+
+1 3 0 2 
+ Permutation size : 4
+0 : 1
+1 : 3
+2 : 0
+3 : 2
+
+1 0 3 2 
+ Permutation size : 4
+0 : 1
+1 : 0
+2 : 3
+3 : 2
+
+1 0 2 3 
+ Permutation size : 4
+0 : 1
+1 : 0
+2 : 2
+3 : 3
+
+------------  Running test 4b...
+0 1 2 3 4 5 6 7 8 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 6
+7 : 7
+8 : 8
+
+0 1 2 3 4 5 6 8 7 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 6
+7 : 8
+8 : 7
+
+0 1 2 3 4 5 8 6 7 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 8
+7 : 6
+8 : 7
+
+0 1 2 3 4 8 5 6 7 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 8
+6 : 5
+7 : 6
+8 : 7
+
+0 1 2 3 8 4 5 6 7 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 8
+5 : 4
+6 : 5
+7 : 6
+8 : 7
+
+0 1 2 8 3 4 5 6 7 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 8
+4 : 3
+5 : 4
+6 : 5
+7 : 6
+8 : 7
+
+0 1 8 2 3 4 5 6 7 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 8
+3 : 2
+4 : 3
+5 : 4
+6 : 5
+7 : 6
+8 : 7
+
+0 8 1 2 3 4 5 6 7 
+ Permutation size : 9
+0 : 0
+1 : 8
+2 : 1
+3 : 2
+4 : 3
+5 : 4
+6 : 5
+7 : 6
+8 : 7
+
+8 0 1 2 3 4 5 6 7 
+ Permutation size : 9
+0 : 8
+1 : 0
+2 : 1
+3 : 2
+4 : 3
+5 : 4
+6 : 5
+7 : 6
+8 : 7
+
+8 0 1 2 3 4 5 7 6 
+ Permutation size : 9
+0 : 8
+1 : 0
+2 : 1
+3 : 2
+4 : 3
+5 : 4
+6 : 5
+7 : 7
+8 : 6
+
+0 8 1 2 3 4 5 7 6 
+ Permutation size : 9
+0 : 0
+1 : 8
+2 : 1
+3 : 2
+4 : 3
+5 : 4
+6 : 5
+7 : 7
+8 : 6
+
+0 1 8 2 3 4 5 7 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 8
+3 : 2
+4 : 3
+5 : 4
+6 : 5
+7 : 7
+8 : 6
+
+0 1 2 8 3 4 5 7 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 8
+4 : 3
+5 : 4
+6 : 5
+7 : 7
+8 : 6
+
+0 1 2 3 8 4 5 7 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 8
+5 : 4
+6 : 5
+7 : 7
+8 : 6
+
+0 1 2 3 4 8 5 7 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 8
+6 : 5
+7 : 7
+8 : 6
+
+0 1 2 3 4 5 8 7 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 8
+7 : 7
+8 : 6
+
+0 1 2 3 4 5 7 8 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 7
+7 : 8
+8 : 6
+
+0 1 2 3 4 5 7 6 8 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 5
+6 : 7
+7 : 6
+8 : 8
+
+0 1 2 3 4 7 5 6 8 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 7
+6 : 5
+7 : 6
+8 : 8
+
+0 1 2 3 4 7 5 8 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 7
+6 : 5
+7 : 8
+8 : 6
+
+0 1 2 3 4 7 8 5 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 7
+6 : 8
+7 : 5
+8 : 6
+
+0 1 2 3 4 8 7 5 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 4
+5 : 8
+6 : 7
+7 : 5
+8 : 6
+
+0 1 2 3 8 4 7 5 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 3
+4 : 8
+5 : 4
+6 : 7
+7 : 5
+8 : 6
+
+0 1 2 8 3 4 7 5 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 2
+3 : 8
+4 : 3
+5 : 4
+6 : 7
+7 : 5
+8 : 6
+
+0 1 8 2 3 4 7 5 6 
+ Permutation size : 9
+0 : 0
+1 : 1
+2 : 8
+3 : 2
+4 : 3
+5 : 4
+6 : 7
+7 : 5
+8 : 6
+
+0 8 1 2 3 4 7 5 6 
+ Permutation size : 9
+0 : 0
+1 : 8
+2 : 1
+3 : 2
+4 : 3
+5 : 4
+6 : 7
+7 : 5
+8 : 6
+
+------------  Running test 5a...
+ Started with    :           0      0      0      0 
+ Incrementing 0  :           1      0      0      0 
+ Incrementing 1  :           1      1      0      0 
+ Incrementing 0  :           0      1      0      0 
+ Incrementing 2  :           0      1      1      0 
+ Incrementing 0  :           1      1      1      0 
+ Incrementing 1  :           1      0      1      0 
+ Incrementing 0  :           0      0      1      0 
+ Incrementing 3  :           0      0      1      1 
+ Incrementing 0  :           1      0      1      1 
+ Incrementing 1  :           1      1      1      1 
+ Incrementing 0  :           0      1      1      1 
+ Incrementing 2  :           0      1      0      1 
+ Incrementing 0  :           1      1      0      1 
+ Incrementing 1  :           1      0      0      1 
+ Incrementing 0  :           0      0      0      1 
+------------  Running test 5b...
+ Started with    :           0      0      0 
+ Incrementing 0  :           1      0      0 
+ Incrementing 0  :           2      0      0 
+ Incrementing 1  :           2      1      0 
+ Incrementing 0  :           0      1      0 
+ Incrementing 0  :           1      1      0 
+ Incrementing 1  :           1      2      0 
+ Incrementing 0  :           2      2      0 
+ Incrementing 0  :           0      2      0 
+ Incrementing 2  :           0      2      1 
+ Incrementing 0  :           1      2      1 
+ Incrementing 0  :           2      2      1 
+ Incrementing 1  :           2      0      1 
+ Incrementing 0  :           0      0      1 
+ Incrementing 0  :           1      0      1 
+ Incrementing 1  :           1      1      1 
+ Incrementing 0  :           2      1      1 
+ Incrementing 0  :           0      1      1 
+ Incrementing 2  :           0      1      2 
+ Incrementing 0  :           1      1      2 
+ Incrementing 0  :           2      1      2 
+ Incrementing 1  :           2      2      2 
+ Incrementing 0  :           0      2      2 
+ Incrementing 0  :           1      2      2 
+ Incrementing 1  :           1      0      2 
+ Incrementing 0  :           2      0      2 
+ Incrementing 0  :           0      0      2 

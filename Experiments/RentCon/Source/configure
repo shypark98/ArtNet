@@ -1,0 +1,72 @@
+#!/usr/bin/perl -w
+
+$|=1;
+
+chomp($system=`uname 2> /dev/null`);
+if ($system ne "Linux")
+{
+	print "\nWARNING: WLD program is tested on Linux and unexpected problem may occur.\n\n";
+}
+
+chomp($GCC=`which g++`);
+if ($GCC=~/not found|^ *no /i)
+{
+	print "\nNOTE: The g++ command does not work on your system. \nExiting ...\n\n";
+	exit;
+}
+else
+{
+	$GCCVersion=`g++ --version 2> /dev/null`;
+	
+	$GCCVersion=$1 if $GCCVersion =~ /\s(\S+\.\S+)\s+/;
+	chomp($GCCVersion);
+	$GCCmaj=0;
+	$GCCmaj=$1 if $GCCVersion =~ /(\d+)\S*/;
+	$GCCmin=0;
+	$GCCmin=$1 if $GCCVersion =~ /\d+\.(\d+)\S*/;
+	$GCCrev=0;
+	$GCCrev=$1 if $GCCVersion =~ /\d+\.\d+\.(\d+)/;
+	
+	if ($GCCmaj < 3 || ($GCCmaj == 3 && $GCCmin < 2))
+	{
+		print "\nWARNING: GCC Version: $GCCmaj.$GCCmin.$GCCrev\n";
+		print "WLD program compiles on GCC 3.2.3 or higher. \nExiting ...\n\n";
+		exit;
+	}
+}
+
+$SFtemp = "";
+$Have64bits = "";
+if ( -e "/proc/cpuinfo")
+{
+	chomp($SFtemp=`egrep Itanium /proc/cpuinfo | wc -l`);
+	$SFtemp =~ s/ +//g;
+	$Have64bits=" 64-bit Itanium" if $SFtemp > 0;
+	chomp($SFtemp=`egrep Opteron /proc/cpuinfo | wc -l`);
+	$SFtemp =~ s/ +//g;
+	$Have64bits=" 64-bit Opteron" if $SFtemp > 0;
+	chomp($unamea=`uname -a`);
+	$Have64bits= " 64-bit" if (($Have64bits eq "") && $unamea =~ m/x86_64/);
+}
+else
+{
+	print "\nWARNING: cannot find CPU information in /proc/cpuinfo and the system may not be supported.\n\n";
+}
+
+if ($Have64bits =~ m/64/)
+{
+	chomp($CC=`which cc`);
+	if ($CC=~/not found|^ *no /i)
+	{
+		print "\nNOTE: The cc command does not work on your system. \nExiting ...\n\n";
+		exit;
+	}
+	
+	system("sed 's/^M64.*/M64 = CC=cc CFLAGS=\"-64\" LDFLAGS=\"-64\"/g' GSLSource/makefile.install > sed.out");
+	system("\\mv -f sed.out GSLSource/makefile.install");
+}
+else
+{
+	system("sed 's/^M64.*/M64 = /g' GSLSource/makefile.install > sed.out");
+	system("\\mv -f sed.out GSLSource/makefile.install");
+}

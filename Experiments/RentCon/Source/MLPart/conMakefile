@@ -1,0 +1,9 @@
+#!/bin/tcsh
+
+foreach DIRECTORY ( ABKCommon ClusteredHGraph Combi Ctainers FilledHier FMPart GenHier Geoms HGraph MLPart PartEvals Partitioners Partitioning PartLegality Placement SmallPart Stats )
+
+cd "$DIRECTORY"
+../chgMakefile Makefile
+cd ../
+
+end

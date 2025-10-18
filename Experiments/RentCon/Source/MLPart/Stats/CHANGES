@@ -1,0 +1,37 @@
+
+CHANGES to package StatzenPlotz
+
+1.3 971005  mro  -- corrected standard deviation as returned
+                    from TrivialStatsWithStdDev (it was actually
+                    returning variance).
+
+                 -- corrected bug caused by unsigned overflow
+                    in rancor.cxx (see variable en3n in compute_rankcorr().
+                    If "size" is used instead of "dsize", right-hand side
+                    can overflow.)
+
+1.4 971006  ilm  -- inlined all methods defined in freqDistr.h
+                 -- now one-point intervals are printed as [2,2]
+                    rather than [2,2)
+                 -- added the word "decile" to output of FreqDistr
+                 -- moved main5.cxx to main4.cxx (incl. Makefile
+                    and regression script)
+                 -- updated regression script
+
+1.5  970108 mro  -- restored part of correction for ties in RankCorrelation
+                    and took scope resolution operator out of definition
+                    of compute_rankcorr() (ask Chuck if it gives him trouble)
+
+1.5.1 980126 ilm -- added an optional argument to the FreqDistribution
+                    ctors setting the number of subranges for ASCII output.
+                    This goes in between the vector argument and the 
+		    enum type parameter, so the old calls setting the
+		    parameter explicitely (to Magnitudes) will not work
+		    correctly, giving only one range for a wrong type.
+
+1.6   980410 ilm -- added class BiasedRandomSelection (aka LoadedDie)
+
+1.8   980826 ilm -- added class KeyCounter, regression tests 5 and 6
+
+1.9   981206 ilm -- added class ExpectedMins, regression test 8
+2.3   020824 ilm -- ported to g++ 3.1.1

@@ -1,0 +1,13 @@
+UCLA blk 1.0 
+# Created      : Wed Sep 29 02:07:24 1999
+# User         : caldwell@nexus12.cs.ucla.edu (Andrew Caldwell) 
+# Platform     : SunOS 5.7 sparc SUNW,Ultra-5_10 
+
+Regular partitions : 2
+Pad partitions : 2
+Relative capacities : yes 
+Capacity tolerances : 2.70494%   
+    pb0 rect       720    335840       720    335840 
+    pb1 rect     23760    312480     23760    312480 
+     b0 rect       720    332160     23760    335840  : 33.0355 
+     b1 rect       720    312480     23760    332160  : 66.9645 

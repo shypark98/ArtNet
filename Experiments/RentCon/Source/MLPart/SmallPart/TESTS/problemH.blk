@@ -1,0 +1,13 @@
+UCLA blk 1.0 
+# Created      : Mon Nov 25 22:09:44 2002
+# User         : sadya@buran (Saurabh N Adya,Not Available,NotAvailable/Freysinger;CR0i;30) 
+# Platform     : Linux 2.4.17 #4 SMP Wed Mar 20 13:31:05 EST 2002 i686 
+
+Regular partitions : 2
+Pad partitions : 2
+Relative capacities : yes 
+Capacity tolerances : 16.6667%   
+    pb0 rect         0        10         0        10 
+    pb1 rect         3         8         3         8 
+     b0 rect         0         9         3        10  :    60 
+     b1 rect         0         8         3         9  :    40 

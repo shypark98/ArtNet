@@ -1,0 +1,156 @@
+-----------------------
+IntervalSequence 1: 
+ 2 interval(s)  :  [-10,10)  [20,30)  
+
+Complemented:       
+ 3 interval(s)  :  [-1.79769e+308,-10)  [10,20)  [30,1.79769e+308)  
+
+Original:           
+ 2 interval(s)  :  [-10,10)  [20,30)  
+
+IntervalSequence 2: 
+ 3 interval(s)  :  [-5,5)  [8,22)  [25,40)  
+
+ISeq1 Union ISeq2:     
+ 1 interval(s)  :  [-10,40)  
+
+ISeq1 Intersect ISeq2: 
+ 4 interval(s)  :  [-5,5)  [8,10)  [20,22)  [25,30)  
+
+Running test1  ...-----------------------
+IS:  5 interval(s)  :  [0.1,0.9)  [0.7,1.2)  [0.9,1.2)  [1.2,1.5)  [1.7,20)  
+
+IS[0],IS[0]:  doesOverlap=1 overlap=0.8
+IS[0],IS[1]:  doesOverlap=1 overlap=0.2
+IS[0],IS[2]:  doesOverlap=0 overlap=0
+IS[0],IS[3]:  doesOverlap=0 overlap=0
+IS[0],IS[4]:  doesOverlap=0 overlap=0
+IS[1],IS[0]:  doesOverlap=1 overlap=0.2
+IS[1],IS[1]:  doesOverlap=1 overlap=0.5
+IS[1],IS[2]:  doesOverlap=1 overlap=0.3
+IS[1],IS[3]:  doesOverlap=0 overlap=0
+IS[1],IS[4]:  doesOverlap=0 overlap=0
+IS[2],IS[0]:  doesOverlap=0 overlap=0
+IS[2],IS[1]:  doesOverlap=1 overlap=0.3
+IS[2],IS[2]:  doesOverlap=1 overlap=0.3
+IS[2],IS[3]:  doesOverlap=0 overlap=0
+IS[2],IS[4]:  doesOverlap=0 overlap=0
+IS[3],IS[0]:  doesOverlap=0 overlap=0
+IS[3],IS[1]:  doesOverlap=0 overlap=0
+IS[3],IS[2]:  doesOverlap=0 overlap=0
+IS[3],IS[3]:  doesOverlap=1 overlap=0.3
+IS[3],IS[4]:  doesOverlap=0 overlap=0
+IS[4],IS[0]:  doesOverlap=0 overlap=0
+IS[4],IS[1]:  doesOverlap=0 overlap=0
+IS[4],IS[2]:  doesOverlap=0 overlap=0
+IS[4],IS[3]:  doesOverlap=0 overlap=0
+IS[4],IS[4]:  doesOverlap=1 overlap=18.3
+IS[0] [0.1,0.9) length: 0.8
+IS[1] [0.7,1.2) length: 0.5
+IS[2] [0.9,1.2) length: 0.3
+IS[3] [1.2,1.5) length: 0.3
+IS[4] [1.7,20) length: 18.3
+Length of full sequence: 20.2
+Before blanking:  1 interval(s)  :  [0,5)  
+
+ blanking by [0.1,0.9)
+ after blanking:  2 interval(s)  :  [0,0.1)  [0.9,5)  
+
+Before blanking:  2 interval(s)  :  [0,0.1)  [0.9,5)  
+
+ blanking by [0.7,1.2)
+ after blanking:  2 interval(s)  :  [0,0.1)  [1.2,5)  
+
+Before blanking:  2 interval(s)  :  [0,0.1)  [1.2,5)  
+
+ blanking by [0.9,1.2)
+ after blanking:  2 interval(s)  :  [0,0.1)  [1.2,5)  
+
+Before blanking:  2 interval(s)  :  [0,0.1)  [1.2,5)  
+
+ blanking by [1.2,1.5)
+ after blanking:  2 interval(s)  :  [0,0.1)  [1.5,5)  
+
+Before blanking:  2 interval(s)  :  [0,0.1)  [1.5,5)  
+
+ blanking by [1.7,20)
+ after blanking:  2 interval(s)  :  [0,0.1)  [1.5,1.7)  
+
+File seeds.in exists and will override all seeds, including hardcoded ones 
+
+File seeds.in appears to come from a process that never completed
+ (Warning in seed.cxx:262)
+
+Pseudo-random IS:
+ 5 interval(s)  :  [21.9918,40.3944)  [61.1502,77.4923)  [101.529,121.446)  [139.542,152.861)  [180.444,191.333)  
+Pseudo-random int IS:
+ 5 interval(s)  :  [24,41)  [67,78)  [106,121)  [148,162)  [178,191)  
+Running test2  ...-----------------------
+Start sequence:  5 interval(s)  :  [1.7,2.4)  [1.3,1.9)  [0.1,0.9)  [0.7,1.2)  [1.5,1.6)  
+
+After canonicalization:  2 interval(s)  :  [0.1,1.2)  [1.3,2.4)  
+
+File seeds.in exists and will override all seeds, including hardcoded ones 
+
+File seeds.in appears to come from a process that never completed
+ (Warning in seed.cxx:262)
+First random seq:  5 interval(s)  :  [21,39)  [59,75)  [99,118)  [136,149)  [176,195)  
+
+2nd   random seq:  5 interval(s)  :  [16,32)  [57,74)  [91,109)  [132,150)  [171,182)  
+
+result of merge :  5 interval(s)  :  [16,39)  [57,75)  [91,118)  [132,150)  [171,195)  
+
+First random seq:  5 interval(s)  :  [23,38)  [53,69)  [93,110)  [139,149)  [174,185)  
+
+2nd   random seq:  4 interval(s)  :  [27,40)  [65,83)  [112,131)  [158,177)  
+
+result of merge :  6 interval(s)  :  [23,40)  [53,83)  [93,110)  [112,131)  [139,149)  [158,185)  
+
+First random seq:  5 interval(s)  :  [29,40)  [61,77)  [101,117)  [139,155)  [178,190)  
+
+2nd   random seq:  5 interval(s)  :  [28,39)  [56,71)  [91,108)  [123,138)  [161,172)  
+
+result of merge :  7 interval(s)  :  [28,40)  [56,77)  [91,117)  [123,138)  [139,155)  [161,172)  [178,190)  
+
+First random seq:  5 interval(s)  :  [27,40)  [57,67)  [87,105)  [126,142)  [166,177)  
+
+2nd   random seq:  5 interval(s)  :  [15,33)  [49,60)  [79,90)  [117,129)  [148,166)  
+
+result of merge :  5 interval(s)  :  [15,40)  [49,67)  [79,105)  [117,142)  [148,177)  
+
+First random seq:  5 interval(s)  :  [19,31)  [60,78)  [94,113)  [142,157)  [180,199)  
+
+2nd   random seq:  5 interval(s)  :  [29,39)  [61,77)  [96,114)  [142,156)  [174,189)  
+
+result of merge :  5 interval(s)  :  [19,39)  [60,78)  [94,114)  [142,157)  [174,199)  
+
+First random seq:  5 interval(s)  :  [26,37)  [57,68)  [93,110)  [129,145)  [162,179)  
+
+2nd   random seq:  5 interval(s)  :  [21,33)  [49,67)  [92,108)  [124,140)  [168,184)  
+
+result of merge :  5 interval(s)  :  [21,37)  [49,68)  [92,110)  [124,145)  [162,184)  
+
+First random seq:  5 interval(s)  :  [28,45)  [66,81)  [102,118)  [139,155)  [171,186)  
+
+2nd   random seq:  5 interval(s)  :  [25,43)  [65,76)  [98,116)  [139,154)  [173,184)  
+
+result of merge :  5 interval(s)  :  [25,45)  [65,81)  [98,118)  [139,155)  [171,186)  
+
+First random seq:  5 interval(s)  :  [25,42)  [62,80)  [102,114)  [131,148)  [164,181)  
+
+2nd   random seq:  5 interval(s)  :  [29,45)  [67,80)  [102,114)  [130,149)  [177,187)  
+
+result of merge :  5 interval(s)  :  [25,45)  [62,80)  [102,114)  [130,149)  [164,187)  
+
+First random seq:  5 interval(s)  :  [28,38)  [60,71)  [95,106)  [133,151)  [178,195)  
+
+2nd   random seq:  5 interval(s)  :  [25,43)  [66,77)  [93,105)  [124,138)  [165,180)  
+
+result of merge :  5 interval(s)  :  [25,43)  [60,77)  [93,106)  [124,151)  [165,195)  
+
+First random seq:  5 interval(s)  :  [21,37)  [57,72)  [95,113)  [140,157)  [178,194)  
+
+2nd   random seq:  5 interval(s)  :  [24,43)  [70,89)  [114,127)  [144,163)  [181,197)  
+
+result of merge :  6 interval(s)  :  [21,43)  [57,89)  [95,113)  [114,127)  [140,163)  [178,197)  
+

@@ -1,0 +1,54 @@
+UCLA fix 1.0 
+# Created    : Tue May 26 16:35:58 1998
+# User       : caldwell@nexus6 (uclacs) 
+# Platform   : SunOS 5.5.1 sparc SUNW,Ultra-1 
+
+Regular partitions : 2
+Pad partitions : 45
+Fixed Pads : 45
+Fixed NonPads : 0
+      p1 : pb0 
+      p2 : pb1 
+      p3 : pb2 
+      p4 : pb3 
+      p5 : pb4 
+      p6 : pb5 
+      p7 : pb6 
+      p8 : pb7 
+      p9 : pb8 
+     p10 : pb9 
+     p11 : pb10 
+     p12 : pb11 
+     p13 : pb12 
+     p14 : pb13 
+     p15 : pb14 
+     p16 : pb15 
+     p17 : pb16 
+     p18 : pb17 
+     p19 : pb18 
+     p20 : pb19 
+     p21 : pb20 
+     p22 : pb21 
+     p23 : pb22 
+     p24 : pb23 
+     p25 : pb24 
+     p26 : pb25 
+     p27 : pb26 
+     p28 : pb27 
+     p29 : pb28 
+     p30 : pb29 
+     p31 : pb30 
+     p32 : pb31 
+     p33 : pb32 
+     p34 : pb33 
+     p35 : pb34 
+     p36 : pb35 
+     p37 : pb36 
+     p38 : pb37 
+     p39 : pb38 
+     p40 : pb39 
+     p41 : pb40 
+     p42 : pb41 
+     p43 : pb42 
+     p44 : pb43 
+     p45 : pb44 

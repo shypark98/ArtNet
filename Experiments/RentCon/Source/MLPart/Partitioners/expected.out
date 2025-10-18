@@ -1,0 +1,176 @@
+------------  Running test 0a...
+   Partitioner Parameters: 
+   Verbosity levels : 3
+ For actions : 1,   For sys resources : 1,   For major stats : 1
+   Move manager                    : FM            
+   Partitioning evaluator          : NetCutWNetVec   
+   Solution generator              : RandomizedEngineers
+   Legalize only                   : false
+   Use clip / early stop           : false/false
+   Print hill stats                : false
+   Min pass improvement            : 0%
+   Max num passes                  : 0
+   Relaxed tolerance passes        : 0
+   Randomized                      : false
+   Uncorking                       : 1
+   Do first LIFO pass              : false
+   Allow corking nodes             : false
+   Allow illegal moves             : false
+   Tie break on pin counts         : false
+   Wiggle terminals                : true
+   Save move log                   : false
+   Use weights                     : true
+   Use map based gain cont         : false
+   Use hash based gain cont        : false
+   Do not use hash based gain cont : false
+
+Reading TESTS/dwarf1.aux
+ Done reading HGraph
+ Reading TESTS/dwarf1.blk ... 
+ Reading TESTS/dwarf1.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.002 user, 0.0e+00 system, 0 real, 0.0186393 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.045 user, 5.0e-03 system, 0 real, 0.428 norm'd sec 
+
+ Running 1 multi-start
+ MultiStart costs : 2  
+ Legal solutions : 1 (all) 
+ Best solution:  2  Average:  2 StdDev: 0
+ Areas: 7  3  
+ Pins: 11  2  
+
+------------  Running test 0b...
+   Partitioner Parameters: 
+   Verbosity levels : 3
+ For actions : 1,   For sys resources : 1,   For major stats : 1
+   Move manager                    : FM            
+   Partitioning evaluator          : NetCutWNetVec   
+   Solution generator              : RandomizedEngineers
+   Legalize only                   : false
+   Use clip / early stop           : false/false
+   Print hill stats                : false
+   Min pass improvement            : 0%
+   Max num passes                  : 0
+   Relaxed tolerance passes        : 0
+   Randomized                      : false
+   Uncorking                       : 1
+   Do first LIFO pass              : false
+   Allow corking nodes             : false
+   Allow illegal moves             : false
+   Tie break on pin counts         : false
+   Wiggle terminals                : true
+   Save move log                   : false
+   Use weights                     : true
+   Use map based gain cont         : false
+   Use hash based gain cont        : false
+   Do not use hash based gain cont : false
+
+Reading TESTS/hpl+2.aux
+ Done reading HGraph
+ Reading TESTS/newPartProb.blk ... 
+ Reading TESTS/newPartProb.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.005999 user, 0.0e+00 system, 0 real, 0.0559087 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.049 user, 5.0e-03 system, 0 real, 0.465 norm'd sec 
+
+ Running 1 multi-start
+ MultiStart costs : 34  
+ Legal solutions : 1 (all) 
+ Best solution:  34  Average:  34 StdDev: 0
+ Areas: 5.86039e+08  7.3982e+08  
+ Pins: 356  399  
+
+------------  Running test 0c...
+   Partitioner Parameters: 
+   Verbosity levels : 3
+ For actions : 1,   For sys resources : 1,   For major stats : 1
+   Move manager                    : FM            
+   Partitioning evaluator          : NetCutWNetVec   
+   Solution generator              : RandomizedEngineers
+   Legalize only                   : false
+   Use clip / early stop           : false/false
+   Print hill stats                : false
+   Min pass improvement            : 0%
+   Max num passes                  : 0
+   Relaxed tolerance passes        : 0
+   Randomized                      : false
+   Uncorking                       : 1
+   Do first LIFO pass              : false
+   Allow corking nodes             : false
+   Allow illegal moves             : false
+   Tie break on pin counts         : false
+   Wiggle terminals                : true
+   Save move log                   : false
+   Use weights                     : true
+   Use map based gain cont         : false
+   Use hash based gain cont        : false
+   Do not use hash based gain cont : false
+
+Reading TESTS/primary1+.aux
+ Done reading HGraph
+ Reading TESTS/2way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1156)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.015 user, 0.0e+00 system, 0 real, 0.152 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.058 user, 4.0e-03 system, 0 real, 0.562 norm'd sec 
+
+ Running 1 multi-start
+ MultiStart costs : 156  
+ Legal solutions : 1 (all) 
+ Best solution:  156  Average:  156 StdDev: 0
+ Areas: 1.2644e+07  1.5338e+07  
+ Pins: 1347  1561  
+
+------------  Running test 1a...
+ -verb 1_1_1 | silent 
+ -part FM | FMDD | |FMUCLA | FMwCutLineRef | FMHybrid 
+       | SA | HMetis | RandomGreedy | Greedy | AGreed
+ -partEval  NetCutWBits  | NetCutWConfigIds   | NetCutWNetVec
+             | BBox1Dim                          | StrayNodes 
+             | NetCut2way   | NetCut2wayWWeights | StrayNodes2way
+ -solnGen RandomizedEngineers | AllToOne | Bfs
+== Flat multistart partitioner parameters ==
+ -useClip <0|1|2> 
+ -maxHillHeightFactor <double> 
+ -maxHillWidth        < 0<=double %%<=100 > 
+ -mapBasedGC, -hashBasedGC, -noHashBasedGC, -ignoreWts 
+ -wiggleTerms, -legOnly, -printHillStats, -saveMoveLog 
+ -maxNumMoves <unsigned> (0==infinity)[0] 
+ -minPassImprovement < 0<=double %% > 
+ -maxNumPasses <unsigned> [0]
+ -relaxedTolerancePasses <unsigned> [0]
+ -randomizedPart [false] 
+ -unCork    <int>  
+ -skipNetsLargerThan <unsigned> 
+ -skipLargestNets    <0.0-100.0> 
+ -doFirstLIFOPass [false] 
+ -allowCorkingNodes [false] 
+ -allowIllegalMoves [false] 
+ -tieBreakOnPins    [false] 
+------------  Running test 1b...
+   Partitioner Parameters: 
+   Verbosity levels : 3
+ For actions : 1,   For sys resources : 1,   For major stats : 1
+   Move manager                    : FM            
+   Partitioning evaluator          : NetCutWNetVec   
+   Solution generator              : RandomizedEngineers
+   Legalize only                   : false
+   Use clip / early stop           : false/false
+   Print hill stats                : false
+   Min pass improvement            : 0%
+   Max num passes                  : 0
+   Relaxed tolerance passes        : 0
+   Randomized                      : false
+   Uncorking                       : 1
+   Do first LIFO pass              : false
+   Allow corking nodes             : false
+   Allow illegal moves             : false
+   Tie break on pin counts         : false
+   Wiggle terminals                : true
+   Save move log                   : false
+   Use weights                     : true
+   Use map based gain cont         : false
+   Use hash based gain cont        : false
+   Do not use hash based gain cont : false

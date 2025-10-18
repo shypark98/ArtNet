@@ -1,0 +1,43 @@
+#!/bin/csh -f
+
+#**************************************************************************
+#**
+#**    Copyright (c) 1995-1997 by ABKGroup, UCLA VLSI CAD Laboratory,
+#**    UCLA Computer Science Department, Los Angeles, CA 90095-1596 USA,
+#**    and by the Regents of the University of California.
+#**    All rights reserved.
+#**
+#**    No portion of this file may be used, copied, or transmitted for
+#**    any purpose, including any research or commercial purpose,
+#**    without the express written consent of Professor Andrew B. Kahng,
+#**    UCLA Computer Science Department, 3713 Boelter Hall, Los Angeles,
+#**    CA 90095-1596 USA.   Any copy made of this file must include this
+#**    notice.    ABKGroup and the Regents of the University of California
+#**    retain title to all copies of this file and/or its compiled
+#**    derivatives.
+#**
+#**************************************************************************/
+
+set DIFF=/usr/bin/diff
+set WC=/usr/bin/wc
+set PROG=./FMPartTest
+
+/bin/rm -f seeds.* > & /dev/null
+
+cp TESTS/seeds.in seeds.in
+
+echo "------------  Running test 0a..." > new.out
+echo -n Running test 0a...
+${PROG}0.exe -f TESTS/primary1+.aux -useClip -num 3 -verb 1_1_1 >>& new.out
+echo Ok
+
+egrep -v "(#|seed|conversion|arning|Built|built|running|and libraries|compiler|Created|sec|User|Platform|Memory)" new.out > newout.notime
+egrep -v "(#|seed|conversion|arning|Built|built|running|and libraries|compiler|Created|sec|User|Platform|Memory)" expected.out > expectedout.notime
+
+$DIFF newout.notime expectedout.notime > diffs.notime
+
+echo " "
+echo Differences from precomputed results
+$WC diffs.notime
+
+/bin/rm -f seeds.* > & /dev/null

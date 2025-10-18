@@ -1,0 +1,200 @@
+------------  Running test 0a...
+Reading TESTS/ibm01+.aux
+ Done reading HGraph
+ Reading TESTS/2way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1154)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.503 user, 7.0e-03 system, 1 real, 3.898 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.56 user, 2.1e-02 system, 1 real, 4.339 norm'd sec 
+init soln balances      2.11501e+06 2.11501e+06 
+
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :    1.90351e+06     2.11501e+06      2.32651e+06      
+    1 :    1.90351e+06     2.11501e+06      2.32651e+06      
+
+ Pins:   23643  26923  
+
+ Done writing newSoln.netD and newSoln.areM
+ Writing newSoln.blk ... 
+ Writing newSoln.sol ... 
+------------  Running test 0b...
+Reading TESTS/ibm01+8.aux
+ Done reading HGraph
+ Reading TESTS/8way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1154)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.5 user, 8.0e-03 system, 1 real, 3.668 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.563 user, 2.0e-02 system, 1 real, 4.129 norm'd sec 
+init soln balances      528736 528768 528736 528768 528736 528768 528768 528736 
+
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :         475877          528736           581627      
+    1 :         475877          528768           581627      
+    2 :         475877          528736           581627      
+    3 :         475877          528768           581627      
+    4 :         475877          528736           581627      
+    5 :         475877          528768           581627      
+    6 :         475877          528768           581627      
+    7 :         475877          528736           581627      
+
+ Pins:    7628(+)   5898   6202   6839   3318   7229   7382   6070  
+
+ Done writing newSoln.netD and newSoln.areM
+ Writing newSoln.blk ... 
+ Writing newSoln.sol ... 
+------------  Running test 1a...
+Reading TESTS/ibm01+.aux
+ Done reading HGraph
+ Reading TESTS/2way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1154)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.537 user, 4.0e-03 system, 0 real, 4.084 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.596 user, 1.7e-02 system, 0 real, 4.532 norm'd sec 
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :    1.90351e+06               0      2.32651e+06      -
+    1 :    1.90351e+06     4.23002e+06      2.32651e+06      +
+
+ Pins:       0  50566  
+
+Spent 4922 moves to balance
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :    1.90351e+06     1.90352e+06      2.32651e+06      
+    1 :    1.90351e+06      2.3265e+06      2.32651e+06      
+
+ Pins:   19815  30751  
+
+------------  Running test 1b...
+Reading TESTS/ibm01+8.aux
+ Done reading HGraph
+ Reading TESTS/8way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1154)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.503 user, 6.0e-03 system, 1 real, 3.826 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.562 user, 2.0e-02 system, 1 real, 4.274 norm'd sec 
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :         475877               0           581627      -
+    1 :         475877     4.23002e+06           581627      +
+    2 :         475877               0           581627      -
+    3 :         475877               0           581627      -
+    4 :         475877               0           581627      -
+    5 :         475877               0           581627      -
+    6 :         475877               0           581627      -
+    7 :         475877               0           581627      -
+
+ Pins:       0  50566      0      0      0      0      0      0  
+
+Spent 10967 moves to balance
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :         475877          516320           581627      
+    1 :         475877          575680           581627      
+    2 :         475877          516352           581627      
+    3 :         475877          527936           581627      
+    4 :         475877          520992           581627      
+    5 :         475877          522944           581627      
+    6 :         475877          524704           581627      
+    7 :         475877          525088           581627      
+
+ Pins:    3422   7011   6404   6396   6441   7147   6741   7004  
+
+------------  Running test 2a...
+Reading TESTS/ibm01+.aux
+ Done reading HGraph
+ Reading TESTS/2way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1154)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.501 user, 1.1e-02 system, 1 real, 3.958 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.558 user, 2.7e-02 system, 1 real, 4.407 norm'd sec 
+init soln balances      2.11501e+06 2.11501e+06 
+
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :    1.90351e+06     2.11501e+06      2.32651e+06      
+    1 :    1.90351e+06     2.11501e+06      2.32651e+06      
+
+ Pins:   23643  26923  
+
+Spent 0 moves to legalize
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :    1.90351e+06     2.11501e+06      2.32651e+06      
+    1 :    1.90351e+06     2.11501e+06      2.32651e+06      
+
+ Pins:   23643  26923  
+
+Spent 0 moves to balance
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :    1.90351e+06     2.11501e+06      2.32651e+06      
+    1 :    1.90351e+06     2.11501e+06      2.32651e+06      
+
+ Pins:   23643  26923  
+
+------------  Running test 2b...
+Reading TESTS/ibm01+8.aux
+ Done reading HGraph
+ Reading TESTS/8way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1154)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.515 user, 1.0e-02 system, 0 real, 3.917 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.574 user, 2.3e-02 system, 1 real, 4.365 norm'd sec 
+init soln balances      528736 528768 528736 528768 528736 528768 528768 528736 
+
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :         475877          528736           581627      
+    1 :         475877          528768           581627      
+    2 :         475877          528736           581627      
+    3 :         475877          528768           581627      
+    4 :         475877          528736           581627      
+    5 :         475877          528768           581627      
+    6 :         475877          528768           581627      
+    7 :         475877          528736           581627      
+
+ Pins:    7628(+)   5898   6202   6839   3318   7229   7382   6070  
+
+Spent 0 moves to legalize
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :         475877          528736           581627      
+    1 :         475877          528768           581627      
+    2 :         475877          528736           581627      
+    3 :         475877          528768           581627      
+    4 :         475877          528736           581627      
+    5 :         475877          528768           581627      
+    6 :         475877          528768           581627      
+    7 :         475877          528736           581627      
+
+ Pins:    7628(+)   5898   6202   6839   3318   7229   7382   6070  
+
+Spent 0 moves to balance
+ Single Balance Legality Checker 
+ Part#    Min capacity   Actual capacity   Max capacity  Violation
+    0 :         475877          528736           581627      
+    1 :         475877          528768           581627      
+    2 :         475877          528736           581627      
+    3 :         475877          528768           581627      
+    4 :         475877          528736           581627      
+    5 :         475877          528768           581627      
+    6 :         475877          528768           581627      
+    7 :         475877          528736           581627      
+
+ Pins:    7628(+)   5898   6202   6839   3318   7229   7382   6070  
+

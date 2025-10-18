@@ -1,0 +1,3 @@
+#!/bin/sh
+make OPTFLAGS="-O5 -fast" RHKEY="-R" $1 $2 $3 $4 $5
+

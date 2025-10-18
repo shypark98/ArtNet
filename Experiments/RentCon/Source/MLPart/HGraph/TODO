@@ -1,0 +1,8 @@
+
+990830	aec
+
+  -bit 'weights have been permuted'
+  -weight permutation
+  -function to move weights w/ mostly 0 values to the 'bin weights'
+	from the dense-matrix (creates the non-trivial weights permutation)
+

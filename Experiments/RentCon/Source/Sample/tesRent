@@ -1,0 +1,10 @@
+#!/bin/tcsh -x
+
+set EXENAME = RentCon.exe
+
+set sourceDir = DIR_TO_SOURCE/Source 
+
+\cp -f "$sourceDir"/bin/"$EXENAME" ./
+
+./"$EXENAME" -f Rent.aux -verb 3_3_3 -startsPerRun 1 -totalRuns 1 -sampleNum 3 -sampleSizeNum 30 -log RentCon.log
+

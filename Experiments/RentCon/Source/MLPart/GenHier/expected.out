@@ -1,0 +1,454 @@
+------------  Running test 0 ...
+<hcl>
+<header>
+<created> 
+# Created      : Wed May 31 00:42:42 2000
+</created>
+<author> GenericHierarchy output, 
+         # User         : caldwell@nexus11.cs.ucla.edu (Andrew Caldwell) 
+</author>
+</header>
+<body>
+<cluster name="root"   parent="root"   />
+<cluster name="a0"   parent="coreCells"   />
+<cluster name="a1"   parent="coreCells"   />
+<cluster name="a2"   parent="coreCells"   />
+<cluster name="a3"   parent="coreCells"   />
+<cluster name="a4"   parent="coreCells"   />
+<cluster name="a5"   parent="coreCells"   />
+<cluster name="a6"   parent="coreCells"   />
+<cluster name="a7"   parent="coreCells"   />
+<cluster name="a8"   parent="coreCells"   />
+<cluster name="a9"   parent="coreCells"   />
+<cluster name="a10"   parent="coreCells"   />
+<cluster name="a11"   parent="coreCells"   />
+<cluster name="a12"   parent="coreCells"   />
+<cluster name="a13"   parent="coreCells"   />
+<cluster name="a14"   parent="coreCells"   />
+<cluster name="a15"   parent="coreCells"   />
+<cluster name="a16"   parent="coreCells"   />
+<cluster name="a17"   parent="coreCells"   />
+<cluster name="a18"   parent="coreCells"   />
+<cluster name="a19"   parent="coreCells"   />
+<cluster name="a20"   parent="coreCells"   />
+<cluster name="a21"   parent="coreCells"   />
+<cluster name="a22"   parent="coreCells"   />
+<cluster name="a23"   parent="coreCells"   />
+<cluster name="a24"   parent="coreCells"   />
+<cluster name="a25"   parent="coreCells"   />
+<cluster name="a26"   parent="coreCells"   />
+<cluster name="a27"   parent="coreCells"   />
+<cluster name="a28"   parent="coreCells"   />
+<cluster name="a29"   parent="coreCells"   />
+<cluster name="a30"   parent="coreCells"   />
+<cluster name="a31"   parent="coreCells"   />
+<cluster name="a32"   parent="coreCells"   />
+<cluster name="a33"   parent="coreCells"   />
+<cluster name="a34"   parent="coreCells"   />
+<cluster name="a35"   parent="coreCells"   />
+<cluster name="a36"   parent="coreCells"   />
+<cluster name="a37"   parent="coreCells"   />
+<cluster name="a38"   parent="coreCells"   />
+<cluster name="a39"   parent="coreCells"   />
+<cluster name="a40"   parent="coreCells"   />
+<cluster name="a41"   parent="coreCells"   />
+<cluster name="a42"   parent="coreCells"   />
+<cluster name="a43"   parent="coreCells"   />
+<cluster name="a44"   parent="coreCells"   />
+<cluster name="a45"   parent="coreCells"   />
+<cluster name="a46"   parent="coreCells"   />
+<cluster name="a47"   parent="coreCells"   />
+<cluster name="a48"   parent="coreCells"   />
+<cluster name="a49"   parent="coreCells"   />
+<cluster name="a50"   parent="coreCells"   />
+<cluster name="a51"   parent="coreCells"   />
+<cluster name="a52"   parent="coreCells"   />
+<cluster name="a53"   parent="coreCells"   />
+<cluster name="a54"   parent="coreCells"   />
+<cluster name="a55"   parent="coreCells"   />
+<cluster name="a56"   parent="coreCells"   />
+<cluster name="a57"   parent="coreCells"   />
+<cluster name="a58"   parent="coreCells"   />
+<cluster name="a59"   parent="coreCells"   />
+<cluster name="a60"   parent="coreCells"   />
+<cluster name="a61"   parent="coreCells"   />
+<cluster name="a62"   parent="coreCells"   />
+<cluster name="a63"   parent="coreCells"   />
+<cluster name="a64"   parent="coreCells"   />
+<cluster name="a65"   parent="coreCells"   />
+<cluster name="a66"   parent="coreCells"   />
+<cluster name="a67"   parent="coreCells"   />
+<cluster name="a68"   parent="coreCells"   />
+<cluster name="a69"   parent="coreCells"   />
+<cluster name="a70"   parent="coreCells"   />
+<cluster name="a71"   parent="coreCells"   />
+<cluster name="a72"   parent="coreCells"   />
+<cluster name="a73"   parent="coreCells"   />
+<cluster name="a74"   parent="coreCells"   />
+<cluster name="a75"   parent="coreCells"   />
+<cluster name="a76"   parent="coreCells"   />
+<cluster name="a77"   parent="coreCells"   />
+<cluster name="a78"   parent="coreCells"   />
+<cluster name="a79"   parent="coreCells"   />
+<cluster name="a80"   parent="coreCells"   />
+<cluster name="a81"   parent="coreCells"   />
+<cluster name="a82"   parent="coreCells"   />
+<cluster name="a83"   parent="coreCells"   />
+<cluster name="a84"   parent="coreCells"   />
+<cluster name="a85"   parent="coreCells"   />
+<cluster name="a86"   parent="coreCells"   />
+<cluster name="a87"   parent="coreCells"   />
+<cluster name="a88"   parent="coreCells"   />
+<cluster name="a89"   parent="coreCells"   />
+<cluster name="a90"   parent="coreCells"   />
+<cluster name="a91"   parent="coreCells"   />
+<cluster name="a92"   parent="coreCells"   />
+<cluster name="a93"   parent="coreCells"   />
+<cluster name="a94"   parent="coreCells"   />
+<cluster name="a95"   parent="coreCells"   />
+<cluster name="a96"   parent="coreCells"   />
+<cluster name="a97"   parent="coreCells"   />
+<cluster name="a98"   parent="coreCells"   />
+<cluster name="coreCells"   parent="root"   />
+<cluster name="p1"   parent="coreCells"   />
+<cluster name="p2"   parent="coreCells"   />
+</body>
+</hcl>
+------------  Running test 0 ...
+<hcl>
+<header>
+<created> 
+# Created      : Wed May 31 00:42:42 2000
+</created>
+<author> GenericHierarchy output, 
+         # User         : caldwell@nexus11.cs.ucla.edu (Andrew Caldwell) 
+</author>
+</header>
+<body>
+<cluster name="root"   parent="root"   />
+<cluster name="a0"   parent="coreCells"   />
+<cluster name="a1"   parent="coreCells"   />
+<cluster name="a2"   parent="coreCells"   />
+<cluster name="a3"   parent="coreCells"   />
+<cluster name="a4"   parent="coreCells"   />
+<cluster name="a5"   parent="coreCells"   />
+<cluster name="a6"   parent="coreCells"   />
+<cluster name="a7"   parent="coreCells"   />
+<cluster name="a8"   parent="coreCells"   />
+<cluster name="a9"   parent="coreCells"   />
+<cluster name="a10"   parent="coreCells"   />
+<cluster name="a11"   parent="coreCells"   />
+<cluster name="a12"   parent="coreCells"   />
+<cluster name="a13"   parent="coreCells"   />
+<cluster name="a14"   parent="coreCells"   />
+<cluster name="a15"   parent="coreCells"   />
+<cluster name="a16"   parent="coreCells"   />
+<cluster name="a17"   parent="coreCells"   />
+<cluster name="a18"   parent="coreCells"   />
+<cluster name="a19"   parent="coreCells"   />
+<cluster name="a20"   parent="coreCells"   />
+<cluster name="a21"   parent="coreCells"   />
+<cluster name="a22"   parent="coreCells"   />
+<cluster name="a23"   parent="coreCells"   />
+<cluster name="a24"   parent="coreCells"   />
+<cluster name="a25"   parent="coreCells"   />
+<cluster name="a26"   parent="coreCells"   />
+<cluster name="a27"   parent="coreCells"   />
+<cluster name="a28"   parent="coreCells"   />
+<cluster name="a29"   parent="coreCells"   />
+<cluster name="a30"   parent="coreCells"   />
+<cluster name="a31"   parent="coreCells"   />
+<cluster name="a32"   parent="coreCells"   />
+<cluster name="a33"   parent="coreCells"   />
+<cluster name="a34"   parent="coreCells"   />
+<cluster name="a35"   parent="coreCells"   />
+<cluster name="a36"   parent="coreCells"   />
+<cluster name="a37"   parent="coreCells"   />
+<cluster name="a38"   parent="coreCells"   />
+<cluster name="a39"   parent="coreCells"   />
+<cluster name="a40"   parent="coreCells"   />
+<cluster name="a41"   parent="coreCells"   />
+<cluster name="a42"   parent="coreCells"   />
+<cluster name="a43"   parent="coreCells"   />
+<cluster name="a44"   parent="coreCells"   />
+<cluster name="a45"   parent="coreCells"   />
+<cluster name="a46"   parent="coreCells"   />
+<cluster name="a47"   parent="coreCells"   />
+<cluster name="a48"   parent="coreCells"   />
+<cluster name="a49"   parent="coreCells"   />
+<cluster name="a50"   parent="coreCells"   />
+<cluster name="a51"   parent="coreCells"   />
+<cluster name="a52"   parent="coreCells"   />
+<cluster name="a53"   parent="coreCells"   />
+<cluster name="a54"   parent="coreCells"   />
+<cluster name="a55"   parent="coreCells"   />
+<cluster name="a56"   parent="coreCells"   />
+<cluster name="a57"   parent="coreCells"   />
+<cluster name="a58"   parent="coreCells"   />
+<cluster name="a59"   parent="coreCells"   />
+<cluster name="a60"   parent="coreCells"   />
+<cluster name="a61"   parent="coreCells"   />
+<cluster name="a62"   parent="coreCells"   />
+<cluster name="a63"   parent="coreCells"   />
+<cluster name="a64"   parent="coreCells"   />
+<cluster name="a65"   parent="coreCells"   />
+<cluster name="a66"   parent="coreCells"   />
+<cluster name="a67"   parent="coreCells"   />
+<cluster name="a68"   parent="coreCells"   />
+<cluster name="a69"   parent="coreCells"   />
+<cluster name="a70"   parent="coreCells"   />
+<cluster name="a71"   parent="coreCells"   />
+<cluster name="a72"   parent="coreCells"   />
+<cluster name="a73"   parent="coreCells"   />
+<cluster name="a74"   parent="coreCells"   />
+<cluster name="a75"   parent="coreCells"   />
+<cluster name="a76"   parent="coreCells"   />
+<cluster name="a77"   parent="coreCells"   />
+<cluster name="a78"   parent="coreCells"   />
+<cluster name="a79"   parent="coreCells"   />
+<cluster name="a80"   parent="coreCells"   />
+<cluster name="a81"   parent="coreCells"   />
+<cluster name="a82"   parent="coreCells"   />
+<cluster name="a83"   parent="coreCells"   />
+<cluster name="a84"   parent="coreCells"   />
+<cluster name="a85"   parent="coreCells"   />
+<cluster name="a86"   parent="coreCells"   />
+<cluster name="a87"   parent="coreCells"   />
+<cluster name="a88"   parent="coreCells"   />
+<cluster name="a89"   parent="coreCells"   />
+<cluster name="a90"   parent="coreCells"   />
+<cluster name="a91"   parent="coreCells"   />
+<cluster name="a92"   parent="coreCells"   />
+<cluster name="a93"   parent="coreCells"   />
+<cluster name="a94"   parent="coreCells"   />
+<cluster name="a95"   parent="coreCells"   />
+<cluster name="a96"   parent="coreCells"   />
+<cluster name="a97"   parent="coreCells"   />
+<cluster name="a98"   parent="coreCells"   />
+<cluster name="coreCells"   parent="root"   />
+<cluster name="p1"   parent="coreCells"   />
+<cluster name="p2"   parent="coreCells"   />
+</body>
+</hcl>
+------------  Running test 1 ...
+<hcl>
+<header>
+<created> 
+# Created      : Wed May 31 00:42:42 2000
+</created>
+<author> GenericHierarchy output, 
+         # User         : caldwell@nexus11.cs.ucla.edu (Andrew Caldwell) 
+</author>
+</header>
+<body>
+<cluster name="ab,cd"   parent="ab,cd++cluster"   />
+<cluster name="ab,cd,e"   parent="ab,cd++cluster"   />
+<cluster name="ab,e,f"   parent="ab,e"   />
+<cluster name="ab,e,g"   parent="ab,e,g++cluster"   />
+<cluster name="ab,e,g,"   parent="ab,e,g++cluster"   />
+<cluster name="ab"   parent="ab++cluster"   />
+<cluster name="ba"   parent="ROOT"   />
+<cluster name="ab,e"   parent="ab++cluster"   />
+<cluster name="ROOT"   parent="ROOT"   />
+<cluster name="ab++cluster"   parent="ROOT"   />
+<cluster name="ab,e,g++cluster"   parent="ab,e"   />
+<cluster name="ab,cd++cluster"   parent="ab++cluster"   />
+</body>
+</hcl>
+------------  Running test 2 ...
+Enter a string of one-character delimiters (e.g., '/|_'):  The delimiter set is i
+Now enter a list of words containing those delimiters 
+ (first empty line ends input) 
+Read 126 words, will now ctruct a hierarhy... done 
+ saving test2.hcl ... done 
+<hcl>
+<header>
+<created> 
+# Created      : Wed May 31 00:42:42 2000
+</created>
+<author> GenericHierarchy output, 
+         # User         : caldwell@nexus11.cs.ucla.edu (Andrew Caldwell) 
+</author>
+</header>
+<body>
+<cluster name="kick"   parent="k"   />
+<cluster name="Kickapoo"   parent="K"   />
+<cluster name="kicked"   parent="k"   />
+<cluster name="kicker"   parent="k"   />
+<cluster name="kickers"   parent="k"   />
+<cluster name="kicking"   parent="k"   />
+<cluster name="kickoff"   parent="k"   />
+<cluster name="kicks"   parent="k"   />
+<cluster name="kid"   parent="k"   />
+<cluster name="Kidde"   parent="K"   />
+<cluster name="kidded"   parent="k"   />
+<cluster name="kiddie"   parent="k"   />
+<cluster name="kidding"   parent="kidd"   />
+<cluster name="kidnap"   parent="k"   />
+<cluster name="kidnapper"   parent="k"   />
+<cluster name="kidnappers"   parent="k"   />
+<cluster name="kidnapping"   parent="k"   />
+<cluster name="kidnappings"   parent="kidnapp"   />
+<cluster name="kidnaps"   parent="k"   />
+<cluster name="kidney"   parent="k"   />
+<cluster name="kidneys"   parent="k"   />
+<cluster name="kids"   parent="k"   />
+<cluster name="Kieffer"   parent="K"   />
+<cluster name="Kiel"   parent="K"   />
+<cluster name="Kiev"   parent="K"   />
+<cluster name="Kiewit"   parent="K"   />
+<cluster name="Kigali"   parent="K"   />
+<cluster name="Kikuyu"   parent="K"   />
+<cluster name="Kilgore"   parent="K"   />
+<cluster name="Kilimanjaro"   parent="K"   />
+<cluster name="kill"   parent="kill++cluster"   />
+<cluster name="Killebrew"   parent="K"   />
+<cluster name="killed"   parent="k"   />
+<cluster name="killer"   parent="k"   />
+<cluster name="killers"   parent="k"   />
+<cluster name="killing"   parent="k"   />
+<cluster name="killingly"   parent="kill++cluster"   />
+<cluster name="killings"   parent="kill++cluster"   />
+<cluster name="killjoy"   parent="k"   />
+<cluster name="kills"   parent="k"   />
+<cluster name="kilobit"   parent="kilob"   />
+<cluster name="kilobits"   parent="kilob"   />
+<cluster name="kiloblock"   parent="k"   />
+<cluster name="kilobyte"   parent="k"   />
+<cluster name="kilobytes"   parent="k"   />
+<cluster name="kilogram"   parent="k"   />
+<cluster name="kilograms"   parent="k"   />
+<cluster name="kilohertz"   parent="k"   />
+<cluster name="kilohm"   parent="k"   />
+<cluster name="kilojoule"   parent="k"   />
+<cluster name="kilometer"   parent="k"   />
+<cluster name="kilometers"   parent="k"   />
+<cluster name="kiloton"   parent="k"   />
+<cluster name="kilovolt"   parent="k"   />
+<cluster name="kilowatt"   parent="k"   />
+<cluster name="kiloword"   parent="k"   />
+<cluster name="Kim"   parent="K"   />
+<cluster name="Kimball"   parent="K"   />
+<cluster name="Kimberly"   parent="K"   />
+<cluster name="kimono"   parent="k"   />
+<cluster name="kin"   parent="k"   />
+<cluster name="kind"   parent="k"   />
+<cluster name="kinder"   parent="k"   />
+<cluster name="kindergarten"   parent="k"   />
+<cluster name="kindest"   parent="k"   />
+<cluster name="kindhearted"   parent="k"   />
+<cluster name="kindle"   parent="k"   />
+<cluster name="kindled"   parent="k"   />
+<cluster name="kindles"   parent="k"   />
+<cluster name="kindling"   parent="k"   />
+<cluster name="kindly"   parent="k"   />
+<cluster name="kindness"   parent="k"   />
+<cluster name="kindred"   parent="k"   />
+<cluster name="kinds"   parent="k"   />
+<cluster name="kinetic"   parent="k"   />
+<cluster name="king"   parent="k"   />
+<cluster name="kingdom"   parent="k"   />
+<cluster name="kingdoms"   parent="k"   />
+<cluster name="kingly"   parent="k"   />
+<cluster name="kingpin"   parent="k"   />
+<cluster name="kings"   parent="k"   />
+<cluster name="Kingsbury"   parent="K"   />
+<cluster name="Kingsley"   parent="K"   />
+<cluster name="Kingston"   parent="K"   />
+<cluster name="Kingstown"   parent="K"   />
+<cluster name="Kingwood"   parent="K"   />
+<cluster name="kink"   parent="k"   />
+<cluster name="kinky"   parent="k"   />
+<cluster name="Kinney"   parent="K"   />
+<cluster name="Kinnickinnic"   parent="K"   />
+<cluster name="Kinsey"   parent="K"   />
+<cluster name="Kinshasha"   parent="K"   />
+<cluster name="kinship"   parent="k"   />
+<cluster name="kinsman"   parent="k"   />
+<cluster name="kiosk"   parent="k"   />
+<cluster name="Kiowa"   parent="K"   />
+<cluster name="Kipling"   parent="K"   />
+<cluster name="Kirby"   parent="K"   />
+<cluster name="Kirchner"   parent="K"   />
+<cluster name="Kirchoff"   parent="K"   />
+<cluster name="Kirk"   parent="K"   />
+<cluster name="Kirkland"   parent="K"   />
+<cluster name="Kirkpatrick"   parent="K"   />
+<cluster name="Kirkwood"   parent="K"   />
+<cluster name="Kirov"   parent="K"   />
+<cluster name="kiss"   parent="k"   />
+<cluster name="kissed"   parent="k"   />
+<cluster name="kisser"   parent="k"   />
+<cluster name="kissers"   parent="k"   />
+<cluster name="kisses"   parent="k"   />
+<cluster name="kissing"   parent="k"   />
+<cluster name="kit"   parent="k"   />
+<cluster name="Kitakyushu"   parent="K"   />
+<cluster name="kitchen"   parent="k"   />
+<cluster name="kitchenette"   parent="k"   />
+<cluster name="kitchens"   parent="k"   />
+<cluster name="kite"   parent="k"   />
+<cluster name="kited"   parent="k"   />
+<cluster name="kites"   parent="k"   />
+<cluster name="kiting"   parent="k"   />
+<cluster name="kits"   parent="k"   />
+<cluster name="kitten"   parent="kitten++cluster"   />
+<cluster name="kittenish"   parent="kitten++cluster"   />
+<cluster name="kittens"   parent="k"   />
+<cluster name="kitty"   parent="k"   />
+<cluster name="Kiwanis"   parent="K"   />
+<cluster name="kidd"   parent="k"   />
+<cluster name="K"   parent="ROOT"   />
+<cluster name="k"   parent="ROOT"   />
+<cluster name="kidnapp"   parent="k"   />
+<cluster name="ROOT"   parent="ROOT"   />
+<cluster name="kilob"   parent="k"   />
+<cluster name="kill++cluster"   parent="k"   />
+<cluster name="kitten++cluster"   parent="k"   />
+</body>
+</hcl>
+------------  Running test 4a...
+Enter a list of words containing those delimiters 
+ (first empty line ends input) 
+Read 4 words, will now ctruct a hierarhy... done 
+ saving test4a.hcl ... done 
+ saving test4b.hcl ... done 
+<hcl>
+<header>
+<created> 
+# Created      : Wed May 31 00:42:42 2000
+</created>
+<author> GenericHierarchy output, 
+         # User         : caldwell@nexus11.cs.ucla.edu (Andrew Caldwell) 
+</author>
+</header>
+<body>
+<cluster name="a|b|c"   parent="a|b|c++cluster"   />
+<cluster name="a|b|c_d"   parent="a|b|c++cluster"   />
+<cluster name="a_b|f"   parent="a_b|"   />
+<cluster name="a_b|h"   parent="a_b|"   />
+<cluster name="a_b|"   parent="a"   />
+<cluster name="a"   parent="a"   />
+<cluster name="a|b|c++cluster"   parent="a"   />
+</body>
+</hcl>
+------------  Running test 4b...
+<hcl>
+<header>
+<created> 
+# Created      : Wed May 31 00:42:42 2000
+</created>
+<author> GenericHierarchy output, 
+         # User         : caldwell@nexus11.cs.ucla.edu (Andrew Caldwell) 
+</author>
+</header>
+<body>
+<cluster name="a|b|c"   parent="a|b|c++cluster"   />
+<cluster name="a|b|c_d"   parent="a|b|c++cluster"   />
+<cluster name="a_b|f"   parent="a_b"   />
+<cluster name="a_b|h"   parent="a_b"   />
+<cluster name="a"   parent="a"   />
+<cluster name="a_b"   parent="a"   />
+<cluster name="a|b|c++cluster"   parent="a"   />
+</body>
+</hcl>

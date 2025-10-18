@@ -1,0 +1,255 @@
+------------  Running test 0a...
+Reading TESTS/test2cells.aux
+ Done reading HGraph
+ Reading TESTS/2way10%-2pb.blk ... 
+ Reading TESTS/test2pads.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.001 user, 0.0e+00 system, 0 real, 0.0105144 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.04 user, 8.0e-03 system, 0 real, 0.431 norm'd sec 
+ Found 2 movables
+Legal solution found
+ Resulting cut is 1
+ Max violations   0
+ Checked cost  is 1
+ Exhaustive search took  0 user, 0.0e+00 system, 0 real, 0 norm'd sec  Writing best.sol ... 
+UCLA sol 1.0 
+# Created      : Wed Nov  2 22:30:34 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+Regular partitions : 2
+Pad partitions : 2
+Fixed Pads : 2
+Fixed NonPads : 2
+        p1 : b0 
+        p2 : b1 
+        a0 : b0 
+        a1 : b1 
+------------  Running test 0b...
+Reading TESTS/test12cells.aux
+ Done reading HGraph
+ Reading TESTS/2way10%-12pb.blk ... 
+ Reading TESTS/test12pads.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.001999 user, 0.0e+00 system, 0 real, 0.0199929 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.043 user, 6.0e-03 system, 0 real, 0.439 norm'd sec 
+ Found 14 movables
+Legal solution found
+ Resulting cut is 1
+ Max violations   0
+ Checked cost  is 1
+ Exhaustive search took  0.005999 user, 0.0e+00 system, 0 real, 0.0599988 norm'd sec  Writing best.sol ... 
+UCLA sol 1.0 
+# Created      : Wed Nov  2 22:30:34 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+Regular partitions : 2
+Pad partitions : 12
+Fixed Pads : 12
+Fixed NonPads : 12
+        p1 : b0 
+        p2 : b0 
+        p3 : b1 
+        p4 : b1 
+        p5 : b1 
+        p6 : b1 
+        p7 : b1 
+        p8 : b0 
+        p9 : b0 
+       p10 : b0 
+       p11 : b0 
+       p12 : b0 
+        a0 : b0 
+        a1 : b1 
+        a2 : b1 
+        a3 : b0 
+        a4 : b0 
+        a5 : b1 
+        a6 : b1 
+        a7 : b0 
+        a8 : b0 
+        a9 : b0 
+       a10 : b1 
+       a11 : b0 
+------------  Running test 0c...
+Reading TESTS/spp-i872.aux
+ Done reading HGraph
+ Reading TESTS/spp-i872.blk ... 
+ Reading TESTS/spp-i872.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.002999 user, 1.0e-03 system, 0 real, 0.0307444 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.042 user, 7.0e-03 system, 0 real, 0.44 norm'd sec 
+ Found 14 movables
+Legal solution found
+ Resulting cut is 7
+ Max violations   0
+ Checked cost  is 7
+ Exhaustive search took  0.008999 user, 0.0e+00 system, 0 real, 0.0922536 norm'd sec  Writing best.sol ... 
+UCLA sol 1.0 
+# Created      : Wed Nov  2 22:30:34 2005
+# User         : royj@linus.eecs.umich.edu 
+# Platform     : Linux 2.6.11-1.35_FC3smp #1 SMP Mon Jun 13 01:16:04 EDT 2005 x86_64 
+
+Regular partitions : 2
+Pad partitions : 81
+Fixed Pads : 81
+Fixed NonPads : 8
+        p1 : b1 
+        p2 : b1 
+        p3 : b1 
+        p4 : b1 
+        p5 : b1 
+        p6 : b0 
+        p7 : b0 
+        p8 : b1 
+        p9 : b0 
+       p10 : b1 
+       p11 : b0 
+       p12 : b0 
+       p13 : b0 
+       p14 : b0 
+       p15 : b0 
+       p16 : b1 
+       p17 : b0 
+       p18 : b1 
+       p19 : b0 
+       p20 : b0 
+       p21 : b0 
+       p22 : b1 
+       p23 : b1 
+       p24 : b0 
+       p25 : b0 
+       p26 : b1 
+       p27 : b1 
+       p28 : b0 
+       p29 : b1 
+       p30 : b0 
+       p31 : b0 
+       p32 : b0 
+       p33 : b0 
+       p34 : b1 
+       p35 : b0 
+       p36 : b1 
+       p37 : b1 
+       p38 : b0 
+       p39 : b0 
+       p40 : b0 
+       p41 : b0 
+       p42 : b0 
+       p43 : b0 
+       p44 : b0 
+       p45 : b0 
+       p46 : b0 
+       p47 : b0 
+       p48 : b0 
+       p49 : b1 
+       p50 : b0 
+       p51 : b1 
+       p52 : b0 
+       p53 : b0 
+       p54 : b0 
+       p55 : b1 
+       p56 : b1 
+       p57 : b0 
+       p58 : b0 
+       p59 : b0 
+       p60 : b0 
+       p61 : b0 
+       p62 : b1 
+       p63 : b1 
+       p64 : b0 
+       p65 : b0 
+       p66 : b0 
+       p67 : b1 
+       p68 : b0 
+       p69 : b0 
+       p70 : b0 
+       p71 : b0 
+       p72 : b0 
+       p73 : b0 
+       p74 : b0 
+       p75 : b0 
+       p76 : b0 
+       p77 : b0 
+       p78 : b0 
+       p79 : b0 
+       p80 : b0 
+       p81 : b0 
+        a0 : b1 
+        a1 : b0 
+        a2 : b1 
+        a3 : b1 
+        a4 : b0 
+        a5 : b1 
+        a6 : b0 
+        a7 : b0 
+------------  Running test 2...
+Reading TESTS/amd_101.aux
+ Resulting cut is 8
+ Max violations   551384
+ Branch-and-bound search took  0.002 user, 0.0e+00 system, 0 real, 0.0200034 norm'd sec 
+Reading TESTS/amd_102.aux
+ Resulting cut is 9
+ Max violations   551873
+ Branch-and-bound search took  0.004999 user, 1.0e-03 system, 0 real, 0.0499973 norm'd sec 
+Reading TESTS/amd_63.aux
+ Resulting cut is 15
+ Max violations   521535
+ Branch-and-bound search took  0.307 user, 0.0e+00 system, 1 real, 3.156 norm'd sec 
+Reading TESTS/artificial.aux
+ Resulting cut is 3
+ Max violations   0
+ Branch-and-bound search took  0.003 user, 0.0e+00 system, 0 real, 0.0300051 norm'd sec 
+Reading TESTS/faraday_1019.aux
+ Resulting cut is 0
+ Max violations   0
+ Branch-and-bound search took  0.001 user, 0.0e+00 system, 0 real, 0.00976353 norm'd sec 
+Reading TESTS/faraday_9193.aux
+ Resulting cut is 30
+ Max violations   0
+ Branch-and-bound search took  0.000999 user, 0.0e+00 system, 0 real, 0.00999146 norm'd sec 
+Reading TESTS/faraday_9709.aux
+ Resulting cut is 12
+ Max violations   0
+ Branch-and-bound search took  0.142 user, 0.0e+00 system, 0 real, 1.429 norm'd sec 
+Reading TESTS/faraday_noSoln.aux
+ Resulting cut is 41
+ Max violations   0
+ Branch-and-bound search took  0.001 user, 0.0e+00 system, 0 real, 0.00953644 norm'd sec 
+Reading TESTS/lastProblem.aux
+ Resulting cut is 8
+ Max violations   0
+ Branch-and-bound search took  0.001999 user, 0.0e+00 system, 0 real, 0.0204928 norm'd sec 
+Reading TESTS/manyPins.aux
+ Resulting cut is 121
+ Max violations   0
+ Branch-and-bound search took  0.824 user, 1.0e-03 system, 1 real, 8.25 norm'd sec 
+Reading TESTS/oddCut.aux
+ Resulting cut is 11
+ Max violations   0
+ Branch-and-bound search took  0.003999 user, 0.0e+00 system, 0 real, 0.0390434 norm'd sec 
+Reading TESTS/problemH.aux
+ Resulting cut is 90
+ Max violations   0
+ Branch-and-bound search took  0.001 user, 0.0e+00 system, 0 real, 0.0100015 norm'd sec 
+Reading TESTS/spp-i802.aux
+ Resulting cut is 8
+ Max violations   0
+ Branch-and-bound search took  0.002999 user, 0.0e+00 system, 0 real, 0.0307444 norm'd sec 
+Reading TESTS/spp-i872.aux
+ Resulting cut is 7
+ Max violations   0
+ Branch-and-bound search took  0.001 user, 0.0e+00 system, 0 real, 0.0100015 norm'd sec 
+Reading TESTS/test12cells.aux
+ Resulting cut is 1
+ Max violations   0
+ Branch-and-bound search took  0.001 user, 0.0e+00 system, 0 real, 0.0102515 norm'd sec 
+Reading TESTS/test2cells.aux
+ Resulting cut is 1
+ Max violations   0
+ Branch-and-bound search took  0 user, 0.0e+00 system, 0 real, 0 norm'd sec 
+Reading TESTS/test4cells.aux
+ Resulting cut is 1
+ Max violations   0
+ Branch-and-bound search took  0 user, 0.0e+00 system, 0 real, 0 norm'd sec 

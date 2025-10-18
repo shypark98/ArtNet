@@ -1,0 +1,22 @@
+Running test2  ...-----------------------
+Running test3  ...-----------------------
+Running test4  ...-----------------------
+Running test5  ...-----------------------
+./ABKCommonTest5.exe: Command not found.
+Running test7  ...-----------------------
+Running test9  ...-----------------------
+./ABKCommonTest9.exe: Command not found.
+---------------------- seeds.out:----------
+Running test10 ...-----------------------
+Running test11 ...-----------------------
+Running test13 ...-----------------------
+Running test16 ...-----------test16-----
+./ABKCommonTest16.exe: Command not found.
+Running test19 ...-----------test19-----
+./ABKCommonTest19.exe: Command not found.
+Running test20a ...-----------test20a-----
+./ABKCommonTest20.exe: Command not found.
+Running test20b ...-----------test20b-----
+./ABKCommonTest20.exe: Command not found.
+Running test21 ...-----------test21-----
+./ABKCommonTest21.exe: Command not found.

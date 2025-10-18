@@ -1,0 +1,64 @@
+
+ README for Placement4.7
+ contact: Igor Markov <imarkov@cs.ucla.edu>
+ date:    September 29, 1997
+
+ COPYRIGHT: ABKGroup and UC Regents, see file COPYRIGHT
+
+ OS and compilers supported : CC 4.2+ for  Solaris 2.5+,
+                               MSVC++5.0 for Windows NT4.0
+                                   (probably for Windows '95 as well)
+ compilers not supported : MSVC++4.x, g++ 2.7.2, CC 4.1
+
+ Libraries used : STL 2.01 (see STL note below), ABKCommon2.9
+ 
+ Formal interface : placement.h (includes plGeom.h)
+                    mapping.h
+                    subPlacement.h (includes mapping.h),
+                    transf.h,
+                    plStats.h (requires the StatzenPlotz package),
+                    compar.h
+                    rwalk.h
+
+ Linking interface: one static (libplace.a) or shared (libplace.so) library
+
+ Installation notes : customize Makefile to your filesystem,
+                      Type make. This will build the libraries.
+                      The shared library can not be
+                      moved from its initial location.
+
+ Tests : produce executable placeTest with "make test", then use 
+         script "regression" in the REGRESSION SUBDIRECTORY
+         correct output contains
+
+          Differences from precomputed results
+           0       0       0 someofdiffs
+
+ Purify note :        you may want to put
+
+suppress umr ...; Timer*
+
+                     into your ~/.purify file because purify reports
+                     uninitialized memory reads in UNIX system calls.
+
+  STL note: you need an *adapted* version 2.01  970718) or higher. 
+            It is available (together with a testsuite) from
+            http://www.ipmce.su/people/fbp/stl/stlport.html. 
+            Extensive online documentation is available at
+            http://www.sgi.com/Technology/STL/
+            Links to tutorials can be found at
+            http://www.sgi.com/Technology/STL/other_resources.html
+
+
+ Remarks:   Placement is a 'generic pointset' class that knows nothing about
+            placement algorithms. A standard model for Placer is
+            derived class (e.g. QPlacement) which does all the work
+            in its constructor.
+
+ Remarks:    Convex hull for 100,000 points takes 5 sec to compute.
+             Computing and destroying 100,000 convex hulls for the
+             same 20 points takes 31 sec. MST is pretty fast too, but
+             it rounds all input coordinates to integers.
+
+ SEE ALSO:   README.files  
+             placements2.2 in SPECS directory

@@ -1,0 +1,11 @@
+UCLA fix 1.0 
+# Created      : Mon Nov 25 22:09:44 2002
+# User         : sadya@buran (Saurabh N Adya,Not Available,NotAvailable/Freysinger;CR0i;30) 
+# Platform     : Linux 2.4.17 #4 SMP Wed Mar 20 13:31:05 EST 2002 i686 
+
+Regular partitions : 2
+Pad partitions : 2
+Fixed Pads : 2
+Fixed NonPads : 0
+     term0 : pb0 b0 
+     term1 : pb1 b1 

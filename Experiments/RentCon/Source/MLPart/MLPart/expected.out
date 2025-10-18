@@ -1,0 +1,295 @@
+------------  Running test 0a...
+# Built on Jun 28 2006 at 18:58:46
+#  on Unix 
+#  from MLPartTest0.cxx and libraries  
+#  using GNU C/C++ 4.0.2 20051125 (Red Hat 4.0.2-8) compiler 
+# Command line : ./MLPartTest0.exe -f TESTS/dwarf1.aux 
+
+ Multi-Level Partitioner Parameters : 
+   Partitioner Parameters: 
+   Verbosity levels : 3
+ For actions : 1,   For sys resources : 1,   For major stats : 1
+   Move manager                    : FM            
+   Partitioning evaluator          : NetCutWNetVec   
+   Solution generator              : RandomizedEngineers
+   Legalize only                   : false
+   Use clip / early stop           : false/true
+   Print hill stats                : false
+   Max hill height factor          : 2x
+   Max hill width                  : 100%
+   Max num moves                   : 0
+   Min pass improvement            : 0%
+   Max num passes                  : 0
+   Relaxed tolerance passes        : 0
+   Randomized                      : false
+   Uncorking                       : 1
+   Do first LIFO pass              : false
+   Allow corking nodes             : false
+   Allow illegal moves             : false
+   Tie break on pin counts         : false
+   Wiggle terminals                : true
+   Save move log                   : false
+   Use weights                     : true
+   Use map based gain cont         : false
+   Use hash based gain cont        : false
+   Do not use hash based gain cont : false
+ Flat partitioner              FM          
+ Use B&B at top level          false
+ Partition fuzziness:          0
+ Runs per clustering:          1
+ Solution pool on top level    3
+ Tolerance Multiple:           2
+ Tolerance Alpha:              0
+ Use Two Partitioner Calls     TopOnly
+ Max num passes at bottom:     0
+ Max passes after top levels:  2
+ Cluster to terminals:         false
+ Seed Top Level Solution:      false
+ V-cycling type:               Exclusive
+ vcNumFailures:                1
+ vcImproveRatio:               1
+ vc1ClusterRatio:              2
+ vc1FirstLevel:                200
+ vc1LevelGrowth:               2
+ vc2ClusterRatio:              1.3
+ vc2FirstLevel:                200
+ vc2LevelGrowth:               2
+ useFMPartPlus:                false
+ Pruning Percentage:           No Pruning 
+ Pruning Point:               30%
+ Net threshold (max net size): 0
+ Time limit (sec):             0
+ Clustering Parameters 
+Clustering Parameters
+ Clustering Type: HEM   
+ ClusterRatio:    1.3
+ LevelGrowth:     2.5
+ MaxNewClRatio:   9
+ MaxChildClRatio: 4.5
+ MaxClArea:       0
+ SizeOfTop:       200
+ RemoveDup:       0
+ WeightOption:    3
+ dontClusterToTerms 0
+
+solnGen RandomizedEngineers
+Reading TESTS/dwarf1.aux
+ Done reading HGraph
+ Reading TESTS/dwarf1.blk ... 
+ Reading TESTS/dwarf1.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.004 user, 0.0e+00 system, 0 real, 0.0512468 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.04 user, 8.0e-03 system, 0 real, 0.512 norm'd sec 
+
+Problem too small for ML, running flat
+ Best Cost in one ML (1 starts):4   average :    4
+  Part Areas: 6  (2 nodes with terms)   /  4  (5 nodes with terms) 
+ Pin balances :   6 / 7
+ One ML took            0.004 user, 0.0e+00 system, 0 real, 0.0512468 norm'd sec 
+Net Cut:    4
+Part Areas: 6  (2 nodes with terms)   /  4  (5 nodes with terms) 
+
+ Cut edge sizes :  Max: 3  Min: 2  Avg: 2.5
+     2: 2         3: 2     
+ Writing best.sol ... 
+# Created      : Wed Jun 28 18:58:49 2006
+# Platform     : Linux 2.6.16-1.2069_FC4smp #1 SMP Tue Mar 28 12:48:20 EST 2006 x86_64 
+# User         : royj@helios8.eecs.umich.edu 
+# Virtual Memory usage : 6.32422MB (estimate)# Run-time conversion to Ultra-1 @143.5/71.5MHz, SunProCC4.2/-O5 : 12.811699 
+
+------------  Running test 0b...
+# Built on Jun 28 2006 at 18:58:46
+#  on Unix 
+#  from MLPartTest0.cxx and libraries  
+#  using GNU C/C++ 4.0.2 20051125 (Red Hat 4.0.2-8) compiler 
+# Command line : ./MLPartTest0.exe -f TESTS/primary1+.aux -num 4 -lg 3 -verb 3_13_3 
+
+ Multi-Level Partitioner Parameters : 
+   Partitioner Parameters: 
+   Verbosity levels : 3
+ For actions : 3,   For sys resources : 13,   For major stats : 3
+   Move manager                    : FM            
+   Partitioning evaluator          : NetCutWNetVec   
+   Solution generator              : RandomizedEngineers
+   Legalize only                   : false
+   Use clip / early stop           : false/true
+   Print hill stats                : false
+   Max hill height factor          : 2x
+   Max hill width                  : 100%
+   Max num moves                   : 0
+   Min pass improvement            : 0%
+   Max num passes                  : 0
+   Relaxed tolerance passes        : 0
+   Randomized                      : false
+   Uncorking                       : 1
+   Do first LIFO pass              : false
+   Allow corking nodes             : false
+   Allow illegal moves             : false
+   Tie break on pin counts         : false
+   Wiggle terminals                : true
+   Save move log                   : false
+   Use weights                     : true
+   Use map based gain cont         : false
+   Use hash based gain cont        : false
+   Do not use hash based gain cont : false
+ Flat partitioner              FM          
+ Use B&B at top level          false
+ Partition fuzziness:          0
+ Runs per clustering:          1
+ Solution pool on top level    3
+ Tolerance Multiple:           2
+ Tolerance Alpha:              0
+ Use Two Partitioner Calls     TopOnly
+ Max num passes at bottom:     0
+ Max passes after top levels:  2
+ Cluster to terminals:         false
+ Seed Top Level Solution:      false
+ V-cycling type:               Exclusive
+ vcNumFailures:                1
+ vcImproveRatio:               1
+ vc1ClusterRatio:              2
+ vc1FirstLevel:                200
+ vc1LevelGrowth:               2
+ vc2ClusterRatio:              1.3
+ vc2FirstLevel:                200
+ vc2LevelGrowth:               2
+ useFMPartPlus:                false
+ Pruning Percentage:           No Pruning 
+ Pruning Point:               30%
+ Net threshold (max net size): 0
+ Time limit (sec):             0
+ Clustering Parameters 
+Clustering Parameters
+ Clustering Type: HEM   
+ ClusterRatio:    1.3
+ LevelGrowth:     2.5
+ MaxNewClRatio:   9
+ MaxChildClRatio: 4.5
+ MaxClArea:       0
+ SizeOfTop:       200
+ RemoveDup:       0
+ WeightOption:    3
+ dontClusterToTerms 0
+
+solnGen RandomizedEngineers
+Reading TESTS/primary1+.aux
+ Done reading HGraph
+ Reading TESTS/2way10%.blk ... 
+
+Terminals specified in .net or .netD file, but no .fix file given.
+  Making all nodes nonterminal (Warning in partProbIO.cxx:1164)
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.016 user, 0.0e+00 system, 0 real, 0.182 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.052 user, 8.0e-03 system, 0 real, 0.592 norm'd sec 
+
+ Multilevel partitioning on 833 nodes  including 0 terminals 
+ Will now create 4 clusterTrees and use each to find one solution
+  --- Tree 0
+ Selecting 1 initial solution(s), from 3 random starts each
+ Costs :               58     75     70 
+ Costs :               58     75     70 
+ Imbalances :      657000 1.017e+06 1.011e+06 
+ Violations :           0      0      0 
+
+ Costs :               57     -1     -1     -1 
+ Imbalances :      411000     -1     -1     -1 
+ Violations :           0     -1     -1     -1 
+
+ Costs :               49     -1     -1     -1 
+ Imbalances :      381000     -1     -1     -1 
+ Violations :           0     -1     -1     -1 
+
+BestSoFar cost: 49
+  --- Tree 1
+ Selecting 1 initial solution(s), from 3 random starts each
+ Costs :               66     55     66 
+ Costs :               66     55     66 
+ Imbalances :      1.191e+06 1.167e+06 1.2e+06 
+ Violations :           0      0      0 
+
+ Costs :               -1     54     -1     -1 
+ Imbalances :          -1 1.113e+06     -1     -1 
+ Violations :          -1      0     -1     -1 
+
+ Costs :               -1     48     -1     -1 
+ Imbalances :          -1 582000     -1     -1 
+ Violations :          -1      0     -1     -1 
+
+BestSoFar cost: 48
+  --- Tree 2
+ Selecting 1 initial solution(s), from 3 random starts each
+ Costs :               78     85     81 
+ Costs :               78     85     81 
+ Imbalances :      1.125e+06 930000 912000 
+ Violations :           0      0      0 
+
+ Costs :               -1     -1     76     -1 
+ Imbalances :          -1     -1 1.083e+06     -1 
+ Violations :          -1     -1      0     -1 
+
+ Costs :               -1     -1     72     -1 
+ Imbalances :          -1     -1 501000     -1 
+ Violations :          -1     -1      0     -1 
+
+BestSoFar cost: 48
+  --- Tree 3
+ Selecting 1 initial solution(s), from 3 random starts each
+ Costs :               62     71     69 
+ Costs :               62     71     69 
+ Imbalances :      1.047e+06 1.173e+06 681000 
+ Violations :           0      0      0 
+
+ Costs :               -1     -1     -1     60 
+ Imbalances :          -1     -1     -1 960000 
+ Violations :          -1     -1     -1      0 
+
+ Costs :               -1     -1     -1     54 
+ Imbalances :          -1     -1     -1 349500 
+ Violations :          -1     -1     -1      0 
+
+BestSoFar cost: 48
+Threshold for starting VCycling is 1.79769e+308
+Best cost is 48
+ Performing Last V-Cycle(s) on best solution
+Before last VCycle(s), best cost is 48
+Improvement threshold is 0.666667%
+ Costs :               -1     48     -1     -1 
+ Imbalances :          -1 1.164e+06     -1     -1 
+ Violations :          -1      0     -1     -1 
+
+ Costs :               -1     46     -1     -1 
+ Imbalances :          -1 1.2e+06     -1     -1 
+ Violations :          -1      0     -1     -1 
+
+BestSoFar cost: 46
+Best cost is 46 improvement was 4.16667%
+ Costs :               -1     46     -1     -1 
+ Imbalances :          -1 1.2e+06     -1     -1 
+ Violations :          -1      0     -1     -1 
+
+ Costs :               -1     46     -1     -1 
+ Imbalances :          -1 1.2e+06     -1     -1 
+ Violations :          -1      0     -1     -1 
+
+BestSoFar cost: 46
+Best cost is 46 improvement was 0%
+ Best Cost in one ML (4 starts):46   average :    55.25
+  Part Areas: 5.4135e+06  (347 nodes with terms)   /  6.6135e+06  (486 nodes with terms) 
+ Pin balances :   1188 / 1720
+ One ML took            0.872 user, 2.0e-02 system, 1 real, 9.931 norm'd sec 
+ Ave Clustering Time Per Tree   : 0.033002
+ Ave UnClustering Time Per Tree : 0.185012
+ Ave CallPartitioner Time Per Tree: 0.182012
+Net Cut:    46
+Part Areas: 5.4135e+06  (347 nodes with terms)   /  6.6135e+06  (486 nodes with terms) 
+
+ Cut edge sizes :  Max: 18  Min: 2  Avg: 6.56522
+     2: 5         3: 13        4: 6         5: 1         6: 4     
+     7: 3         8: 1         9: 2        10: 1        11: 3     
+    13: 1        14: 2        17: 3        18: 1     
+ Writing best.sol ... 
+# Created      : Wed Jun 28 18:58:50 2006
+# Platform     : Linux 2.6.16-1.2069_FC4smp #1 SMP Tue Mar 28 12:48:20 EST 2006 x86_64 
+# User         : royj@helios8.eecs.umich.edu 
+# Virtual Memory usage : 6.84375MB (estimate)# Run-time conversion to Ultra-1 @143.5/71.5MHz, SunProCC4.2/-O5 : 11.388256 
+

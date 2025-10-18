@@ -1,0 +1,54 @@
+#!/bin/csh -f
+
+#**************************************************************************
+#**
+#**    Copyright (c) 1995-1997 by ABKGroup, UCLA VLSI CAD Laboratory,
+#**    UCLA Computer Science Department, Los Angeles, CA 90095-1596 USA,
+#**    and by the Regents of the University of California.
+#**    All rights reserved.
+#**
+#**    No portion of this file may be used, copied, or transmitted for
+#**    any purpose, including any research or commercial purpose,
+#**    without the express written consent of Professor Andrew B. Kahng,
+#**    UCLA Computer Science Department, 3713 Boelter Hall, Los Angeles,
+#**    CA 90095-1596 USA.   Any copy made of this file must include this
+#**    notice.    ABKGroup and the Regents of the University of California
+#**    retain title to all copies of this file and/or its compiled
+#**    derivatives.
+#**
+#**************************************************************************/
+
+set DIFF=/usr/bin/diff
+set WC=/usr/bin/wc
+set PROG=./CtainersTest
+/bin/rm -f seeds.{in,out}
+/bin/rm -f new.out
+
+echo -n Running test 0 ...
+echo " ---- test 0 ----- " >> new.out
+echo 0 > seeds.in
+echo 1667770400 >> seeds.in
+${PROG}0.exe >>& new.out
+/bin/rm -rf seeds.in
+echo Ok
+
+echo -n Running test 1 ...
+echo " ---- test 1 ---- " >> new.out
+${PROG}1.exe >>& new.out
+echo Ok
+
+
+echo -n Running test 2 ...
+echo " ---- test 2 ---- " >> new.out
+${PROG}2.exe >>& new.out
+echo Ok
+
+/bin/rm -f newout.notime expectedout.notime
+egrep -v Created new.out > newout.notime
+egrep -v Created expected.out > expectedout.notime
+$DIFF newout.notime expectedout.notime > diffs.notime
+
+echo " "
+echo Differences from precomputed results
+echo "  lines:  words:  bytes:    error log:"
+$WC diffs.notime

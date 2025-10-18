@@ -1,0 +1,6 @@
+Method 0 : 
+========= Circuit partitioning based method using MLPart =========
+Arithmetic avg pins per gate: 3.706807, geometric avg pins per gate: 3.428297
+----------------- Arithmetic Rent's parameters -----------------
+(2) Type 2 pin counting: 0.581602 
+============= Detailed information for each module =============

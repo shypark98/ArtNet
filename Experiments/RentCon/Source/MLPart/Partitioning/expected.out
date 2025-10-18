@@ -1,0 +1,2360 @@
+------------  Running test 0...
+HGraph Parameters: 
+   makeAllSrcSnk : 1
+   removeBigNets : 0
+   netThreshold  : 4294967295
+   nodeSortMethod: no sort
+   edgeSortMethod: no sort
+   shredTopology: Grid
+
+Reading TESTS/dwarf1.aux
+ Done reading HGraph
+ Reading TESTS/dwarf1.blk ... 
+ Reading TESTS/dwarf1.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.004 user, 0.0e+00 system, 0 real, 0.0231022 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.075 user, 1.8e-02 system, 0 real, 0.438 norm'd sec 
+ Done writing t1.netD and t1.areM
+ Writing t1.blk ... 
+ Writing t1.fix ... 
+------------  Running test 1...
+HGraph Parameters: 
+   makeAllSrcSnk : 1
+   removeBigNets : 0
+   netThreshold  : 4294967295
+   nodeSortMethod: no sort
+   edgeSortMethod: no sort
+   shredTopology: Grid
+
+Reading TESTS/dwarf1+s.aux
+ Done reading HGraph
+ Reading TESTS/dwarf1.blk ... 
+ Reading TESTS/dwarf1.fix ... 
+ Reading TESTS/dwarf1.sol ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.002999 user, 2.0e-03 system, 0 real, 0.0161814 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.08 user, 1.8e-02 system, 0 real, 0.436 norm'd sec 
+ Partitions come from a 2 by 1 grid
+NumNodes: 7
+Total Weight:          10 
+
+Targets:                 5 
+            5 
+ 
+
+UCLA fix 1.0 
+# Created      : Mon Feb 14 16:14:04 2005
+# User         : royj@ariane3.eecs.umich.edu 
+# Platform     : Linux 2.6.10-1.8_FC2smp #1 SMP Mon Jan 10 15:22:16 EST 2005 i686 
+
+Regular partitions : 2
+Pad partitions : 3
+Fixed Pads : 3
+Fixed NonPads : 0
+p1 : pb0 
+p2 : pb1 
+p3 : pb2 
+UCLA blk 1.0 
+# Created      : Mon Feb 14 16:14:04 2005
+# User         : royj@ariane3.eecs.umich.edu 
+# Platform     : Linux 2.6.10-1.8_FC2smp #1 SMP Mon Jan 10 15:22:16 EST 2005 i686 
+
+Regular partitions : 2
+Pad partitions : 3
+Relative capacities : yes 
+Capacity tolerances : 2.5%   
+    pb0 rect         0         0         0         0 
+    pb1 rect         0         0         0         0 
+    pb2 rect         0         0         0         0 
+     b0 rect       -10       -10         0        10  :    50 
+     b1 rect         0       -10        10        10  :    50 
+------------  Running test 2...
+HGraph Parameters: 
+   makeAllSrcSnk : 1
+   removeBigNets : 0
+   netThreshold  : 4294967295
+   nodeSortMethod: no sort
+   edgeSortMethod: no sort
+   shredTopology: Grid
+
+Reading TESTS/dwarf1.aux
+ Done reading HGraph
+ Reading TESTS/dwarf1.blk ... 
+ Reading TESTS/dwarf1.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.002999 user, 1.0e-03 system, 0 real, 0.0175683 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.073 user, 1.9e-02 system, 0 real, 0.433 norm'd sec 
+------------  Running test 3...
+[ 0 1 2 3  ]
+[ 1 2  ]
+[ 1 2  ]
+------------  Running test 4...
+HGraph Parameters: 
+   makeAllSrcSnk : 1
+   removeBigNets : 0
+   netThreshold  : 4294967295
+   nodeSortMethod: no sort
+   edgeSortMethod: no sort
+   shredTopology: Grid
+
+Reading TESTS/dwarf1.aux
+ Done reading HGraph
+ Reading TESTS/dwarf1.blk ... 
+ Reading TESTS/dwarf1.fix ... 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+Reading PartitioningProblem took  0.002 user, 1.0e-03 system, 0 real, 0.010651 norm'd sec 
+Init+Read+PostProcess for PartProblem took  0.08 user, 1.7e-02 system, 0 real, 0.431 norm'd sec 
+ Total Edges: 5
+ Total Nodes: 7
+   Terminals: 3
+   Non-Terms: 4
+
+ Edge sizes :  Max: 3  Min: 2  Avg: 2.6
+     2: 2         3: 3     
+ Node degrees:  Max: 3  Min: 1  Avg: 1.85714
+ Total Pins: 13
+     1: 3         2: 2         3: 2     
+
+ Weights : Max: 4  Min: 0  Avg: 1.429
+ Total Wt:       10 Max:       40%    Min nonzero: 1
+ Num zeros:     3   Num minNZ:     1  Num others:  3
+ Distribution in 7 equal subranges : 
+          [0,0.571): 3            [0.571,1.14): 1             [1.14,1.71): 0    
+        [1.71,2.29): 1             [2.29,2.86): 0             [2.86,3.43): 1    
+           [3.43,4]: 1     
+ Distribution in 7 deciles (equipotent subranges) : 
+              [0,0]: 1                   [0,0]: 1                   [0,0]: 1    
+              [0,1): 1                   [1,2): 1                   [2,3): 1    
+              [3,4]: 1     
+
+------------  Running test 8...
+Generating partProb.....
+SubPartProb thinks there are 1094 Pads
+ Done writing t8.netD and t8.areM
+ Writing t8.blk ... 
+ Writing t8.fix ... 
+Stats for Problem
+___Node Stats______
+
+Total Nodes: 2789
+  Terminals: 1094
+  Non-Terms: 1695
+TotalNodeArea: 1.06552e+10
+ Node Areas:  Max: 7.854e+06  Min: 34000  Avg: 3.82045e+06
+
+ Largest Node is 0.0737103% of total area
+Node Degrees:  Max: 6  Min: 1  Avg: 2.53998
+
+
+___Net Stats______
+Total Nets:  1908
+ Net Degrees:  Max: 384  Min: 2  Avg: 3.71279
+
+UCLA fix 1.0 
+# Created      : Mon Feb 14 16:14:04 2005
+# User         : royj@ariane3.eecs.umich.edu 
+# Platform     : Linux 2.6.10-1.8_FC2smp #1 SMP Mon Jan 10 15:22:16 EST 2005 i686 
+
+Regular partitions : 2
+Pad partitions : 1094
+Fixed Pads : 1094
+Fixed NonPads : 0
+p1 : pb0 
+p2 : pb1 
+p3 : pb2 
+p4 : pb3 
+p5 : pb4 
+p6 : pb5 
+p7 : pb6 
+p8 : pb7 
+p9 : pb8 
+p10 : pb9 
+p11 : pb10 
+p12 : pb11 
+p13 : pb12 
+p14 : pb13 
+p15 : pb14 
+p16 : pb15 
+p17 : pb16 
+p18 : pb17 
+p19 : pb18 
+p20 : pb19 
+p21 : pb20 
+p22 : pb21 
+p23 : pb22 
+p24 : pb23 
+p25 : pb24 
+p26 : pb25 
+p27 : pb26 
+p28 : pb27 
+p29 : pb28 
+p30 : pb29 
+p31 : pb30 
+p32 : pb31 
+p33 : pb32 
+p34 : pb33 
+p35 : pb34 
+p36 : pb35 
+p37 : pb36 
+p38 : pb37 
+p39 : pb38 
+p40 : pb39 
+p41 : pb40 
+p42 : pb41 
+p43 : pb42 
+p44 : pb43 
+p45 : pb44 
+p46 : pb45 
+p47 : pb46 
+p48 : pb47 
+p49 : pb48 
+p50 : pb49 
+p51 : pb50 
+p52 : pb51 
+p53 : pb52 
+p54 : pb53 
+p55 : pb54 
+p56 : pb55 
+p57 : pb56 
+p58 : pb57 
+p59 : pb58 
+p60 : pb59 
+p61 : pb60 
+p62 : pb61 
+p63 : pb62 
+p64 : pb63 
+p65 : pb64 
+p66 : pb65 
+p67 : pb66 
+p68 : pb67 
+p69 : pb68 
+p70 : pb69 
+p71 : pb70 
+p72 : pb71 
+p73 : pb72 
+p74 : pb73 
+p75 : pb74 
+p76 : pb75 
+p77 : pb76 
+p78 : pb77 
+p79 : pb78 
+p80 : pb79 
+p81 : pb80 
+p82 : pb81 
+p83 : pb82 
+p84 : pb83 
+p85 : pb84 
+p86 : pb85 
+p87 : pb86 
+p88 : pb87 
+p89 : pb88 
+p90 : pb89 
+p91 : pb90 
+p92 : pb91 
+p93 : pb92 
+p94 : pb93 
+p95 : pb94 
+p96 : pb95 
+p97 : pb96 
+p98 : pb97 
+p99 : pb98 
+p100 : pb99 
+p101 : pb100 
+p102 : pb101 
+p103 : pb102 
+p104 : pb103 
+p105 : pb104 
+p106 : pb105 
+p107 : pb106 
+p108 : pb107 
+p109 : pb108 
+p110 : pb109 
+p111 : pb110 
+p112 : pb111 
+p113 : pb112 
+p114 : pb113 
+p115 : pb114 
+p116 : pb115 
+p117 : pb116 
+p118 : pb117 
+p119 : pb118 
+p120 : pb119 
+p121 : pb120 
+p122 : pb121 
+p123 : pb122 
+p124 : pb123 
+p125 : pb124 
+p126 : pb125 
+p127 : pb126 
+p128 : pb127 
+p129 : pb128 
+p130 : pb129 
+p131 : pb130 
+p132 : pb131 
+p133 : pb132 
+p134 : pb133 
+p135 : pb134 
+p136 : pb135 
+p137 : pb136 
+p138 : pb137 
+p139 : pb138 
+p140 : pb139 
+p141 : pb140 
+p142 : pb141 
+p143 : pb142 
+p144 : pb143 
+p145 : pb144 
+p146 : pb145 
+p147 : pb146 
+p148 : pb147 
+p149 : pb148 
+p150 : pb149 
+p151 : pb150 
+p152 : pb151 
+p153 : pb152 
+p154 : pb153 
+p155 : pb154 
+p156 : pb155 
+p157 : pb156 
+p158 : pb157 
+p159 : pb158 
+p160 : pb159 
+p161 : pb160 
+p162 : pb161 
+p163 : pb162 
+p164 : pb163 
+p165 : pb164 
+p166 : pb165 
+p167 : pb166 
+p168 : pb167 
+p169 : pb168 
+p170 : pb169 
+p171 : pb170 
+p172 : pb171 
+p173 : pb172 
+p174 : pb173 
+p175 : pb174 
+p176 : pb175 
+p177 : pb176 
+p178 : pb177 
+p179 : pb178 
+p180 : pb179 
+p181 : pb180 
+p182 : pb181 
+p183 : pb182 
+p184 : pb183 
+p185 : pb184 
+p186 : pb185 
+p187 : pb186 
+p188 : pb187 
+p189 : pb188 
+p190 : pb189 
+p191 : pb190 
+p192 : pb191 
+p193 : pb192 
+p194 : pb193 
+p195 : pb194 
+p196 : pb195 
+p197 : pb196 
+p198 : pb197 
+p199 : pb198 
+p200 : pb199 
+p201 : pb200 
+p202 : pb201 
+p203 : pb202 
+p204 : pb203 
+p205 : pb204 
+p206 : pb205 
+p207 : pb206 
+p208 : pb207 
+p209 : pb208 
+p210 : pb209 
+p211 : pb210 
+p212 : pb211 
+p213 : pb212 
+p214 : pb213 
+p215 : pb214 
+p216 : pb215 
+p217 : pb216 
+p218 : pb217 
+p219 : pb218 
+p220 : pb219 
+p221 : pb220 
+p222 : pb221 
+p223 : pb222 
+p224 : pb223 
+p225 : pb224 
+p226 : pb225 
+p227 : pb226 
+p228 : pb227 
+p229 : pb228 
+p230 : pb229 
+p231 : pb230 
+p232 : pb231 
+p233 : pb232 
+p234 : pb233 
+p235 : pb234 
+p236 : pb235 
+p237 : pb236 
+p238 : pb237 
+p239 : pb238 
+p240 : pb239 
+p241 : pb240 
+p242 : pb241 
+p243 : pb242 
+p244 : pb243 
+p245 : pb244 
+p246 : pb245 
+p247 : pb246 
+p248 : pb247 
+p249 : pb248 
+p250 : pb249 
+p251 : pb250 
+p252 : pb251 
+p253 : pb252 
+p254 : pb253 
+p255 : pb254 
+p256 : pb255 
+p257 : pb256 
+p258 : pb257 
+p259 : pb258 
+p260 : pb259 
+p261 : pb260 
+p262 : pb261 
+p263 : pb262 
+p264 : pb263 
+p265 : pb264 
+p266 : pb265 
+p267 : pb266 
+p268 : pb267 
+p269 : pb268 
+p270 : pb269 
+p271 : pb270 
+p272 : pb271 
+p273 : pb272 
+p274 : pb273 
+p275 : pb274 
+p276 : pb275 
+p277 : pb276 
+p278 : pb277 
+p279 : pb278 
+p280 : pb279 
+p281 : pb280 
+p282 : pb281 
+p283 : pb282 
+p284 : pb283 
+p285 : pb284 
+p286 : pb285 
+p287 : pb286 
+p288 : pb287 
+p289 : pb288 
+p290 : pb289 
+p291 : pb290 
+p292 : pb291 
+p293 : pb292 
+p294 : pb293 
+p295 : pb294 
+p296 : pb295 
+p297 : pb296 
+p298 : pb297 
+p299 : pb298 
+p300 : pb299 
+p301 : pb300 
+p302 : pb301 
+p303 : pb302 
+p304 : pb303 
+p305 : pb304 
+p306 : pb305 
+p307 : pb306 
+p308 : pb307 
+p309 : pb308 
+p310 : pb309 
+p311 : pb310 
+p312 : pb311 
+p313 : pb312 
+p314 : pb313 
+p315 : pb314 
+p316 : pb315 
+p317 : pb316 
+p318 : pb317 
+p319 : pb318 
+p320 : pb319 
+p321 : pb320 
+p322 : pb321 
+p323 : pb322 
+p324 : pb323 
+p325 : pb324 
+p326 : pb325 
+p327 : pb326 
+p328 : pb327 
+p329 : pb328 
+p330 : pb329 
+p331 : pb330 
+p332 : pb331 
+p333 : pb332 
+p334 : pb333 
+p335 : pb334 
+p336 : pb335 
+p337 : pb336 
+p338 : pb337 
+p339 : pb338 
+p340 : pb339 
+p341 : pb340 
+p342 : pb341 
+p343 : pb342 
+p344 : pb343 
+p345 : pb344 
+p346 : pb345 
+p347 : pb346 
+p348 : pb347 
+p349 : pb348 
+p350 : pb349 
+p351 : pb350 
+p352 : pb351 
+p353 : pb352 
+p354 : pb353 
+p355 : pb354 
+p356 : pb355 
+p357 : pb356 
+p358 : pb357 
+p359 : pb358 
+p360 : pb359 
+p361 : pb360 
+p362 : pb361 
+p363 : pb362 
+p364 : pb363 
+p365 : pb364 
+p366 : pb365 
+p367 : pb366 
+p368 : pb367 
+p369 : pb368 
+p370 : pb369 
+p371 : pb370 
+p372 : pb371 
+p373 : pb372 
+p374 : pb373 
+p375 : pb374 
+p376 : pb375 
+p377 : pb376 
+p378 : pb377 
+p379 : pb378 
+p380 : pb379 
+p381 : pb380 
+p382 : pb381 
+p383 : pb382 
+p384 : pb383 
+p385 : pb384 
+p386 : pb385 
+p387 : pb386 
+p388 : pb387 
+p389 : pb388 
+p390 : pb389 
+p391 : pb390 
+p392 : pb391 
+p393 : pb392 
+p394 : pb393 
+p395 : pb394 
+p396 : pb395 
+p397 : pb396 
+p398 : pb397 
+p399 : pb398 
+p400 : pb399 
+p401 : pb400 
+p402 : pb401 
+p403 : pb402 
+p404 : pb403 
+p405 : pb404 
+p406 : pb405 
+p407 : pb406 
+p408 : pb407 
+p409 : pb408 
+p410 : pb409 
+p411 : pb410 
+p412 : pb411 
+p413 : pb412 
+p414 : pb413 
+p415 : pb414 
+p416 : pb415 
+p417 : pb416 
+p418 : pb417 
+p419 : pb418 
+p420 : pb419 
+p421 : pb420 
+p422 : pb421 
+p423 : pb422 
+p424 : pb423 
+p425 : pb424 
+p426 : pb425 
+p427 : pb426 
+p428 : pb427 
+p429 : pb428 
+p430 : pb429 
+p431 : pb430 
+p432 : pb431 
+p433 : pb432 
+p434 : pb433 
+p435 : pb434 
+p436 : pb435 
+p437 : pb436 
+p438 : pb437 
+p439 : pb438 
+p440 : pb439 
+p441 : pb440 
+p442 : pb441 
+p443 : pb442 
+p444 : pb443 
+p445 : pb444 
+p446 : pb445 
+p447 : pb446 
+p448 : pb447 
+p449 : pb448 
+p450 : pb449 
+p451 : pb450 
+p452 : pb451 
+p453 : pb452 
+p454 : pb453 
+p455 : pb454 
+p456 : pb455 
+p457 : pb456 
+p458 : pb457 
+p459 : pb458 
+p460 : pb459 
+p461 : pb460 
+p462 : pb461 
+p463 : pb462 
+p464 : pb463 
+p465 : pb464 
+p466 : pb465 
+p467 : pb466 
+p468 : pb467 
+p469 : pb468 
+p470 : pb469 
+p471 : pb470 
+p472 : pb471 
+p473 : pb472 
+p474 : pb473 
+p475 : pb474 
+p476 : pb475 
+p477 : pb476 
+p478 : pb477 
+p479 : pb478 
+p480 : pb479 
+p481 : pb480 
+p482 : pb481 
+p483 : pb482 
+p484 : pb483 
+p485 : pb484 
+p486 : pb485 
+p487 : pb486 
+p488 : pb487 
+p489 : pb488 
+p490 : pb489 
+p491 : pb490 
+p492 : pb491 
+p493 : pb492 
+p494 : pb493 
+p495 : pb494 
+p496 : pb495 
+p497 : pb496 
+p498 : pb497 
+p499 : pb498 
+p500 : pb499 
+p501 : pb500 
+p502 : pb501 
+p503 : pb502 
+p504 : pb503 
+p505 : pb504 
+p506 : pb505 
+p507 : pb506 
+p508 : pb507 
+p509 : pb508 
+p510 : pb509 
+p511 : pb510 
+p512 : pb511 
+p513 : pb512 
+p514 : pb513 
+p515 : pb514 
+p516 : pb515 
+p517 : pb516 
+p518 : pb517 
+p519 : pb518 
+p520 : pb519 
+p521 : pb520 
+p522 : pb521 
+p523 : pb522 
+p524 : pb523 
+p525 : pb524 
+p526 : pb525 
+p527 : pb526 
+p528 : pb527 
+p529 : pb528 
+p530 : pb529 
+p531 : pb530 
+p532 : pb531 
+p533 : pb532 
+p534 : pb533 
+p535 : pb534 
+p536 : pb535 
+p537 : pb536 
+p538 : pb537 
+p539 : pb538 
+p540 : pb539 
+p541 : pb540 
+p542 : pb541 
+p543 : pb542 
+p544 : pb543 
+p545 : pb544 
+p546 : pb545 
+p547 : pb546 
+p548 : pb547 
+p549 : pb548 
+p550 : pb549 
+p551 : pb550 
+p552 : pb551 
+p553 : pb552 
+p554 : pb553 
+p555 : pb554 
+p556 : pb555 
+p557 : pb556 
+p558 : pb557 
+p559 : pb558 
+p560 : pb559 
+p561 : pb560 
+p562 : pb561 
+p563 : pb562 
+p564 : pb563 
+p565 : pb564 
+p566 : pb565 
+p567 : pb566 
+p568 : pb567 
+p569 : pb568 
+p570 : pb569 
+p571 : pb570 
+p572 : pb571 
+p573 : pb572 
+p574 : pb573 
+p575 : pb574 
+p576 : pb575 
+p577 : pb576 
+p578 : pb577 
+p579 : pb578 
+p580 : pb579 
+p581 : pb580 
+p582 : pb581 
+p583 : pb582 
+p584 : pb583 
+p585 : pb584 
+p586 : pb585 
+p587 : pb586 
+p588 : pb587 
+p589 : pb588 
+p590 : pb589 
+p591 : pb590 
+p592 : pb591 
+p593 : pb592 
+p594 : pb593 
+p595 : pb594 
+p596 : pb595 
+p597 : pb596 
+p598 : pb597 
+p599 : pb598 
+p600 : pb599 
+p601 : pb600 
+p602 : pb601 
+p603 : pb602 
+p604 : pb603 
+p605 : pb604 
+p606 : pb605 
+p607 : pb606 
+p608 : pb607 
+p609 : pb608 
+p610 : pb609 
+p611 : pb610 
+p612 : pb611 
+p613 : pb612 
+p614 : pb613 
+p615 : pb614 
+p616 : pb615 
+p617 : pb616 
+p618 : pb617 
+p619 : pb618 
+p620 : pb619 
+p621 : pb620 
+p622 : pb621 
+p623 : pb622 
+p624 : pb623 
+p625 : pb624 
+p626 : pb625 
+p627 : pb626 
+p628 : pb627 
+p629 : pb628 
+p630 : pb629 
+p631 : pb630 
+p632 : pb631 
+p633 : pb632 
+p634 : pb633 
+p635 : pb634 
+p636 : pb635 
+p637 : pb636 
+p638 : pb637 
+p639 : pb638 
+p640 : pb639 
+p641 : pb640 
+p642 : pb641 
+p643 : pb642 
+p644 : pb643 
+p645 : pb644 
+p646 : pb645 
+p647 : pb646 
+p648 : pb647 
+p649 : pb648 
+p650 : pb649 
+p651 : pb650 
+p652 : pb651 
+p653 : pb652 
+p654 : pb653 
+p655 : pb654 
+p656 : pb655 
+p657 : pb656 
+p658 : pb657 
+p659 : pb658 
+p660 : pb659 
+p661 : pb660 
+p662 : pb661 
+p663 : pb662 
+p664 : pb663 
+p665 : pb664 
+p666 : pb665 
+p667 : pb666 
+p668 : pb667 
+p669 : pb668 
+p670 : pb669 
+p671 : pb670 
+p672 : pb671 
+p673 : pb672 
+p674 : pb673 
+p675 : pb674 
+p676 : pb675 
+p677 : pb676 
+p678 : pb677 
+p679 : pb678 
+p680 : pb679 
+p681 : pb680 
+p682 : pb681 
+p683 : pb682 
+p684 : pb683 
+p685 : pb684 
+p686 : pb685 
+p687 : pb686 
+p688 : pb687 
+p689 : pb688 
+p690 : pb689 
+p691 : pb690 
+p692 : pb691 
+p693 : pb692 
+p694 : pb693 
+p695 : pb694 
+p696 : pb695 
+p697 : pb696 
+p698 : pb697 
+p699 : pb698 
+p700 : pb699 
+p701 : pb700 
+p702 : pb701 
+p703 : pb702 
+p704 : pb703 
+p705 : pb704 
+p706 : pb705 
+p707 : pb706 
+p708 : pb707 
+p709 : pb708 
+p710 : pb709 
+p711 : pb710 
+p712 : pb711 
+p713 : pb712 
+p714 : pb713 
+p715 : pb714 
+p716 : pb715 
+p717 : pb716 
+p718 : pb717 
+p719 : pb718 
+p720 : pb719 
+p721 : pb720 
+p722 : pb721 
+p723 : pb722 
+p724 : pb723 
+p725 : pb724 
+p726 : pb725 
+p727 : pb726 
+p728 : pb727 
+p729 : pb728 
+p730 : pb729 
+p731 : pb730 
+p732 : pb731 
+p733 : pb732 
+p734 : pb733 
+p735 : pb734 
+p736 : pb735 
+p737 : pb736 
+p738 : pb737 
+p739 : pb738 
+p740 : pb739 
+p741 : pb740 
+p742 : pb741 
+p743 : pb742 
+p744 : pb743 
+p745 : pb744 
+p746 : pb745 
+p747 : pb746 
+p748 : pb747 
+p749 : pb748 
+p750 : pb749 
+p751 : pb750 
+p752 : pb751 
+p753 : pb752 
+p754 : pb753 
+p755 : pb754 
+p756 : pb755 
+p757 : pb756 
+p758 : pb757 
+p759 : pb758 
+p760 : pb759 
+p761 : pb760 
+p762 : pb761 
+p763 : pb762 
+p764 : pb763 
+p765 : pb764 
+p766 : pb765 
+p767 : pb766 
+p768 : pb767 
+p769 : pb768 
+p770 : pb769 
+p771 : pb770 
+p772 : pb771 
+p773 : pb772 
+p774 : pb773 
+p775 : pb774 
+p776 : pb775 
+p777 : pb776 
+p778 : pb777 
+p779 : pb778 
+p780 : pb779 
+p781 : pb780 
+p782 : pb781 
+p783 : pb782 
+p784 : pb783 
+p785 : pb784 
+p786 : pb785 
+p787 : pb786 
+p788 : pb787 
+p789 : pb788 
+p790 : pb789 
+p791 : pb790 
+p792 : pb791 
+p793 : pb792 
+p794 : pb793 
+p795 : pb794 
+p796 : pb795 
+p797 : pb796 
+p798 : pb797 
+p799 : pb798 
+p800 : pb799 
+p801 : pb800 
+p802 : pb801 
+p803 : pb802 
+p804 : pb803 
+p805 : pb804 
+p806 : pb805 
+p807 : pb806 
+p808 : pb807 
+p809 : pb808 
+p810 : pb809 
+p811 : pb810 
+p812 : pb811 
+p813 : pb812 
+p814 : pb813 
+p815 : pb814 
+p816 : pb815 
+p817 : pb816 
+p818 : pb817 
+p819 : pb818 
+p820 : pb819 
+p821 : pb820 
+p822 : pb821 
+p823 : pb822 
+p824 : pb823 
+p825 : pb824 
+p826 : pb825 
+p827 : pb826 
+p828 : pb827 
+p829 : pb828 
+p830 : pb829 
+p831 : pb830 
+p832 : pb831 
+p833 : pb832 
+p834 : pb833 
+p835 : pb834 
+p836 : pb835 
+p837 : pb836 
+p838 : pb837 
+p839 : pb838 
+p840 : pb839 
+p841 : pb840 
+p842 : pb841 
+p843 : pb842 
+p844 : pb843 
+p845 : pb844 
+p846 : pb845 
+p847 : pb846 
+p848 : pb847 
+p849 : pb848 
+p850 : pb849 
+p851 : pb850 
+p852 : pb851 
+p853 : pb852 
+p854 : pb853 
+p855 : pb854 
+p856 : pb855 
+p857 : pb856 
+p858 : pb857 
+p859 : pb858 
+p860 : pb859 
+p861 : pb860 
+p862 : pb861 
+p863 : pb862 
+p864 : pb863 
+p865 : pb864 
+p866 : pb865 
+p867 : pb866 
+p868 : pb867 
+p869 : pb868 
+p870 : pb869 
+p871 : pb870 
+p872 : pb871 
+p873 : pb872 
+p874 : pb873 
+p875 : pb874 
+p876 : pb875 
+p877 : pb876 
+p878 : pb877 
+p879 : pb878 
+p880 : pb879 
+p881 : pb880 
+p882 : pb881 
+p883 : pb882 
+p884 : pb883 
+p885 : pb884 
+p886 : pb885 
+p887 : pb886 
+p888 : pb887 
+p889 : pb888 
+p890 : pb889 
+p891 : pb890 
+p892 : pb891 
+p893 : pb892 
+p894 : pb893 
+p895 : pb894 
+p896 : pb895 
+p897 : pb896 
+p898 : pb897 
+p899 : pb898 
+p900 : pb899 
+p901 : pb900 
+p902 : pb901 
+p903 : pb902 
+p904 : pb903 
+p905 : pb904 
+p906 : pb905 
+p907 : pb906 
+p908 : pb907 
+p909 : pb908 
+p910 : pb909 
+p911 : pb910 
+p912 : pb911 
+p913 : pb912 
+p914 : pb913 
+p915 : pb914 
+p916 : pb915 
+p917 : pb916 
+p918 : pb917 
+p919 : pb918 
+p920 : pb919 
+p921 : pb920 
+p922 : pb921 
+p923 : pb922 
+p924 : pb923 
+p925 : pb924 
+p926 : pb925 
+p927 : pb926 
+p928 : pb927 
+p929 : pb928 
+p930 : pb929 
+p931 : pb930 
+p932 : pb931 
+p933 : pb932 
+p934 : pb933 
+p935 : pb934 
+p936 : pb935 
+p937 : pb936 
+p938 : pb937 
+p939 : pb938 
+p940 : pb939 
+p941 : pb940 
+p942 : pb941 
+p943 : pb942 
+p944 : pb943 
+p945 : pb944 
+p946 : pb945 
+p947 : pb946 
+p948 : pb947 
+p949 : pb948 
+p950 : pb949 
+p951 : pb950 
+p952 : pb951 
+p953 : pb952 
+p954 : pb953 
+p955 : pb954 
+p956 : pb955 
+p957 : pb956 
+p958 : pb957 
+p959 : pb958 
+p960 : pb959 
+p961 : pb960 
+p962 : pb961 
+p963 : pb962 
+p964 : pb963 
+p965 : pb964 
+p966 : pb965 
+p967 : pb966 
+p968 : pb967 
+p969 : pb968 
+p970 : pb969 
+p971 : pb970 
+p972 : pb971 
+p973 : pb972 
+p974 : pb973 
+p975 : pb974 
+p976 : pb975 
+p977 : pb976 
+p978 : pb977 
+p979 : pb978 
+p980 : pb979 
+p981 : pb980 
+p982 : pb981 
+p983 : pb982 
+p984 : pb983 
+p985 : pb984 
+p986 : pb985 
+p987 : pb986 
+p988 : pb987 
+p989 : pb988 
+p990 : pb989 
+p991 : pb990 
+p992 : pb991 
+p993 : pb992 
+p994 : pb993 
+p995 : pb994 
+p996 : pb995 
+p997 : pb996 
+p998 : pb997 
+p999 : pb998 
+p1000 : pb999 
+p1001 : pb1000 
+p1002 : pb1001 
+p1003 : pb1002 
+p1004 : pb1003 
+p1005 : pb1004 
+p1006 : pb1005 
+p1007 : pb1006 
+p1008 : pb1007 
+p1009 : pb1008 
+p1010 : pb1009 
+p1011 : pb1010 
+p1012 : pb1011 
+p1013 : pb1012 
+p1014 : pb1013 
+p1015 : pb1014 
+p1016 : pb1015 
+p1017 : pb1016 
+p1018 : pb1017 
+p1019 : pb1018 
+p1020 : pb1019 
+p1021 : pb1020 
+p1022 : pb1021 
+p1023 : pb1022 
+p1024 : pb1023 
+p1025 : pb1024 
+p1026 : pb1025 
+p1027 : pb1026 
+p1028 : pb1027 
+p1029 : pb1028 
+p1030 : pb1029 
+p1031 : pb1030 
+p1032 : pb1031 
+p1033 : pb1032 
+p1034 : pb1033 
+p1035 : pb1034 
+p1036 : pb1035 
+p1037 : pb1036 
+p1038 : pb1037 
+p1039 : pb1038 
+p1040 : pb1039 
+p1041 : pb1040 
+p1042 : pb1041 
+p1043 : pb1042 
+p1044 : pb1043 
+p1045 : pb1044 
+p1046 : pb1045 
+p1047 : pb1046 
+p1048 : pb1047 
+p1049 : pb1048 
+p1050 : pb1049 
+p1051 : pb1050 
+p1052 : pb1051 
+p1053 : pb1052 
+p1054 : pb1053 
+p1055 : pb1054 
+p1056 : pb1055 
+p1057 : pb1056 
+p1058 : pb1057 
+p1059 : pb1058 
+p1060 : pb1059 
+p1061 : pb1060 
+p1062 : pb1061 
+p1063 : pb1062 
+p1064 : pb1063 
+p1065 : pb1064 
+p1066 : pb1065 
+p1067 : pb1066 
+p1068 : pb1067 
+p1069 : pb1068 
+p1070 : pb1069 
+p1071 : pb1070 
+p1072 : pb1071 
+p1073 : pb1072 
+p1074 : pb1073 
+p1075 : pb1074 
+p1076 : pb1075 
+p1077 : pb1076 
+p1078 : pb1077 
+p1079 : pb1078 
+p1080 : pb1079 
+p1081 : pb1080 
+p1082 : pb1081 
+p1083 : pb1082 
+p1084 : pb1083 
+p1085 : pb1084 
+p1086 : pb1085 
+p1087 : pb1086 
+p1088 : pb1087 
+p1089 : pb1088 
+p1090 : pb1089 
+p1091 : pb1090 
+p1092 : pb1091 
+p1093 : pb1092 
+p1094 : pb1093 
+UCLA blk 1.0 
+# Created      : Mon Feb 14 16:14:04 2005
+# User         : royj@ariane3.eecs.umich.edu 
+# Platform     : Linux 2.6.10-1.8_FC2smp #1 SMP Mon Jan 10 15:22:16 EST 2005 i686 
+
+Regular partitions : 2
+Pad partitions : 1094
+Relative capacities : yes 
+Capacity tolerances : 10%   
+    pb0 rect         0     58245         0     58245 
+    pb1 rect         0     45325         0     45325 
+    pb2 rect         0     44375         0     44375 
+    pb3 rect    113735     79900    113735     79900 
+    pb4 rect      6520     79900      6520     79900 
+    pb5 rect    111480     79900    111480     79900 
+    pb6 rect         0     44035         0     44035 
+    pb7 rect         0     41985         0     41985 
+    pb8 rect         0     41645         0     41645 
+    pb9 rect    126650     79900    126650     79900 
+   pb10 rect         0     40965         0     40965 
+   pb11 rect      9800     79900      9800     79900 
+   pb12 rect      8980     79900      8980     79900 
+   pb13 rect     50595     79900     50595     79900 
+   pb14 rect         0     40455         0     40455 
+   pb15 rect         0     40115         0     40115 
+   pb16 rect         0     39775         0     39775 
+   pb17 rect         0     39435         0     39435 
+   pb18 rect         0     38915         0     38915 
+   pb19 rect         0     38395         0     38395 
+   pb20 rect         0     37875         0     37875 
+   pb21 rect         0     35850         0     35850 
+   pb22 rect         0     35330         0     35330 
+   pb23 rect         0     34990         0     34990 
+   pb24 rect    112095         0    112095         0 
+   pb25 rect    120910         0    120910         0 
+   pb26 rect         0     34650         0     34650 
+   pb27 rect         0     34310         0     34310 
+   pb28 rect         0     33630         0     33630 
+   pb29 rect         0     33290         0     33290 
+   pb30 rect         0     32950         0     32950 
+   pb31 rect         0     32610         0     32610 
+   pb32 rect         0     32100         0     32100 
+   pb33 rect         0     31760         0     31760 
+   pb34 rect         0     31420         0     31420 
+   pb35 rect     42600     79900     42600     79900 
+   pb36 rect     69045         0     69045         0 
+   pb37 rect     39320     79900     39320     79900 
+   pb38 rect     67815         0     67815         0 
+   pb39 rect    107380     79900    107380     79900 
+   pb40 rect    139770         0    139770         0 
+   pb41 rect    146945         0    146945         0 
+   pb42 rect    131775         0    131775         0 
+   pb43 rect    134850         0    134850         0 
+   pb44 rect      7340     79900      7340     79900 
+   pb45 rect    143870         0    143870         0 
+   pb46 rect    141820         0    141820         0 
+   pb47 rect     70070         0     70070         0 
+   pb48 rect         0     28000         0     28000 
+   pb49 rect     66995         0     66995         0 
+   pb50 rect         0     27660         0     27660 
+   pb51 rect         0     27320         0     27320 
+   pb52 rect         0     26810         0     26810 
+   pb53 rect         0     26470         0     26470 
+   pb54 rect     43420     79900     43420     79900 
+   pb55 rect         0     26130         0     26130 
+   pb56 rect         0     25700         0     25700 
+   pb57 rect     51825         0     51825         0 
+   pb58 rect    116810         0    116810         0 
+   pb59 rect         0     25020         0     25020 
+   pb60 rect     32965     79900     32965     79900 
+   pb61 rect     34605     79900     34605     79900 
+   pb62 rect     69865     79900     69865     79900 
+   pb63 rect     64125     79900     64125     79900 
+   pb64 rect     56950     79900     56950     79900 
+   pb65 rect     91595         0     91595         0 
+   pb66 rect    145715     79900    145715     79900 
+   pb67 rect     89545         0     89545         0 
+   pb68 rect    148175     79900    148175     79900 
+   pb69 rect    110045         0    110045         0 
+   pb70 rect    102665     79900    102665     79900 
+   pb71 rect         0     24680         0     24680 
+   pb72 rect         0     24340         0     24340 
+   pb73 rect     53875         0     53875         0 
+   pb74 rect         0     23820         0     23820 
+   pb75 rect         0     23480         0     23480 
+   pb76 rect         0     23140         0     23140 
+   pb77 rect         0     22800         0     22800 
+   pb78 rect         0     22370         0     22370 
+   pb79 rect         0     22030         0     22030 
+   pb80 rect    102870         0    102870         0 
+   pb81 rect     47930         0     47930         0 
+   pb82 rect     46905         0     46905         0 
+   pb83 rect     27635         0     27635         0 
+   pb84 rect     72120     79900     72120     79900 
+   pb85 rect    114760         0    114760         0 
+   pb86 rect    123370         0    123370         0 
+   pb87 rect     29480         0     29480         0 
+   pb88 rect         0     21690         0     21690 
+   pb89 rect     41780         0     41780         0 
+   pb90 rect     40755         0     40755         0 
+   pb91 rect    148995         0    148995         0 
+   pb92 rect     14515         0     14515         0 
+   pb93 rect     63100         0     63100         0 
+   pb94 rect     39730         0     39730         0 
+   pb95 rect     79295     79900     79295     79900 
+   pb96 rect    154120         0    154120         0 
+   pb97 rect    111070         0    111070         0 
+   pb98 rect    113735         0    113735         0 
+   pb99 rect    103895         0    103895         0 
+  pb100 rect    121730         0    121730         0 
+  pb101 rect     90570         0     90570         0 
+  pb102 rect    137925         0    137925         0 
+  pb103 rect    136900         0    136900         0 
+  pb104 rect         0     21260         0     21260 
+  pb105 rect     43830         0     43830         0 
+  pb106 rect     73760     79900     73760     79900 
+  pb107 rect         0     20920         0     20920 
+  pb108 rect         0     20580         0     20580 
+  pb109 rect         0     20240         0     20240 
+  pb110 rect     87495         0     87495         0 
+  pb111 rect     55105         0     55105         0 
+  pb112 rect         0     19900         0     19900 
+  pb113 rect         0     19560         0     19560 
+  pb114 rect       985     79900       985     79900 
+  pb115 rect         0     19130         0     19130 
+  pb116 rect         0     18700         0     18700 
+  pb117 rect     85035     79900     85035     79900 
+  pb118 rect         0     18180         0     18180 
+  pb119 rect         0     17750         0     17750 
+  pb120 rect         0     17410         0     17410 
+  pb121 rect     74170         0     74170         0 
+  pb122 rect     86470         0     86470         0 
+  pb123 rect         0     16890         0     16890 
+  pb124 rect         0     16550         0     16550 
+  pb125 rect         0     16210         0     16210 
+  pb126 rect         0     15870         0     15870 
+  pb127 rect         0     15440         0     15440 
+  pb128 rect         0     15100         0     15100 
+  pb129 rect         0     14670         0     14670 
+  pb130 rect         0     14330         0     14330 
+  pb131 rect         0     13820         0     13820 
+  pb132 rect     77040     79900     77040     79900 
+  pb133 rect         0     13480         0     13480 
+  pb134 rect         0     13140         0     13140 
+  pb135 rect         0     12710         0     12710 
+  pb136 rect         0     12190         0     12190 
+  pb137 rect         0     11850         0     11850 
+  pb138 rect         0     11420         0     11420 
+  pb139 rect         0     11080         0     11080 
+  pb140 rect         0     10650         0     10650 
+  pb141 rect         0     10310         0     10310 
+  pb142 rect         0      9880         0      9880 
+  pb143 rect     78680     79900     78680     79900 
+  pb144 rect         0      9450         0      9450 
+  pb145 rect         0      8930         0      8930 
+  pb146 rect         0      8590         0      8590 
+  pb147 rect         0      8250         0      8250 
+  pb148 rect         0      7910         0      7910 
+  pb149 rect         0      7570         0      7570 
+  pb150 rect         0      7230         0      7230 
+  pb151 rect         0      6800         0      6800 
+  pb152 rect         0      6370         0      6370 
+  pb153 rect         0      6030         0      6030 
+  pb154 rect         0      5600         0      5600 
+  pb155 rect         0      5170         0      5170 
+  pb156 rect         0      4740         0      4740 
+  pb157 rect         0      4400         0      4400 
+  pb158 rect     37065     79900     37065     79900 
+  pb159 rect     30505     79900     30505     79900 
+  pb160 rect         0      3880         0      3880 
+  pb161 rect         0      3020         0      3020 
+  pb162 rect         0      2680         0      2680 
+  pb163 rect     42805         0     42805         0 
+  pb164 rect         0      2250         0      2250 
+  pb165 rect     48545         0     48545         0 
+  pb166 rect         0      1910         0      1910 
+  pb167 rect         0      1390         0      1390 
+  pb168 rect     10620     79900     10620     79900 
+  pb169 rect     29070     79900     29070     79900 
+  pb170 rect         0       870         0       870 
+  pb171 rect         0       350         0       350 
+  pb172 rect         0     58075         0     58075 
+  pb173 rect     74580     79900     74580     79900 
+  pb174 rect     85445         0     85445         0 
+  pb175 rect     77450         0     77450         0 
+  pb176 rect     38705         0     38705         0 
+  pb177 rect     83395         0     83395         0 
+  pb178 rect     52645         0     52645         0 
+  pb179 rect         0     46785         0     46785 
+  pb180 rect         0     29710         0     29710 
+  pb181 rect         0     54315         0     54315 
+  pb182 rect         0     60985         0     60985 
+  pb183 rect         0     56795         0     56795 
+  pb184 rect         0     29370         0     29370 
+  pb185 rect         0     46265         0     46265 
+  pb186 rect         0     28940         0     28940 
+  pb187 rect         0     60815         0     60815 
+  pb188 rect         0     28510         0     28510 
+  pb189 rect     84215     79900     84215     79900 
+  pb190 rect     22510         0     22510         0 
+  pb191 rect     28250     79900     28250     79900 
+  pb192 rect         0     56365         0     56365 
+  pb193 rect     15540         0     15540         0 
+  pb194 rect      4265         0      4265         0 
+  pb195 rect         0     45925         0     45925 
+  pb196 rect         0     28170         0     28170 
+  pb197 rect         0     53975         0     53975 
+  pb198 rect         0     27830         0     27830 
+  pb199 rect      1190         0      1190         0 
+  pb200 rect     21485         0     21485         0 
+  pb201 rect     97745         0     97745         0 
+  pb202 rect     76220     79900     76220     79900 
+  pb203 rect         0     45495         0     45495 
+  pb204 rect         0     27490         0     27490 
+  pb205 rect     83395     79900     83395     79900 
+  pb206 rect     34605         0     34605         0 
+  pb207 rect     36655         0     36655         0 
+  pb208 rect         0     26980         0     26980 
+  pb209 rect         0     45155         0     45155 
+  pb210 rect         0     26640         0     26640 
+  pb211 rect         0     53635         0     53635 
+  pb212 rect     25585         0     25585         0 
+  pb213 rect     18615         0     18615         0 
+  pb214 rect     20665         0     20665         0 
+  pb215 rect     12465         0     12465         0 
+  pb216 rect      4265     79900      4265     79900 
+  pb217 rect      8365         0      8365         0 
+  pb218 rect      7340         0      7340         0 
+  pb219 rect      6315         0      6315         0 
+  pb220 rect      5290         0      5290         0 
+  pb221 rect     26610         0     26610         0 
+  pb222 rect      3240         0      3240         0 
+  pb223 rect      2215         0      2215         0 
+  pb224 rect     24560         0     24560         0 
+  pb225 rect         0     26300         0     26300 
+  pb226 rect         0     56025         0     56025 
+  pb227 rect         0     44635         0     44635 
+  pb228 rect         0     25870         0     25870 
+  pb229 rect         0     59795         0     59795 
+  pb230 rect         0     25530         0     25530 
+  pb231 rect         0     44205         0     44205 
+  pb232 rect         0     25190         0     25190 
+  pb233 rect         0     53115         0     53115 
+  pb234 rect         0     24850         0     24850 
+  pb235 rect         0     43865         0     43865 
+  pb236 rect     22510     79900     22510     79900 
+  pb237 rect         0     55685         0     55685 
+  pb238 rect     81550         0     81550         0 
+  pb239 rect         0     57395         0     57395 
+  pb240 rect         0     24080         0     24080 
+  pb241 rect     16155     79900     16155     79900 
+  pb242 rect         0     43525         0     43525 
+  pb243 rect         0     23650         0     23650 
+  pb244 rect     13080     79900     13080     79900 
+  pb245 rect     12260     79900     12260     79900 
+  pb246 rect         0     55255         0     55255 
+  pb247 rect     11440     79900     11440     79900 
+  pb248 rect         0     23310         0     23310 
+  pb249 rect         0     22970         0     22970 
+  pb250 rect     80525         0     80525         0 
+  pb251 rect     76220         0     76220         0 
+  pb252 rect         0     61155         0     61155 
+  pb253 rect         0     22630         0     22630 
+  pb254 rect         0     42495         0     42495 
+  pb255 rect         0     22200         0     22200 
+  pb256 rect         0     54825         0     54825 
+  pb257 rect         0     52175         0     52175 
+  pb258 rect         0     21860         0     21860 
+  pb259 rect         0     42155         0     42155 
+  pb260 rect         0     21520         0     21520 
+  pb261 rect         0     57055         0     57055 
+  pb262 rect         0     21090         0     21090 
+  pb263 rect         0     41815         0     41815 
+  pb264 rect     25790     79900     25790     79900 
+  pb265 rect     14515     79900     14515     79900 
+  pb266 rect     13695     79900     13695     79900 
+  pb267 rect     97745     79900     97745     79900 
+  pb268 rect         0     51835         0     51835 
+  pb269 rect     27430     79900     27430     79900 
+  pb270 rect     26610     79900     26610     79900 
+  pb271 rect         0     20410         0     20410 
+  pb272 rect         0     41475         0     41475 
+  pb273 rect         0     20070         0     20070 
+  pb274 rect         0     59365         0     59365 
+  pb275 rect         0     19730         0     19730 
+  pb276 rect         0     60645         0     60645 
+  pb277 rect         0     41135         0     41135 
+  pb278 rect         0     19300         0     19300 
+  pb279 rect         0     51405         0     51405 
+  pb280 rect         0     18960         0     18960 
+  pb281 rect         0     40795         0     40795 
+  pb282 rect         0     18440         0     18440 
+  pb283 rect         0     56535         0     56535 
+  pb284 rect         0     17920         0     17920 
+  pb285 rect         0     40285         0     40285 
+  pb286 rect         0     17580         0     17580 
+  pb287 rect     16975     79900     16975     79900 
+  pb288 rect     24150     79900     24150     79900 
+  pb289 rect         0     51065         0     51065 
+  pb290 rect         0     17150         0     17150 
+  pb291 rect         0     39945         0     39945 
+  pb292 rect     56130         0     56130         0 
+  pb293 rect         0     16720         0     16720 
+  pb294 rect         0     60475         0     60475 
+  pb295 rect      5700     79900      5700     79900 
+  pb296 rect         0     16380         0     16380 
+  pb297 rect         0     39605         0     39605 
+  pb298 rect         0     16040         0     16040 
+  pb299 rect         0     50635         0     50635 
+  pb300 rect         0     15610         0     15610 
+  pb301 rect         0     39175         0     39175 
+  pb302 rect         0     15270         0     15270 
+  pb303 rect     65355         0     65355         0 
+  pb304 rect         0     56195         0     56195 
+  pb305 rect         0     14840         0     14840 
+  pb306 rect     91390     79900     91390     79900 
+  pb307 rect         0     38655         0     38655 
+  pb308 rect         0     14500         0     14500 
+  pb309 rect         0     50295         0     50295 
+  pb310 rect         0     13990         0     13990 
+  pb311 rect         0     38135         0     38135 
+  pb312 rect         0     13650         0     13650 
+  pb313 rect         0     58845         0     58845 
+  pb314 rect         0     13310         0     13310 
+  pb315 rect         0     37615         0     37615 
+  pb316 rect         0     12970         0     12970 
+  pb317 rect    103485     79900    103485     79900 
+  pb318 rect         0     49955         0     49955 
+  pb319 rect         0     12450         0     12450 
+  pb320 rect         0     35590         0     35590 
+  pb321 rect         0     12020         0     12020 
+  pb322 rect         0     55855         0     55855 
+  pb323 rect         0     11250         0     11250 
+  pb324 rect         0     49525         0     49525 
+  pb325 rect         0     10820         0     10820 
+  pb326 rect    104920     79900    104920     79900 
+  pb327 rect         0     34820         0     34820 
+  pb328 rect         0     34480         0     34480 
+  pb329 rect         0      9190         0      9190 
+  pb330 rect         0     54485         0     54485 
+  pb331 rect         0      8420         0      8420 
+  pb332 rect         0      7400         0      7400 
+  pb333 rect         0     58415         0     58415 
+  pb334 rect         0      6970         0      6970 
+  pb335 rect         0     33120         0     33120 
+  pb336 rect         0      6630         0      6630 
+  pb337 rect         0     48145         0     48145 
+  pb338 rect         0      6200         0      6200 
+  pb339 rect         0     32780         0     32780 
+  pb340 rect         0      5770         0      5770 
+  pb341 rect         0     54995         0     54995 
+  pb342 rect         0      5430         0      5430 
+  pb343 rect         0     32440         0     32440 
+  pb344 rect         0      4910         0      4910 
+  pb345 rect         0     47805         0     47805 
+  pb346 rect         0      4570         0      4570 
+  pb347 rect         0     31930         0     31930 
+  pb348 rect         0      4140         0      4140 
+  pb349 rect         0     60135         0     60135 
+  pb350 rect         0      3620         0      3620 
+  pb351 rect         0     31590         0     31590 
+  pb352 rect         0      3280         0      3280 
+  pb353 rect         0     47465         0     47465 
+  pb354 rect         0     54145         0     54145 
+  pb355 rect         0      2850         0      2850 
+  pb356 rect         0     31250         0     31250 
+  pb357 rect    130750         0    130750         0 
+  pb358 rect    128700         0    128700         0 
+  pb359 rect         0     54655         0     54655 
+  pb360 rect         0      2080         0      2080 
+  pb361 rect     93030     79900     93030     79900 
+  pb362 rect         0     60305         0     60305 
+  pb363 rect         0     53805         0     53805 
+  pb364 rect         0     30910         0     30910 
+  pb365 rect     96720         0     96720         0 
+  pb366 rect     88520         0     88520         0 
+  pb367 rect     98770         0     98770         0 
+  pb368 rect    107995         0    107995         0 
+  pb369 rect         0     53375         0     53375 
+  pb370 rect    126445         0    126445         0 
+  pb371 rect     59820         0     59820         0 
+  pb372 rect         0      1650         0      1650 
+  pb373 rect     62280         0     62280         0 
+  pb374 rect     61050         0     61050         0 
+  pb375 rect     59000         0     59000         0 
+  pb376 rect    124395         0    124395         0 
+  pb377 rect     54490     79900     54490     79900 
+  pb378 rect    118655         0    118655         0 
+  pb379 rect     45880         0     45880         0 
+  pb380 rect    115785         0    115785         0 
+  pb381 rect    127675         0    127675         0 
+  pb382 rect    106970         0    106970         0 
+  pb383 rect     99795         0     99795         0 
+  pb384 rect     94875         0     94875         0 
+  pb385 rect     57155         0     57155         0 
+  pb386 rect     58180         0     58180         0 
+  pb387 rect     56130     79900     56130     79900 
+  pb388 rect     98565     79900     98565     79900 
+  pb389 rect         0     47125         0     47125 
+  pb390 rect     19435         0     19435         0 
+  pb391 rect    127470     79900    127470     79900 
+  pb392 rect     37885     79900     37885     79900 
+  pb393 rect         0      1130         0      1130 
+  pb394 rect         0     30570         0     30570 
+  pb395 rect         0       610         0       610 
+  pb396 rect      8160         0      8160         0 
+  pb397 rect     31325     79900     31325     79900 
+  pb398 rect     86675     79900     86675     79900 
+  pb399 rect         0     59965         0     59965 
+  pb400 rect    140180     79900    140180     79900 
+  pb401 rect    137720     79900    137720     79900 
+  pb402 rect    136285     79900    136285     79900 
+  pb403 rect         0     52345         0     52345 
+  pb404 rect         0     52005         0     52005 
+  pb405 rect         0     51665         0     51665 
+  pb406 rect         0     51235         0     51235 
+  pb407 rect         0     59625         0     59625 
+  pb408 rect      2625     79900      2625     79900 
+  pb409 rect     65765     79900     65765     79900 
+  pb410 rect     96105     79900     96105     79900 
+  pb411 rect     67405     79900     67405     79900 
+  pb412 rect         0     50465         0     50465 
+  pb413 rect         0     50125         0     50125 
+  pb414 rect         0     59105         0     59105 
+  pb415 rect         0     49695         0     49695 
+  pb416 rect    134645     79900    134645     79900 
+  pb417 rect     93850     79900     93850     79900 
+  pb418 rect    118655     79900    118655     79900 
+  pb419 rect         0     47295         0     47295 
+  pb420 rect         0     58585         0     58585 
+  pb421 rect         0     46955         0     46955 
+  pb422 rect         0     46525         0     46525 
+  pb423 rect     58590     79900     58590     79900 
+  pb424 rect    106560     79900    106560     79900 
+  pb425 rect    109020     79900    109020     79900 
+  pb426 rect    104800      1360    104800      1360 
+  pb427 rect    111600      4250    111600      4250 
+  pb428 rect    122000     29920    122000     29920 
+  pb429 rect    115400     29920    115400     29920 
+  pb430 rect    111200     29920    111200     29920 
+  pb431 rect    121000     29920    121000     29920 
+  pb432 rect    123800     29920    123800     29920 
+  pb433 rect    121800     33320    121800     33320 
+  pb434 rect    120800     33320    120800     33320 
+  pb435 rect    102000     33320    102000     33320 
+  pb436 rect    125400     33320    125400     33320 
+  pb437 rect    120800     36210    120800     36210 
+  pb438 rect    119000     36210    119000     36210 
+  pb439 rect    118000     36210    118000     36210 
+  pb440 rect    118600     42670    118600     42670 
+  pb441 rect    118200     39610    118200     39610 
+  pb442 rect    100600     23460    100600     23460 
+  pb443 rect    100400     26860    100400     26860 
+  pb444 rect    102600     26860    102600     26860 
+  pb445 rect    101400     33320    101400     33320 
+  pb446 rect    122600     36210    122600     36210 
+  pb447 rect    100200     17170    100200     17170 
+  pb448 rect    109800      7650    109800      7650 
+  pb449 rect    113600      7650    113600      7650 
+  pb450 rect    114600      7650    114600      7650 
+  pb451 rect    115800      7650    115800      7650 
+  pb452 rect    119200     29920    119200     29920 
+  pb453 rect    118600     17170    118600     17170 
+  pb454 rect    113000     17170    113000     17170 
+  pb455 rect    117400     29920    117400     29920 
+  pb456 rect    147000     36210    147000     36210 
+  pb457 rect    145000     36210    145000     36210 
+  pb458 rect    127600     39610    127600     39610 
+  pb459 rect    148600     42670    148600     42670 
+  pb460 rect    136600     29920    136600     29920 
+  pb461 rect    101000     36210    101000     36210 
+  pb462 rect    101600     29920    101600     29920 
+  pb463 rect    101400     20570    101400     20570 
+  pb464 rect    102600     29920    102600     29920 
+  pb465 rect    137800     23460    137800     23460 
+  pb466 rect    137000     20570    137000     20570 
+  pb467 rect    137800     26860    137800     26860 
+  pb468 rect    138800     55420    138800     55420 
+  pb469 rect    108000      4250    108000      4250 
+  pb470 rect    106200      7650    106200      7650 
+  pb471 rect    100400      4250    100400      4250 
+  pb472 rect    121600     20570    121600     20570 
+  pb473 rect    108800     20570    108800     20570 
+  pb474 rect    118000      4250    118000      4250 
+  pb475 rect    133000     29920    133000     29920 
+  pb476 rect    125400     36210    125400     36210 
+  pb477 rect    124200     26860    124200     26860 
+  pb478 rect    120800     26860    120800     26860 
+  pb479 rect    105000     10710    105000     10710 
+  pb480 rect    122200      7650    122200      7650 
+  pb481 rect    113600     26860    113600     26860 
+  pb482 rect    131400     20570    131400     20570 
+  pb483 rect    132600     36210    132600     36210 
+  pb484 rect    113800     36210    113800     36210 
+  pb485 rect    100600      7650    100600      7650 
+  pb486 rect    102800     36210    102800     36210 
+  pb487 rect    126400     33320    126400     33320 
+  pb488 rect    129400     23460    129400     23460 
+  pb489 rect    107000     20570    107000     20570 
+  pb490 rect    127800     26860    127800     26860 
+  pb491 rect    116200     36210    116200     36210 
+  pb492 rect    116200     10710    116200     10710 
+  pb493 rect    112600     23460    112600     23460 
+  pb494 rect    115400     26860    115400     26860 
+  pb495 rect    105600     20570    105600     20570 
+  pb496 rect    124400     36210    124400     36210 
+  pb497 rect    129000     20570    129000     20570 
+  pb498 rect    122600     26860    122600     26860 
+  pb499 rect    108400     10710    108400     10710 
+  pb500 rect    119600      7650    119600      7650 
+  pb501 rect    126200     26860    126200     26860 
+  pb502 rect    113400     20570    113400     20570 
+  pb503 rect    117400     14110    117400     14110 
+  pb504 rect    112400     36210    112400     36210 
+  pb505 rect    130000     20570    130000     20570 
+  pb506 rect    129400     36210    129400     36210 
+  pb507 rect    112000     39610    112000     39610 
+  pb508 rect    100200     14110    100200     14110 
+  pb509 rect    106200     33320    106200     33320 
+  pb510 rect    101200     23460    101200     23460 
+  pb511 rect    103000      1360    103000      1360 
+  pb512 rect    131800     33320    131800     33320 
+  pb513 rect    101600      1360    101600      1360 
+  pb514 rect    101600     26860    101600     26860 
+  pb515 rect    102000      1360    102000      1360 
+  pb516 rect    126000     36210    126000     36210 
+  pb517 rect    124000     20570    124000     20570 
+  pb518 rect    105000     26860    105000     26860 
+  pb519 rect    113000     26860    113000     26860 
+  pb520 rect    110600     29920    110600     29920 
+  pb521 rect    109200     17170    109200     17170 
+  pb522 rect    115600      1360    115600      1360 
+  pb523 rect    116400     26860    116400     26860 
+  pb524 rect    104400     33320    104400     33320 
+  pb525 rect    116400     29920    116400     29920 
+  pb526 rect    102600     33320    102600     33320 
+  pb527 rect    103000     23460    103000     23460 
+  pb528 rect    127600     23460    127600     23460 
+  pb529 rect    115200     33320    115200     33320 
+  pb530 rect    135000     23460    135000     23460 
+  pb531 rect    130000     33320    130000     33320 
+  pb532 rect    113600     29920    113600     29920 
+  pb533 rect    105200      4250    105200      4250 
+  pb534 rect    114400     20570    114400     20570 
+  pb535 rect    118000     10710    118000     10710 
+  pb536 rect    119000     23460    119000     23460 
+  pb537 rect    105800     14110    105800     14110 
+  pb538 rect    117200     26860    117200     26860 
+  pb539 rect    104200      7650    104200      7650 
+  pb540 rect    131200     23460    131200     23460 
+  pb541 rect    117000     33320    117000     33320 
+  pb542 rect    124400     20570    124400     20570 
+  pb543 rect    111000     26860    111000     26860 
+  pb544 rect    108400     14110    108400     14110 
+  pb545 rect    119800     20570    119800     20570 
+  pb546 rect    116200     20570    116200     20570 
+  pb547 rect    116200      4250    116200      4250 
+  pb548 rect    123400      4250    123400      4250 
+  pb549 rect    129000     29920    129000     29920 
+  pb550 rect    136000     26860    136000     26860 
+  pb551 rect    133400     33320    133400     33320 
+  pb552 rect    104600     36210    104600     36210 
+  pb553 rect    127200     36210    127200     36210 
+  pb554 rect    131200     29920    131200     29920 
+  pb555 rect    120800     23460    120800     23460 
+  pb556 rect    109400     10710    109400     10710 
+  pb557 rect    116200     23460    116200     23460 
+  pb558 rect    103800     20570    103800     20570 
+  pb559 rect    125400     23460    125400     23460 
+  pb560 rect    109600     33320    109600     33320 
+  pb561 rect    135000     20570    135000     20570 
+  pb562 rect    110600     36210    110600     36210 
+  pb563 rect    102400      7650    102400      7650 
+  pb564 rect    110000     36210    110000     36210 
+  pb565 rect    126600     36210    126600     36210 
+  pb566 rect    127200     26860    127200     26860 
+  pb567 rect    111600     20570    111600     20570 
+  pb568 rect    111600     14110    111600     14110 
+  pb569 rect    103000      4250    103000      4250 
+  pb570 rect    103600     29920    103600     29920 
+  pb571 rect    108800     17170    108800     17170 
+  pb572 rect    102000     17170    102000     17170 
+  pb573 rect    103200     14110    103200     14110 
+  pb574 rect    124000      7650    124000      7650 
+  pb575 rect    100400     10710    100400     10710 
+  pb576 rect    110400      4250    110400      4250 
+  pb577 rect    136800     33320    136800     33320 
+  pb578 rect    133000     39610    133000     39610 
+  pb579 rect    107800     10710    107800     10710 
+  pb580 rect    106800     10710    106800     10710 
+  pb581 rect    103800     17170    103800     17170 
+  pb582 rect    107600     48960    107600     48960 
+  pb583 rect    113400     52360    113400     52360 
+  pb584 rect    104200     14110    104200     14110 
+  pb585 rect    102200     14110    102200     14110 
+  pb586 rect    101000     10710    101000     10710 
+  pb587 rect    136200     36210    136200     36210 
+  pb588 rect    110600     20570    110600     20570 
+  pb589 rect    106600     20570    106600     20570 
+  pb590 rect    111200     14110    111200     14110 
+  pb591 rect    107200     17170    107200     17170 
+  pb592 rect    113000     10710    113000     10710 
+  pb593 rect    140200     29920    140200     29920 
+  pb594 rect    114400     10710    114400     10710 
+  pb595 rect    115600     14110    115600     14110 
+  pb596 rect    102800     10710    102800     10710 
+  pb597 rect    119000     26860    119000     26860 
+  pb598 rect    105800     23460    105800     23460 
+  pb599 rect    114400     23460    114400     23460 
+  pb600 rect    107600     23460    107600     23460 
+  pb601 rect    123600     33320    123600     33320 
+  pb602 rect    106400     36210    106400     36210 
+  pb603 rect    127200     29920    127200     29920 
+  pb604 rect    129600     26860    129600     26860 
+  pb605 rect    117800      1360    117800      1360 
+  pb606 rect    125000      7650    125000      7650 
+  pb607 rect    134800     29920    134800     29920 
+  pb608 rect    138400     29920    138400     29920 
+  pb609 rect    137400     33320    137400     33320 
+  pb610 rect    108200     36210    108200     36210 
+  pb611 rect    126200     20570    126200     20570 
+  pb612 rect    123600     23460    123600     23460 
+  pb613 rect    102600      4250    102600      4250 
+  pb614 rect    105200     29920    105200     29920 
+  pb615 rect    111200     10710    111200     10710 
+  pb616 rect    133400     26860    133400     26860 
+  pb617 rect    118000     20570    118000     20570 
+  pb618 rect    116800     17170    116800     17170 
+  pb619 rect    130200     39610    130200     39610 
+  pb620 rect    125200      4250    125200      4250 
+  pb621 rect    128200     33320    128200     33320 
+  pb622 rect    134400     36210    134400     36210 
+  pb623 rect    107000     29920    107000     29920 
+  pb624 rect    108800     29920    108800     29920 
+  pb625 rect    111400     33320    111400     33320 
+  pb626 rect    118800     33320    118800     33320 
+  pb627 rect    102000     20570    102000     20570 
+  pb628 rect    103200     26860    103200     26860 
+  pb629 rect    101200     14110    101200     14110 
+  pb630 rect    104800     23460    104800     23460 
+  pb631 rect    128000     20570    128000     20570 
+  pb632 rect    113200     33320    113200     33320 
+  pb633 rect    136800     23460    136800     23460 
+  pb634 rect    135200     33320    135200     33320 
+  pb635 rect    114200     33320    114200     33320 
+  pb636 rect    107000      4250    107000      4250 
+  pb637 rect    111600     23460    111600     23460 
+  pb638 rect    118400     14110    118400     14110 
+  pb639 rect    122600     23460    122600     23460 
+  pb640 rect    110200     14110    110200     14110 
+  pb641 rect    118000     23460    118000     23460 
+  pb642 rect    105400     17170    105400     17170 
+  pb643 rect    141200      1360    141200      1360 
+  pb644 rect    139200      1360    139200      1360 
+  pb645 rect    117600      7650    117600      7650 
+  pb646 rect    141200      7650    141200      7650 
+  pb647 rect    140600     20570    140600     20570 
+  pb648 rect    138200     39610    138200     39610 
+  pb649 rect    136400     39610    136400     39610 
+  pb650 rect    137600     36210    137600     36210 
+  pb651 rect    149200     26860    149200     26860 
+  pb652 rect    144200     20570    144200     20570 
+  pb653 rect    148000     20570    148000     20570 
+  pb654 rect    152800     36210    152800     36210 
+  pb655 rect    149400     36210    149400     36210 
+  pb656 rect    151200     26860    151200     26860 
+  pb657 rect    146600     33320    146600     33320 
+  pb658 rect    146800     23460    146800     23460 
+  pb659 rect    139600     26860    139600     26860 
+  pb660 rect    142400     20570    142400     20570 
+  pb661 rect    142000     29920    142000     29920 
+  pb662 rect    138800     20570    138800     20570 
+  pb663 rect    139600     23460    139600     23460 
+  pb664 rect    157600     26860    157600     26860 
+  pb665 rect    148200     23460    148200     23460 
+  pb666 rect    153600     23460    153600     23460 
+  pb667 rect    150000     23460    150000     23460 
+  pb668 rect    151800     23460    151800     23460 
+  pb669 rect    157600     29920    157600     29920 
+  pb670 rect    155800     29920    155800     29920 
+  pb671 rect    152400      1360    152400      1360 
+  pb672 rect    106600      1360    106600      1360 
+  pb673 rect    110200      1360    110200      1360 
+  pb674 rect    108400      1360    108400      1360 
+  pb675 rect    150600      1360    150600      1360 
+  pb676 rect    157600      7650    157600      7650 
+  pb677 rect    154200      1360    154200      1360 
+  pb678 rect    113400      4250    113400      4250 
+  pb679 rect    111600      7650    111600      7650 
+  pb680 rect    123600     26860    123600     26860 
+  pb681 rect    158600     42670    158600     42670 
+  pb682 rect    157200     33320    157200     33320 
+  pb683 rect    158400     39610    158400     39610 
+  pb684 rect    119800      4250    119800      4250 
+  pb685 rect    149000     20570    149000     20570 
+  pb686 rect    156000      1360    156000      1360 
+  pb687 rect    154600     20570    154600     20570 
+  pb688 rect    157600     20570    157600     20570 
+  pb689 rect    125400     17170    125400     17170 
+  pb690 rect    153400     36210    153400     36210 
+  pb691 rect    141600     39610    141600     39610 
+  pb692 rect    148600     39610    148600     39610 
+  pb693 rect    155800     36210    155800     36210 
+  pb694 rect    157600     36210    157600     36210 
+  pb695 rect    143200      1360    143200      1360 
+  pb696 rect    119800     10710    119800     10710 
+  pb697 rect    119600      1360    119600      1360 
+  pb698 rect    132600      1360    132600      1360 
+  pb699 rect    156400     17170    156400     17170 
+  pb700 rect    153600     17170    153600     17170 
+  pb701 rect    121600      4250    121600      4250 
+  pb702 rect    113800      1360    113800      1360 
+  pb703 rect    143800     29920    143800     29920 
+  pb704 rect    149200     29920    149200     29920 
+  pb705 rect    157600     10710    157600     10710 
+  pb706 rect    155800      7650    155800      7650 
+  pb707 rect    108000      7650    108000      7650 
+  pb708 rect    116000      1360    116000      1360 
+  pb709 rect    155800     10710    155800     10710 
+  pb710 rect    150000     10710    150000     10710 
+  pb711 rect    143600     14110    143600     14110 
+  pb712 rect    141800     14110    141800     14110 
+  pb713 rect    122600     14110    122600     14110 
+  pb714 rect    154000     10710    154000     10710 
+  pb715 rect    145400     14110    145400     14110 
+  pb716 rect    140400     17170    140400     17170 
+  pb717 rect    124400     14110    124400     14110 
+  pb718 rect    158200      1360    158200      1360 
+  pb719 rect    121400      1360    121400      1360 
+  pb720 rect    126800      7650    126800      7650 
+  pb721 rect    125000      1360    125000      1360 
+  pb722 rect    153000     29920    153000     29920 
+  pb723 rect    148800     14110    148800     14110 
+  pb724 rect    112000      1360    112000      1360 
+  pb725 rect    154600     14110    154600     14110 
+  pb726 rect    158400     14110    158400     14110 
+  pb727 rect    136200      1360    136200      1360 
+  pb728 rect    130400      7650    130400      7650 
+  pb729 rect    138200      1360    138200      1360 
+  pb730 rect    134000      4250    134000      4250 
+  pb731 rect    132400      7650    132400      7650 
+  pb732 rect    133400      4250    133400      4250 
+  pb733 rect    140600     10710    140600     10710 
+  pb734 rect    123600     10710    123600     10710 
+  pb735 rect    142600      4250    142600      4250 
+  pb736 rect    156400     20570    156400     20570 
+  pb737 rect    129400     17170    129400     17170 
+  pb738 rect    157400     14110    157400     14110 
+  pb739 rect    146200      7650    146200      7650 
+  pb740 rect    118600      7650    118600      7650 
+  pb741 rect    144400      7650    144400      7650 
+  pb742 rect    136200      7650    136200      7650 
+  pb743 rect    152000     10710    152000     10710 
+  pb744 rect    136800     17170    136800     17170 
+  pb745 rect    126800      1360    126800      1360 
+  pb746 rect    134000     23460    134000     23460 
+  pb747 rect    133000     23460    133000     23460 
+  pb748 rect    148000     10710    148000     10710 
+  pb749 rect    148600      1360    148600      1360 
+  pb750 rect    149000      7650    149000      7650 
+  pb751 rect    152000     29920    152000     29920 
+  pb752 rect    152200     17170    152200     17170 
+  pb753 rect    138600      4250    138600      4250 
+  pb754 rect    119600     17170    119600     17170 
+  pb755 rect    121400     17170    121400     17170 
+  pb756 rect    120400     14110    120400     14110 
+  pb757 rect    123200     17170    123200     17170 
+  pb758 rect    105400     39610    105400     39610 
+  pb759 rect    105400     42670    105400     42670 
+  pb760 rect    106400     42670    106400     42670 
+  pb761 rect    104400     42670    104400     42670 
+  pb762 rect    103600     39610    103600     39610 
+  pb763 rect    116400     39610    116400     39610 
+  pb764 rect    101600     39610    101600     39610 
+  pb765 rect    102600     39610    102600     39610 
+  pb766 rect    134600     39610    134600     39610 
+  pb767 rect    141400     36210    141400     36210 
+  pb768 rect    138800     36210    138800     36210 
+  pb769 rect    137600     42670    137600     42670 
+  pb770 rect    139800     42670    139800     42670 
+  pb771 rect    143200     36210    143200     36210 
+  pb772 rect    142600     33320    142600     33320 
+  pb773 rect    139200     33320    139200     33320 
+  pb774 rect    136400     42670    136400     42670 
+  pb775 rect    140200     33320    140200     33320 
+  pb776 rect    144400     33320    144400     33320 
+  pb777 rect    147400     29920    147400     29920 
+  pb778 rect    142200     26860    142200     26860 
+  pb779 rect    146000     36210    146000     36210 
+  pb780 rect    154000     29920    154000     29920 
+  pb781 rect    149800     33320    149800     33320 
+  pb782 rect    151800     36210    151800     36210 
+  pb783 rect    150400     39610    150400     39610 
+  pb784 rect    148800     33320    148800     33320 
+  pb785 rect    151600     33320    151600     33320 
+  pb786 rect    153400     33320    153400     33320 
+  pb787 rect    150800     36210    150800     36210 
+  pb788 rect    151000     39610    151000     39610 
+  pb789 rect    151600     39610    151600     39610 
+  pb790 rect    155200     33320    155200     33320 
+  pb791 rect    113000     39610    113000     39610 
+  pb792 rect    111000     39610    111000     39610 
+  pb793 rect    100200     42670    100200     42670 
+  pb794 rect    114800     39610    114800     39610 
+  pb795 rect    109200     39610    109200     39610 
+  pb796 rect    108800     42670    108800     42670 
+  pb797 rect    107200     39610    107200     39610 
+  pb798 rect    113800     46070    113800     46070 
+  pb799 rect    108200     39610    108200     39610 
+  pb800 rect    107000     42670    107000     42670 
+  pb801 rect    100800     42670    100800     42670 
+  pb802 rect    100600     39610    100600     39610 
+  pb803 rect    102600     42670    102600     42670 
+  pb804 rect    111200     52360    111200     52360 
+  pb805 rect    113800     48960    113800     48960 
+  pb806 rect    114600     42670    114600     42670 
+  pb807 rect    107200     46070    107200     46070 
+  pb808 rect    112800     42670    112800     42670 
+  pb809 rect    114000     17170    114000     17170 
+  pb810 rect    117200     46070    117200     46070 
+  pb811 rect    145600     29920    145600     29920 
+  pb812 rect    143000     55420    143000     55420 
+  pb813 rect    141600     48960    141600     48960 
+  pb814 rect    111000     42670    111000     42670 
+  pb815 rect    115200     46070    115200     46070 
+  pb816 rect    113800     52360    113800     52360 
+  pb817 rect    113200     48960    113200     48960 
+  pb818 rect    105000     48960    105000     48960 
+  pb819 rect    101000     46070    101000     46070 
+  pb820 rect    106600     48960    106600     48960 
+  pb821 rect    104200     46070    104200     46070 
+  pb822 rect    106000     46070    106000     46070 
+  pb823 rect    109600     23460    109600     23460 
+  pb824 rect    116800     26860    116800     26860 
+  pb825 rect    115600     48960    115600     48960 
+  pb826 rect    114400     46070    114400     46070 
+  pb827 rect    115800     39610    115800     39610 
+  pb828 rect    106800     46070    106800     46070 
+  pb829 rect    122000     42670    122000     42670 
+  pb830 rect    112000     46070    112000     46070 
+  pb831 rect    111000     48960    111000     48960 
+  pb832 rect    103400     46070    103400     46070 
+  pb833 rect    102800     46070    102800     46070 
+  pb834 rect    137800     52360    137800     52360 
+  pb835 rect    147400     55420    147400     55420 
+  pb836 rect    144200     52360    144200     52360 
+  pb837 rect    140600     55420    140600     55420 
+  pb838 rect    145000     55420    145000     55420 
+  pb839 rect    144600     55420    144600     55420 
+  pb840 rect    141200     55420    141200     55420 
+  pb841 rect    147400     48960    147400     48960 
+  pb842 rect    149200     52360    149200     52360 
+  pb843 rect    143400     55420    143400     55420 
+  pb844 rect    140000     48960    140000     48960 
+  pb845 rect    136000     46070    136000     46070 
+  pb846 rect    126800     48960    126800     48960 
+  pb847 rect    143400     48960    143400     48960 
+  pb848 rect    146400     48960    146400     48960 
+  pb849 rect    143600     61880    143600     61880 
+  pb850 rect    146200     55420    146200     55420 
+  pb851 rect    141800     58820    141800     58820 
+  pb852 rect    130000     46070    130000     46070 
+  pb853 rect    127200     48960    127200     48960 
+  pb854 rect    128800     42670    128800     42670 
+  pb855 rect    125200     42670    125200     42670 
+  pb856 rect    129400     42670    129400     42670 
+  pb857 rect    130400     42670    130400     42670 
+  pb858 rect    132400     42670    132400     42670 
+  pb859 rect    134400     42670    134400     42670 
+  pb860 rect    107800     33320    107800     33320 
+  pb861 rect    109400     26860    109400     26860 
+  pb862 rect    113800     58820    113800     58820 
+  pb863 rect    122400     39610    122400     39610 
+  pb864 rect    110200     46070    110200     46070 
+  pb865 rect    158600     52360    158600     52360 
+  pb866 rect    152400     55420    152400     55420 
+  pb867 rect    140600     52360    140600     52360 
+  pb868 rect    142400     52360    142400     52360 
+  pb869 rect    132400     46070    132400     46070 
+  pb870 rect    130600     46070    130600     46070 
+  pb871 rect    148800     36210    148800     36210 
+  pb872 rect    125800     39610    125800     39610 
+  pb873 rect    127000     42670    127000     42670 
+  pb874 rect    102800     48960    102800     48960 
+  pb875 rect    134200     46070    134200     46070 
+  pb876 rect    112400     68340    112400     68340 
+  pb877 rect    136400     46070    136400     46070 
+  pb878 rect    121400     48960    121400     48960 
+  pb879 rect    122600     46070    122600     46070 
+  pb880 rect    120800     46070    120800     46070 
+  pb881 rect    125600     46070    125600     46070 
+  pb882 rect    127400     46070    127400     46070 
+  pb883 rect    119600     48960    119600     48960 
+  pb884 rect    119000     52360    119000     52360 
+  pb885 rect    133400     48960    133400     48960 
+  pb886 rect    124000     55420    124000     55420 
+  pb887 rect    109800     65280    109800     65280 
+  pb888 rect    116200     61880    116200     61880 
+  pb889 rect    119600     42670    119600     42670 
+  pb890 rect    137600     48960    137600     48960 
+  pb891 rect    136000     52360    136000     52360 
+  pb892 rect    141800     61880    141800     61880 
+  pb893 rect    153800     71740    153800     71740 
+  pb894 rect    132400     52360    132400     52360 
+  pb895 rect    122800     52360    122800     52360 
+  pb896 rect    132800     58820    132800     58820 
+  pb897 rect    123000     68340    123000     68340 
+  pb898 rect    129200     74800    129200     74800 
+  pb899 rect    110600     61880    110600     61880 
+  pb900 rect    128800     55420    128800     55420 
+  pb901 rect    109400     52360    109400     52360 
+  pb902 rect    104600     52360    104600     52360 
+  pb903 rect    113400     55420    113400     55420 
+  pb904 rect    111600     55420    111600     55420 
+  pb905 rect    109800     55420    109800     55420 
+  pb906 rect    120600     39610    120600     39610 
+  pb907 rect    122400     42670    122400     42670 
+  pb908 rect    119000     46070    119000     46070 
+  pb909 rect    116800     42670    116800     42670 
+  pb910 rect    157600     68340    157600     68340 
+  pb911 rect    137600     65280    137600     65280 
+  pb912 rect    108800     61880    108800     61880 
+  pb913 rect    125200     65280    125200     65280 
+  pb914 rect    105200     55420    105200     55420 
+  pb915 rect    104200     55420    104200     55420 
+  pb916 rect    102800     52360    102800     52360 
+  pb917 rect    106800     65280    106800     65280 
+  pb918 rect    105200     58820    105200     58820 
+  pb919 rect    102800     55420    102800     55420 
+  pb920 rect    108000     58820    108000     58820 
+  pb921 rect    108800     52360    108800     52360 
+  pb922 rect    100400     55420    100400     55420 
+  pb923 rect    101000     52360    101000     52360 
+  pb924 rect    106400     52360    106400     52360 
+  pb925 rect    107600     55420    107600     55420 
+  pb926 rect    109000     46070    109000     46070 
+  pb927 rect    103600     65280    103600     65280 
+  pb928 rect    127800     48960    127800     48960 
+  pb929 rect    104400     65280    104400     65280 
+  pb930 rect    103800     74800    103800     74800 
+  pb931 rect    131200     52360    131200     52360 
+  pb932 rect    124200     42670    124200     42670 
+  pb933 rect    110800     71740    110800     71740 
+  pb934 rect    113400     71740    113400     71740 
+  pb935 rect    130600     52360    130600     52360 
+  pb936 rect    112400     71740    112400     71740 
+  pb937 rect    116800     65280    116800     65280 
+  pb938 rect    114400     52360    114400     52360 
+  pb939 rect    105200     68340    105200     68340 
+  pb940 rect    135800     58820    135800     58820 
+  pb941 rect    134600     58820    134600     58820 
+  pb942 rect    101200     61880    101200     61880 
+  pb943 rect    137200     58820    137200     58820 
+  pb944 rect    125600     68340    125600     68340 
+  pb945 rect    128600     61880    128600     61880 
+  pb946 rect    121400     61880    121400     61880 
+  pb947 rect    110600     68340    110600     68340 
+  pb948 rect    108800     68340    108800     68340 
+  pb949 rect    106600     68340    106600     68340 
+  pb950 rect    135400     68340    135400     68340 
+  pb951 rect    130400     58820    130400     58820 
+  pb952 rect    121400     42670    121400     42670 
+  pb953 rect    133800     55420    133800     55420 
+  pb954 rect    120800     52360    120800     52360 
+  pb955 rect    121800     52360    121800     52360 
+  pb956 rect    136200     71740    136200     71740 
+  pb957 rect    123600     61880    123600     61880 
+  pb958 rect    120800     71740    120800     71740 
+  pb959 rect    119600     65280    119600     65280 
+  pb960 rect    112600     74800    112600     74800 
+  pb961 rect    112400     61880    112400     61880 
+  pb962 rect    101800     65280    101800     65280 
+  pb963 rect    105600     68340    105600     68340 
+  pb964 rect    119200     74800    119200     74800 
+  pb965 rect    122800     74800    122800     74800 
+  pb966 rect    125400     74800    125400     74800 
+  pb967 rect    127000     74800    127000     74800 
+  pb968 rect    108000     65280    108000     65280 
+  pb969 rect    142400     58820    142400     58820 
+  pb970 rect    100400     58820    100400     58820 
+  pb971 rect    139800     61880    139800     61880 
+  pb972 rect    149600     74800    149600     74800 
+  pb973 rect    143800     74800    143800     74800 
+  pb974 rect    153800     58820    153800     58820 
+  pb975 rect    153000     68340    153000     68340 
+  pb976 rect    138600     46070    138600     46070 
+  pb977 rect    144000     68340    144000     68340 
+  pb978 rect    155800     71740    155800     71740 
+  pb979 rect    158000     55420    158000     55420 
+  pb980 rect    141400     71740    141400     71740 
+  pb981 rect    128000     68340    128000     68340 
+  pb982 rect    146400     58820    146400     58820 
+  pb983 rect    108600     58820    108600     58820 
+  pb984 rect    111600     48960    111600     48960 
+  pb985 rect    130200     65280    130200     65280 
+  pb986 rect    147600     74800    147600     74800 
+  pb987 rect    154000     52360    154000     52360 
+  pb988 rect    156600     65280    156600     65280 
+  pb989 rect    140000     74800    140000     74800 
+  pb990 rect    147800     61880    147800     61880 
+  pb991 rect    140000     68340    140000     68340 
+  pb992 rect    156200     74800    156200     74800 
+  pb993 rect    151800     58820    151800     58820 
+  pb994 rect    144400     58820    144400     58820 
+  pb995 rect    137800     61880    137800     61880 
+  pb996 rect    105000     71740    105000     71740 
+  pb997 rect    130800     71740    130800     71740 
+  pb998 rect    127000     68340    127000     68340 
+  pb999 rect    121800     74800    121800     74800 
+ pb1000 rect    149200     55420    149200     55420 
+ pb1001 rect    124800     74800    124800     74800 
+ pb1002 rect    150400     65280    150400     65280 
+ pb1003 rect    142000     68340    142000     68340 
+ pb1004 rect    157800     71740    157800     71740 
+ pb1005 rect    150800     46070    150800     46070 
+ pb1006 rect    146200     61880    146200     61880 
+ pb1007 rect    144200     65280    144200     65280 
+ pb1008 rect    132600     65280    132600     65280 
+ pb1009 rect    136800     71740    136800     71740 
+ pb1010 rect    134000     61880    134000     61880 
+ pb1011 rect    136000     74800    136000     74800 
+ pb1012 rect    104800     65280    104800     65280 
+ pb1013 rect    157200     58820    157200     58820 
+ pb1014 rect    150400     52360    150400     52360 
+ pb1015 rect    149800     61880    149800     61880 
+ pb1016 rect    143600     65280    143600     65280 
+ pb1017 rect    135800     68340    135800     68340 
+ pb1018 rect    132000     61880    132000     61880 
+ pb1019 rect    152400     65280    152400     65280 
+ pb1020 rect    115000     71740    115000     71740 
+ pb1021 rect    142000     74800    142000     74800 
+ pb1022 rect    144800     65280    144800     65280 
+ pb1023 rect    154000     68340    154000     68340 
+ pb1024 rect    154400     65280    154400     65280 
+ pb1025 rect    115200     65280    115200     65280 
+ pb1026 rect    159000     65280    159000     65280 
+ pb1027 rect    135800     65280    135800     65280 
+ pb1028 rect    149200     68340    149200     68340 
+ pb1029 rect    137800     58820    137800     58820 
+ pb1030 rect    151000     68340    151000     68340 
+ pb1031 rect    102600     58820    102600     58820 
+ pb1032 rect    119200     68340    119200     68340 
+ pb1033 rect    133800     71740    133800     71740 
+ pb1034 rect    144000     61880    144000     61880 
+ pb1035 rect    138000     68340    138000     68340 
+ pb1036 rect    141600     65280    141600     65280 
+ pb1037 rect    114200     61880    114200     61880 
+ pb1038 rect    123200     65280    123200     65280 
+ pb1039 rect    149200     71740    149200     71740 
+ pb1040 rect    103200     68340    103200     68340 
+ pb1041 rect    106200     58820    106200     58820 
+ pb1042 rect    101800     74800    101800     74800 
+ pb1043 rect    107000     71740    107000     71740 
+ pb1044 rect    136000     61880    136000     61880 
+ pb1045 rect    149800     58820    149800     58820 
+ pb1046 rect    103000     61880    103000     61880 
+ pb1047 rect    115600     71740    115600     71740 
+ pb1048 rect    101400     71740    101400     71740 
+ pb1049 rect    128800     65280    128800     65280 
+ pb1050 rect    151200     71740    151200     71740 
+ pb1051 rect    140800     36210    140800     36210 
+ pb1052 rect    138200     36210    138200     36210 
+ pb1053 rect    124400     46070    124400     46070 
+ pb1054 rect    112000     58820    112000     58820 
+ pb1055 rect    146200     71740    146200     71740 
+ pb1056 rect    141800     71740    141800     71740 
+ pb1057 rect    144400     71740    144400     71740 
+ pb1058 rect    110200     58820    110200     58820 
+ pb1059 rect    146800     42670    146800     42670 
+ pb1060 rect    111600     65280    111600     65280 
+ pb1061 rect    104400     74800    104400     74800 
+ pb1062 rect    114200     68340    114200     68340 
+ pb1063 rect    117400     58820    117400     58820 
+ pb1064 rect    138400     58820    138400     58820 
+ pb1065 rect    115600     58820    115600     58820 
+ pb1066 rect    148000     58820    148000     58820 
+ pb1067 rect    105200     61880    105200     61880 
+ pb1068 rect    106200     74800    106200     74800 
+ pb1069 rect    101400     68340    101400     68340 
+ pb1070 rect    109000     71740    109000     71740 
+ pb1071 rect    117800     65280    117800     65280 
+ pb1072 rect    126200     52360    126200     52360 
+ pb1073 rect    131600     48960    131600     48960 
+ pb1074 rect    129800     48960    129800     48960 
+ pb1075 rect    117200     52360    117200     52360 
+ pb1076 rect    115400     52360    115400     52360 
+ pb1077 rect    117800     48960    117800     48960 
+ pb1078 rect    125800     71740    125800     71740 
+ pb1079 rect    145800     74800    145800     74800 
+ pb1080 rect    128600     71740    128600     71740 
+ pb1081 rect    127000     55420    127000     55420 
+ pb1082 rect    135200     55420    135200     55420 
+ pb1083 rect    109800     74800    109800     74800 
+ pb1084 rect    117200     71740    117200     71740 
+ pb1085 rect    119200     58820    119200     58820 
+ pb1086 rect    137000     55420    137000     55420 
+ pb1087 rect    108000     74800    108000     74800 
+ pb1088 rect    116800     68340    116800     68340 
+ pb1089 rect    119000     71740    119000     71740 
+ pb1090 rect    127200     61880    127200     61880 
+ pb1091 rect    134200     52360    134200     52360 
+ pb1092 rect    116200     71740    116200     71740 
+ pb1093 rect    107600     65280    107600     65280 
+     b0 rect         0         0    100000    100000  :   100 
+     b1 rect         0    100000    100000    150000  :     0 

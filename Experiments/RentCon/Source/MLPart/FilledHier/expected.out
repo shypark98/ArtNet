@@ -1,0 +1,9 @@
+------------  Running test 1 ...
+Reading TESTS/size99.aux
+Finished reading TESTS/size99.aux and referenced files
+HEM Clustering
+ #Clusters
+ 99
+ 39
+ 10
+Constructing the Filled Hierarchy took 0.07

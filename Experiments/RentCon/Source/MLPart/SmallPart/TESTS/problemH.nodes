@@ -1,0 +1,14 @@
+UCLA nodes 1.0 
+# Created      : Mon Nov 25 22:09:44 2002
+# User         : sadya@buran (Saurabh N Adya,Not Available,NotAvailable/Freysinger;CR0i;30) 
+# Platform     : Linux 2.4.17 #4 SMP Wed Mar 20 13:31:05 EST 2002 i686 
+
+NumNodes :                7
+NumTerminals :            2
+term0 terminal
+term1 terminal
+C1@6#1
+C1@7#0
+C1@7#4
+C1@8#3
+C1@9#2

@@ -1,0 +1,90 @@
+UCLA fix 1.0 
+# Created      : Mon Nov 30 21:30:34 1998
+# User         : caldwell@nexus12 (uclacs) 
+# Platform     : SunOS 5.6 sparc SUNW,Ultra-5_10 
+
+Regular partitions : 2
+Pad partitions : 81
+Fixed Pads : 81
+Fixed NonPads : 0
+      p1 : pb0 
+      p2 : pb1 b1 
+      p3 : pb2 
+      p4 : pb3 b1 
+      p5 : pb4 b1 
+      p6 : pb5 b0 
+      p7 : pb6 b0 
+      p8 : pb7 b1 
+      p9 : pb8 b0 
+     p10 : pb9 b1 
+     p11 : pb10 
+     p12 : pb11 b0 
+     p13 : pb12 b0 
+     p14 : pb13 b0 
+     p15 : pb14 b0 
+     p16 : pb15 b1 
+     p17 : pb16 b0 
+     p18 : pb17 b1 
+     p19 : pb18 b0 
+     p20 : pb19 b0 
+     p21 : pb20 b0 
+     p22 : pb21 b1 
+     p23 : pb22 b1 
+     p24 : pb23 b0 
+     p25 : pb24 b0 
+     p26 : pb25 b1 
+     p27 : pb26 b1 
+     p28 : pb27 b0 
+     p29 : pb28 b1 
+     p30 : pb29 b0 
+     p31 : pb30 b0 
+     p32 : pb31 
+     p33 : pb32 b0 
+     p34 : pb33 b1 
+     p35 : pb34 b0 
+     p36 : pb35 b1 
+     p37 : pb36 b1 
+     p38 : pb37 b0 
+     p39 : pb38 b0 
+     p40 : pb39 b0 
+     p41 : pb40 b0 
+     p42 : pb41 b0 
+     p43 : pb42 b0 
+     p44 : pb43 b0 
+     p45 : pb44 b0 
+     p46 : pb45 b0 
+     p47 : pb46 b0 
+     p48 : pb47 b0 
+     p49 : pb48 b1 
+     p50 : pb49 b0 
+     p51 : pb50 b1 
+     p52 : pb51 b0 
+     p53 : pb52 b0 
+     p54 : pb53 b0 
+     p55 : pb54 b1 
+     p56 : pb55 b1 
+     p57 : pb56 b0 
+     p58 : pb57 b0 
+     p59 : pb58 b0 
+     p60 : pb59 b0 
+     p61 : pb60 b0 
+     p62 : pb61 b1 
+     p63 : pb62 b1 
+     p64 : pb63 b0 
+     p65 : pb64 b0 
+     p66 : pb65 b0 
+     p67 : pb66 b1 
+     p68 : pb67 b0 
+     p69 : pb68 
+     p70 : pb69 b0 
+     p71 : pb70 b0 
+     p72 : pb71 b0 
+     p73 : pb72 b0 
+     p74 : pb73 b0 
+     p75 : pb74 b0 
+     p76 : pb75 b0 
+     p77 : pb76 b0 
+     p78 : pb77 b0 
+     p79 : pb78 b0 
+     p80 : pb79 
+     p81 : pb80 b0 

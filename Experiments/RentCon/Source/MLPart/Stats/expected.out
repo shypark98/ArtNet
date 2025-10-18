@@ -1,0 +1,132 @@
+ ---- test 0 ----- 
+ Stats1   Max: 3.14159  Min: 3.14159  Avg: 3.14159
+ Stats1a  Max: 3.14159  Min: 3.14159  Avg: 3.14159  StdDev: 0
+ Stats2   Max: 8  Min: 8  Avg: 8
+ Stats2a  Max: 8  Min: 8  Avg: 8  StdDev: 0
+ Stats3   Max: 3  Min: 0  Avg: 1.5
+ Stats3a  Max: 3  Min: 0  Avg: 1.5  StdDev: 1.11803
+ Stats4   Max: 3  Min: 0  Avg: 1.5
+ Stats4a  Max: 3  Min: 0  Avg: 1.5  StdDev: 1.11803
+ ---- test 1 ----- 
+     3.14159     0.333333
+     3.14159     0.666667
+     3.14159            1
+ --- 
+           8     0.333333
+           8     0.666667
+           8            1
+ --- 
+           0         0.25
+           1          0.5
+           2         0.75
+           3            1
+ --- 
+           0         0.25
+           1          0.5
+           2         0.75
+           3            1
+ --- 
+           0            0
+           1     0.333333
+           2     0.666667
+           3            1
+ --- 
+ ---- test 2 ----- 
+=== Distribution 1 ========= 
+ Distribution in the global range
+        [3.14,3.14]: 3     
+ Distribution in the global range
+        [3.14,3.14]: 3     
+=== Distribution 2 ========= 
+ Distribution in 6 equal subranges : 
+          [0,0.833): 1            [0.833,1.67): 1              [1.67,2.5): 1    
+         [2.5,3.33): 1             [3.33,4.17): 1                [4.17,5]: 1    
+ Distribution in 6 deciles (equipotent subranges) : 
+              [0,0]: 1                   [0,1): 1                   [1,2): 1    
+              [2,3): 1                   [3,4): 1                   [4,5]: 1    
+=== Distribution 3 ========= 
+ Distribution in 6 equal subranges : 
+          [0,0.833): 1            [0.833,1.67): 1              [1.67,2.5): 1    
+         [2.5,3.33): 1             [3.33,4.17): 1                [4.17,5]: 1    
+ Distribution in 6 deciles (equipotent subranges) : 
+              [0,1): 2                   [1,2): 1                   [2,3): 1    
+              [3,4): 1                   [4,5): 1                   [5,5]: 0    
+=== Distribution 4 ========= 
+ Distribution in 4 equal subranges : 
+          [1.2,4.2): 3               [4.2,7.2): 1              [7.2,10.2): 2    
+        [10.2,13.2]: 2     
+ Distribution in 4 deciles (equipotent subranges) : 
+          [1.2,2.1): 2               [2.1,4.2): 2               [4.2,9.2): 2    
+         [9.2,13.2]: 2     
+ ---- test 3 ----- 
+ Vec 1 : 
+          0      1      2      3      4      5      6      7      8      9 
+ Vec 2 : 
+          0      2      4      6      8     10     12     14     16     18 
+ Vec 3 : 
+         -0     -3     -6     -9    -12    -15    -18    -21    -24    -27 
+ Vec 4 : 
+        1.2    4.1    9.1   13.1    2.1    4.2    9.2   13.2   14.1   14.7 
+ Vec 5 : 
+        1.2   -4.1    9.1  -13.1    2.1   -4.2    9.2  -13.2   14.1  -14.7 
+ Vec 6 : 
+      -14.7  -13.2  -13.1   -4.2   -4.1    1.2    2.1    9.1    9.2   14.1 
+ Vec 7 : 
+        1.2    1.7    1.7    1.7    1.7    1.7    1.7    1.7    1.7    2.9 
+ Correlation(vec1,vec2) = 1
+ Correlation(vec1,vec3) = -1
+ Correlation(vec1,vec4) = 0.710372
+ Correlation(vec4,vec5) = -0.224812
+ Rank Correlation(vec1,vec2) = 1
+ Rank Correlation(vec1,vec3) = -1
+ Rank Correlation(vec1,vec4) = 0.830303
+ Rank Correlation(vec4,vec5) = -0.248485
+ Rank Correlation(vec1,vec6) = 1
+ Rank Correlation(vec1,vec7) = 0.700649
+ Rank Correlation(vec5,vec7) = -0.389249
+ Rank Correlation(vec7,vec7) = 1
+ LinRegression(vec1,vec2): k= 2 c= 0
+ LinRegression(vec2,vec1): k= 0.5 c= 0
+ LinRegression(vec1,vec3): k= -3 c= 0
+ LinRegression(vec1,vec4): k= 1.22667 c= 2.98
+ LinRegression(vec4,vec5): k= -0.441789 c= 2.3952
+ LinRegression(vec1,vec6): k= 3.34061 c= -16.3927
+ ---- test 4 ----- 
+v1:  Max: 9.97259e+08  Min: 4.36856e+06  Avg: 4.99695e+08  StdDev: 2.10077e+08
+
+v2:  Max: 9.94946e+08  Min: 7.78553e+06  Avg: 4.98935e+08  StdDev: 2.1154e+08
+
+correl= 0.753761
+Rank Correlation= 0.765449
+ ---- test 5 ----- 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+0
+0
+2
+2
+2
+2
+0
+2
+0
+2
+ ---- test 6 ----- 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+ 70 30 53 18 79 74 30 72 36 29 78 37 17 64 41 17 24 24 17 62
+    17: 3        18: 1        24: 2        29: 1        30: 2     
+    36: 1        37: 1        41: 1        53: 1     
+ ---- test 8 ----- 
+Sample :
+        5.5    5.5    5.5    5.5    5.5    5.5    5.5    5.5    5.5    5.5 
+        5.5    5.5    5.5    5.5    5.5    5.5    5.5    5.5    5.5    5.5 
+File seeds.in exists and will override all seeds, including hardcoded ones 
+
+ Expected minima for subsamples of sizes 1 through 5
+    1: 5.5             2: 5.5             3: 5.5             4: 5.5         
+Sample :
+          0      1      2      3      4      5      6      7      8      9 
+         10     11     12     13     14     15     16     17     18     19 
+
+ Expected minima for subsamples of sizes 1 through 5
+    1: 9.5             2: 6.5             3: 4.15            4: 3.1         
+ Max: 19  Min: 0  Avg: 9.5

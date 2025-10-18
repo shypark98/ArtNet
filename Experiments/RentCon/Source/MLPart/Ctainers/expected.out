@@ -1,0 +1,61 @@
+ ---- test 0 ----- 
+0 bits are set to TRUE in bitBoard of size 10
+0000000000
+ Bit 5 is set to 0
+ Set bits 3 and 7 
+2 bits are set to TRUE in bitBoard of size 10
+          3      7 
+0001000100
+ Set bit 3 once again 
+2 bits are set to TRUE in bitBoard of size 10
+          3      7 
+ Clear the BitBoard 
+0 bits are set to TRUE in bitBoard of size 10
+0000000000
+ ---- test 1 ---- 
+Min priority: 3 Max Priority: 7 top: 8
+Priority 3: 9 4 2 0 
+Priority 4: 3 1 
+Priority 5: 10 5 
+Priority 6: 6 
+Priority 7: 8 7 
+Min priority: 3 Max Priority: 5 top: 10
+Priority 3: 9 4 2 0 
+Priority 4: 7 3 1 
+Priority 5: 10 5 8 
+
+Enumeration of top bucket, head to tail:
+10 5 8 
+Enumeration of top bucket, tail to head:
+8 5 10 
+Enumeration of bucket 3, head to tail:
+9 4 2 0 
+Enumeration of bucket 3, tail to head:
+0 2 4 9 
+Enumeration of bottom bucket, head to tail:
+9 4 2 0 
+Enumeration of bottom bucket, tail to head:
+0 2 4 9 
+Top = 10 Bottom = 9
+Min priority: 3 Max Priority: 27 top: 4
+Priority 3: 9 2 0 
+Priority 4: 7 3 1 6 
+Priority 5: 10 5 8 
+Priority 27: 4 
+Min priority: 4 Max Priority: 5 top: 0
+Priority 4: 7 3 1 6 
+Priority 5: 0 9 10 5 8 
+Min priority: 5 Max Priority: 5 top: 0
+Priority 5: 0 9 10 5 8 
+Min priority: 5 Max Priority: 5 top: 9
+Priority 5: 9 5 
+Min priority: 4294967295 Max Priority: 4294967295 top: 4294967295
+Prioritizer empty
+ ---- test 2 ---- 
+4 2
+5 2
+5 2
+32 1.79
+193 27.3
+193 27.3
+32 1.79

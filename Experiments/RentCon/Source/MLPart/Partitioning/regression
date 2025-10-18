@@ -1,0 +1,66 @@
+#!/bin/csh -f
+
+#**************************************************************************
+#**
+#**    Copyright (c) 1995-1997 by ABKGroup, UCLA VLSI CAD Laboratory,
+#**    UCLA Computer Science Department, Los Angeles, CA 90095-1596 USA,
+#**    and by the Regents of the University of California.
+#**    All rights reserved.
+#**
+#**    No portion of this file may be used, copied, or transmitted for
+#**    any purpose, including any research or commercial purpose,
+#**    without the express written consent of Professor Andrew B. Kahng,
+#**    UCLA Computer Science Department, 3713 Boelter Hall, Los Angeles,
+#**    CA 90095-1596 USA.   Any copy made of this file must include this
+#**    notice.    ABKGroup and the Regents of the University of California
+#**    retain title to all copies of this file and/or its compiled
+#**    derivatives.
+#**
+#**************************************************************************/
+
+set DIFF=/usr/bin/diff
+set WC=/usr/bin/wc
+set PROG=./PartitioningTest
+
+/bin/rm -f seeds.* >& /dev/null
+
+cp TESTS/seeds.in seeds.in
+
+echo "------------  Running test 0..." > new.out
+echo Running test 0...
+${PROG}0.exe -f  TESTS/dwarf1.aux -saveAsNetD t1 >>&new.out
+
+echo "------------  Running test 1..." >> new.out
+echo Running test 1...
+${PROG}1.exe -f TESTS/dwarf1+s.aux >>& new.out
+cat t1.fix  >> new.out
+cat t1.blk  >> new.out
+
+echo "------------  Running test 2..." >> new.out
+echo Running test 2...
+${PROG}2.exe -f  TESTS/dwarf1.aux >>&new.out
+
+echo "------------  Running test 3..." >> new.out
+echo Running test 3...
+${PROG}3.exe -f  TESTS/dwarf1.aux >>&new.out
+
+echo "------------  Running test 4..." >> new.out
+echo Running test 4...
+${PROG}4.exe -f  TESTS/dwarf1.aux >>&new.out
+
+echo "------------  Running test 8..." >> new.out
+echo Running test 8...
+${PROG}8.exe -netD TESTS/intel.netD -are TESTS/intel.are -pl TESTS/intel.pl >>&new.out
+cat t8.fix  >> new.out
+cat t8.blk  >> new.out
+
+egrep -v "(Created|sec|User|Platform|Memory)" new.out > newout.notime
+egrep -v "(Created|sec|User|Platform|Memory)" expected.out > expectedout.notime
+$DIFF newout.notime expectedout.notime > diffs.notime
+
+echo " "
+echo Differences from precomputed results
+$WC diffs.notime
+
+/bin/rm -f seeds.* t1.* t8.* >& /dev/null
+

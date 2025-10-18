@@ -1,0 +1,182 @@
+
+
+1.1 980301 aec	
+
+	updated the main0.cxx test to remove all DB and Clustering code.
+	It now loads a HGraph from a .netD/.are file
+
+1.1.1 980302 aec
+
+	-updated package to new HGraph..including removing nodeAreas vectors
+	 everywhere..this is not available as HNode::getWeight()	
+	-fixed bug in PartitionerParams
+	-added regression test with greedyPartitioner
+1.2 980303 aec
+
+	-FM now works, and has been added to the regression
+	-efficiency changes to netCut2WayEval
+
+1.3 980305 aec
+	-updated package to HGraphFixed
+	-replaced loops through srcs,snks,srcSnks with loops through all nodes/edges
+	-moved fixedConstraints out of PartitionerParams, and made it an argumente
+		to the basePartitioner (it takes const Partitioning& fixedConst)
+
+
+1.3.1 980305 aec
+	-added numPartRows/numPartCols to PartitioningParams + ctor for this.
+		the old ctor will still work, but only for bi-partitioning.
+	-added void BasePartitioner::run(). it currently does nothing
+
+1.3.2 980315 aec
+	-added code to BasePartEvaluator and BasePartitioner ctor to check
+		the validity of each argument passed to the ctor.
+
+1.4  980316 aec
+	-added bool parameter to fmPart for clip.  It's default is true.
+	-first pass of proposed PartitioningProblem class.
+
+1.5  980317 aec
+	-flushed out class PartitioningProblem.
+	-updated partitioners to take PartitioningProblem as an argument
+	-deleted class PartitionerParams. PartitioningProblem contains
+		all data from the parameters, + more.
+
+1.7 980318 aec
+	-moved postprocesssing operations in partProb to seperate functions
+	-removed BBosex + Centers from basePartEval
+	-created basePECenters and basePEBBox
+	-added isEmpty to partitionIds
+	-moved dtor to partProb.cxx
+	-added PartProb::Attributes
+	-addded BasePartEval::requiredPartAttributes, and matchesProblem
+
+1.8 980320
+        -added file I/O
+        -changes to initialization and constructors
+
+1.9  980322
+	-changed ctor for PartitioningSolution
+	-fixed mem leaks in PartProb
+	-added targetAreas to basePartitioner
+	-made initRand soln generator in basPartitioner work for k-way
+
+1.11 980325
+        -independent fix and blk files, AUX file I/O, stream I/O 
+        -simplified regression tests by removing .netD / .are data
+
+
+1.14 980330
+	-added _hgraph member to BasePartEvaluator
+
+
+1.15/1.16 ilm 980331
+        -AUX file augmented with .sol files 
+         (need to agree with Andy on defaults)
+
+1.17	aec 980331
+	-added getUnscaledCost to basePartEval.
+	-changed basePartEval::operatr() to use the above function, then scale.
+	-added _bestSolnNum + get/set for it to PartProb.h
+1.18  ilm 98401
+        - added PartProb::saveBestSol()
+        - _bestSolNum is set to UINT_MAX by default 
+        _ _solnBuffers are now initialized correctly
+1.19  aec 980401
+	- changed BasePart::findBestSol() to set bestSolnNum in PartProb
+	- added isDataOwned to PartProb
+	- added reserveBuffers to PartProb
+
+1.20 ilm 980402 
+        - .are files are now optional
+          (changes to partProbIO.cxx and main2.cxx)
+
+1.21.2 ilm 980403
+        - _terminalToBlock is now of length numTerminals
+        - optional verbosity params added
+        - standard time reporting added
+
+1.22	aec 980404
+	-fixed problems with virtualness of functions in the basePartEval,
+		and netCut2WayEval.
+	-renamed basePartEval::operator() => getScaledCost,
+
+2.0     aec 980408
+	-added minCapacity to partProb
+	-some speed issues in basePArtEval, netCut2Way
+
+2.1     ilm
+        -added class TerminalPropagator
+        -added PartitioningProblem::propagateTerminals(double fuzziness);
+
+2.1.1  aec 980411
+	-added Verbosity to basePartitioner
+
+2.3.1  aec 980412
+	-added BasePartEval::totalUnscaledGraphCosTt
+2.5    aec 980420
+	-added &= |= to PartitionIds
+2.6    ilm 980426
+        -added expandable PartitioningBuffer 
+        -added PartitioningDoubleBuffer with rigorous check-in/check-out 
+2.6.5  ilm 
+        -added another TerminalPropagator class to termiProp.{h,cxx}
+2.7
+        -improvements to partitioning buffers (ranges of used solutions
+         and memory caps)
+2.8 	aec
+	-moved initRandomSolnGenerator from basePartitioner to 
+		PartProblem
+	-changed base & greedy partitioner to take  & store a non-const
+		PartProblem
+2.9	aec
+	-conversion to PartitioningBuffers
+	-PartitionProblem now has a PartitioningBuffer
+	-added ctor to PartitionIds that takes an unsigned as an argument.
+	  It populates ALL partitions up to (and including) that one.
+2.10    aec
+	-moved PartitionIds to Combinatorics
+
+3.1     ilm 
+        -removed all stuff related basePart and basePartEval
+3.2  980520
+  ilm  - added getXTics(), getYTics(), getNumXParts(), getNumYParts()
+       - reworked regression tests
+
+3.6.1 980713
+  ilm  - postProcessor now changes empty constraints to "freeToMove"
+       - terminal propagation only applies to constraints, not solution
+         buffers
+
+3.7 980719
+  ilm  - added vector<double> _const and _violations to partProb
+         (multiple changes to support those)
+
+3.8 980811
+  ilm  - added relaxPart(Partitioning&,const HGraphFixed&)
+
+3.9 980910
+  aec  - removed code which cleared the weights of terminals. As of Now:
+	for actual area, terminal areas are taken directly from the .are file
+	for unit area, terminals have unit area, just like everything else
+
+4.0 980929 
+ ilm  - added PartitioningProblem::Parameters, derived from HGBase::Parameters;
+
+4.1 981203
+   sm - added SubPartitioningProblem, derived from PartitioningProblem
+        it will take hgraph, placement, and layoutBBox and generate
+        a new partitioning problem with hgraph that are in the given
+        window
+
+4.3+ 990509
+   ilm - updated PartProbIO to correctly process multi-weighted instances
+         and avoid creating .fix file when not necessary
+4.3.1 990517
+   aec - fixed bug in partitionData.cxx::PartitioningSolution ctor, which
+	 assumed there to be only one weight
+
+4.4  990719
+   ilm - the area of nodes that have an associated "pad block" is zeroed
+4.8  020824
+   ilm - ported to g++ 3.1.1

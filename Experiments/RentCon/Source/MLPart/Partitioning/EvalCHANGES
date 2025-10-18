@@ -1,0 +1,5 @@
+to be changed:
+
+1) remove the multiply by _scale from all maxPossible functions
+2) don't use terminalToBlock == UINT_MAX to test for terminal status..
+

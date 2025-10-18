@@ -1,0 +1,66 @@
+
+ README for Partitioning2.0
+ Contact: Andy Caldwell <caldwell@cs.ucla.edu>
+          Igor Markov <imarkov@cs.ucla.edu>
+ Date:  April 7, 1998
+
+ Copyright: ABKGroup and UC Regents, see file COPYRIGHT
+ Authors: (design and implementation) Andy Caldwell, Igor Markov
+
+     OS and compilers supported : CC 4.2+ for  Solaris 2.5+,
+                               MSVC++5.0 for Windows NT4.0
+                                   (probably for Windows '95 as well)
+     compilers not supported : MSVC++4.x, g++ 2.7.2, CC 4.1
+
+   ******************  THIS IS THE SOLARIS DISTRIBUTION ***************
+
+
+ Libraries used : STL 2.03  (see STL note below), ABKCommon3.7
+                  HGraph2.42
+
+ Formal C++ interface : part.h
+
+ Linking interface: 
+   one static (libpart.a) or shared (libpart.so) library
+
+ Test:
+         produce executable dbTest with "make test", then use 
+         script "regression"; correct output contains
+
+          Differences from precomputed results
+           0       0       0 diffs.notime
+
+         If you do not get zeros, look at the file diffs.notime
+         and if you think the differences are essential, 
+         email them to <imarkov@math.ucla.edu>
+
+ Installation notes : customize Makefile to your filesystem,
+		      Type make. This will build the libraries. 
+                      The shared library can not be
+		      moved from its initial location.
+
+  Purify note :        you may want to put
+
+suppress umr ...; Timer*
+
+                     into your ~/.purify file because purify reports
+                     uninitialized memory reads in UNIX system calls.
+
+            It is available (together with a testsuite) from
+            http://www.ipmce.su/people/fbp/stl/stlport.html. 
+            Extensive online documentation is available at
+            http://www.sgi.com/Technology/STL/
+            Links to tutorials can be found at
+            http://www.sgi.com/Technology/STL/other_resources.html
+
+
+ Synopsys:  foundation classes PartitioningProblem (with complete I/O),
+            Partitioning, BasePartitioner, BasePartEvaluator; working
+            samples --- Greedy2WayPartitioner and NetCut2Way evaluator.
+            Samples of PartitioningProblems (files) in Partitioning/TESTS
+
+ Additional documentation : in Partitioning/DOCS subdirectory
+
+ Changes : see the file Partitioning/CHANGES
+
+ Future work : see the file Partitioning/TODO

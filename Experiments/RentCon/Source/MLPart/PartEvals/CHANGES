@@ -1,0 +1,77 @@
+
+PartEvals2.7  980521 ilm
+   - many additions to PartEvalType in evalRegistry.{h,cxx} (see main3.cxx)
+   - evaluators now refer to externally maintained partition
+     (see main[0-2].cxx for examples)
+   - min/max possible costs of one net are now in common evaluator xface
+
+PartEvals3.0  980531 ilm
+   - added ctor from argc,argv to PartEvalType in evalRegistry.{h,cxx}
+     and main6.cxx testing it
+
+PartEvals3.1  980601 sm
+   - added bbox1dimWCheng, bbox2dimWCheng, and bbox2dimWRSMT evaluators
+     and main7.cxx, main8.cxx, main9.cxx for testing them
+
+PartEvals3.2  980602 sm
+   - added hbbox, hbboxWCheng, hbboxWRSMT evaluators and main10.cxx,
+     main11.cxx, main12.cxx for testing them
+   - added hbboxZero, hbboxZeroWCheng, hbboxZeroWRSMT evaluators and
+     main13.cxx, main14.cxx, main15.cxx for testing them 
+
+PartEvals3.3  980602 ilm
+  - PartEvalXFace::_part is a pointer now, not a ref.
+  - added virtual PartEvalXFace::resetTo(Partitioning&) 
+     which changes _part and then calls reinitialize()
+  - new regression test added
+
+PartEvals3.4  980603 ilm
+  - computeCostOfOneNet() is now const and returns a value
+    (a change to all evaluators)
+  - all "Zero" in names of evaluators and files changed to "0"
+
+PartEvals3.5  980605 sm
+  - remove redundant call to updateCostWhenLostModule() and
+    updateCostWhenGotModule()
+
+PartEvals3.7  980625 sm
+  - change the implementation for HBBox calculation to gain more speed
+
+PartEvals3.8  980626 sm
+  - change structure of NetTallies table construction. No replication
+    is allowed (i.e. one module can only reside in one partition)
+  - _costTable moved from NetVecGeneric to the derived class
+
+PartEvals3.9  980701 ilm
+  - added StrayNodes
+
+PartEvals4.0  980704 ilm
+ - 2way speedups for NetCut and StrayNodes
+
+PartEvals4.1  980708 ilm
+ - created class UniversalPartEval and split univPartEval.* from evalRegistry.*
+ - added method getNumModulesOnNon0Nets()
+              980709 sm
+ - bug fixed for getMinCostOfOneNet() for hbbox, hbboxWCheng, and hbboxWRSMT
+ - bug fixed for getMaxCostOfOneNet() for hbboxWRSMT and hbbox0wRSMT
+
+PartEvals4.2  980711 ilm
+ - StrayNodes and StrayNodes2way now have an optional param terminalsCountAs
+   (default 2)
+ - bug fixed in getMinCostOfOneNet() for StrayNodes2way
+
+PartEvals4.4  980714 sm
+ - added simple construction that does not need Partitioning as the parameter
+
+PartEvals4.5  980803 ilm
+ - you can now ask an evaluator if it's computing netcut
+   and are guaranteed to get an asnwer in compile time
+   (bool isNetCut() const { return true/false; } )
+
+4.6-4.7 speedups to NetCut2way
+
+PartEvals4.8  980929 ilm
+ - added 2way tallies w costs and net weight, also 2way netcut w net weights
+
+5.3  020824 ilm
+ - ported to g++ 3.1.1

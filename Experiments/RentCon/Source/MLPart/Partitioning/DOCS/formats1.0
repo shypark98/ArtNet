@@ -1,0 +1,167 @@
+Andrew Caldwell, Andrew Kahng and Igor Markov             ABKGroup CONFIDENTIAL
+March 21, 1998
+
+
+Extended Benchmark File Format 
+------------------------------
+draft  1.0
+
+  Send comments to <imarkov@math.ucla.edu>
+
+
+Introduction
+------------
+
+Each benchmark comes with 4 files, a .netD file, a .are file, a UCLA .fix file
+and a UCLA .blk file. .netD format and .are formats are described at
+http://vlsicad.cs.ucla.edu/~cheese/ispd98.html (.netD has been proposed
+by Chuck Alpert as a substitute for .net format), while the other two are new.
+
+The proposed formats describe partition geometry and capacities as well
+as fixed modules and terminal propagation --- virtually in any combination
+\footnote{i.e. with intelligent enough parser, users do not need to specify
+information they do not need}. It should be noted, however, that UCLA .fix files
+make little sense without .netD files.
+
+The new file formats have straightforward facilities to represent 
+"multi-balanced" partitioning problems where each module supplies several
+(same number!) types of resources;  a matching number of partition capacities
+and tolerances is given. Specifying such problems will require "multi-area"
+files .areM, which are different from .are files in that module areas can
+be repeated on the same line.
+
+General
+-------
+
+    o     UCLA .blk files describe the geometries and capacities of multiple 
+          partitions (also called "blocks"). Partition capacities are described
+          in percent of total.
+
+          .blk files do not depend on UCLA .fix files and
+          are sufficient with .netD only if no terminals are fixed.
+          
+    o     UCLA .fix describes fixed modules and terminal propagation
+          (terminals are descibed in .netD format as "pads")
+
+          .fix files can be used without .blk files if the partitioning
+          objective does not account for the geometry of partitions,
+          Partition capacities will need to be set by the user.
+
+          .fix files can have terminals fixed in "pad partitions" which
+          can not accomodate any additional modules or terminals.
+
+
+
+Format Descriptions: UCLA .blk File Format
+-------------------
+
+  Empty lines and lines starting with pound sign '#' are ignored by the parser. 
+  The first nonignored line is reserved for format version number,
+  author/software name and date (in free format), e.g.
+
+UCLA blk 1.0  Igor Markov <imarkov@math.ucla.edu>  Fri Mar 13 13:50:25 PST 1998 
+
+  In addition to this, each .blk file header consists of three lines
+
+Regular partitions : <positive integer>
+Pad partitions : <positive integer>
+Relative capacities : <yes/no> [<yes/no>...]
+Capacity tolerances : <floating point><switch> [<floating point><switch>...]
+
+  "yes" means that partition capacities for all partitions will be given 
+        in percent, e.g., 90 for 90%, of total module area (as specified in 
+        .are file "no"  means that partition capacities are interpreted in 
+        absolute units (e.g. area)
+
+  Capacity tolerance is specified for all partitions
+  <switch> can be empty, "%" or "b", following <floating point> (no space)
+        "%" means that tolerance is interpreted in percent of total module area,
+        "b" gives tolerance in multiples of the biggest module area
+
+  Both capacities and tolerances can be repeated on the same line to
+  achieves "multi-capacities". The number of relative capacities
+  specifications determines the number of "multi-capacities" for given file.
+  There should be exactly the same number of tolerance specifications and each
+  non-pad partition must have exactly the same number of capacities (see below).
+  Note that this requires "multi-area" files ".areM" with matching "multi-ness".
+
+  The header is followed by a list of regular partitions and pad partitions.
+  Regular partitions are numbered 0 .. # regular partitions - 1,
+  pad partitions ---  0 .. # pad partitions - 1
+
+  Identifiers of regular partitions consist of a "b" ("p" is taken by
+  .netD files, so we think of partitions as "blocks" with "bounding boxes") 
+  and their ordinary numbers. Similarly, identifiers of pad partitions are 
+  prefaced with "pb" ("pad blocks").
+
+  It is recommended that partitions be listed in ascending order
+  of their numbers with pad partitions first. 
+
+  Each "partition line" has the following structure
+  (below "999" stands for a positive integer)
+
+<Partition Id> <Geometry Type> <Geometry Description> : [<Capacities>]
+
+<Partition Id>  can be of the form b999 or pb999 
+<Geometry Type> can be "rect" (for rectangle) with additional types possible
+
+<Geometry Description> must be 
+           Xmin Ymin Xmax Ymax
+           for "rect" with Xmin <= Xmax, Ymin <= Ymax
+           Observe that a point is specified by Xmin = Xmax, Ymin = Ymax
+
+<Capacities> 
+           Capacities for pad partitions will be ignored by the parser.
+           Regular partitions must have exactly as many [multi]-capacities as 
+           specified by the file header (see Relative capacities:) and will be
+           interpreted as absolute numbers or relative to the total module area.
+           Relative specifications must be in percent (50 for 50%) and sum up
+           to 100 or more (fatal parser error otherwise).
+
+           The parser must compute and print the total capacity of partitions
+           in absoluet (e.g. area) units.  If it the original specificationis
+           have been in percent, the sum of those (at least 100) should be
+           printed too.
+
+Format Descriptions: .fix File Format
+-------------------
+
+  Empty lines and lines starting with pound sign '#' is ignored by the parser. 
+  The first nonignored line is reserved for format version number,
+  author/software name and date (in free format), e.g.
+
+UCLA fix 1.0  Igor Markov <imarkov@math.ucla.edu>  Fri Mar 13 13:50:25 PST 1998 
+
+  In addition to this, each .fix file header consists of two lines
+
+Regular Partitions : <positive integer>
+Pad Partitions : <positive integer>
+Fixed Pads : <positive integer>
+Fixed NonPads : <positive integer>
+
+  A list of fixed pads and modules follows.
+  Each line must be of the form 
+
+<Module/Pad Id> : <Partition Id> [<Partition Id> ...]
+
+  where  <Module/Pad Id> can be of the form a99 or p99 ("99" means 
+  "a positive integer") and must refer to a module or pad (terminal)
+  declared in a .netD file
+
+  <Partition Id> can be of the form b99 or pb99 and, if the geometry of
+  partitions is important, will refer to a partition declared in a .blk file.
+  If no .blk file is given, the parser can guess the number of partitions
+  of each type as max id appearing in the .fix format, OR can be given 
+  these data by the user.
+
+  There are no restrictions on fixing modules and pads in partitions
+  (e.g. one can fix a module in a pad partition or vice versa, 
+  a pad can be fixed in several pad partitions etc), and fixing a
+  module/pad in several partitions should be interpreted with an "OR".
+
+  Terminal propagation information
+  --------------------------------
+  Is given by fixing pads in one pad partition each and, in addition to that,
+  in several regular partitions each.
+
+

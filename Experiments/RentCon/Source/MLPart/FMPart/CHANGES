@@ -1,0 +1,89 @@
+
+
+2.7  aec 062998	aec
+	-changed FM to use only one MoveManager for all starts
+3.2  ilm 071198 ilm
+        -now 2way evals are turned on automatically in setMoveManager.cxx
+         for bipartitioning
+
+3.5  ilm 071998
+        -tie breaking on imbalances
+3.6  aec 072098
+	-update to Partitioners1.7 (partLeg moves to mmTemplBase)
+	-moveMgr->reinitialize moved to begining of a pass + 	
+		addition of necessary data items for this in fmPart.cxx
+	-bool skipSolnGen added to ctor
+4.6  aec 090398
+        -wrapped D&D code and plugged in instead of generic MM
+4.7  ilm 090498 
+        -tried an alternative speedup, couldn't beat D&D (4.6 is still current)
+4.8  ilm/aec 090498
+        -added Clip, fixed nodes and locking large nodes
+5.0  ilm 090698
+        -added back CLR, _params.useOptimizedMM and -unCorking are processed
+5.1  ilm 090698
+        -  2-pin net speedup in D&D code
+5.2  ilm 090698
+        -generic FMMM sped up by testing nets for not
+         being affected by a move
+5.3  ilm 090698
+        - 2-pin net speed-up in the generic FMMM and FMMMwCLR
+5.5  ilm 090698
+        - added uncorking (-unCork)
+5.6,5.7 ilm 090998
+        - more speedups
+6.0  ilm 150998
+        - there are now 5 move managers (D&D, FM generic, FMLIFOwCLR, FMCLIPwCLR,
+                                         FM-way with NetCut)
+6.1  ilm 170998
+        - parametrized gain container by gain bucket type
+          (SplitDestCentricGainCo is now available)
+6.2  ilm 200998
+        - move manager w hybrid buckets now available
+6.3  ilm 220998
+        - added MoveManagerSwitchBoxInterface and two concrete types
+        - fmPart.cxx and setMoveManager.cxx now use switch boxes
+        - added MM types FMDD and FMHybrid, removed parameter useOptimizedMM 
+
+6.6.2 aec 990304
+	- test version of uncorking - this version removed any illegal node
+	  when it was the highest gain move.  This is the only version with
+	  this type of uncorking
+6.7   aec 990304
+	- test version for temporary illegalities.  Only allowed an 
+	  illegal move if the move was illegal by <= a multiple of the
+	  min (non-zero) cell size.  This is in this version only.
+
+6.8   aec 990307
+	- modification to uncorking - large nodes are only removed from the
+	  gain-buckets prior to the pass if the initial solution (at the
+	  start of the pass) is legal
+
+6.17  aec 991015
+	- made D&D movemanager use integer edge-weights.
+
+7.1   ilm 001002
+        - a series of changes in move managers and FMPart to
+          allow saving the move log (depending on a parameter value).
+          See FMPart5.cxx for an example.
+
+
+7.2   dap 010601
+	- improved performance of the fmpart gain container.
+
+7.3   dap 010627
+	- improved performance of evaluators
+	- changed FMPart to use weights if given
+
+7.4   dap 010707
+        - changed FMPart to use weights CORRECTLY :)
+	- separated the performance hit of using weights from non-weighted tests        - added the command line parameter -useWts
+7.5   dap 010713
+        - ok no joke this time, weights work :P 
+7.6   dap 010808
+        - changed gain container to be implemented with a map
+	- added probabalistic bucket selection to gain container
+	- made weights propagate throughout the params, such that
+	  running without weights, then with weights is easy (see FMPartTest8)
+7.7   ilm 020824
+        - ported to g++ 3.1.1

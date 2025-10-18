@@ -1,0 +1,53 @@
+#!
+set package = Combi
+set base = ~code/OUR/
+set opt = $base/Opt/$package
+set reg = $base/$package
+
+# removing extra newline (from Windows), tabs -> 3 spaces
+#set files = "*cxx *h CHANGES DOCS README COPYRIGHT"
+#perl -p -i -e 's/	/   /g' $files
+#perl -p -i -e 's/
+//g' Makefile # keep tabs in Makefile , though
+#perl -p -i -e 's/
+//g' $files
+
+beautify.for.imarkov.taste
+#beatufying code
+#if ( $1 == '') then
+#	foreach source ( *cxx *h )
+#	bcpp -bnl -cc 25 -s $source
+#	end
+#endif
+#rm *.bac
+
+# building non-optimised version
+cd $reg
+make clean
+make
+make test
+regression
+
+# cleaning optimised directory
+set files = " *cxx *h regression tests/* test*.* CHANGES COPYRIGHT DOCS README expected.out"
+cd $opt
+/bin/rm $files
+
+# creating sym links in optimised directory
+cd $reg
+foreach i ( $files )
+	ln -s $reg/$i $opt/$i
+end
+
+# adjusting Makefile for optimised directory
+cp $reg/Makefile $opt/Makefile
+perl -p -i -e 's/#OPTFLAGS/OPTFLAGS/' $opt/Makefile
+perl -p -i -e 's/#LIBBASE/LIBBASE/' $opt/Makefile
+
+# building optimised version
+cd $opt
+make clean
+make
+cp lib* ~code/lib/O5
+make test
+regression

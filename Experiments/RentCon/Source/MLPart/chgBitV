@@ -1,0 +1,7 @@
+#!/bin/tcsh
+
+foreach file ($argv[*])
+	echo $file
+	sed 's/bit_vector/uofm_bit_vector/g' $file > sed.out
+	\mv sed.out $file
+end

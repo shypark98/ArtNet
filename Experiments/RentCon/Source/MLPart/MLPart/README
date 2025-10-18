@@ -1,0 +1,55 @@
+
+ README for MLPart
+ Contact: Igor Markov <imarkov@math.ucla.edu>
+ Date:  April 7, 1998
+
+ Copyright: ABKGroup and UC Regents, see file COPYRIGHT
+ Authors: (design and implementation) Andy Caldwell, Igor Markov
+
+     OS and compilers supported : CC 4.2+ for  Solaris 2.5+,
+                               MSVC++5.0 for Windows NT4.0
+                                   (probably for Windows '95 as well)
+     compilers not supported : MSVC++4.x, g++ 2.7.2, CC 4.1
+
+   ******************  THIS IS THE SOLARIS DISTRIBUTION ***************
+
+
+ Libraries used : STL 2.03  (see STL note below), ABKCommon3.7
+                  HGraph2.42, PartEval1.5, FMPart1.7 Sanchis1.1
+
+ Formal C++ interface : mlPart.h
+
+ Linking interface: one shared (libmlPart.so) or static (libmlPart.a) library
+ Test:
+         produce executable mlPartTest0` with "make test", then use 
+         script "regression"; correct output contains
+
+          Differences from precomputed results
+           0       0       0 diffs.notime
+
+         If you do not get zeros, look at the file diffs.notime
+         and if you think the differences are essential, 
+         email them to <imarkov@math.ucla.edu>
+
+  Purify note :        you may want to put
+
+suppress umr ...; Timer*
+
+                     into your ~/.purify file because purify reports
+                     uninitialized memory reads in UNIX system calls.
+
+ STL:       It is available (together with a testsuite) from
+            http://www.ipmce.su/people/fbp/stl/stlport.html. 
+            Extensive online documentation is available at
+            http://www.sgi.com/Technology/STL/
+            Links to tutorials can be found at
+            http://www.sgi.com/Technology/STL/other_resources.html
+
+
+ Synopsys:  General multilevel k-way partitioner
+
+ Additional documentation : in MLPart/DOCS subdirectory
+
+ Changes : see the file MLPart/CHANGES
+
+ Future work : see the file MLPart/TODO

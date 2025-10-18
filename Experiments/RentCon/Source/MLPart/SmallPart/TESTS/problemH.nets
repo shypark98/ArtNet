@@ -1,0 +1,59 @@
+UCLA nets 1.0
+# Created      : Mon Nov 25 22:09:44 2002
+# User         : sadya@buran (Saurabh N Adya,Not Available,NotAvailable/Freysinger;CR0i;30) 
+# Platform     : Linux 2.4.17 #4 SMP Wed Mar 20 13:31:05 EST 2002 i686 
+
+NumNets : 17
+NumPins : 34
+NetDegree : 2  net0
+C1@6#1 B
+term1 B
+NetDegree : 2  net1
+C1@6#1 B
+term1 B
+NetDegree : 2  net2
+C1@6#1 B
+term1 B
+NetDegree : 2  net3
+C1@6#1 B
+term1 B
+NetDegree : 2  net4
+C1@7#0 B
+term1 B
+NetDegree : 2  net5
+C1@7#0 B
+term1 B
+NetDegree : 2  net6
+C1@7#0 B
+term1 B
+NetDegree : 2  net7
+C1@7#4 B
+term1 B
+NetDegree : 2  net8
+C1@7#4 B
+term1 B
+NetDegree : 2  net9
+C1@7#4 B
+term1 B
+NetDegree : 2  net10
+C1@8#3 B
+term1 B
+NetDegree : 2  net11
+C1@8#3 B
+term1 B
+NetDegree : 2  net12
+C1@8#3 B
+term1 B
+NetDegree : 2  net13
+C1@8#3 B
+term1 B
+NetDegree : 2  net14
+C1@9#2 B
+term1 B
+NetDegree : 2  net15
+C1@9#2 B
+term1 B
+NetDegree : 2  net16
+C1@9#2 B
+term1 B
+

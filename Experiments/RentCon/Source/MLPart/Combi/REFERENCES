@@ -1,0 +1,31 @@
+Bibliography for Gray codes
+All of these would be available in our library, 
+I guess, once I bring the hard copies to Huijuan.
+
+VERY USEFUL
+Carla Savage, "A Survey of Combinatorial Gray Codes", SIAM REV
+v.39(12/1997), no.4, pp605-629
+
+USEFUL T.A.Jenkyns, "Loopless Gray Code Algorithms", Dept of Math, Brock
+Univ, Canada
+
+Frank Ruskey, Carla Savage, "A Gray Code for Combinations of a Multiset",
+Dept of CS, NCSU
+
+Frank Ruskey, "Simple combinatorial Gray codes constructed by reversing
+sublists", Dept of CS, Univ of Victoria, Canada
+
+POTENTIALLY USEFUL Bruce Bauslaugh, Frank Ruskey, "Generating Alternating
+Permutations Lexicographically", Dept of CS, Univ of Victoria, Canada
+
+Bette Bultena, Frank Ruskey, "Transition Restricted Gray Codes", Dept of CS,
+Univ of Victoria, Canada
+
+Frank Ruskey, "Efficient Generation of Subsets with a Given Sum", Dept of
+CS, Univ of Victoria, Canada
+
+Yasunori Koda, Frank Ruskey, "A Gray Code for the Ideals of a Forest Poset",
+Dept of CS, Univ of Victoria, Canada
+
+Frank Ruskey, Andrzej Proskurowski, "Generating Binary Trees by
+Transpositions", Dept of CS, Univ of Victoria, Canada
