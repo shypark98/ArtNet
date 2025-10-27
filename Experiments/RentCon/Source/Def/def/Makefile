@@ -82,9 +82,9 @@ LIBSRCS =	\
 			defwWriter.cpp \
 			def.tab.cpp
 
-#def.tab.cpp : $(DEF_BISON_SRCS)
-#	bison -v -p$(DEF_TABNAME)yy -d $(DEF_BISON_SRCS)
-#	mv $(DEF_TABNAME).tab.c $(DEF_TABNAME).tab.cpp ;
+def.tab.cpp : $(DEF_BISON_SRCS)
+	bison -v -p$(DEF_TABNAME)yy -d $(DEF_BISON_SRCS)
+	mv $(DEF_TABNAME).tab.c $(DEF_TABNAME).tab.cpp ;
 
 include ../template.mk
 

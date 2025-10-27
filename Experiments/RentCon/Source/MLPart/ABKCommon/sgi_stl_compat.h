@@ -72,7 +72,7 @@
 #include <iterator>
 #include <functional>
 
-// #include <ABKCommon/SGI_STL_COMPAT/hash_map.h>
+#include <ABKCommon/SGI_STL_COMPAT/hash_map.h>
 
 #ifdef _MSC_VER
   //HP and SGI copyrights do not apply to these definitions of

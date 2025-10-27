@@ -1,4 +1,4 @@
-M64 = CC=cc CFLAGS="-64" LDFLAGS="-64"
+M64 = CC=gcc
 
 all:
 	./configure $(M64) --prefix=$(PWD)/../gsl;

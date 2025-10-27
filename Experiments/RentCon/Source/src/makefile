@@ -38,11 +38,11 @@
 SUFFIX  = cpp
 GCC = g++
 
-LIBROOT=/home/memzfs_projects/artnet/d3yoon/ArtNet/Exps/RentCon/Source
+LIBROOT=XXX
 
-GSLROOT = ../GSLSource
+GSLROOT = $(LIBROOT)/gsl/include
 #GSLLIB = $(LIBROOT)/gsl/lib/libgsl.a
-GSLLIB = -lgsl -lgslcblas -lm
+GSLLIB = -L$(LIBROOT)/gsl/lib -lgsl -lgslcblas -lm
 
 DEFROOT = ../Def/def
 LEFROOT = $(LIBROOT)/Lef/lef
@@ -50,7 +50,7 @@ LEFROOT = $(LIBROOT)/Lef/lef
 SODIRKEY= -Wl,-rpath,
 
 MLPARTROOT = $(LIBROOT)/MLPart
-MLPartCFLAG = -DABKDEBUG -pedantic -pipe -I$(MLPARTROOT)
+MLPartCFLAG = -DABKDEBUG -pipe -I$(MLPARTROOT) -Wno-deprecated -std=gnu++98
 
 MLPartLFLAG = -L$(MLPARTROOT)/libs $(SODIRKEY)$(MLPARTROOT)/libs -lMLPart -lABKCommon -lPartitioning \
 							-lFilledHier -lPartEvals -lHGraph -lClusteredHGraph -lGenHier \
@@ -70,7 +70,7 @@ OBJECTS = $(SOURCES:%.$(SUFFIX)=$(OBJPATH)/%.o)
 HEADERS = $(wildcard ./*.h) 
 
 #DISABLEASSERT="-DNDEBUG"
-CFLAGS = $(IFLAG) -c -fPIC $(DEBUG) -w $(DBG) -Wunused $(DISABLEASSERT) $(MLPartCFLAG) #-Wno-deprecated
+CFLAGS = $(IFLAG) -c -fPIC $(DEBUG) -w $(DBG) -Wunused $(DISABLEASSERT) $(MLPartCFLAG) -Wno-deprecated
 
 TARGET = $(BINPATH)/RentCon.exe
 

@@ -62,7 +62,7 @@ if ($Have64bits =~ m/64/)
 		exit;
 	}
 	
-	system("sed 's/^M64.*/M64 = CC=cc CFLAGS=\"-64\" LDFLAGS=\"-64\"/g' GSLSource/makefile.install > sed.out");
+	system("sed 's/^M64.*/M64 = CC=gcc/g' GSLSource/makefile.install > sed.out");
 	system("\\mv -f sed.out GSLSource/makefile.install");
 }
 else

@@ -63,9 +63,9 @@ LIBSRCS =	\
 		  	lefwWriter.cpp
 			
 # For lef, create '.cpp' object
-#lef.tab.cpp : $(LEF_BISON_SRCS)
-#	bison -v -p$(LEF_TABNAME)yy -d $(LEF_BISON_SRCS)
-#	mv $(LEF_TABNAME).tab.c $(LEF_TABNAME).tab.cpp ;
+lef.tab.cpp : $(LEF_BISON_SRCS)
+	bison -v -p$(LEF_TABNAME)yy -d $(LEF_BISON_SRCS)
+	mv $(LEF_TABNAME).tab.c $(LEF_TABNAME).tab.cpp ;
 
 include ../template.mk
 
