@@ -115,10 +115,10 @@ Cluster* Block::Generate()
 
   module->checkConsistency();
 
-  /*
+
   if (isTop) {
       module->postProcessing(this);
-  }*/
+  }
 
   if (isTop && ArtNetGen::printDepth_) {
     module->levelize();
