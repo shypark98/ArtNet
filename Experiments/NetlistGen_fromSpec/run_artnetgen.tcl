@@ -4,6 +4,13 @@ read_lef ../pdk/lef/asap7_tech_1x_201209.lef
 read_lef ../pdk/lef/asap7sc7p5t_27_R_1x_201211.lef
 read_lef ../pdk/lef/fakeram7_128x32.lef
 
+read_lib ../pdk/lib/asap7sc7p5t_AO_RVT_TT_nldm_201020.lib
+read_lib ../pdk/lib/asap7sc7p5t_INVBUF_RVT_TT_nldm_201020.lib
+read_lib ../pdk/lib/asap7sc7p5t_OA_RVT_TT_nldm_201020.lib
+read_lib ../pdk/lib/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib
+read_lib ../pdk/lib/asap7sc7p5t_SIMPLE_RVT_TT_nldm_201020.lib
+read_lib ../pdk/lib/fakeram7_128x32.lib
+
 artnetgen_set_parameters \
     -seed 3 \
     -verbose 0 \
