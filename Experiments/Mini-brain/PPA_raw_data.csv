@@ -1,0 +1,13 @@
+Design,Type,Area,Power,ECP
+jpeg,Real,7998,0.130,260
+jpeg,ArtNet,7530,0.120,266
+nova,Real,25886,0.422,1226
+nova,ArtNet,25592,0.461,1295
+netcard,Real,55186,0.381,404
+netcard,ArtNet,53578,0.375,392
+tate_pairing,Real,32764,0.297,298
+tate_pairing,ArtNet,32712,0.309,297
+CA53,Real,209938,0.304,620
+CA53,ArtNet,224670,0.345,598
+ariane133,Real,111898,0.341,1321
+ariane133,ArtNet,110401,0.326,1296
