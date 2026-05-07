@@ -196,6 +196,8 @@ class Distrib
   std::vector<int> rouletteVector();
   std::vector<DistUnit>::iterator end() { return units_.end(); }
   std::vector<DistUnit>::iterator begin() { return units_.begin(); }
+  bool empty() const { return units_.empty(); }
+  int size() const { return units_.size(); }
 
  private:
   int min_;

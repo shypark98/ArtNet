@@ -120,9 +120,17 @@ Cluster* Block::Generate()
       module->postProcessing(this);
   }
 
-  if (isTop && ArtNetGen::printDepth_) {
-    module->levelize();
+  // Post-processing: extend max depth by selectively removing FFs
+  if (isTop) {
+    start = std::chrono::system_clock::now();
+    module->adjustDepthDistribution(this);
+    runtime = std::chrono::system_clock::now() - start;
+    cout << "\t-- Depth adjustment Finished (" << runtime.count()
+         << " sec)" << endl;
+  }
 
+  if (isTop && ArtNetGen::printDepth_) {
+    module->levelizeKahn();
     cout << "levelizing done " << endl;
     module->printDepth();
   }

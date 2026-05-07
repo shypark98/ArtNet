@@ -51,7 +51,7 @@ class CounterMap
   int operator[](void* ptr);
 
  private:
-  std::map<void*, int> counterMap_;
+  std::unordered_map<void*, int> counterMap_;
   int next_;
 };
 
@@ -214,6 +214,8 @@ class Block : public CELL
  public:
   // queue for flip-flops
   std::multimap<IntPair, Librarycell*> getSeqForrest() { return seqForrest_; }
+  Distrib& getDepthDist() { return depthDist_; }
+  bool hasDepthDist() const { return !depthDist_.empty(); }
   std::multimap<IntPair, Librarycell*> seqForrest_;
 
  private:
@@ -352,6 +354,14 @@ class Cluster
   void insertFlop(Instance* inst, Block* block, int outTerm);
   void addNumInputs(int incr) { numInputs_ += incr; }
   void addNumOutputs(int incr) { numOutputs_ += incr; }
+
+  void adjustDepthDistribution(Block* block);
+  void levelizeKahn();
+  void incrementalRelevel(Instance* startInst);
+  std::map<int, int> collectCurrentDepthDist();
+  int getFFInputDepth(Instance* ff);
+  int getFFOutputDepth(Instance* ff);
+  void removeFlop(Instance* ff);
 
  public:
   // for debugging

@@ -70,8 +70,7 @@ namespace ang {
 
 int CounterMap::operator[](void* ptr)
 {
-  pair<map<void*, int>::iterator, bool> mi
-      = counterMap_.insert(pair<void* const, int>(ptr, next_));
+  auto mi = counterMap_.insert({ptr, next_});
 
   if (mi.second)
     ++next_;
@@ -112,7 +111,7 @@ Cluster::Cluster(Librarycell* cell) : numBlocks_(1)
     // if cell is combinational
     double maxPath;
     double minPath;
-    if (!cell->isSequential()) {
+    if (!cell->isSequential() && !cell->isMacro) {
       maxPath = ArtNetGen::delay_.SamplePath();
       maxPath -= cell->getDelay();
       minPath = 0;
@@ -1857,6 +1856,12 @@ void Cluster::writeVerilog(Block* block)
 
   CounterMap countInst;
 
+  // Cache pin names per master to avoid repeated getMTermNames calls
+  std::unordered_map<odb::dbMaster*, vector<string>> masterClkPins;
+  std::unordered_map<odb::dbMaster*, vector<string>> masterRstPins;
+  std::unordered_map<odb::dbMaster*, vector<string>> masterInPins;
+  std::unordered_map<odb::dbMaster*, vector<string>> masterOutPins;
+
   verilog << "module " << block->getBlockName() << " (";
 
   // PI
@@ -2054,74 +2059,565 @@ void Cluster::writeVerilog(Block* block)
       pinGroups.clear();
 
     } else {
-      if (lib_cell->hasSequentials()) {
-        ang::getMTermNames(master, "in", "clock", pinName);
+      // Use cached pin names per master
+      if (masterInPins.find(master) == masterInPins.end()) {
+        ang::getMTermNames(master, "in", "signal", masterInPins[master]);
+        ang::getMTermNames(master, "out", "signal", masterOutPins[master]);
+        if (lib_cell->hasSequentials()) {
+          ang::getMTermNames(master, "in", "clock", masterClkPins[master]);
+          ang::getMTermNames(master, "in", "reset", masterRstPins[master]);
+        }
+      }
 
-        if (pinName.size() != 1) {
-          cout << master->getName() << endl;
-          cout << "Error: number of clock pins is not equal to 1" << endl;
-          cout << "This version does not support Multi-Bit FF" << endl;
+      if (lib_cell->hasSequentials()) {
+        auto& clkPins = masterClkPins[master];
+        if (clkPins.size() != 1) {
+          cout << master->getName() << "\n";
+          cout << "Error: number of clock pins is not equal to 1\n";
           exit(0);
         }
+        verilog << "." << clkPins[0] << "(" << clockName << "),\n";
 
-        verilog << "." << pinName[0] << "(" << clockName << ")," << endl;
-        pinName.clear();
-      }
-
-      if (lib_cell->hasSequentials()) {
-        ang::getMTermNames(master, "in", "reset", pinName);
-
-        for (int i = 0; i < pinName.size(); ++i)
-          if (pinName[i] == "RESET")  // for asap7
-            verilog << "." << pinName[i] << "(" << resetName << ")," << endl;
+        auto& rstPins = masterRstPins[master];
+        for (int i = 0; i < rstPins.size(); ++i)
+          if (rstPins[i] == "RESET")
+            verilog << "." << rstPins[i] << "(" << resetName << "),\n";
           else
-            verilog << "." << pinName[i] << "(1'b0)," << endl;
-        pinName.clear();
+            verilog << "." << rstPins[i] << "(1'b0),\n";
       }
 
-      ang::getMTermNames(master, "in", "signal", pinName);
+      auto& inPins = masterInPins[master];
 
-      if (pinName.size() != (*iit)->inNets_.size()) {
+      if (inPins.size() != (*iit)->inNets_.size()) {
         cout << "Error: number of input nets is not equal to the number of "
-                "input pins"
-             << endl;
-        cout << master->getName() << " " << pinName.size() << " "
-             << (*iit)->inNets_.size() << endl;
-
-        for (int i = 0; i < pinName.size(); ++i)
-          cout << pinName[i] << endl;
+                "input pins\n";
+        cout << master->getName() << " " << inPins.size() << " "
+             << (*iit)->inNets_.size() << "\n";
         exit(0);
       }
 
       for (int i = 0; i < (*iit)->inNets_.size(); ++i) {
-        verilog << "." << pinName[i] << "(net_" << countNet[(*iit)->inNets_[i]]
-                << ")," << endl;
+        verilog << "." << inPins[i] << "(net_" << countNet[(*iit)->inNets_[i]]
+                << "),\n";
       }
-      pinName.clear();
 
-      ang::getMTermNames(master, "out", "signal", pinName);
+      auto& outPins = masterOutPins[master];
 
-      if (pinName.size() != (*iit)->outNets_.size()) {
+      if (outPins.size() != (*iit)->outNets_.size()) {
         cout << "Error: number of output nets is not equal to the number of "
-                "output pins"
-             << endl;
+                "output pins\n";
         exit(0);
       }
 
       for (int o = 0; o < (*iit)->outNets_.size(); ++o) {
         if (o == (*iit)->outNets_.size() - 1) {
-          verilog << "." << pinName[o] << "(net_"
-                  << countNet[(*iit)->outNets_[o]] << "));" << endl;
+          verilog << "." << outPins[o] << "(net_"
+                  << countNet[(*iit)->outNets_[o]] << "));\n";
         } else {
-          verilog << "." << pinName[o] << "(net_"
-                  << countNet[(*iit)->outNets_[o]] << ")," << endl;
+          verilog << "." << outPins[o] << "(net_"
+                  << countNet[(*iit)->outNets_[o]] << "),\n";
         }
       }
-      pinName.clear();
     }
   }
 
-  verilog << "endmodule" << endl;
+  verilog << "endmodule\n";
+}
+
+
+// ============================================================
+// Post-processing: extend max depth by selectively removing FFs
+// ============================================================
+
+void Cluster::levelizeKahn()
+{
+  for (auto inst : instances_) {
+    if (inst->isSequential()) {
+      inst->maxLevel_ = 0;
+      inst->minLevel_ = 0;
+      inst->isVisited_ = true;
+    } else {
+      inst->maxLevel_ = -1;
+      inst->minLevel_ = INT_MAX;
+      inst->isVisited_ = false;
+    }
+  }
+
+  std::unordered_map<Instance*, int> inDeg;
+  for (auto inst : instances_) {
+    if (!inst->isSequential()) {
+      int deg = 0;
+      for (size_t j = 0; j < inst->inNets_.size(); ++j) {
+        OutputNet* oNet = dynamic_cast<OutputNet*>(inst->inNets_[j]);
+        if (oNet && oNet->source_.first && oNet->source_.first != inst
+            && !oNet->source_.first->isSequential()) {
+          deg++;
+        }
+      }
+      inDeg[inst] = deg;
+    }
+  }
+
+  std::deque<Instance*> ready;
+  for (auto it = inDeg.begin(); it != inDeg.end(); ++it) {
+    if (it->second == 0) {
+      ready.push_back(it->first);
+    }
+  }
+
+  while (!ready.empty()) {
+    Instance* inst = ready.front();
+    ready.pop_front();
+    if (inst->isVisited_)
+      continue;
+
+    int maxLev = 0;
+    for (size_t j = 0; j < inst->inNets_.size(); ++j) {
+      OutputNet* oNet = dynamic_cast<OutputNet*>(inst->inNets_[j]);
+      if (oNet && oNet->source_.first && oNet->source_.first != inst
+          && oNet->source_.first->isVisited_) {
+        maxLev = std::max(maxLev, oNet->source_.first->maxLevel_);
+      }
+    }
+
+    inst->maxLevel_ = maxLev + 1;
+    inst->minLevel_ = maxLev + 1;
+    inst->isVisited_ = true;
+
+    for (size_t k = 0; k < inst->outNets_.size(); ++k) {
+      for (auto sit = inst->outNets_[k]->sinks_.begin();
+           sit != inst->outNets_[k]->sinks_.end(); ++sit) {
+        if (sit->first && !sit->first->isSequential()
+            && !sit->first->isVisited_) {
+          auto it2 = inDeg.find(sit->first);
+          if (it2 != inDeg.end()) {
+            it2->second--;
+            if (it2->second <= 0) {
+              ready.push_back(sit->first);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Handle cells in combinational loops
+  bool changed = true;
+  int maxPasses = 100;
+  while (changed && maxPasses-- > 0) {
+    changed = false;
+    for (auto inst : instances_) {
+      if (!inst->isSequential() && !inst->isVisited_) {
+        int maxLev = -1;
+        for (size_t j = 0; j < inst->inNets_.size(); ++j) {
+          OutputNet* oNet = dynamic_cast<OutputNet*>(inst->inNets_[j]);
+          if (oNet && oNet->source_.first && oNet->source_.first != inst
+              && oNet->source_.first->isVisited_) {
+            maxLev = std::max(maxLev, oNet->source_.first->maxLevel_);
+          }
+        }
+        if (maxLev >= 0) {
+          inst->maxLevel_ = maxLev + 1;
+          inst->minLevel_ = maxLev + 1;
+          inst->isVisited_ = true;
+          changed = true;
+        }
+      }
+    }
+  }
+
+  for (auto inst : instances_) {
+    if (!inst->isSequential() && !inst->isVisited_) {
+      inst->maxLevel_ = 1;
+      inst->minLevel_ = 1;
+      inst->isVisited_ = true;
+    }
+  }
+}
+
+void Cluster::incrementalRelevel(Instance* startInst)
+{
+  // BFS forward from startInst, recomputing levels for affected cells.
+  // Stop at sequential boundaries or when level doesn't change.
+  std::deque<Instance*> queue;
+  std::unordered_set<Instance*> visited;
+  queue.push_back(startInst);
+
+  while (!queue.empty()) {
+    Instance* inst = queue.front();
+    queue.pop_front();
+    if (visited.count(inst)) continue;
+    visited.insert(inst);
+
+    if (inst->isSequential())
+      continue;
+
+    // Recompute this cell's level from its fanins
+    int newMaxLev = 0;
+    for (size_t j = 0; j < inst->inNets_.size(); ++j) {
+      OutputNet* oNet = dynamic_cast<OutputNet*>(inst->inNets_[j]);
+      if (oNet && oNet->source_.first && oNet->source_.first != inst
+          && oNet->source_.first->isVisited_) {
+        newMaxLev = std::max(newMaxLev, oNet->source_.first->maxLevel_);
+      }
+    }
+    int newLevel = newMaxLev + 1;
+
+    // Only propagate if level actually changed
+    if (newLevel != inst->maxLevel_) {
+      inst->maxLevel_ = newLevel;
+      inst->minLevel_ = newLevel;
+      inst->isVisited_ = true;
+
+      for (size_t k = 0; k < inst->outNets_.size(); ++k) {
+        for (auto sit = inst->outNets_[k]->sinks_.begin();
+             sit != inst->outNets_[k]->sinks_.end(); ++sit) {
+          if (sit->first && !sit->first->isSequential()
+              && !visited.count(sit->first)) {
+            queue.push_back(sit->first);
+          }
+        }
+      }
+    }
+  }
+}
+
+std::map<int, int> Cluster::collectCurrentDepthDist()
+{
+  std::map<int, int> depthDist;
+  for (auto ff : FFs_) {
+    depthDist[getFFInputDepth(ff)]++;
+  }
+  return depthDist;
+}
+
+int Cluster::getFFInputDepth(Instance* ff)
+{
+  OutputNet* inNet = dynamic_cast<OutputNet*>(ff->inNets_[0]);
+  if (inNet && inNet->source_.first) {
+    return inNet->source_.first->maxLevel_;
+  }
+  return 0;
+}
+
+int Cluster::getFFOutputDepth(Instance* ff)
+{
+  int maxDepth = 0;
+  for (size_t k = 0; k < ff->outNets_.size(); ++k) {
+    for (auto sit = ff->outNets_[k]->sinks_.begin();
+         sit != ff->outNets_[k]->sinks_.end(); ++sit) {
+      if (!sit->first->isSequential()) {
+        maxDepth = std::max(maxDepth, sit->first->maxLevel_);
+      }
+    }
+  }
+  return maxDepth;
+}
+
+void Cluster::removeFlop(Instance* ff)
+{
+  OutputNet* net_in = dynamic_cast<OutputNet*>(ff->inNets_[0]);
+  OutputNet* net_out = ff->outNets_[0];
+  if (!net_in || !net_out) return;
+
+  for (auto it = net_in->sinks_.begin(); it != net_in->sinks_.end(); ++it) {
+    if (it->first == ff && it->second == 0) {
+      net_in->sinks_.erase(it);
+      break;
+    }
+  }
+
+  for (auto sit = net_out->sinks_.begin(); sit != net_out->sinks_.end(); ++sit) {
+    sit->first->inNets_[sit->second] = net_in;
+  }
+  net_in->sinks_.splice(net_in->sinks_.end(), net_out->sinks_);
+
+  auto it_internal = std::find(internalNets_.begin(), internalNets_.end(), net_out);
+  if (it_internal != internalNets_.end()) {
+    internalNets_.erase(it_internal);
+  } else {
+    auto it_out = std::find(outNets_.begin(), outNets_.end(), net_out);
+    if (it_out != outNets_.end()) {
+      outNets_.erase(it_out);
+      numOutputs_--;
+    }
+  }
+
+  for (size_t i = 1; i < ff->inNets_.size(); ++i) {
+    Net* extraNet = ff->inNets_[i];
+    for (auto sit = extraNet->sinks_.begin(); sit != extraNet->sinks_.end(); ++sit) {
+      if (sit->first == ff && sit->second == (int)i) {
+        extraNet->sinks_.erase(sit);
+        break;
+      }
+    }
+  }
+
+  instances_.remove(ff);
+  FFs_.remove(ff);
+  numBlocks_--;
+  area_ -= ff->getArea();
+  net_out->source_ = Terminal(nullptr, 0);
+  delete ff;
+}
+
+void Cluster::adjustDepthDistribution(Block* block)
+{
+  int maxPathLen = ArtNetGen::delay_.getMaxPath();
+  if (maxPathLen <= 0) return;
+
+  levelizeKahn();
+
+  int curMaxDepth = 0;
+  for (auto ff : FFs_) {
+    int d = getFFInputDepth(ff);
+    if (d > curMaxDepth) curMaxDepth = d;
+  }
+
+  // Report macro depths (check all input pins)
+  int macroMaxDepth = 0;
+  int macroCount = 0;
+  for (auto inst : instances_) {
+    if (inst->cell_->isMacro) {
+      macroCount++;
+      for (size_t p = 0; p < inst->inNets_.size(); ++p) {
+        OutputNet* oNet = dynamic_cast<OutputNet*>(inst->inNets_[p]);
+        if (oNet && oNet->source_.first) {
+          macroMaxDepth = std::max(macroMaxDepth, oNet->source_.first->maxLevel_);
+        }
+      }
+    }
+  }
+
+  std::cout << "[adjustDepthDist] Starting. FFs=" << FFs_.size()
+            << " Macros=" << macroCount
+            << " curMaxDepth=" << curMaxDepth
+            << " macroMaxDepth=" << macroMaxDepth
+            << " targetMaxDepth=" << maxPathLen << std::endl;
+
+  int removed = 0;
+  if (curMaxDepth >= maxPathLen) goto macro_phase;
+
+  for (int iter = 0; iter < 50 && curMaxDepth < maxPathLen; ++iter) {
+    Instance* bestFF = nullptr;
+    int bestDepthA = 0;
+
+    for (auto ff : FFs_) {
+      int depthA = getFFInputDepth(ff);
+      if (depthA <= bestDepthA) continue;
+
+      bool feedsFF = false;
+      for (auto sit = ff->outNets_[0]->sinks_.begin();
+           sit != ff->outNets_[0]->sinks_.end(); ++sit) {
+        if (sit->first->isSequential()) { feedsFF = true; break; }
+        for (size_t k = 0; k < sit->first->outNets_.size() && !feedsFF; ++k) {
+          for (auto s2 = sit->first->outNets_[k]->sinks_.begin();
+               s2 != sit->first->outNets_[k]->sinks_.end(); ++s2) {
+            if (s2->first->isSequential()) { feedsFF = true; break; }
+          }
+        }
+        if (feedsFF) break;
+      }
+      if (!feedsFF) continue;
+
+      bestDepthA = depthA;
+      bestFF = ff;
+    }
+
+    if (!bestFF) break;
+
+    // Loop check
+    OutputNet* inNet = dynamic_cast<OutputNet*>(bestFF->inNets_[0]);
+    Instance* upSrc = inNet ? inNet->source_.first : nullptr;
+    bool wouldLoop = false;
+    if (upSrc && !upSrc->isSequential()) {
+      std::unordered_set<Instance*> visited;
+      std::deque<Instance*> bfs;
+      for (auto sit = bestFF->outNets_[0]->sinks_.begin();
+           sit != bestFF->outNets_[0]->sinks_.end(); ++sit) {
+        if (!sit->first->isSequential()) bfs.push_back(sit->first);
+      }
+      while (!bfs.empty() && !wouldLoop) {
+        Instance* cur = bfs.front(); bfs.pop_front();
+        if (visited.count(cur)) continue;
+        visited.insert(cur);
+        if (cur == upSrc) { wouldLoop = true; break; }
+        for (size_t j = 0; j < cur->inNets_.size(); ++j) {
+          OutputNet* oNet = dynamic_cast<OutputNet*>(cur->inNets_[j]);
+          if (oNet && oNet->source_.first
+              && !oNet->source_.first->isSequential()
+              && !visited.count(oNet->source_.first)) {
+            bfs.push_back(oNet->source_.first);
+          }
+        }
+      }
+    }
+    if (wouldLoop) break;
+    if (bestDepthA >= maxPathLen) break;
+
+    std::cout << "[adjustDepthDist] Iter " << iter
+              << ": removing FF (depthA=" << bestDepthA << ")" << std::endl;
+
+    // Collect downstream sinks BEFORE removal (they'll be moved to net_in)
+    std::vector<Instance*> affectedSinks;
+    for (auto sit = bestFF->outNets_[0]->sinks_.begin();
+         sit != bestFF->outNets_[0]->sinks_.end(); ++sit) {
+      affectedSinks.push_back(sit->first);
+    }
+
+    removeFlop(bestFF);
+    removed++;
+
+    // Incremental relevel: only update the fanout cone of affected sinks
+    for (auto inst : affectedSinks) {
+      incrementalRelevel(inst);
+    }
+
+    curMaxDepth = 0;
+    for (auto ff : FFs_) {
+      int d = getFFInputDepth(ff);
+      if (d > curMaxDepth) curMaxDepth = d;
+    }
+
+    std::cout << "[adjustDepthDist] New max depth: " << curMaxDepth << std::endl;
+
+    if (curMaxDepth >= maxPathLen * 0.7) {
+      std::cout << "[adjustDepthDist] Close to target, stopping" << std::endl;
+      break;
+    }
+  }
+
+  std::cout << "[adjustDepthDist] FF phase done. Removed " << removed
+            << " maxDepth=" << curMaxDepth
+            << " remaining FFs=" << FFs_.size() << std::endl;
+
+macro_phase:
+  // Phase 2: Extend macro depth by removing FFs feeding macros
+  int macroTargetDepth = ArtNetGen::delay_.getMacroMaxPath();
+  if (macroTargetDepth <= 0 || macroCount == 0) return;
+
+  // Recompute macro max depth (all input pins)
+  macroMaxDepth = 0;
+  for (auto inst : instances_) {
+    if (inst->cell_->isMacro) {
+      for (size_t p = 0; p < inst->inNets_.size(); ++p) {
+        OutputNet* oNet = dynamic_cast<OutputNet*>(inst->inNets_[p]);
+        if (oNet && oNet->source_.first) {
+          macroMaxDepth = std::max(macroMaxDepth, oNet->source_.first->maxLevel_);
+        }
+      }
+    }
+  }
+
+  if (macroMaxDepth >= macroTargetDepth) {
+    std::cout << "[adjustDepthDist] Macro depth " << macroMaxDepth
+              << " already meets target " << macroTargetDepth << std::endl;
+    return;
+  }
+
+  std::cout << "[adjustDepthDist] Macro phase: macroMaxDepth=" << macroMaxDepth
+            << " target=" << macroTargetDepth << std::endl;
+
+  int macroRemoved = 0;
+  for (int iter = 0; iter < 50 && macroMaxDepth < macroTargetDepth; ++iter) {
+    // Find deepest FF that feeds a macro (directly or 1-hop through combi)
+    Instance* bestFF = nullptr;
+    int bestDepthA = 0;
+
+    for (auto ff : FFs_) {
+      int depthA = getFFInputDepth(ff);
+      if (depthA <= bestDepthA) continue;
+
+      bool feedsMacro = false;
+      for (auto sit = ff->outNets_[0]->sinks_.begin();
+           sit != ff->outNets_[0]->sinks_.end(); ++sit) {
+        if (sit->first->cell_->isMacro) { feedsMacro = true; break; }
+        for (size_t k = 0; k < sit->first->outNets_.size() && !feedsMacro; ++k) {
+          for (auto s2 = sit->first->outNets_[k]->sinks_.begin();
+               s2 != sit->first->outNets_[k]->sinks_.end(); ++s2) {
+            if (s2->first->cell_->isMacro) { feedsMacro = true; break; }
+          }
+        }
+        if (feedsMacro) break;
+      }
+      if (!feedsMacro) continue;
+
+      bestDepthA = depthA;
+      bestFF = ff;
+    }
+
+    if (!bestFF) {
+      std::cout << "[adjustDepthDist] No FF feeding macro found" << std::endl;
+      break;
+    }
+
+    // Loop check
+    OutputNet* inNet = dynamic_cast<OutputNet*>(bestFF->inNets_[0]);
+    Instance* upSrc = inNet ? inNet->source_.first : nullptr;
+    bool wouldLoop = false;
+    if (upSrc && !upSrc->isSequential()) {
+      std::unordered_set<Instance*> visited;
+      std::deque<Instance*> bfs;
+      for (auto sit = bestFF->outNets_[0]->sinks_.begin();
+           sit != bestFF->outNets_[0]->sinks_.end(); ++sit) {
+        if (!sit->first->isSequential()) bfs.push_back(sit->first);
+      }
+      while (!bfs.empty() && !wouldLoop) {
+        Instance* cur = bfs.front(); bfs.pop_front();
+        if (visited.count(cur)) continue;
+        visited.insert(cur);
+        if (cur == upSrc) { wouldLoop = true; break; }
+        for (size_t j = 0; j < cur->inNets_.size(); ++j) {
+          OutputNet* oNet = dynamic_cast<OutputNet*>(cur->inNets_[j]);
+          if (oNet && oNet->source_.first
+              && !oNet->source_.first->isSequential()
+              && !visited.count(oNet->source_.first)) {
+            bfs.push_back(oNet->source_.first);
+          }
+        }
+      }
+    }
+    if (wouldLoop) break;
+    if (bestDepthA >= macroTargetDepth) break;
+
+    std::cout << "[adjustDepthDist] Macro iter " << iter
+              << ": removing FF (depthA=" << bestDepthA << ")" << std::endl;
+
+    std::vector<Instance*> affectedSinks;
+    for (auto sit = bestFF->outNets_[0]->sinks_.begin();
+         sit != bestFF->outNets_[0]->sinks_.end(); ++sit) {
+      affectedSinks.push_back(sit->first);
+    }
+
+    removeFlop(bestFF);
+    macroRemoved++;
+
+    for (auto inst : affectedSinks) {
+      incrementalRelevel(inst);
+    }
+
+    macroMaxDepth = 0;
+    for (auto inst : instances_) {
+      if (inst->cell_->isMacro) {
+        for (size_t p = 0; p < inst->inNets_.size(); ++p) {
+          OutputNet* oNet = dynamic_cast<OutputNet*>(inst->inNets_[p]);
+          if (oNet && oNet->source_.first) {
+            macroMaxDepth = std::max(macroMaxDepth, oNet->source_.first->maxLevel_);
+          }
+        }
+      }
+    }
+
+    std::cout << "[adjustDepthDist] New macro max depth: " << macroMaxDepth << std::endl;
+
+    if (macroMaxDepth >= macroTargetDepth * 0.7) {
+      std::cout << "[adjustDepthDist] Macro close to target, stopping" << std::endl;
+      break;
+    }
+  }
+
+  std::cout << "[adjustDepthDist] Macro phase done. Removed " << macroRemoved
+            << " macroMaxDepth=" << macroMaxDepth << std::endl;
 }
 
 }  // namespace ang

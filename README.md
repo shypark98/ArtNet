@@ -1,6 +1,11 @@
 # ArtNet
 
-This repository contains all the codes and scripts for our paper.  
+This repository contains all the codes and scripts for our paper.
+
+## Branches
+- **`main`**: Current version. Includes the **max depth post-processing** feature, which extends the maximum FF-to-FF path depth by selectively removing FFs along the critical path so generated netlists better match the `maxPathLen` constraint.
+- **`submitted`**: TCAD submitted version (the former default branch contents, preserved as-is).
+
 
 <img width="1024" alt="image" src="./Framework.png">
 
