@@ -2442,12 +2442,13 @@ void Cluster::adjustDepthDistribution(Block* block)
         if (visited.count(cur)) continue;
         visited.insert(cur);
         if (cur == upSrc) { wouldLoop = true; break; }
-        for (size_t j = 0; j < cur->inNets_.size(); ++j) {
-          OutputNet* oNet = dynamic_cast<OutputNet*>(cur->inNets_[j]);
-          if (oNet && oNet->source_.first
-              && !oNet->source_.first->isSequential()
-              && !visited.count(oNet->source_.first)) {
-            bfs.push_back(oNet->source_.first);
+        // Bypassing the FF creates a loop if its fanout reaches its input driver.
+        for (auto* outNet : cur->outNets_) {
+          for (const auto& sink : outNet->sinks_) {
+            if (sink.first && !sink.first->isSequential()
+                && !visited.count(sink.first)) {
+              bfs.push_back(sink.first);
+            }
           }
         }
       }
@@ -2567,12 +2568,13 @@ macro_phase:
         if (visited.count(cur)) continue;
         visited.insert(cur);
         if (cur == upSrc) { wouldLoop = true; break; }
-        for (size_t j = 0; j < cur->inNets_.size(); ++j) {
-          OutputNet* oNet = dynamic_cast<OutputNet*>(cur->inNets_[j]);
-          if (oNet && oNet->source_.first
-              && !oNet->source_.first->isSequential()
-              && !visited.count(oNet->source_.first)) {
-            bfs.push_back(oNet->source_.first);
+        // Bypassing the FF creates a loop if its fanout reaches its input driver.
+        for (auto* outNet : cur->outNets_) {
+          for (const auto& sink : outNet->sinks_) {
+            if (sink.first && !sink.first->isSequential()
+                && !visited.count(sink.first)) {
+              bfs.push_back(sink.first);
+            }
           }
         }
       }
